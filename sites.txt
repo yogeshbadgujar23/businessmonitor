@@ -1,0 +1,4 @@
+# Add your business websites here, one per line
+# Example:
+# https://example.com/news
+https://news.ycombinator.com
