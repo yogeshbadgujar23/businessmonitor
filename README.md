@@ -62,5 +62,9 @@ python3 monitor.py
 1.  **Raw Intelligence**: Cleaned text dumps stored in `data/{today}/{domain}.txt`.
 2.  **Executive Briefing**: A consolidated AI prompt generated at `data/{today}/daily_digest_prompt.txt`, pre-engineered for optimal LLM summarization.
 
+## 🧠 Daily Digest Prompt Template
+
+Use `DAILY_DIGEST_PROMPT_TEMPLATE.md` to generate a role-specific system prompt with user profile fields (role, business, interests, location, etc.). This helps the summarizer focus on what matters for each site in `sites.txt`.
+
 ---
 *Built with precision for the modern data-driven executive.*
