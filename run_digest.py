@@ -198,6 +198,9 @@ class DailyDigestPipeline:
         
         # 2. Broad Intelligence batched queries to fit Tavily limits
         topic_queries = [
+            # Currency & Mandi Prices (Strictly fetch today's rates/prices)
+            f"\"USD/INR\" OR \"EUR/INR\" exchange rate AND \"Nashik onion price\" OR \"Nashik garlic price\" mandi {today_str}",
+            
             # Topic 1: Indian Export Policy & Trade Bodies
             f"\"India export policy\" OR \"DGFT notification\" OR \"APEDA\" OR \"Spice Board India\" OR \"FIEO\" OR \"FTA India\" OR \"JNPT customs\" {today_str}",
             
@@ -312,22 +315,30 @@ EXCLUDE:
 ❌ Generic startup/VC funding news with no relevance to export or SME operations
 
 ==========================================
-QUALITY RULES - NON-NEGOTIABLE
+CRITICAL QUALITY RULES - NON-NEGOTIABLE
 ==========================================
-1. Handle posts AND broad web findings are equally valid — label source clearly.
-2. New product opportunities (e.g. dehydrated tomato powder demand spike) are as important as policy news — never filter these out.
-3. AI tools section must cover at least one item useful to Supab Digital consulting work where possible.
-4. Every item must answer: "Would Yogesh act on this, pitch this to a client, or share this with a fellow exporter?" — if no, cut it.
-5. 3 sharp items beat 8 mediocre ones.
-6. No padding empty sections with filler.
-7. Entire email under 700 words.
-8. When covering trade deals, always clarify whether the news affects Indian EXPORTS or Indian IMPORTS — state this explicitly in one word: (export-side) or (import-side).
-9. Plain business English — no jargon.
+1. 🚫 NO PLACEHOLDERS OR INCOMPLETE DATA:
+   - If any item is missing crucial details (e.g., exact date, venue, source, link, or exact price), DO NOT include it in the digest.
+   - Never write placeholders like 'Date: Not specified', 'Venue: Not specified', 'likely India', or 'context implies'. If you do not have the exact date/venue, omit the item entirely.
+2. 🚫 FILTER OUT PAST EVENTS:
+   - Today is Monday, May 25, 2026. Any event that took place before May 25, 2026 (such as GulfFood 2026 in February) is in the PAST and must be ignored.
+3. 🚫 NO GENERAL/IRRELEVANT NOISE:
+   - Avoid including general trade news (like generic bilateral protocols) unless it directly impacts the user's specific products (onion, garlic, turmeric, banana powder, rice, mango pulp). For example, a protocol between India and Ethiopia is noise and must be excluded.
+4. ⚡ BE EXTREMELY CRISP AND DENSE:
+   - Keep descriptions very short (1-2 sentences).
+   - "Opportunity for Supab" or "What it means for you" must be exactly one sharp, direct, highly-actionable sentence.
+   - Total email length must be under 600 words. A few high-signal, fully complete items are much better than many generic ones.
+5. 📊 QUICK NUMBERS:
+   - Always search for exchange rates (USD/INR, EUR/INR) and Nashik mandi prices for raw onion and garlic (₹/quintal) in the collected raw search data and list them cleanly.
+6. 🏛️ GOVERNMENT & POLICY:
+   - Always clarify whether trade updates are (export-side) or (import-side) in the headline.
+7. Handle posts AND broad web findings are equally valid — label source clearly.
+8. Plain business English — no jargon.
 """
 
         user_instruction = f"""
 Here is the raw data collected in the last 24 hours from the target crawled pages and optimized web searches. 
-Read the content carefully, apply the strict relevance filters, and generate the final email report in the exact format specified below.
+Read the content carefully, apply the strict relevance filters and critical quality rules, and generate the final email report in the exact format specified below.
 
 ### RAW CRAWLED DATA (DGFT / CONFIG SITES)
 {raw_crawled}
@@ -373,7 +384,7 @@ Daily briefing for [Date, Day].
 ---
 
 🤝 EVENTS & OPPORTUNITIES
-[Trade fairs, expos, meets, training, seminars — upcoming or newly announced]
+[Trade fairs, expos, meets, training, seminars — upcoming or newly announced. Strictly no placeholders or past events.]
 - [Event Name]
   Date: | Venue:
   Why it matters: [one sentence — who attends, what opportunity it creates for Supab]
@@ -412,6 +423,7 @@ Daily briefing for [Date, Day].
 Report generated: [timestamp]
 Priority handles: @CimGOI @DoC_GoI @FieoHq @PiyushGoyal @theresanaiforit + broad web intelligence across all platforms.
 """
+
 
         try:
             import google.generativeai as genai

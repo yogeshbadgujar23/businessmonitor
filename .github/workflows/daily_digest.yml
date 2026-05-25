@@ -1,5 +1,8 @@
 name: Daily Business Intelligence Digest
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 on:
   schedule:
     # 2:30 AM UTC corresponds to exactly 8:00 AM IST
