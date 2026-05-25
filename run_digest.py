@@ -217,8 +217,9 @@ class DailyDigestPipeline:
             # Topic 4: Market Intelligence & Opportunities
             f"\"dehydrated food buyer importer\" OR \"food ingredient procurement tender\" OR \"competitor country dehydrated veg export\" {today_str}",
             
-            # Topic 5: Events & Opportunities
-            f"\"food trade fair expo 2026 India\" OR \"buyer seller meet India food 2026\" OR \"APEDA participation 2026\" OR \"agri food trade show 2026\"",
+            # Topic 5: Events, Training, Buyer-Seller Meets (Upcoming focus)
+            f"\"food trade fair expo 2026 India\" OR \"buyer seller meet India food 2026\" OR \"agri food trade show 2026\" OR \"food ingredient exhibition 2026\"",
+            f"\"APEDA\" OR \"Spices Board\" OR \"FIEO\" OR \"DGFT\" AND \"buyer seller meet\" OR \"training program\" OR \"export seminar\" OR \"export training\" 2026",
             
             # Topic 6: AI & Technology Updates
             f"\"AI tool Indian exporter\" OR \"AI market research tool export\" OR \"AI buyer discovery\" OR \"AI export compliance\" {today_str}",
@@ -317,11 +318,12 @@ EXCLUDE:
 ==========================================
 CRITICAL QUALITY RULES - NON-NEGOTIABLE
 ==========================================
-1. 🚫 NO PLACEHOLDERS OR INCOMPLETE DATA:
-   - If any item is missing crucial details (e.g., exact date, venue, source, link, or exact price), DO NOT include it in the digest.
-   - Never write placeholders like 'Date: Not specified', 'Venue: Not specified', 'likely India', or 'context implies'. If you do not have the exact date/venue, omit the item entirely.
-2. 🚫 FILTER OUT PAST EVENTS:
-   - Today is Monday, May 25, 2026. Any event that took place before May 25, 2026 (such as GulfFood 2026 in February) is in the PAST and must be ignored.
+1. 🚫 NO PLACEHOLDERS OR INCOMPLETE DATA (EXCEPT FOR CRITICAL UPCOMING EVENTS):
+   - If any standard news item is missing crucial details (e.g. source, link, or exact price), DO NOT include it in the digest.
+   - Never write placeholders like 'Date: Not specified', 'Venue: Not specified', 'likely India', or 'context implies'.
+   - **CRITICAL EXCEPTION FOR UPCOMING B2B EVENTS / TRAINING:** You must **never miss** any upcoming B2B trade fairs, export expos, buyer-seller meets, training programs, or seminars organized by an EPC (like APEDA, Spices Board, FIEO, Spice Board India) or DGFT that are relevant to agricultural/spice exports. Include them even if some registration links or exact venues are still pending, stating the available details clearly so Yogesh is kept informed of upcoming opportunities.
+2. 🚫 FUTURE EVENTS ONLY:
+   - Today is Monday, May 25, 2026. Only include events and opportunities scheduled to take place on or after May 25, 2026. Omit past events completely.
 3. 🚫 NO GENERAL/IRRELEVANT NOISE:
    - Avoid including general trade news (like generic bilateral protocols) unless it directly impacts the user's specific products (onion, garlic, turmeric, banana powder, rice, mango pulp). For example, a protocol between India and Ethiopia is noise and must be excluded.
 4. ⚡ BE EXTREMELY CRISP AND DENSE:
@@ -334,7 +336,7 @@ CRITICAL QUALITY RULES - NON-NEGOTIABLE
    - Always clarify whether trade updates are (export-side) or (import-side) in the headline.
 7. Handle posts AND broad web findings are equally valid — label source clearly.
 8. Plain business English — no jargon.
-"""
+""",StartLine:318,TargetContent:
 
         user_instruction = f"""
 Here is the raw data collected in the last 24 hours from the target crawled pages and optimized web searches. 
