@@ -1,4 +1,2 @@
-# Add your business websites here, one per line
-# Example:
-# https://example.com/news
-https://news.ycombinator.com
+# Add new sites here, one per line (comments start with #)
+https://www.dgft.gov.in/CP/

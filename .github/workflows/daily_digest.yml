@@ -1,0 +1,35 @@
+name: Daily Business Intelligence Digest
+
+on:
+  schedule:
+    # 2:30 AM UTC corresponds to exactly 8:00 AM IST
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+    # Allows manual triggering of the workflow from the GitHub Actions UI for testing
+
+jobs:
+  run-digest:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip' # cache pip dependencies for faster runs
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Daily Digest Pipeline
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        SMTP_EMAIL: ${{ secrets.SMTP_EMAIL }}
+        SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      run: python run_digest.py

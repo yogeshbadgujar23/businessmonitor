@@ -1,2 +1,9 @@
 requests
 beautifulsoup4
+trafilatura
+schedule
+urllib3
+duckduckgo-search
+tavily-python
+google-generativeai
+python-dotenv

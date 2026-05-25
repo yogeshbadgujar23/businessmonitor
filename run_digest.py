@@ -1,0 +1,752 @@
+import os
+import sys
+import datetime
+import time
+import json
+import logging
+import smtplib
+import re
+import argparse
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from urllib.parse import urlparse, urljoin
+import requests
+from bs4 import BeautifulSoup
+import trafilatura
+from dotenv import load_dotenv
+
+# Load local environment variables if .env file exists (useful for local testing)
+load_dotenv()
+
+# --- Logging Setup ---
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+
+# --- Default Fallback API Key ---
+# Using the Tavily API key provided by the user
+DEFAULT_TAVILY_KEY = "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"
+
+class DailyDigestPipeline:
+    def __init__(self, dry_run=False, email_test=False):
+        self.dry_run = dry_run
+        self.email_test = email_test
+        
+        # Keys setup
+        self.gemini_key = os.environ.get("GEMINI_API_KEY")
+        self.tavily_key = os.environ.get("TAVILY_API_KEY", DEFAULT_TAVILY_KEY)
+        
+        # Email settings
+        self.smtp_email = os.environ.get("SMTP_EMAIL", "yogeshgujar@gmail.com")
+        self.smtp_password = os.environ.get("SMTP_PASSWORD")  # Gmail App Password
+        
+        # Scraper session
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        })
+        
+        # Target URLs in sites.txt
+        self.base_dir = os.path.dirname(os.path.abspath(__file__))
+        self.sites_file = os.path.join(self.base_dir, 'sites.txt')
+        self.sites = self.load_sites()
+        
+        # Crawler keywords
+        self.update_keywords = ['notification', 'circular', 'public notice', 'press release', 'news', 'update', 'latest']
+        self.ignore_keywords = ['login', 'register', 'signup', 'apply', 'contact', 'about', 'help', 'search', 'lang=']
+
+    def load_sites(self):
+        """Loads crawling targets from sites.txt."""
+        if not os.path.exists(self.sites_file):
+            logging.warning(f"sites.txt not found in {self.base_dir}. Using DGFT default.")
+            return ["https://www.dgft.gov.in/CP/"]
+            
+        with open(self.sites_file, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+        return [line.strip() for line in lines if line.strip() and not line.strip().startswith('#')]
+
+    # ==========================================
+    # CRAWLING & SCRAPING ENGINE (sites.txt)
+    # ==========================================
+    def is_link_interesting(self, text, url):
+        text = text.lower()
+        url = url.lower()
+        if not any(k in text or k in url for k in self.update_keywords):
+            return False
+        if any(k in text or k in url for k in self.ignore_keywords):
+            return False
+        return True
+
+    def find_sub_links(self, url):
+        """Scans a website landing page for relevant sub-links (notifications, circulars, etc.)."""
+        logging.info(f"Scanning target URL: {url}...")
+        try:
+            response = self.session.get(url, timeout=15)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            interesting_links = {url} # include main page itself
+            for a in soup.find_all('a', href=True):
+                href = a['href']
+                text = a.get_text(" ", strip=True)
+                full_url = urljoin(url, href)
+                
+                if self.is_link_interesting(text, full_url):
+                    interesting_links.add(full_url)
+            
+            # Return top 5 most promising links + main page
+            return list(interesting_links)[:6]
+        except Exception as e:
+            logging.error(f"Failed to scan target sub-links for {url}: {e}")
+            return [url]
+
+    def scrape_url_content(self, url):
+        """Deep extracts clean text content from a URL using trafilatura."""
+        logging.info(f"Extracting content from {url}...")
+        try:
+            downloaded = trafilatura.fetch_url(url)
+            if downloaded:
+                return trafilatura.extract(downloaded)
+        except Exception as e:
+            logging.error(f"Trafilatura failed for {url}: {e}")
+        return None
+
+    def crawl_target_sites(self):
+        """Crawls all configured sites and returns combined text corpora."""
+        crawled_data = []
+        for url in self.sites:
+            sub_links = self.find_sub_links(url)
+            logging.info(f"Found {len(sub_links)} pages to extract on {url}")
+            
+            site_content = []
+            for link in sub_links:
+                text = self.scrape_url_content(link)
+                if text and len(text) > 100:
+                    # Ignore generic login/account pages
+                    if "login" in text.lower().split()[:20]:
+                        continue
+                    site_content.append(f"Source URL: {link}\n---\n{text}\n")
+                    time.sleep(1) # Be polite
+                    
+            if site_content:
+                crawled_data.append(f"=== TARGET SITE SCANNED: {url} ===\n" + "\n".join(site_content))
+        return "\n\n".join(crawled_data)
+
+    # ==========================================
+    # WEB INTELLIGENCE SEARCH ENGINE (Tavily/DDG)
+    # ==========================================
+    def search_web_tavily(self, query):
+        """Queries Tavily API with strict 24-hour time constraint."""
+        logging.info(f"Tavily Search: '{query}'")
+        url = "https://api.tavily.com/search"
+        payload = {
+            "api_key": self.tavily_key,
+            "query": query,
+            "search_depth": "advanced",
+            "include_domains": [],
+            "exclude_domains": [],
+            "max_results": 5,
+            "days": 1 # STRICT 24 HOUR FILTER
+        }
+        try:
+            response = requests.post(url, json=payload, timeout=15)
+            response.raise_for_status()
+            results = response.json().get("results", [])
+            
+            formatted_results = []
+            for r in results:
+                formatted_results.append(f"Title: {r.get('title')}\nURL: {r.get('url')}\nContent: {r.get('content')}\n")
+            return "\n".join(formatted_results)
+        except Exception as e:
+            logging.error(f"Tavily search failed for '{query}': {e}. Falling back to DuckDuckGo.")
+            return self.search_web_ddg(query)
+
+    def search_web_ddg(self, query):
+        """DuckDuckGo Search fallback with 24h filter."""
+        logging.info(f"DuckDuckGo Search: '{query}'")
+        try:
+            from duckduckgo_search import DDGS
+            with DDGS() as ddgs:
+                # time='d' filters results to the last 24 hours
+                results = list(ddgs.text(query, max_results=5, timelimit='d'))
+                
+            formatted_results = []
+            for r in results:
+                formatted_results.append(f"Title: {r.get('title')}\nURL: {r.get('href')}\nContent: {r.get('body')}\n")
+            return "\n".join(formatted_results)
+        except Exception as e:
+            logging.error(f"DuckDuckGo search failed for '{query}': {e}")
+            return ""
+
+    def run_broad_search(self):
+        """Runs optimized search queries for the 6 topics and social media handles."""
+        today_str = datetime.date.today().isoformat()
+        
+        # 1. Social Media Handles Search (Targeted queries with strict date)
+        # We query the profiles of target X accounts to find recent updates in the last 24 hours
+        social_queries = [
+            f"site:x.com/dgftindia {today_str}",
+            f"site:x.com/CimGOI OR site:x.com/DoC_GoI {today_str}",
+            f"site:x.com/FieoHq OR site:x.com/PiyushGoyal {today_str}",
+            f"site:x.com/APEDADOC OR site:x.com/AgriGoI {today_str}",
+            f"site:x.com/theresanaiforit \"AI\" {today_str}"
+        ]
+        
+        # 2. Broad Intelligence batched queries to fit Tavily limits
+        topic_queries = [
+            # Topic 1: Indian Export Policy & Trade Bodies
+            f"\"India export policy\" OR \"DGFT notification\" OR \"APEDA\" OR \"Spice Board India\" OR \"FIEO\" OR \"FTA India\" OR \"JNPT customs\" {today_str}",
+            
+            # Topic 2: Dehydrated Foods (Spices/Onion/Garlic/Turmeric/Banana/Tomato)
+            f"\"dehydrated onion export\" OR \"dehydrated garlic\" OR \"turmeric export curcumin\" OR \"banana powder market\" OR \"dehydrated ginger\" {today_str}",
+            f"\"dehydrated vegetable export market\" OR \"dehydrated potato flakes\" OR \"dehydrated mushroom\" OR \"dehydrated tomato powder\" {today_str}",
+            
+            # Topic 3: Target Markets (GCC, EU, US, Asia)
+            f"\"India GCC food trade\" OR \"UAE food import\" OR \"Saudi Arabia agri import\" {today_str}",
+            f"\"India EU food trade\" OR \"Germany food ingredient\" OR \"EU food safety regulation\" {today_str}",
+            f"\"FDA import alert India food\" OR \"US food ingredient market India\" {today_str}",
+            f"\"India Asia food trade\" OR \"Japan Korea food import India\" OR \"Singapore food import\" OR \"West Africa food import\" {today_str}",
+            
+            # Topic 4: Market Intelligence & Opportunities
+            f"\"dehydrated food buyer importer\" OR \"food ingredient procurement tender\" OR \"competitor country dehydrated veg export\" {today_str}",
+            
+            # Topic 5: Events & Opportunities
+            f"\"food trade fair expo 2026 India\" OR \"buyer seller meet India food 2026\" OR \"APEDA participation 2026\" OR \"agri food trade show 2026\"",
+            
+            # Topic 6: AI & Technology Updates
+            f"\"AI tool Indian exporter\" OR \"AI market research tool export\" OR \"AI buyer discovery\" OR \"AI export compliance\" {today_str}",
+            f"\"AI tool small business\" OR \"AI productivity tool SME\" OR \"new AI tool launched\" OR \"site:theresanaiforit.com\" {today_str}",
+            f"\"AI market research competitor analysis\" OR \"AI report generation\" OR \"AI consulting tool\" {today_str}"
+        ]
+        
+        all_search_data = []
+        
+        # Execute Social Queries
+        logging.info("Gathering priority handles updates (Social search)...")
+        for q in social_queries:
+            results = self.search_web_tavily(q) if self.tavily_key else self.search_web_ddg(q)
+            if results:
+                all_search_data.append(f"=== SOCIAL HANDLE SEARCH: {q} ===\n{results}")
+            time.sleep(1)
+            
+        # Execute Broad Topic Queries
+        logging.info("Gathering broad market intelligence...")
+        for q in topic_queries:
+            results = self.search_web_tavily(q) if self.tavily_key else self.search_web_ddg(q)
+            if results:
+                all_search_data.append(f"=== INTEL SEARCH: {q} ===\n{results}")
+            time.sleep(1)
+            
+        return "\n\n".join(all_search_data)
+
+    # ==========================================
+    # AI COMPILATION & GENERATION (Gemini API)
+    # ==========================================
+    def generate_digest_ai(self, raw_crawled, raw_searched):
+        """Calls Google Gemini API to compile and generate the final Daily Digest."""
+        if not self.gemini_key:
+            logging.error("GEMINI_API_KEY environment variable is not set. Cannot run AI compilation.")
+            # Fallback output in dry run
+            if self.dry_run:
+                return "## [DRY RUN] Gemini API output placeholder. (Please set GEMINI_API_KEY to generate actual digest)"
+            sys.exit("Error: GEMINI_API_KEY is required.")
+            
+        logging.info("Compiling daily digest with Gemini API...")
+        
+        # System Prompt and Instructions (Your exact prompt template)
+        system_prompt = """You are an export business intelligence assistant for
+Yogesh Badgujar, founder of two businesses:
+
+SUPAB EXPORTS (Kalyan West, Maharashtra)
+Agricultural export business specializing in
+dehydrated vegetables and spices. Core products:
+dehydrated onion (flakes, chopped, minced, granules,
+powder), dehydrated garlic (flakes, granules, powder,
+minced), turmeric (fingers, bulbs, powder — 2% to 7%
+curcumin grades), banana powder (food grade and
+pharmaceutical grade). Open to opportunities in ALL
+dehydrated foods — dehydrated tomato, potato, ginger,
+beetroot, spinach, mushroom, sweet corn, any other
+dehydrated vegetable or fruit powder where a strong
+buyer demand or market gap exists.
+
+SUPAB DIGITAL
+AI-powered export consultancy for Indian SMEs and
+exporters. Services: custom market research reports
+(basic to McKinsey-level depth), go-to-market strategy
+reports for Indian SMEs entering international markets,
+buyer outreach systems, LinkedIn optimization, export
+compliance guidance. Recent work: go-to-market strategy
+for Vaince Cosmetics for EU market entry. Clients are
+Indian small businesses and exporters wanting to go
+international for the first time or expand into new
+markets.
+
+==========================================
+RELEVANCE FILTER - STRICTLY ENFORCED
+==========================================
+INCLUDE:
+✅ Export policy changes, schemes, incentives
+✅ Any dehydrated food product with export demand signal — not just current products
+✅ Buyer country import regulations, compliance changes, market access updates
+✅ Demand signals from importers or buyer country trade bodies
+✅ Trade fairs, expos, buyer-seller meets, APEDA/Spice Board events and training
+✅ AI tools useful for: export business, market research, report writing, buyer outreach, compliance, daily SME operations, client-facing consulting work
+✅ Commodity prices: onion, garlic, turmeric, tomato, any dehydrated food
+✅ Freight rates, logistics, container costs
+✅ Rupee movement vs USD/EUR/AED/GBP
+✅ Competitor country signals (China, Egypt, Peru, Turkey) in dehydrated vegetables
+✅ Any new product opportunity in dehydrated foods with emerging buyer demand
+
+EXCLUDE:
+❌ Political news unrelated to trade
+❌ Cricket, entertainment, celebrity
+❌ AI hype with no clear practical use case
+❌ Tools clearly designed only for large enterprise — not applicable to SMEs
+❌ Duplicate items already in the report
+❌ Anything older than 24 hours
+❌ Generic startup/VC funding news with no relevance to export or SME operations
+
+==========================================
+QUALITY RULES - NON-NEGOTIABLE
+==========================================
+1. Handle posts AND broad web findings are equally valid — label source clearly.
+2. New product opportunities (e.g. dehydrated tomato powder demand spike) are as important as policy news — never filter these out.
+3. AI tools section must cover at least one item useful to Supab Digital consulting work where possible.
+4. Every item must answer: "Would Yogesh act on this, pitch this to a client, or share this with a fellow exporter?" — if no, cut it.
+5. 3 sharp items beat 8 mediocre ones.
+6. No padding empty sections with filler.
+7. Entire email under 700 words.
+8. When covering trade deals, always clarify whether the news affects Indian EXPORTS or Indian IMPORTS — state this explicitly in one word: (export-side) or (import-side).
+9. Plain business English — no jargon.
+"""
+
+        user_instruction = f"""
+Here is the raw data collected in the last 24 hours from the target crawled pages and optimized web searches. 
+Read the content carefully, apply the strict relevance filters, and generate the final email report in the exact format specified below.
+
+### RAW CRAWLED DATA (DGFT / CONFIG SITES)
+{raw_crawled}
+
+### RAW SEARCH & SOCIAL INTELLIGENCE (TAVILY & DDG)
+{raw_searched}
+
+### EMAIL REPORT FORMAT REQUIREMENT
+Subject: 🌏 Supab Export Intel — [Today's Date]
+Send to: yogeshgujar@gmail.com
+
+---
+
+Good morning Yogesh 🙏
+Daily briefing for [Date, Day].
+
+---
+
+📋 WHAT MATTERS TODAY
+[Urgent only — policy deadline, major opportunity, breaking news directly affecting Supab Exports or Supab Digital. Max 2 items. Skip entirely if nothing critical.]
+
+---
+
+🏛️ GOVERNMENT & POLICY
+[Priority handle posts + broad search findings. Highlight if it's (export-side) or (import-side).]
+- [Headline — one plain line]
+  What it means for you: [one sentence, specific to Supab Exports or Supab Digital]
+  Source: [@handle or publication] | [link]
+
+[Max 4 items. If nothing relevant: "No significant policy updates today."]
+
+---
+
+📦 MARKET & PRODUCT INTELLIGENCE
+[Product demand, market signals, buyer country news, commodity prices, competitor countries, new product opportunities in dehydrated foods]
+- [Headline — one line]
+  Details: [2–3 sentences]
+  Opportunity for Supab: [specific product or market angle — be direct about whether this is worth pursuing]
+  Source: [link]
+
+[Max 4 items. If nothing relevant: "No significant market updates today."]
+
+---
+
+🤝 EVENTS & OPPORTUNITIES
+[Trade fairs, expos, meets, training, seminars — upcoming or newly announced]
+- [Event Name]
+  Date: | Venue:
+  Why it matters: [one sentence — who attends, what opportunity it creates for Supab]
+  Register/Info: [link]
+
+[Max 3 items. If nothing: "No relevant events in the last 24 hours."]
+
+---
+
+🤖 AI & TOOLS
+[Useful for: export operations, market research, report writing, client consulting, buyer outreach, or daily SME tasks. All three angles covered.]
+- [Tool name] — [Export / Operations / Research]
+  What it does: [one line]
+  How you can use it: [specific use case for Supab Exports or Supab Digital]
+  Link: [url]
+
+[Max 3 items. If nothing genuinely useful: "No significant AI tool updates today."]
+
+---
+
+📊 QUICK NUMBERS
+[Commodity prices, freight rates, currency — only if found and directly relevant]
+- [Data point]: [value] — [one line context]
+
+[Skip entirely if no relevant numbers found]
+
+---
+
+🔜 WATCH THIS WEEK
+[Max 3 items worth tracking in next 7 days — deadlines, upcoming events, policy windows]
+- [Item]
+- [Item]
+- [Item]
+
+---
+Report generated: [timestamp]
+Priority handles: @CimGOI @DoC_GoI @FieoHq @PiyushGoyal @theresanaiforit + broad web intelligence across all platforms.
+"""
+
+        try:
+            import google.generativeai as genai
+            genai.configure(api_key=self.gemini_key)
+            
+            # Using standard gemini-2.5-flash for speed and cost efficiency
+            model = genai.GenerativeModel(
+                model_name="gemini-2.5-flash",
+                system_instruction=system_prompt
+            )
+            
+            response = model.generate_content(
+                user_instruction,
+                generation_config={"temperature": 0.2}
+            )
+            
+            return response.text
+        except Exception as e:
+            logging.error(f"Gemini API call failed: {e}")
+            sys.exit(f"Error: {e}")
+
+    # ==========================================
+    # EMAIL SENDING SYSTEM (Gmail SMTP)
+    # ==========================================
+    def format_email_body_html(self, text_content):
+        """Converts generated plain markdown digest text into a stunning, responsive HSL-styled HTML layout."""
+        # Simple parser to format markdown headers and blocks into clean styled cards
+        lines = text_content.split('\n')
+        html_sections = []
+        current_section = []
+        
+        def commit_section():
+            if current_section:
+                html_sections.append("\n".join(current_section))
+                current_section.clear()
+
+        # Parse markdown lines into formatted blocks
+        for line in lines:
+            line_strip = line.strip()
+            if not line_strip:
+                current_section.append("<br/>")
+                continue
+                
+            # Headers
+            if line_strip.startswith("📋"):
+                commit_section()
+                current_section.append('<div class="section-card urgent">')
+                current_section.append(f'<h2 class="section-title">🚨 WHAT MATTERS TODAY</h2>')
+            elif line_strip.startswith("🏛️"):
+                commit_section()
+                current_section.append('<div class="section-card">')
+                current_section.append(f'<h2 class="section-title">🏛️ GOVERNMENT & POLICY</h2>')
+            elif line_strip.startswith("📦"):
+                commit_section()
+                current_section.append('<div class="section-card">')
+                current_section.append(f'<h2 class="section-title">📦 MARKET & PRODUCT INTEL</h2>')
+            elif line_strip.startswith("🤝"):
+                commit_section()
+                current_section.append('<div class="section-card">')
+                current_section.append(f'<h2 class="section-title">🤝 EVENTS & OPPORTUNITIES</h2>')
+            elif line_strip.startswith("🤖"):
+                commit_section()
+                current_section.append('<div class="section-card">')
+                current_section.append(f'<h2 class="section-title">🤖 AI & TOOLS</h2>')
+            elif line_strip.startswith("📊"):
+                commit_section()
+                current_section.append('<div class="section-card highlight">')
+                current_section.append(f'<h2 class="section-title">📊 QUICK NUMBERS</h2>')
+            elif line_strip.startswith("🔜"):
+                commit_section()
+                current_section.append('<div class="section-card">')
+                current_section.append(f'<h2 class="section-title">🔜 WATCH THIS WEEK</h2>')
+            elif line_strip == "---":
+                commit_section()
+                # Simple divider or end card
+                html_sections.append('</div>')
+            else:
+                # Format bullets, lists and bold items
+                formatted_line = line_strip
+                # Format links
+                formatted_line = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" class="link">\1</a>', formatted_line)
+                # Format bold text
+                formatted_line = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', formatted_line)
+                
+                if formatted_line.startswith("-"):
+                    current_section.append(f'<li class="bullet-item">{formatted_line[1:].strip()}</li>')
+                else:
+                    current_section.append(f'<p class="para-text">{formatted_line}</p>')
+                    
+        commit_section()
+        body_content = "\n".join(html_sections)
+        
+        # Sleek Premium styling utilizing tailored colors and vibrant headers
+        html_template = f"""<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supab Export Daily Intel</title>
+<style>
+    body {{
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #f4f6f8;
+        color: #2c3e50;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }}
+    .email-container {{
+        max-width: 650px;
+        margin: 20px auto;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        overflow: hidden;
+        border: 1px solid #e1e8ed;
+    }}
+    .header {{
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: #ffffff;
+        padding: 30px 20px;
+        text-align: center;
+    }}
+    .header h1 {{
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }}
+    .header p {{
+        margin: 5px 0 0 0;
+        font-size: 14px;
+        opacity: 0.9;
+    }}
+    .content {{
+        padding: 25px 20px;
+    }}
+    .section-card {{
+        background: #ffffff;
+        border-left: 4px solid #2a5298;
+        padding: 15px 20px;
+        margin-bottom: 25px;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        border-top: 1px solid #f0f4f8;
+        border-right: 1px solid #f0f4f8;
+        border-bottom: 1px solid #f0f4f8;
+    }}
+    .section-card.urgent {{
+        border-left-color: #e74c3c;
+        background-color: #fdf2f2;
+    }}
+    .section-card.highlight {{
+        border-left-color: #f39c12;
+        background-color: #fef9eb;
+    }}
+    .section-title {{
+        font-size: 16px;
+        font-weight: 700;
+        color: #1e3c72;
+        margin-top: 0;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }}
+    .urgent .section-title {{
+        color: #c0392b;
+    }}
+    .para-text {{
+        font-size: 14px;
+        margin: 8px 0;
+    }}
+    .bullet-item {{
+        font-size: 14px;
+        margin: 8px 0;
+        list-style-type: none;
+        position: relative;
+        padding-left: 15px;
+    }}
+    .bullet-item::before {{
+        content: "•";
+        color: #2a5298;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+    }}
+    .link {{
+        color: #2a5298;
+        text-decoration: none;
+        font-weight: 500;
+    }}
+    .link:hover {{
+        text-decoration: underline;
+    }}
+    .footer {{
+        background: #f8fafc;
+        padding: 20px;
+        text-align: center;
+        font-size: 12px;
+        color: #7f8c8d;
+        border-top: 1px solid #ecf0f1;
+    }}
+    .footer a {{
+        color: #7f8c8d;
+    }}
+</style>
+</head>
+<body>
+<div class="email-container">
+    <div class="header">
+        <h1>🌏 SUPAB EXPORT DAILY INTEL</h1>
+        <p>Strategic Business Intelligence Briefing</p>
+    </div>
+    <div class="content">
+        {body_content}
+    </div>
+    <div class="footer">
+        <p>Report dynamically generated on {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>
+        <p>Priority Handles Checked: @CimGOI @DoC_GoI @FieoHq @PiyushGoyal @theresanaiforit</p>
+        <p>Supab Exports &amp; Supab Digital &copy; 2026. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
+"""
+        return html_template
+
+    def send_email(self, text_content):
+        """Sends the generated digest via SMTP (Gmail App Password)."""
+        if not self.smtp_password:
+            logging.error("SMTP_PASSWORD environment variable is not set. Skipping email delivery.")
+            if self.dry_run or self.email_test:
+                logging.info("[DUMMY EMAIL SUCCESS] Saved local plain-text output in daily_digest_output.md due to missing password.")
+                with open("daily_digest_output.md", "w", encoding="utf-8") as f:
+                    f.write(text_content)
+                return
+            sys.exit("Error: SMTP_PASSWORD is required to email the digest.")
+
+        today_str = datetime.date.today().strftime("%d-%b-%Y (%A)")
+        subject = f"🌏 Supab Export Intel — {today_str}"
+        recipient = self.smtp_email
+        
+        logging.info(f"Sending daily intelligence email to {recipient}...")
+        
+        msg = MIMEMultipart('alternative')
+        msg['Subject'] = subject
+        msg['From'] = self.smtp_email
+        msg['To'] = recipient
+        
+        # Attach plain text version
+        part1 = MIMEText(text_content, 'plain')
+        msg.attach(part1)
+        
+        # Attach styled HTML version
+        html_body = self.format_email_body_html(text_content)
+        part2 = MIMEText(html_body, 'html')
+        msg.attach(part2)
+        
+        try:
+            # Connect to Gmail SMTP server using SSL on port 465
+            server = smtplib.SMTP_SSL('smtp.gmail.com', 465, timeout=15)
+            server.login(self.smtp_email, self.smtp_password)
+            server.sendmail(self.smtp_email, [recipient], msg.as_string())
+            server.close()
+            logging.info("Email delivered successfully!")
+        except Exception as e:
+            logging.error(f"Failed to deliver email over SMTP: {e}")
+            sys.exit(f"SMTP Error: {e}")
+
+    # ==========================================
+    # CORE PIPELINE EXECUTION
+    # ==========================================
+    def run_pipeline(self):
+        logging.info("=" * 60)
+        logging.info("SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE STARTED")
+        logging.info("=" * 60)
+        
+        # 1. Scrape configured target sites (DGFT, etc.)
+        logging.info("[Step 1/4] Deep Scanning Target Regulatory Sites...")
+        crawled_data = self.crawl_target_sites()
+        logging.info(f"Scraped {len(crawled_data)} chars of raw text from regulatory targets.")
+        
+        # 2. Execute broad web search & handle checking
+        logging.info("[Step 2/4] Conducting 24-Hour Web Intelligence Searches...")
+        searched_data = self.run_broad_search()
+        logging.info(f"Retrieved {len(searched_data)} chars of broad web search results.")
+        
+        # Save aggregated raw files for historical tracking (just like monitor.py did)
+        today = datetime.date.today().isoformat()
+        daily_dir = os.path.join(self.base_dir, 'data', today)
+        os.makedirs(daily_dir, exist_ok=True)
+        
+        with open(os.path.join(daily_dir, "raw_scraped_targets.txt"), "w", encoding="utf-8") as f:
+            f.write(crawled_data)
+        with open(os.path.join(daily_dir, "raw_searched_intel.txt"), "w", encoding="utf-8") as f:
+            f.write(searched_data)
+        
+        # 3. Call AI to synthesize and filter
+        logging.info("[Step 3/4] Synthesizing Intelligence with Gemini API...")
+        digest_text = self.generate_digest_ai(crawled_data, searched_data)
+        
+        # Save generated digest markdown file
+        digest_file = os.path.join(daily_dir, "digest.md")
+        with open(digest_file, "w", encoding="utf-8") as f:
+            f.write(digest_text)
+        logging.info(f"Saved completed markdown digest to {digest_file}")
+        
+        # 4. Email report
+        logging.info("[Step 4/4] Delivering Digest Briefing Email...")
+        self.send_email(digest_text)
+        
+        logging.info("=" * 60)
+        logging.info("SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE COMPLETED")
+        logging.info("=" * 60)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Supab Exports Daily Digest Pipeline")
+    parser.add_argument("--dry-run", action="store_true", help="Compile prompt and save files locally without calling Gemini/SMTP")
+    parser.add_argument("--email-test", action="store_true", help="Test SMTP email delivery with a test body")
+    args = parser.parse_args()
+    
+    if args.email_test:
+        # SMTP validation routine
+        pipeline = DailyDigestPipeline(email_test=True)
+        test_body = """
+Good morning Yogesh 🙏
+This is a test notification to verify SMTP email setup.
+
+📋 WHAT MATTERS TODAY
+- Verification Test: SMTP configuration working properly.
+  Why it matters: Confirms that email triggers correctly from the cloud.
+  Priority: Important
+"""
+        pipeline.send_email(test_body)
+    else:
+        pipeline = DailyDigestPipeline(dry_run=args.dry_run)
+        pipeline.run_pipeline()
