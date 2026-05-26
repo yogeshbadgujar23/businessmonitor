@@ -5,8 +5,9 @@ env:
 
 on:
   schedule:
-    # 2:30 AM UTC corresponds to exactly 8:00 AM IST
-    - cron: '30 2 * * *'
+    # 2:41 AM UTC corresponds to 8:11 AM IST. 
+    # Using an off-peak minute (41 instead of 30) bypasses GitHub's heavily congested top-of-the-hour queue.
+    - cron: '41 2 * * *'
   workflow_dispatch:
     # Allows manual triggering of the workflow from the GitHub Actions UI for testing
 
