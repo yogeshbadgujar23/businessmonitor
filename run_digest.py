@@ -38,6 +38,7 @@ class DailyDigestPipeline:
         
         # Keys setup
         self.gemini_key = os.environ.get("GEMINI_API_KEY")
+        self.openai_key = os.environ.get("OPENAI_API_KEY")
         self.tavily_key = os.environ.get("TAVILY_API_KEY", DEFAULT_TAVILY_KEY)
         
         # Email settings
@@ -186,45 +187,47 @@ class DailyDigestPipeline:
         """Runs optimized search queries for the 6 topics and social media handles."""
         today_str = datetime.date.today().isoformat()
         
-        # 1. Social Media Handles Search (Targeted queries with strict date)
+        # 1. Social Media Handles Search (Targeted queries with strict date and proper grouping)
         # We query the profiles of target X accounts to find recent updates in the last 24 hours
         social_queries = [
             f"site:x.com/dgftindia {today_str}",
-            f"site:x.com/CimGOI OR site:x.com/DoC_GoI {today_str}",
-            f"site:x.com/FieoHq OR site:x.com/PiyushGoyal {today_str}",
-            f"site:x.com/APEDADOC OR site:x.com/AgriGoI {today_str}",
+            f"(site:x.com/CimGOI OR site:x.com/DoC_GoI) {today_str}",
+            f"(site:x.com/FieoHq OR site:x.com/PiyushGoyal) {today_str}",
+            f"(site:x.com/APEDADOC OR site:x.com/AgriGoI) {today_str}",
             f"site:x.com/theresanaiforit \"AI\" {today_str}"
         ]
         
         # 2. Broad Intelligence batched queries to fit Tavily limits
         topic_queries = [
             # Currency & Mandi Prices (Strictly fetch today's rates/prices)
-            f"\"USD/INR\" OR \"EUR/INR\" exchange rate AND \"Nashik onion price\" OR \"Nashik garlic price\" mandi {today_str}",
+            f"(\"USD/INR\" OR \"EUR/INR\" exchange rate) AND (\"Nashik onion price\" OR \"Nashik garlic price\" OR \"turmeric price\" mandi) {today_str}",
             
             # Topic 1: Indian Export Policy & Trade Bodies
-            f"\"India export policy\" OR \"DGFT notification\" OR \"APEDA\" OR \"Spice Board India\" OR \"FIEO\" OR \"FTA India\" OR \"JNPT customs\" {today_str}",
+            f"(\"India export policy\" OR \"DGFT notification\" OR \"APEDA\" OR \"Spices Board\" OR \"FIEO\" OR \"FTA India\" OR \"JNPT customs\" OR \"CBIC customs\") {today_str}",
             
             # Topic 2: Dehydrated Foods (Spices/Onion/Garlic/Turmeric/Banana/Tomato)
-            f"\"dehydrated onion export\" OR \"dehydrated garlic\" OR \"turmeric export curcumin\" OR \"banana powder market\" OR \"dehydrated ginger\" {today_str}",
-            f"\"dehydrated vegetable export market\" OR \"dehydrated potato flakes\" OR \"dehydrated mushroom\" OR \"dehydrated tomato powder\" {today_str}",
+            f"(\"dehydrated onion\" OR \"dehydrated garlic\" OR \"turmeric curcumin\" OR \"banana powder\" OR \"dehydrated ginger\") AND (export OR market OR trade) {today_str}",
+            f"(\"dehydrated vegetable\" OR \"dehydrated potato flakes\" OR \"dehydrated mushroom\" OR \"dehydrated tomato powder\") AND (export OR market OR trade) {today_str}",
             
             # Topic 3: Target Markets (GCC, EU, US, Asia)
-            f"\"India GCC food trade\" OR \"UAE food import\" OR \"Saudi Arabia agri import\" {today_str}",
-            f"\"India EU food trade\" OR \"Germany food ingredient\" OR \"EU food safety regulation\" {today_str}",
-            f"\"FDA import alert India food\" OR \"US food ingredient market India\" {today_str}",
-            f"\"India Asia food trade\" OR \"Japan Korea food import India\" OR \"Singapore food import\" OR \"West Africa food import\" {today_str}",
+            f"(\"India GCC food trade\" OR \"UAE food import\" OR \"Saudi Arabia agri import\") {today_str}",
+            f"(\"India EU food trade\" OR \"Germany food ingredient\" OR \"EU food safety regulation\" OR \"Listeria\") {today_str}",
+            f"(\"FDA import alert India food\" OR \"US food ingredient market India\" OR \"Salmonella\") {today_str}",
+            f"(\"India Asia food trade\" OR \"Japan Korea food import India\" OR \"Singapore food import\" OR \"West Africa food import\") {today_str}",
             
             # Topic 4: Market Intelligence & Opportunities
-            f"\"dehydrated food buyer importer\" OR \"food ingredient procurement tender\" OR \"competitor country dehydrated veg export\" {today_str}",
+            f"(\"dehydrated food buyer\" OR \"food ingredient procurement tender\" OR \"dehydrated vegetable importer\" OR \"competitor country dehydrated veg export\") {today_str}",
             
             # Topic 5: Events, Training, Buyer-Seller Meets (Upcoming focus)
-            f"\"food trade fair expo 2026 India\" OR \"buyer seller meet India food 2026\" OR \"agri food trade show 2026\" OR \"food ingredient exhibition 2026\"",
-            f"\"APEDA\" OR \"Spices Board\" OR \"FIEO\" OR \"DGFT\" AND \"buyer seller meet\" OR \"training program\" OR \"export seminar\" OR \"export training\" 2026",
+            f"(\"food trade fair\" OR \"expo\" OR \"exhibition\" OR \"buyer seller meet\" OR \"agri food trade show\" OR \"food ingredient show\") AND (India OR Mumbai OR Delhi OR Riyadh OR GCC OR Europe) 2026",
+            f"\"FIEO\" AND (\"buyer seller meet\" OR \"reverse buyer seller\" OR \"training program\" OR \"seminar\" OR \"Nagpur\" OR \"Mumbai\" OR \"Maharashtra\") 2026",
+            f"\"APEDA\" AND (\"buyer seller meet\" OR \"Riyadh\" OR \"exhibition\" OR \"trade fair\" OR \"participation\" OR \"training\" OR \"event\") 2026",
+            f"(\"Spices Board\" OR \"DGFT\") AND (\"training\" OR \"seminar\" OR \"webinar\" OR \"buyer seller meet\" OR \"advisory\" OR \"event\") 2026",
             
             # Topic 6: AI & Technology Updates
-            f"\"AI tool Indian exporter\" OR \"AI market research tool export\" OR \"AI buyer discovery\" OR \"AI export compliance\" {today_str}",
-            f"\"AI tool small business\" OR \"AI productivity tool SME\" OR \"new AI tool launched\" OR \"site:theresanaiforit.com\" {today_str}",
-            f"\"AI market research competitor analysis\" OR \"AI report generation\" OR \"AI consulting tool\" {today_str}"
+            f"(\"AI tool Indian exporter\" OR \"AI market research tool export\" OR \"AI buyer discovery\" OR \"AI export compliance\") {today_str}",
+            f"(\"AI tool small business\" OR \"AI productivity tool SME\" OR \"new AI tool launched\" OR \"site:theresanaiforit.com\") {today_str}",
+            f"(\"AI market research competitor analysis\" OR \"AI report generation\" OR \"AI consulting tool\") {today_str}"
         ]
         
         all_search_data = []
@@ -251,18 +254,11 @@ class DailyDigestPipeline:
     # AI COMPILATION & GENERATION (Gemini API)
     # ==========================================
     def generate_digest_ai(self, raw_crawled, raw_searched):
-        """Calls Google Gemini API to compile and generate the final Daily Digest."""
-        if not self.gemini_key:
-            logging.error("GEMINI_API_KEY environment variable is not set. Cannot run AI compilation.")
-            # Fallback output in dry run
-            if self.dry_run:
-                return "## [DRY RUN] Gemini API output placeholder. (Please set GEMINI_API_KEY to generate actual digest)"
-            sys.exit("Error: GEMINI_API_KEY is required.")
-            
-        logging.info("Compiling daily digest with Gemini API...")
+        """Calls OpenAI or Gemini API to compile and generate the final Daily Digest."""
+        today_date_str = datetime.date.today().strftime("%A, %d %B %Y")
         
-        # System Prompt and Instructions (Your exact prompt template)
-        system_prompt = """You are an export business intelligence assistant for
+        # System Prompt and Instructions (Your exact prompt template with dynamic dates)
+        system_prompt = f"""You are an export business intelligence assistant for
 Yogesh Badgujar, founder of two businesses:
 
 SUPAB EXPORTS (Kalyan West, Maharashtra)
@@ -323,7 +319,7 @@ CRITICAL QUALITY RULES - NON-NEGOTIABLE
    - Never write placeholders like 'Date: Not specified', 'Venue: Not specified', 'likely India', or 'context implies'.
    - **CRITICAL EXCEPTION FOR UPCOMING B2B EVENTS / TRAINING:** You must **never miss** any upcoming B2B trade fairs, export expos, buyer-seller meets, training programs, or seminars organized by an EPC (like APEDA, Spices Board, FIEO, Spice Board India) or DGFT that are relevant to agricultural/spice exports. Include them even if some registration links or exact venues are still pending, stating the available details clearly so Yogesh is kept informed of upcoming opportunities.
 2. 🚫 FUTURE EVENTS ONLY:
-   - Today is Monday, May 25, 2026. Only include events and opportunities scheduled to take place on or after May 25, 2026. Omit past events completely.
+   - Today is {today_date_str}. Only include events and opportunities scheduled to take place on or after {today_date_str}. Omit past events completely.
 3. 🚫 NO GENERAL/IRRELEVANT NOISE:
    - Avoid including general trade news (like generic bilateral protocols) unless it directly impacts the user's specific products (onion, garlic, turmeric, banana powder, rice, mango pulp). For example, a protocol between India and Ethiopia is noise and must be excluded.
 4. ⚡ BE EXTREMELY CRISP AND DENSE:
@@ -333,6 +329,7 @@ CRITICAL QUALITY RULES - NON-NEGOTIABLE
 5. 📊 QUICK NUMBERS:
    - Always search for exchange rates (USD/INR, EUR/INR) and Nashik mandi prices for raw onion and garlic (₹/quintal) in the collected raw search data and list them cleanly.
 6. 🏛️ GOVERNMENT & POLICY:
+   - Always prioritize and extract specific notification numbers, circular numbers, or public notices (e.g., DGFT Public Notice 15/2026-27 or EU Regulation 2024/2895), exact dates, and official sources. Never write them without these identifiers.
    - Always clarify whether trade updates are (export-side) or (import-side) in the headline.
 7. Handle posts AND broad web findings are equally valid — label source clearly.
 8. Plain business English — no jargon.
@@ -415,7 +412,7 @@ Daily briefing for [Date, Day].
 
 ---
 
-🔜 WATCH THIS WEEK
+🔒 WATCH THIS WEEK
 [Max 3 items worth tracking in next 7 days — deadlines, upcoming events, policy windows]
 - [Item]
 - [Item]
@@ -426,26 +423,58 @@ Report generated: [timestamp]
 Priority handles: @CimGOI @DoC_GoI @FieoHq @PiyushGoyal @theresanaiforit + broad web intelligence across all platforms.
 """
 
-
-        try:
-            import google.generativeai as genai
-            genai.configure(api_key=self.gemini_key)
-            
-            # Using standard gemini-2.5-flash for speed and cost efficiency
-            model = genai.GenerativeModel(
-                model_name="gemini-2.5-flash",
-                system_instruction=system_prompt
-            )
-            
-            response = model.generate_content(
-                user_instruction,
-                generation_config={"temperature": 0.2}
-            )
-            
-            return response.text
-        except Exception as e:
-            logging.error(f"Gemini API call failed: {e}")
-            sys.exit(f"Error: {e}")
+        # 1. Attempt OpenAI API (gpt-4o-mini)
+        if self.openai_key:
+            logging.info("Attempting daily digest compilation using OpenAI (gpt-4o-mini)...")
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {self.openai_key}"
+            }
+            payload = {
+                "model": "gpt-4o-mini",
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_instruction}
+                ],
+                "temperature": 0.2
+            }
+            try:
+                response = requests.post("https://api.openai.com/v1/chat/completions", json=payload, headers=headers, timeout=60)
+                response.raise_for_status()
+                result_text = response.json()["choices"][0]["message"]["content"]
+                logging.info("OpenAI compilation successful!")
+                return result_text
+            except Exception as e:
+                logging.warning(f"OpenAI API call failed: {e}. Falling back to Google Gemini...")
+        
+        # 2. Fallback to Google Gemini
+        if self.gemini_key:
+            logging.info("Attempting daily digest compilation using Google Gemini...")
+            try:
+                import google.generativeai as genai
+                genai.configure(api_key=self.gemini_key)
+                model = genai.GenerativeModel(
+                    model_name="gemini-2.5-flash",
+                    system_instruction=system_prompt
+                )
+                response = model.generate_content(
+                    user_instruction,
+                    generation_config={"temperature": 0.2}
+                )
+                
+                result_text = response.text
+                if self.openai_key:
+                    # Add fallback notice if OpenAI key was present but failed
+                    result_text += "\n\n*(Compiled using Gemini backup engine)*"
+                logging.info("Gemini compilation successful!")
+                return result_text
+            except Exception as e:
+                logging.error(f"Gemini API call failed: {e}")
+                
+        # 3. Final failure if neither works
+        if self.dry_run:
+            return "## [DRY RUN] API output placeholder. (Please configure valid API keys to generate actual digest)"
+        sys.exit("Error: Both OpenAI and Gemini API calls failed, or keys are missing.")
 
     # ==========================================
     # EMAIL SENDING SYSTEM (Gmail SMTP)
