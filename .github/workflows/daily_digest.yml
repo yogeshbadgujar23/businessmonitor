@@ -46,5 +46,5 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add data/active_events.json data/shown_tools.json user_context.json
+        git add data/*.json user_context.json
         git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update daily digest state [skip ci]" && git push)

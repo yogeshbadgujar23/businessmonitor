@@ -59,6 +59,7 @@ class DailyDigestPipeline:
         # State tracking files
         self.active_events_file = os.path.join(self.base_dir, 'data', 'active_events.json')
         self.shown_tools_file = os.path.join(self.base_dir, 'data', 'shown_tools.json')
+        self.shown_intel_file = os.path.join(self.base_dir, 'data', 'shown_intel.json')
         
         # Crawler keywords
         self.update_keywords = ['notification', 'circular', 'public notice', 'press release', 'news', 'update', 'latest']
@@ -344,6 +345,17 @@ class DailyDigestPipeline:
                 logging.error(f"Failed to load shown tools: {e}")
                 
         shown_tools_list = ", ".join(shown_tools) if shown_tools else "None"
+
+        # Load shown market intel URLs
+        shown_intel = []
+        if os.path.exists(self.shown_intel_file):
+            try:
+                with open(self.shown_intel_file, 'r', encoding='utf-8') as f:
+                    shown_intel = json.load(f)
+            except Exception as e:
+                logging.error(f"Failed to load shown intel: {e}")
+                
+        shown_intel_list = ", ".join(shown_intel) if shown_intel else "None"
         
         # System Prompt and Instructions (Your exact prompt template with dynamic dates)
         system_prompt = f"""You are an export business intelligence assistant for
@@ -423,6 +435,8 @@ CRITICAL QUALITY RULES - NON-NEGOTIABLE
 8. Plain business English — no jargon.
 9. 🚫 DO NOT REPEAT SHOWN TOOLS:
    - You must NOT recommend or display any of the following AI tools that have already been shown: {shown_tools_list}.
+10. 🚫 DO NOT REPEAT SHOWN MARKET INTELLIGENCE REPORTS:
+    - You must NOT include, summarize, or recommend any market intelligence research reports or articles that link to or reference the following already shown URLs: {shown_intel_list}.
 """
 
         user_instruction = f"""
@@ -528,7 +542,10 @@ Priority handles: @CimGOI @DoC_GoI @FieoHq @PiyushGoyal @theresanaiforit + broad
 
 ### STATE UPDATE FORMAT REQUIREMENT (CRITICAL FOR SYSTEM RETENTION)
 At the very end of your response, output a JSON block wrapped inside <state_update> and </state_update> tags.
-This JSON block must contain all active events (both the persistent ones list and any new events you discovered from today's search that you decided to add) and the names of the AI tools you included in today's digest.
+This JSON block must contain:
+1. All active events (both the persistent ones list and any new events you discovered from today's search that you decided to add).
+2. The names of the AI tools you included in today's digest.
+3. The URLs of any market/product intelligence items you included in today's digest.
 Example:
 <state_update>
 {{
@@ -543,7 +560,8 @@ Example:
       "type": "domestic"
     }}
   ],
-  "tools": ["ToolName1"]
+  "tools": ["ToolName1"],
+  "intel_urls": ["https://www.example.com/report-url"]
 }}
 </state_update>
 """
@@ -887,7 +905,7 @@ Example:
             return clean_text, {}
 
     def update_state_files(self, state_data):
-        """Updates active_events.json and shown_tools.json with the new state data."""
+        """Updates active_events.json, shown_tools.json, and shown_intel.json with the new state data."""
         # 1. Update events
         new_events = state_data.get("events", [])
         if isinstance(new_events, list):
@@ -959,6 +977,34 @@ Example:
                 logging.info(f"Updated shown_tools.json. Total shown tools: {len(shown_tools)}")
             except Exception as e:
                 logging.error(f"Error writing shown_tools.json: {e}")
+
+        # 3. Update shown market intel URLs
+        new_intel = state_data.get("intel_urls", [])
+        if isinstance(new_intel, list) and new_intel:
+            shown_intel = []
+            if os.path.exists(self.shown_intel_file):
+                try:
+                    with open(self.shown_intel_file, 'r', encoding='utf-8') as f:
+                        shown_intel = json.load(f)
+                except Exception as e:
+                    logging.error(f"Error reading shown_intel.json: {e}")
+                    
+            existing_intel_lower = {i.lower().strip() for i in shown_intel if isinstance(i, str)}
+            for ni in new_intel:
+                if isinstance(ni, str) and ni.strip():
+                    ni_strip = ni.strip()
+                    if ni_strip.lower() not in existing_intel_lower:
+                        shown_intel.append(ni_strip)
+                        existing_intel_lower.add(ni_strip.lower())
+                        
+            try:
+                # Ensure data folder exists
+                os.makedirs(os.path.dirname(self.shown_intel_file), exist_ok=True)
+                with open(self.shown_intel_file, 'w', encoding='utf-8') as f:
+                    json.dump(shown_intel, f, indent=4, ensure_ascii=False)
+                logging.info(f"Updated shown_intel.json. Total shown intel URLs: {len(shown_intel)}")
+            except Exception as e:
+                logging.error(f"Error writing shown_intel.json: {e}")
 
     # ==========================================
     # CORE PIPELINE EXECUTION

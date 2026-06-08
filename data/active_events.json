@@ -7,5 +7,68 @@
         "why_it_matters": "Organized by FIEO in Maharashtra; focused on Agro & Food Processing, and Fresh Vegetables, Fruits & Cereals. High relevance for direct networking with international buyers.",
         "link": "https://www.fieo.org",
         "type": "domestic"
+    },
+    {
+        "name": "FIEO Reverse Buyer-Seller Meet (RBSM)",
+        "start_date": "2026-07-02",
+        "end_date": "2026-07-03",
+        "venue": "Nagpur, Maharashtra, India",
+        "why_it_matters": "Connect with international buyers in Agro & Food Processing, Fresh Vegetables, Fruits & Cereals sectors.",
+        "link": "https://www.fieo.org",
+        "type": "domestic"
+    },
+    {
+        "name": "EEPC India Session on Annual RoDTEP Return (ARR) – Preparation & Filing",
+        "start_date": "2026-06-12",
+        "end_date": "2026-06-12",
+        "venue": "Hybrid Mode (Kolkata & Online)",
+        "why_it_matters": "Gain understanding of RoDTEP reporting requirements and practical filing procedures for export benefits.",
+        "link": "https://in.linkedin.com/company/eepc-india",
+        "type": "domestic"
+    },
+    {
+        "name": "WTI-CWS Joint Academy on International Trade Law and Economic Policy",
+        "start_date": "2026-06-08",
+        "end_date": "2026-07-03",
+        "venue": "New Delhi, India",
+        "why_it_matters": "Offers in-depth knowledge on international trade law and policy, beneficial for export compliance and strategy.",
+        "link": "https://in.linkedin.com/company/cwsiift",
+        "type": "domestic"
+    },
+    {
+        "name": "Indusfood 2026 Ahmedabad",
+        "start_date": "2026-07-24",
+        "end_date": "2026-07-26",
+        "venue": "Helipad Exhibition Centre, Gandhinagar",
+        "why_it_matters": "Asia’s premier F&B show, offering a gateway to global food trade and networking with international buyers.",
+        "link": "https://www.instagram.com/p/DTPxpRtjhGg?hl=en",
+        "type": "domestic"
+    },
+    {
+        "name": "APEDA Summer Fancy Food Show",
+        "start_date": "2026-06-28",
+        "end_date": "2026-06-30",
+        "venue": "USA",
+        "why_it_matters": "Opportunity to showcase Indian agri and processed food products to US buyers.",
+        "link": "https://apeda.gov.in/TradeFairs",
+        "type": "international"
+    },
+    {
+        "name": "APEDA The Saudi Food Show",
+        "start_date": "2026-09-27",
+        "end_date": "2026-09-29",
+        "venue": "Riyadh, Saudi Arabia",
+        "why_it_matters": "Direct access to the Middle East food market, a key region for Supab's products.",
+        "link": "https://apeda.gov.in/TradeFairs",
+        "type": "international"
+    },
+    {
+        "name": "Pharmexcil iPHEX 2026",
+        "start_date": "2026-09-07",
+        "end_date": "2026-09-09",
+        "venue": "Bharat Mandapam, New Delhi",
+        "why_it_matters": "Connect with global pharmaceutical leaders and buyers, relevant for pharmaceutical-grade banana powder.",
+        "link": "https://in.linkedin.com/company/pharmaceuticals-export-promotion-council-of-india",
+        "type": "international"
     }
 ]

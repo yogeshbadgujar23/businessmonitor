@@ -1,6 +1,7 @@
 data/*
 !data/active_events.json
 !data/shown_tools.json
+!data/shown_intel.json
 __pycache__/
 *.pyc
 .DS_Store
