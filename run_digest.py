@@ -56,6 +56,10 @@ class DailyDigestPipeline:
         self.sites_file = os.path.join(self.base_dir, 'sites.txt')
         self.sites = self.load_sites()
         
+        # State tracking files
+        self.active_events_file = os.path.join(self.base_dir, 'data', 'active_events.json')
+        self.shown_tools_file = os.path.join(self.base_dir, 'data', 'shown_tools.json')
+        
         # Crawler keywords
         self.update_keywords = ['notification', 'circular', 'public notice', 'press release', 'news', 'update', 'latest']
         self.ignore_keywords = ['login', 'register', 'signup', 'apply', 'contact', 'about', 'help', 'search', 'lang=']
@@ -184,20 +188,65 @@ class DailyDigestPipeline:
             return ""
 
     def run_broad_search(self):
-        """Runs optimized search queries for the 6 topics and social media handles."""
+        """Runs optimized search queries for the topics and social media handles."""
         today_str = datetime.date.today().isoformat()
         
-        # 1. Social Media Handles Search (Targeted queries with strict date and proper grouping)
-        # We query the profiles of target X accounts to find recent updates in the last 24 hours
-        social_queries = [
-            f"site:x.com/dgftindia {today_str}",
-            f"(site:x.com/CimGOI OR site:x.com/DoC_GoI) {today_str}",
-            f"(site:x.com/FieoHq OR site:x.com/PiyushGoyal) {today_str}",
-            f"(site:x.com/APEDADOC OR site:x.com/AgriGoI) {today_str}",
-            f"site:x.com/theresanaiforit \"AI\" {today_str}"
-        ]
+        # Load user context to read custom social handles
+        social_handles = {
+            "x": ["dgftindia", "CimGOI", "DoC_GoI", "FieoHq", "PiyushGoyal", "APEDADOC", "AgriGoI", "theresanaiforit"],
+            "linkedin": [],
+            "instagram": []
+        }
         
-        # 2. Broad Intelligence batched queries to fit Tavily limits
+        user_context_path = os.path.join(self.base_dir, 'user_context.json')
+        if os.path.exists(user_context_path):
+            try:
+                with open(user_context_path, 'r', encoding='utf-8') as f:
+                    ucontext = json.load(f)
+                    if "social_handles" in ucontext:
+                        for platform in ["x", "linkedin", "instagram"]:
+                            if platform in ucontext["social_handles"]:
+                                social_handles[platform] = ucontext["social_handles"][platform]
+            except Exception as e:
+                logging.error(f"Failed to load user_context.json for social handles: {e}")
+
+        # 1. Social Media Handles Search
+        social_queries = []
+        
+        # Construct X/Twitter queries (grouped in 3s to save search calls)
+        x_handles = social_handles.get("x", [])
+        if x_handles:
+            for i in range(0, len(x_handles), 3):
+                chunk = x_handles[i:i+3]
+                or_terms = " OR ".join([f"site:x.com/{handle}" for handle in chunk])
+                social_queries.append(f"({or_terms}) {today_str}")
+
+        # Construct LinkedIn queries (grouped in 2s)
+        # Supports both slugs and company names
+        linkedin_handles = social_handles.get("linkedin", [])
+        if linkedin_handles:
+            for i in range(0, len(linkedin_handles), 2):
+                chunk = linkedin_handles[i:i+2]
+                terms = []
+                for handle in chunk:
+                    if " " in handle or "(" in handle:
+                        # Clean company name
+                        clean_name = re.sub(r'\(.*?\)', '', handle).strip()
+                        terms.append(f'site:linkedin.com/company "{clean_name}"')
+                    else:
+                        terms.append(f"site:linkedin.com/company/{handle} OR site:linkedin.com/in/{handle}")
+                or_terms = " OR ".join(terms)
+                social_queries.append(f"({or_terms}) {today_str}")
+
+        # Construct Instagram queries (grouped in 2s)
+        instagram_handles = social_handles.get("instagram", [])
+        if instagram_handles:
+            for i in range(0, len(instagram_handles), 2):
+                chunk = instagram_handles[i:i+2]
+                or_terms = " OR ".join([f"site:instagram.com/{handle}" for handle in chunk])
+                social_queries.append(f"({or_terms}) {today_str}")
+
+        # 2. Broad Intelligence batched queries
         topic_queries = [
             # Currency & Mandi Prices (Strictly fetch today's rates/prices)
             f"(\"USD/INR\" OR \"EUR/INR\" exchange rate) AND (\"Nashik onion price\" OR \"Nashik garlic price\" OR \"turmeric price\" mandi) {today_str}",
@@ -224,6 +273,9 @@ class DailyDigestPipeline:
             f"\"APEDA\" AND (\"buyer seller meet\" OR \"Riyadh\" OR \"exhibition\" OR \"trade fair\" OR \"participation\" OR \"training\" OR \"event\") 2026",
             f"(\"Spices Board\" OR \"DGFT\") AND (\"training\" OR \"seminar\" OR \"webinar\" OR \"buyer seller meet\" OR \"advisory\" OR \"event\") 2026",
             
+            # Dedicated Maharashtra Buyer-Seller Meets and Exporter events search
+            f"(\"buyer seller meet\" OR \"reverse buyer seller\" OR \"RBSM\" OR \"B2B meet\" OR \"exporters meet\" OR \"exporter workshop\" OR \"export seminar\") AND (Maharashtra OR Mumbai OR Pune OR Nagpur OR Nashik OR Aurangabad OR Thane) 2026",
+
             # Topic 6: AI & Technology Updates
             f"(\"AI tool Indian exporter\" OR \"AI market research tool export\" OR \"AI buyer discovery\" OR \"AI export compliance\") {today_str}",
             f"(\"AI tool small business\" OR \"AI productivity tool SME\" OR \"new AI tool launched\" OR \"site:theresanaiforit.com\") {today_str}",
@@ -256,6 +308,42 @@ class DailyDigestPipeline:
     def generate_digest_ai(self, raw_crawled, raw_searched):
         """Calls OpenAI or Gemini API to compile and generate the final Daily Digest."""
         today_date_str = datetime.date.today().strftime("%A, %d %B %Y")
+        
+        # Load and filter active events
+        active_events = []
+        if os.path.exists(self.active_events_file):
+            try:
+                with open(self.active_events_file, 'r', encoding='utf-8') as f:
+                    active_events = json.load(f)
+            except Exception as e:
+                logging.error(f"Failed to load active events: {e}")
+        
+        # Filter out expired events
+        today_str = datetime.date.today().isoformat()
+        active_events = [e for e in active_events if e.get("end_date", "") >= today_str]
+        
+        # Format active events to pass to the LLM
+        active_events_str = ""
+        if active_events:
+            for e in active_events:
+                active_events_str += f"- Name: {e['name']}\n"
+                active_events_str += f"  Type: {e.get('type', 'domestic')}\n"
+                active_events_str += f"  Date: {e.get('start_date')} to {e.get('end_date')} | Venue: {e.get('venue')}\n"
+                active_events_str += f"  Why it matters: {e.get('why_it_matters')}\n"
+                active_events_str += f"  Register/Info: {e.get('link')}\n\n"
+        else:
+            active_events_str = "No currently active events in the tracker.\n"
+
+        # Load shown tools
+        shown_tools = []
+        if os.path.exists(self.shown_tools_file):
+            try:
+                with open(self.shown_tools_file, 'r', encoding='utf-8') as f:
+                    shown_tools = json.load(f)
+            except Exception as e:
+                logging.error(f"Failed to load shown tools: {e}")
+                
+        shown_tools_list = ", ".join(shown_tools) if shown_tools else "None"
         
         # System Prompt and Instructions (Your exact prompt template with dynamic dates)
         system_prompt = f"""You are an export business intelligence assistant for
@@ -333,6 +421,8 @@ CRITICAL QUALITY RULES - NON-NEGOTIABLE
    - Always clarify whether trade updates are (export-side) or (import-side) in the headline.
 7. Handle posts AND broad web findings are equally valid — label source clearly.
 8. Plain business English — no jargon.
+9. 🚫 DO NOT REPEAT SHOWN TOOLS:
+   - You must NOT recommend or display any of the following AI tools that have already been shown: {shown_tools_list}.
 """
 
         user_instruction = f"""
@@ -344,6 +434,9 @@ Read the content carefully, apply the strict relevance filters and critical qual
 
 ### RAW SEARCH & SOCIAL INTELLIGENCE (TAVILY & DDG)
 {raw_searched}
+
+### PERSISTENT ACTIVE B2B EVENTS (Already tracked, keep these in the digest unless concluded)
+{active_events_str}
 
 ### EMAIL REPORT FORMAT REQUIREMENT
 Subject: 🌏 Supab Export Intel — [Today's Date]
@@ -382,19 +475,30 @@ Daily briefing for [Date, Day].
 
 ---
 
-🤝 EVENTS & OPPORTUNITIES
-[Trade fairs, expos, meets, training, seminars — upcoming or newly announced. Strictly no placeholders or past events.]
+🇮🇳 DOMESTIC B2B EVENTS & MEETS
+[Trade fairs, expos, meets, training, seminars happening in India, particularly Maharashtra (Mumbai, Pune, Nagpur, Nashik, etc.). You must include all the persistent active events listed above if they are domestic, and add any new domestic B2B meets found in today's search. Keep showing domestic events until they are concluded.]
 - [Event Name]
   Date: | Venue:
   Why it matters: [one sentence — who attends, what opportunity it creates for Supab]
   Register/Info: [link]
 
-[Max 3 items. If nothing: "No relevant events in the last 24 hours."]
+[Max 4 items. If nothing: "No relevant domestic B2B events or meets today."]
+
+---
+
+🌏 INTERNATIONAL B2B EVENTS
+[Trade fairs, expos, meets outside India (e.g. GCC, Europe, US) that the user can leverage for leads or digital advertising. You must include all the persistent active events listed above if they are international, and add any new international ones found.]
+- [Event Name]
+  Date: | Venue:
+  Why it matters: [one sentence — who attends, what opportunity it creates for Supab]
+  Register/Info: [link]
+
+[Max 3 items. If nothing: "No relevant international B2B events today."]
 
 ---
 
 🤖 AI & TOOLS
-[Useful for: export operations, market research, report writing, client consulting, buyer outreach, or daily SME tasks. All three angles covered.]
+[Useful for: export operations, market research, report writing, client consulting, buyer outreach, or daily SME tasks. All three angles covered. Remember, DO NOT recommend any tools listed as already shown.]
 - [Tool name] — [Export / Operations / Research]
   What it does: [one line]
   How you can use it: [specific use case for Supab Exports or Supab Digital]
@@ -421,6 +525,27 @@ Daily briefing for [Date, Day].
 ---
 Report generated: [timestamp]
 Priority handles: @CimGOI @DoC_GoI @FieoHq @PiyushGoyal @theresanaiforit + broad web intelligence across all platforms.
+
+### STATE UPDATE FORMAT REQUIREMENT (CRITICAL FOR SYSTEM RETENTION)
+At the very end of your response, output a JSON block wrapped inside <state_update> and </state_update> tags.
+This JSON block must contain all active events (both the persistent ones list and any new events you discovered from today's search that you decided to add) and the names of the AI tools you included in today's digest.
+Example:
+<state_update>
+{{
+  "events": [
+    {{
+      "name": "FIEO Nagpur Reverse Buyer-Seller Meet (RBSM)",
+      "start_date": "2026-07-02",
+      "end_date": "2026-07-03",
+      "venue": "Nagpur, Maharashtra, India",
+      "why_it_matters": "Organized by FIEO in Maharashtra; focused on Agro & Food Processing, and Fresh Vegetables, Fruits & Cereals. High relevance for direct networking with international buyers.",
+      "link": "https://www.fieo.org",
+      "type": "domestic"
+    }}
+  ],
+  "tools": ["ToolName1"]
+}}
+</state_update>
 """
 
         # 1. Attempt OpenAI API (gpt-4o-mini)
@@ -499,34 +624,42 @@ Priority handles: @CimGOI @DoC_GoI @FieoHq @PiyushGoyal @theresanaiforit + broad
                 continue
                 
             # Headers
-            if line_strip.startswith("📋"):
+            if line_strip.startswith("📋") or "WHAT MATTERS TODAY" in line_strip.upper():
                 commit_section()
                 current_section.append('<div class="section-card urgent">')
                 current_section.append(f'<h2 class="section-title">🚨 WHAT MATTERS TODAY</h2>')
-            elif line_strip.startswith("🏛️"):
+            elif line_strip.startswith("🏛️") or "GOVERNMENT & POLICY" in line_strip.upper():
                 commit_section()
                 current_section.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">🏛️ GOVERNMENT & POLICY</h2>')
-            elif line_strip.startswith("📦"):
+            elif line_strip.startswith("📦") or "MARKET & PRODUCT" in line_strip.upper():
                 commit_section()
                 current_section.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">📦 MARKET & PRODUCT INTEL</h2>')
-            elif line_strip.startswith("🤝"):
+            elif "DOMESTIC B2B EVENTS" in line_strip.upper() or "DOMESTIC EVENTS" in line_strip.upper():
+                commit_section()
+                current_section.append('<div class="section-card">')
+                current_section.append(f'<h2 class="section-title">🇮🇳 DOMESTIC B2B EVENTS & MEETS</h2>')
+            elif "INTERNATIONAL B2B EVENTS" in line_strip.upper() or "INTERNATIONAL EVENTS" in line_strip.upper():
+                commit_section()
+                current_section.append('<div class="section-card">')
+                current_section.append(f'<h2 class="section-title">🌏 INTERNATIONAL B2B EVENTS</h2>')
+            elif line_strip.startswith("🤝") or "EVENTS & OPPORTUNITIES" in line_strip.upper():
                 commit_section()
                 current_section.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">🤝 EVENTS & OPPORTUNITIES</h2>')
-            elif line_strip.startswith("🤖"):
+            elif line_strip.startswith("🤖") or "AI & TOOLS" in line_strip.upper():
                 commit_section()
                 current_section.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">🤖 AI & TOOLS</h2>')
-            elif line_strip.startswith("📊"):
+            elif line_strip.startswith("📊") or "QUICK NUMBERS" in line_strip.upper():
                 commit_section()
                 current_section.append('<div class="section-card highlight">')
                 current_section.append(f'<h2 class="section-title">📊 QUICK NUMBERS</h2>')
-            elif line_strip.startswith("🔜"):
+            elif line_strip.startswith("🔜") or line_strip.startswith("🔒") or "WATCH THIS WEEK" in line_strip.upper():
                 commit_section()
                 current_section.append('<div class="section-card">')
-                current_section.append(f'<h2 class="section-title">🔜 WATCH THIS WEEK</h2>')
+                current_section.append(f'<h2 class="section-title">🔒 WATCH THIS WEEK</h2>')
             elif line_strip == "---":
                 commit_section()
                 # Simple divider or end card
@@ -724,6 +857,109 @@ Priority handles: @CimGOI @DoC_GoI @FieoHq @PiyushGoyal @theresanaiforit + broad
             logging.error(f"Failed to deliver email over SMTP: {e}")
             sys.exit(f"SMTP Error: {e}")
 
+    def parse_state_update(self, text_content):
+        """Extracts the <state_update> block from LLM text, parses the JSON, updates state files, and returns clean text."""
+        pattern = re.compile(r'<state_update>(.*?)</state_update>', re.DOTALL)
+        match = pattern.search(text_content)
+        if not match:
+            return text_content, {}
+
+        state_json_str = match.group(1).strip()
+        
+        # Clean markdown code fences if present
+        if state_json_str.startswith("```"):
+            lines = state_json_str.split('\n')
+            if lines[0].startswith("```"):
+                lines = lines[1:]
+            if lines[-1].startswith("```"):
+                lines = lines[:-1]
+            state_json_str = "\n".join(lines).strip()
+
+        try:
+            state_data = json.loads(state_json_str)
+            # Remove the state_update tag from the text
+            clean_text = pattern.sub('', text_content).strip()
+            return clean_text, state_data
+        except Exception as e:
+            logging.error(f"Failed to parse state_update JSON: {e}")
+            # Still clean the text so it isn't emailed to the user
+            clean_text = pattern.sub('', text_content).strip()
+            return clean_text, {}
+
+    def update_state_files(self, state_data):
+        """Updates active_events.json and shown_tools.json with the new state data."""
+        # 1. Update events
+        new_events = state_data.get("events", [])
+        if isinstance(new_events, list):
+            # Load existing
+            active_events = []
+            if os.path.exists(self.active_events_file):
+                try:
+                    with open(self.active_events_file, 'r', encoding='utf-8') as f:
+                        active_events = json.load(f)
+                except Exception as e:
+                    logging.error(f"Error reading active_events.json: {e}")
+            
+            # Merge case-insensitively by event name
+            event_map = {e["name"].lower().strip(): e for e in active_events if "name" in e}
+            for ne in new_events:
+                if not isinstance(ne, dict) or "name" not in ne:
+                    continue
+                name_key = ne["name"].lower().strip()
+                # Ensure type is domestic or international
+                ne["type"] = ne.get("type", "domestic").lower()
+                if ne["type"] not in ["domestic", "international"]:
+                    ne["type"] = "domestic"
+                
+                # Check date formats
+                for dkey in ["start_date", "end_date"]:
+                    val = ne.get(dkey, "")
+                    if not isinstance(val, str) or not re.match(r'^\d{4}-\d{2}-\d{2}$', val):
+                        ne[dkey] = datetime.date.today().isoformat()
+                
+                event_map[name_key] = ne
+                
+            # Filter expired events
+            today_str = datetime.date.today().isoformat()
+            updated_events = [e for e in event_map.values() if e.get("end_date", "") >= today_str]
+            
+            try:
+                # Ensure data folder exists
+                os.makedirs(os.path.dirname(self.active_events_file), exist_ok=True)
+                with open(self.active_events_file, 'w', encoding='utf-8') as f:
+                    json.dump(updated_events, f, indent=4, ensure_ascii=False)
+                logging.info(f"Updated active_events.json with {len(updated_events)} active events.")
+            except Exception as e:
+                logging.error(f"Error writing active_events.json: {e}")
+
+        # 2. Update shown tools
+        new_tools = state_data.get("tools", [])
+        if isinstance(new_tools, list) and new_tools:
+            shown_tools = []
+            if os.path.exists(self.shown_tools_file):
+                try:
+                    with open(self.shown_tools_file, 'r', encoding='utf-8') as f:
+                        shown_tools = json.load(f)
+                except Exception as e:
+                    logging.error(f"Error reading shown_tools.json: {e}")
+                    
+            existing_tools_lower = {t.lower().strip() for t in shown_tools if isinstance(t, str)}
+            for nt in new_tools:
+                if isinstance(nt, str) and nt.strip():
+                    nt_strip = nt.strip()
+                    if nt_strip.lower() not in existing_tools_lower:
+                        shown_tools.append(nt_strip)
+                        existing_tools_lower.add(nt_strip.lower())
+                        
+            try:
+                # Ensure data folder exists
+                os.makedirs(os.path.dirname(self.shown_tools_file), exist_ok=True)
+                with open(self.shown_tools_file, 'w', encoding='utf-8') as f:
+                    json.dump(shown_tools, f, indent=4, ensure_ascii=False)
+                logging.info(f"Updated shown_tools.json. Total shown tools: {len(shown_tools)}")
+            except Exception as e:
+                logging.error(f"Error writing shown_tools.json: {e}")
+
     # ==========================================
     # CORE PIPELINE EXECUTION
     # ==========================================
@@ -756,15 +992,20 @@ Priority handles: @CimGOI @DoC_GoI @FieoHq @PiyushGoyal @theresanaiforit + broad
         logging.info("[Step 3/4] Synthesizing Intelligence with Gemini API...")
         digest_text = self.generate_digest_ai(crawled_data, searched_data)
         
+        # Extract and update state
+        clean_digest, state_data = self.parse_state_update(digest_text)
+        if state_data:
+            self.update_state_files(state_data)
+        
         # Save generated digest markdown file
         digest_file = os.path.join(daily_dir, "digest.md")
         with open(digest_file, "w", encoding="utf-8") as f:
-            f.write(digest_text)
+            f.write(clean_digest)
         logging.info(f"Saved completed markdown digest to {digest_file}")
         
         # 4. Email report
         logging.info("[Step 4/4] Delivering Digest Briefing Email...")
-        self.send_email(digest_text)
+        self.send_email(clean_digest)
         
         logging.info("=" * 60)
         logging.info("SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE COMPLETED")
