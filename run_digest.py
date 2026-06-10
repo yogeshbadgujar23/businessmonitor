@@ -19,13 +19,23 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # --- Logging Setup ---
+log_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daily_digest_run.log')
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.StreamHandler(sys.stdout)
+        logging.StreamHandler(sys.stdout),
+        logging.FileHandler(log_file, mode='w', encoding='utf-8')
     ]
 )
+
+def handle_exception(exc_type, exc_value, exc_traceback):
+    if issubclass(exc_type, KeyboardInterrupt):
+        sys.__excepthook__(exc_type, exc_value, exc_traceback)
+        return
+    logging.critical("Unhandled exception", exc_info=(exc_type, exc_value, exc_traceback))
+
+sys.excepthook = handle_exception
 
 # --- Default Fallback API Key ---
 # Using the Tavily API key provided by the user
