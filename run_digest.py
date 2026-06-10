@@ -102,6 +102,17 @@ class DailyDigestPipeline:
             lines = f.readlines()
         return [line.strip() for line in lines if line.strip() and not line.strip().startswith('#')]
 
+    def clean_text_for_llm(self, text):
+        if not text:
+            return ""
+        # Normalize newlines
+        text = re.sub(r'\r\n', '\n', text)
+        # Replace 3 or more consecutive newlines with 2 newlines (to preserve paragraphs)
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        # Replace multiple spaces or tabs with a single space
+        text = re.sub(r'[ \t]+', ' ', text)
+        return text.strip()
+
     # ==========================================
     # CRAWLING & SCRAPING ENGINE (sites.txt)
     # ==========================================
@@ -619,29 +630,43 @@ Example:
         
         # 2. Fallback to Google Gemini
         if self.gemini_key:
-            logging.info("Attempting daily digest compilation using Google Gemini...")
-            try:
-                import google.generativeai as genai
-                genai.configure(api_key=self.gemini_key)
-                model = genai.GenerativeModel(
-                    model_name="gemini-2.5-flash",
-                    system_instruction=system_prompt
-                )
-                response = model.generate_content(
-                    user_instruction,
-                    generation_config={"temperature": 0.2}
-                )
-                
-                result_text = response.text
-                if self.openai_key:
-                    # Add fallback notice if OpenAI key was present but failed
-                    result_text += "\n\n*(Compiled using Gemini backup engine)*"
-                logging.info("Gemini compilation successful!")
-                return result_text
-            except Exception as e:
-                import traceback
-                logging.error(f"Gemini API call failed: {e}")
-                logging.error(traceback.format_exc())
+            for attempt in range(1, 4):
+                logging.info(f"Attempting daily digest compilation using Google Gemini (Attempt {attempt}/3)...")
+                try:
+                    import google.generativeai as genai
+                    genai.configure(api_key=self.gemini_key)
+                    model = genai.GenerativeModel(
+                        model_name="gemini-2.5-flash",
+                        system_instruction=system_prompt
+                    )
+                    response = model.generate_content(
+                        user_instruction,
+                        generation_config={"temperature": 0.2}
+                    )
+                    
+                    result_text = response.text
+                    if self.openai_key:
+                        # Add fallback notice if OpenAI key was present but failed
+                        result_text += "\n\n*(Compiled using Gemini backup engine)*"
+                    logging.info("Gemini compilation successful!")
+                    return result_text
+                except Exception as e:
+                    import traceback
+                    is_rate_limit = "ResourceExhausted" in type(e).__name__ or "429" in str(e) or "quota" in str(e).lower()
+                    if is_rate_limit:
+                        logging.warning(f"Gemini API rate limited (429) on attempt {attempt}: {e}")
+                        if attempt < 3:
+                            logging.info("Waiting 65 seconds before retrying...")
+                            time.sleep(65)
+                            continue
+                    
+                    logging.error(f"Gemini API call failed on attempt {attempt}: {e}")
+                    logging.error(traceback.format_exc())
+                    if attempt < 3:
+                        logging.info("Waiting 10 seconds before retrying...")
+                        time.sleep(10)
+                    else:
+                        raise e
                 
         # 3. Final failure if neither works
         if self.dry_run:
@@ -1046,12 +1071,14 @@ Example:
         # 1. Scrape configured target sites (DGFT, etc.)
         logging.info("[Step 1/4] Deep Scanning Target Regulatory Sites...")
         crawled_data = self.crawl_target_sites()
-        logging.info(f"Scraped {len(crawled_data)} chars of raw text from regulatory targets.")
+        crawled_data = self.clean_text_for_llm(crawled_data)
+        logging.info(f"Scraped & cleaned {len(crawled_data)} chars of raw text from regulatory targets.")
         
         # 2. Execute broad web search & handle checking
         logging.info("[Step 2/4] Conducting 24-Hour Web Intelligence Searches...")
         searched_data = self.run_broad_search()
-        logging.info(f"Retrieved {len(searched_data)} chars of broad web search results.")
+        searched_data = self.clean_text_for_llm(searched_data)
+        logging.info(f"Retrieved & cleaned {len(searched_data)} chars of broad web search results.")
         
         # Save aggregated raw files for historical tracking (just like monitor.py did)
         today = datetime.date.today().isoformat()
