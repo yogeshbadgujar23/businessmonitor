@@ -44,6 +44,23 @@ class DailyDigestPipeline:
         # Email settings
         self.smtp_email = os.environ.get("SMTP_EMAIL", "yogeshgujar@gmail.com")
         self.smtp_password = os.environ.get("SMTP_PASSWORD")  # Gmail App Password
+
+        # Environment Diagnostics
+        logging.info("=== ENV DIAGNOSTICS ===")
+        for name, val in [
+            ("GEMINI_API_KEY", self.gemini_key),
+            ("OPENAI_API_KEY", self.openai_key),
+            ("TAVILY_API_KEY", self.tavily_key),
+            ("SMTP_EMAIL", self.smtp_email),
+            ("SMTP_PASSWORD", self.smtp_password),
+        ]:
+            if val:
+                val_str = str(val).strip()
+                masked = f"{val_str[:4]}...{val_str[-4:]}" if len(val_str) > 8 else "too_short"
+                logging.info(f"  {name}: SET (len={len(val_str)}, pattern={masked})")
+            else:
+                logging.info(f"  {name}: NOT SET")
+        logging.info("=======================")
         
         # Scraper session
         self.session = requests.Session()
@@ -612,7 +629,9 @@ Example:
                 logging.info("Gemini compilation successful!")
                 return result_text
             except Exception as e:
+                import traceback
                 logging.error(f"Gemini API call failed: {e}")
+                logging.error(traceback.format_exc())
                 
         # 3. Final failure if neither works
         if self.dry_run:

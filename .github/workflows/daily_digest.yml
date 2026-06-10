@@ -4,6 +4,9 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     # 2:41 AM UTC corresponds to 8:11 AM IST. 
     # Using an off-peak minute (41 instead of 30) bypasses GitHub's heavily congested top-of-the-hour queue.
