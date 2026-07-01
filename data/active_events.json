@@ -36,15 +36,6 @@
         "type": "domestic"
     },
     {
-        "name": "APEDA Summer Fancy Food Show",
-        "start_date": "2026-06-28",
-        "end_date": "2026-06-30",
-        "venue": "USA",
-        "why_it_matters": "Opportunity to showcase dehydrated vegetables and spices to the North American specialty food market.",
-        "link": "https://apeda.gov.in/TradeFairs",
-        "type": "international"
-    },
-    {
         "name": "APEDA The Saudi Food Show",
         "start_date": "2026-09-27",
         "end_date": "2026-09-29",
@@ -61,5 +52,185 @@
         "why_it_matters": "Relevant for exploring pharmaceutical-grade banana powder opportunities and connecting with buyers in the pharma sector for Supab Exports.",
         "link": "https://in.linkedin.com/company/pharmaceuticals-export-promotion-council-of-india",
         "type": "domestic"
+    },
+    {
+        "name": "Food & Drink Processing Expo 2026",
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-03",
+        "venue": "CODISSIA, Coimbatore, India",
+        "why_it_matters": "Explore innovations in food processing, connect with machinery suppliers, and network with industry leaders.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "domestic"
+    },
+    {
+        "name": "Seafood Expo Bharat 2026",
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-03",
+        "venue": "Chennai Trade Centre, Chennai, India",
+        "why_it_matters": "Major food expo offering networking opportunities with international food buyers and logistics providers.",
+        "link": "https://seafoodexpobharat.com",
+        "type": "domestic"
+    },
+    {
+        "name": "AI Workshop on Crisis Management",
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-01",
+        "venue": "Bangalore, India",
+        "why_it_matters": "Gain insights into AI applications for crisis management, beneficial for Supab Digital's consulting services.",
+        "link": "https://in.linkedin.com/company/ikigailaw",
+        "type": "domestic"
+    },
+    {
+        "name": "India–GCC Buyer-Seller Meet 2026",
+        "start_date": "2026-07-15",
+        "end_date": "2026-07-15",
+        "venue": "Dubai, UAE",
+        "why_it_matters": "Direct access to importers, distributors, retailers, and HORECA buyers from across the GCC region for your food & beverage products.",
+        "link": "https://www.facebook.com/TPCIIndia/posts/looking-to-expand-your-food-beverage-business-across-the-gccjoin-the-indiagcc-bu/1328062376169704",
+        "type": "international"
+    },
+    {
+        "name": "Food Science and Human Nutrition (IFHN-2026)",
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-02",
+        "venue": "Belstay Roma Aurelia, Rome, Italy",
+        "why_it_matters": "Stay updated on global food science trends and network with researchers, potentially identifying new product development or market insights.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "international"
+    },
+    {
+        "name": "Agribusiness Trade Mission to Accra, Ghana (USDA FAS)",
+        "start_date": "2026-09-22",
+        "end_date": "2026-09-25",
+        "venue": "Accra, Ghana",
+        "why_it_matters": "Explore growing West African market demand for healthy food preparations and ingredients, potentially including dehydrated foods.",
+        "link": "https://www.linkedin.com/company/usda-foreign-agricultural-service",
+        "type": "international"
+    },
+    {
+        "name": "India HoReCa Expo 2026",
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-03",
+        "venue": "Codissia Trade Fair Complex, Tamilnadu, India",
+        "why_it_matters": "Connect with food service companies, hospitality groups, and equipment suppliers.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "domestic"
+    },
+    {
+        "name": "Food A'Fair 2026",
+        "start_date": "2026-07-02",
+        "end_date": "2026-07-04",
+        "venue": "HITEX Exhibition Centre, Hyderabad, India",
+        "why_it_matters": "Connect with food & beverage producers and retail & wholesale traders.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "domestic"
+    },
+    {
+        "name": "ISFA National Webinar on \"Nine Years of GST\"",
+        "start_date": "2026-07-06",
+        "end_date": "2026-07-06",
+        "venue": "Online",
+        "why_it_matters": "Gain insights into GST litigation, beneficial for Supab Digital's export compliance guidance.",
+        "link": "https://in.linkedin.com/company/indian-small-business-and-franchise-association",
+        "type": "domestic"
+    },
+    {
+        "name": "APEDA 2nd Edition of the International Reverse Buyer - Seller Meet (RBSM)",
+        "start_date": "2026-07-27",
+        "end_date": "2026-07-28",
+        "venue": "Gyan Bhawan, Patna, Bihar",
+        "why_it_matters": "Opportunity to showcase agri and processed food products to international buyers.",
+        "link": "https://apeda.gov.in/announcements",
+        "type": "domestic"
+    },
+    {
+        "name": "WAREMAT Exhibition",
+        "start_date": "2026-07-30",
+        "end_date": "2026-08-01",
+        "venue": "Chennai Trade Centre, Chennai, India",
+        "why_it_matters": "Explore solutions in warehousing, material handling, logistics, and supply chain management.",
+        "link": "https://in.linkedin.com/company/indian-exhibition-industry-association",
+        "type": "domestic"
+    },
+    {
+        "name": "Fi India 2026",
+        "start_date": "2026-08-26",
+        "end_date": "2026-08-28",
+        "venue": "Bombay Exhibition Center (BEC), Mumbai, India",
+        "why_it_matters": "India's leading food ingredients event to network with industry tastemakers and discover F&B trends.",
+        "link": "https://www.figlobal.com/india",
+        "type": "domestic"
+    },
+    {
+        "name": "Foodpro 2026",
+        "start_date": "2026-08-07",
+        "end_date": "2026-08-09",
+        "venue": "Chennai Trade Centre, Chennai, India",
+        "why_it_matters": "Premier B2B exhibition focusing on food technology and processing.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "domestic"
+    },
+    {
+        "name": "Food India Expo 2026",
+        "start_date": "2026-09-09",
+        "end_date": "2026-09-11",
+        "venue": "CIDCO Exhibition Centre, Vashi, Navi Mumbai, India",
+        "why_it_matters": "Biggest international exhibition for spices, food grains, and allied food industry.",
+        "link": "https://www.foodindia.co",
+        "type": "domestic"
+    },
+    {
+        "name": "ICRISAT International Conference 2026",
+        "start_date": "2026-09-10",
+        "end_date": "2026-09-12",
+        "venue": "NASC Complex, New Delhi, India",
+        "why_it_matters": "Platform for researchers and policymakers to discuss transforming dryland agriculture.",
+        "link": "https://ke.linkedin.com/company/icrisat",
+        "type": "domestic"
+    },
+    {
+        "name": "FIEO Training Program in International Export Business",
+        "start_date": "2026-07-16",
+        "end_date": "2026-07-16",
+        "venue": "Kanpur, India",
+        "why_it_matters": "Offers practical insights into international export business in Hindi, beneficial for Supab Digital's clients.",
+        "link": "https://fieo.org/MFR",
+        "type": "domestic"
+    },
+    {
+        "name": "29th National Conference on e-Governance 2026",
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-02",
+        "venue": "Jaipur, Rajasthan, India",
+        "why_it_matters": "Explore how digital innovation can create more efficient, secure, and citizen-focused governance, relevant for Supab Digital.",
+        "link": "https://in.linkedin.com/company/istartrajasthan",
+        "type": "domestic"
+    },
+    {
+        "name": "India–US Trade & Investment Connect 2026 (Buyer–Seller Meet)",
+        "start_date": "2026-07-30",
+        "end_date": "2026-07-30",
+        "venue": "Hotel Taj Coromandel, Chennai, India",
+        "why_it_matters": "Forge meaningful business partnerships with leading Indian manufacturers, suppliers, and exporters.",
+        "link": "https://in.linkedin.com/company/iaccindia",
+        "type": "domestic"
+    },
+    {
+        "name": "HOTELEX Chengdu 2026",
+        "start_date": "2026-07-02",
+        "end_date": "2026-07-04",
+        "venue": "Chengdu Century City New International Exhibition & Convention Center, Chengdu, Sichuan, China",
+        "why_it_matters": "International trade fair for the hotel, catering, and food service industry.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "international"
+    },
+    {
+        "name": "Foodies Festival Christmas Tatton Park 2026",
+        "start_date": "2026-07-10",
+        "end_date": "2026-07-12",
+        "venue": "Tatton Park, Knutsford, United Kingdom",
+        "why_it_matters": "Showcases food and beverage products, equipment, and services for retail trade.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "international"
     }
 ]
