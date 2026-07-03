@@ -81,15 +81,6 @@
         "type": "international"
     },
     {
-        "name": "Food Science and Human Nutrition (IFHN-2026)",
-        "start_date": "2026-07-01",
-        "end_date": "2026-07-02",
-        "venue": "Belstay Roma Aurelia, Rome, Italy",
-        "why_it_matters": "Stay updated on global food science trends and network with researchers, potentially identifying new product development or market insights.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "international"
-    },
-    {
         "name": "Agribusiness Trade Mission to Accra, Ghana (USDA FAS)",
         "start_date": "2026-09-22",
         "end_date": "2026-09-25",
@@ -157,7 +148,7 @@
         "start_date": "2026-08-07",
         "end_date": "2026-08-09",
         "venue": "Chennai Trade Centre, Chennai, India",
-        "why_it_matters": "Premier B2B exhibition focusing on food technology and processing.",
+        "why_it_matters": "Premier B2B exhibition focusing on food technology and processing, ideal for exploring new machinery and processes for dehydrated foods.",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
         "type": "domestic"
     },
@@ -166,7 +157,7 @@
         "start_date": "2026-09-09",
         "end_date": "2026-09-11",
         "venue": "CIDCO Exhibition Centre, Vashi, Navi Mumbai, India",
-        "why_it_matters": "Biggest international exhibition for spices, food grains, and allied food industry.",
+        "why_it_matters": "Biggest international exhibition for spices, food grains, and allied food industry, offering extensive networking opportunities.",
         "link": "https://www.foodindia.co",
         "type": "domestic"
     },
@@ -175,7 +166,7 @@
         "start_date": "2026-09-10",
         "end_date": "2026-09-12",
         "venue": "NASC Complex, New Delhi, India",
-        "why_it_matters": "Platform for researchers and policymakers to discuss transforming dryland agriculture.",
+        "why_it_matters": "Platform for researchers and policymakers to discuss transforming dryland agriculture, relevant for sourcing and sustainable practices.",
         "link": "https://ke.linkedin.com/company/icrisat",
         "type": "domestic"
     },
@@ -186,15 +177,6 @@
         "venue": "Kanpur, India",
         "why_it_matters": "Offers practical insights into international export business in Hindi, beneficial for Supab Digital's clients.",
         "link": "https://fieo.org/MFR",
-        "type": "domestic"
-    },
-    {
-        "name": "29th National Conference on e-Governance 2026",
-        "start_date": "2026-07-01",
-        "end_date": "2026-07-02",
-        "venue": "Jaipur, Rajasthan, India",
-        "why_it_matters": "Explore how digital innovation can create more efficient, secure, and citizen-focused governance, relevant for Supab Digital.",
-        "link": "https://in.linkedin.com/company/istartrajasthan",
         "type": "domestic"
     },
     {
@@ -211,7 +193,7 @@
         "start_date": "2026-07-02",
         "end_date": "2026-07-04",
         "venue": "Chengdu Century City New International Exhibition & Convention Center, Chengdu, Sichuan, China",
-        "why_it_matters": "International trade fair for the hotel, catering, and food service industry.",
+        "why_it_matters": "International trade fair for the hotel, catering, and food service industry, offering potential buyer connections for dehydrated products.",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
         "type": "international"
     },
@@ -220,26 +202,8 @@
         "start_date": "2026-07-10",
         "end_date": "2026-07-12",
         "venue": "Tatton Park, Knutsford, United Kingdom",
-        "why_it_matters": "Showcases food and beverage products, equipment, and services for retail trade.",
+        "why_it_matters": "Showcases food and beverage products, equipment, and services for retail trade in the UK market.",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "international"
-    },
-    {
-        "name": "FICCI Ladies Organisation - FLO: \"The Women Behind What India Eats\"",
-        "start_date": "2026-07-02",
-        "end_date": "2026-07-02",
-        "venue": "FICCI Federation House, New Delhi, India",
-        "why_it_matters": "Panel discussion on the food processing industry, offering insights and networking with key women leaders.",
-        "link": "https://in.linkedin.com/company/ficci-flo-headquaters",
-        "type": "domestic"
-    },
-    {
-        "name": "NZIFST Conference",
-        "start_date": "2026-06-30",
-        "end_date": "2026-07-02",
-        "venue": "AUT North Campus, Tāmaki Makaurau Auckland, New Zealand",
-        "why_it_matters": "Stay updated on global food science trends and network with researchers, potentially identifying new product development or market insights for Supab Exports.",
-        "link": "https://www.linkedin.com/company/new-zealand-institute-of-food-science-technology",
         "type": "international"
     },
     {
@@ -250,5 +214,131 @@
         "why_it_matters": "Explore AgriTech, startup, and agribusiness opportunities, beneficial for Supab Digital's consultancy services.",
         "link": "https://in.linkedin.com/company/youragristory",
         "type": "domestic"
+    },
+    {
+        "name": "2nd National Conclave on Environmental Services (2nd NCES)",
+        "start_date": "2026-07-03",
+        "end_date": "2026-07-03",
+        "venue": "The Constitution Club of India, New Delhi",
+        "why_it_matters": "Understand government commitment to sustainability and green economy, relevant for sustainable practices in Supab Exports.",
+        "link": "https://www.linkedin.com/company/services-export-promotion-council-sepc-india",
+        "type": "domestic"
+    },
+    {
+        "name": "Digital Dragons Awards",
+        "start_date": "2026-07-03",
+        "end_date": "2026-07-03",
+        "venue": "K J Somaiya Institute of Management, Mumbai",
+        "why_it_matters": "Explore innovation and digital transformation trends, relevant for Supab Digital's AI-powered consultancy services.",
+        "link": "https://in.linkedin.com/company/indian-business-council",
+        "type": "domestic"
+    },
+    {
+        "name": "FIEO \"Trade Policy Snapshot: Monthly Update on Notifications & Circulars\"",
+        "start_date": "2026-07-07",
+        "end_date": "2026-07-07",
+        "venue": "Virtual session",
+        "why_it_matters": "Stay updated on the latest trade policy and regulatory frameworks from DGFT, CBIC, and RBI, crucial for Supab Digital's compliance guidance.",
+        "link": "https://fr.linkedin.com/company/fieo",
+        "type": "domestic"
+    },
+    {
+        "name": "HOSFAIR Xinjiang 2026",
+        "start_date": "2026-07-07",
+        "end_date": "2026-07-09",
+        "venue": "Urumqi, Xinjiang, China",
+        "why_it_matters": "Premier trading and networking event for food and hospitality, providing access to the Chinese market.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "international"
+    },
+    {
+        "name": "TRAFS - Thailand Retail Food & Hospitality Services 2026",
+        "start_date": "2026-07-09",
+        "end_date": "2026-07-12",
+        "venue": "BITEC - Bangkok International Trade & Exhibition Centre Bangkok, Thailand",
+        "why_it_matters": "International trade fair focusing on food, hospitality, and retail services, offering market insights and networking in Southeast Asia.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "international"
+    },
+    {
+        "name": "Biofach India-2026",
+        "start_date": "2026-08-06",
+        "end_date": "2026-08-08",
+        "venue": "IEML, Greater Noida, Uttar Pradesh",
+        "why_it_matters": "Major domestic trade fair for organic products, offering networking and market insights for organic dehydrated foods.",
+        "link": "https://apeda.gov.in/TradeFairs",
+        "type": "domestic"
+    },
+    {
+        "name": "Fine Food Australia",
+        "start_date": "2026-08-31",
+        "end_date": "2026-09-03",
+        "venue": "Melbourne Convention & Exhibition Centre Australia",
+        "why_it_matters": "Key international food exhibition to showcase Indian agri-food products and connect with Australian buyers.",
+        "link": "https://apeda.gov.in/TradeFairs",
+        "type": "international"
+    },
+    {
+        "name": "World Food Moscow, Russia",
+        "start_date": "2026-09-15",
+        "end_date": "2026-09-18",
+        "venue": "Moscow, Russia",
+        "why_it_matters": "Major international food exhibition to explore the Russian market for food and beverage products.",
+        "link": "https://apeda.gov.in/TradeFairs",
+        "type": "international"
+    },
+    {
+        "name": "Sial Paris, France",
+        "start_date": "2026-10-17",
+        "end_date": "2026-10-21",
+        "venue": "Paris, France",
+        "why_it_matters": "One of the world's largest food innovation exhibitions, offering global market trends and buyer connections.",
+        "link": "https://apeda.gov.in/TradeFairs",
+        "type": "international"
+    },
+    {
+        "name": "Food Africa 2026",
+        "start_date": "2026-12-07",
+        "end_date": "2026-12-10",
+        "venue": "Egypt International Exhibition Center (EIEC), Cairo, Egypt",
+        "why_it_matters": "Africa’s largest international food and beverage trade exhibition, connecting to fast-growing African and Middle Eastern markets.",
+        "link": "http://www.foodafrica-expo.com",
+        "type": "international"
+    },
+    {
+        "name": "Biofach, Germany",
+        "start_date": "2027-02-16",
+        "end_date": "2027-02-19",
+        "venue": "Germany",
+        "why_it_matters": "Leading trade fair for organic food worldwide, crucial for exploring organic dehydrated food opportunities in Europe.",
+        "link": "https://apeda.gov.in/TradeFairs",
+        "type": "international"
+    },
+    {
+        "name": "Natural Product Expo West, USA",
+        "start_date": "2027-03-02",
+        "end_date": "2027-03-05",
+        "venue": "USA",
+        "why_it_matters": "Major natural, organic, and healthy products trade show in the US, ideal for showcasing dehydrated foods and ingredients.",
+        "link": "https://apeda.gov.in/TradeFairs",
+        "type": "international"
+    },
+    {
+        "name": "Gulfood, UAE",
+        "start_date": "2027-03-15",
+        "end_date": "2027-03-19",
+        "venue": "UAE",
+        "why_it_matters": "World's largest annual food and beverage trade exhibition, offering unparalleled access to Middle Eastern and global buyers.",
+        "link": "https://apeda.gov.in/TradeFairs",
+        "type": "international"
+    },
+    {
+        "name": "Foodex, Japan",
+        "start_date": "2027-03-01",
+        "end_date": "2027-03-31",
+        "venue": "Japan",
+        "why_it_matters": "Leading international food and beverage exhibition in Asia, providing access to the Japanese market.",
+        "link": "https://apeda.gov.in/TradeFairs",
+        "type": "international"
     }
 ]
