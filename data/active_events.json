@@ -1,32 +1,5 @@
 [
     {
-        "name": "FIEO Nagpur Reverse Buyer-Seller Meet (RBSM)",
-        "start_date": "2026-07-02",
-        "end_date": "2026-07-03",
-        "venue": "Le Méridien, Nagpur, Maharashtra, India",
-        "why_it_matters": "Connect with international buyers in Agro & Food Processing, Fresh Vegetables, Fruits & Cereals sectors, highly relevant for Supab Exports.",
-        "link": "https://www.fieo.org",
-        "type": "domestic"
-    },
-    {
-        "name": "FIEO Reverse Buyer-Seller Meet (RBSM)",
-        "start_date": "2026-07-02",
-        "end_date": "2026-07-03",
-        "venue": "Nagpur, Maharashtra, India",
-        "why_it_matters": "Connect with international buyers in Agro & Food Processing, Fresh Vegetables, Fruits & Cereals sectors.",
-        "link": "https://www.fieo.org",
-        "type": "domestic"
-    },
-    {
-        "name": "WTI-CWS Joint Academy on International Trade Law and Economic Policy",
-        "start_date": "2026-06-08",
-        "end_date": "2026-07-03",
-        "venue": "New Delhi, India",
-        "why_it_matters": "Offers in-depth knowledge on international trade law and policy, beneficial for Supab Digital's export compliance guidance services.",
-        "link": "https://in.linkedin.com/company/cwsiift",
-        "type": "domestic"
-    },
-    {
         "name": "Indusfood 2026 Ahmedabad",
         "start_date": "2026-07-24",
         "end_date": "2026-07-26",
@@ -54,24 +27,6 @@
         "type": "domestic"
     },
     {
-        "name": "Food & Drink Processing Expo 2026",
-        "start_date": "2026-07-01",
-        "end_date": "2026-07-03",
-        "venue": "CODISSIA, Coimbatore, India",
-        "why_it_matters": "Explore innovations in food processing, connect with machinery suppliers, and network with industry leaders.",
-        "link": "https://in.linkedin.com/company/sector-skill-council-for-food-processing",
-        "type": "domestic"
-    },
-    {
-        "name": "Seafood Expo Bharat 2026",
-        "start_date": "2026-07-01",
-        "end_date": "2026-07-03",
-        "venue": "Chennai Trade Centre, Chennai, India",
-        "why_it_matters": "Major food expo offering networking opportunities with international food buyers and logistics providers.",
-        "link": "https://seafoodexpobharat.com",
-        "type": "domestic"
-    },
-    {
         "name": "India–GCC Buyer-Seller Meet 2026",
         "start_date": "2026-07-15",
         "end_date": "2026-07-15",
@@ -88,15 +43,6 @@
         "why_it_matters": "Explore growing West African market demand for healthy food preparations and ingredients, potentially including dehydrated foods.",
         "link": "https://www.linkedin.com/company/usda-foreign-agricultural-service",
         "type": "international"
-    },
-    {
-        "name": "India HoReCa Expo 2026",
-        "start_date": "2026-07-01",
-        "end_date": "2026-07-03",
-        "venue": "Codissia Trade Fair Complex, Tamilnadu, India",
-        "why_it_matters": "Connect with food service companies, hospitality groups, and equipment suppliers.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "domestic"
     },
     {
         "name": "Food A'Fair 2026",
@@ -216,24 +162,6 @@
         "type": "domestic"
     },
     {
-        "name": "2nd National Conclave on Environmental Services (2nd NCES)",
-        "start_date": "2026-07-03",
-        "end_date": "2026-07-03",
-        "venue": "The Constitution Club of India, New Delhi",
-        "why_it_matters": "Understand government commitment to sustainability and green economy, relevant for sustainable practices in Supab Exports.",
-        "link": "https://www.linkedin.com/company/services-export-promotion-council-sepc-india",
-        "type": "domestic"
-    },
-    {
-        "name": "Digital Dragons Awards",
-        "start_date": "2026-07-03",
-        "end_date": "2026-07-03",
-        "venue": "K J Somaiya Institute of Management, Mumbai",
-        "why_it_matters": "Explore innovation and digital transformation trends, relevant for Supab Digital's AI-powered consultancy services.",
-        "link": "https://in.linkedin.com/company/indian-business-council",
-        "type": "domestic"
-    },
-    {
         "name": "FIEO \"Trade Policy Snapshot: Monthly Update on Notifications & Circulars\"",
         "start_date": "2026-07-07",
         "end_date": "2026-07-07",
@@ -339,6 +267,123 @@
         "venue": "Japan",
         "why_it_matters": "Leading international food and beverage exhibition in Asia, providing access to the Japanese market.",
         "link": "https://apeda.gov.in/TradeFairs",
+        "type": "international"
+    },
+    {
+        "name": "Toy Biz 2026",
+        "start_date": "2026-07-04",
+        "end_date": "2026-07-07",
+        "venue": "Bharat Mandapam, New Delhi",
+        "why_it_matters": "While not directly agri-food, it's a major B2B expo in Delhi, good for general networking and understanding B2B event dynamics.",
+        "link": "https://www.linkedin.com/company/the-toy-association-of-india",
+        "type": "domestic"
+    },
+    {
+        "name": "Bharatiya Vyapar Mahotsav 2026",
+        "start_date": "2026-08-12",
+        "end_date": "2026-08-15",
+        "venue": "Bharat Mandapam, New Delhi",
+        "why_it_matters": "A large B2B platform for Indian traders and MSMEs, offering opportunities for networking and understanding domestic trade trends.",
+        "link": "https://www.linkedin.com/company/bharatiya-vyapar-mahotsav",
+        "type": "domestic"
+    },
+    {
+        "name": "NKN Media International Property Expo 2026",
+        "start_date": "2026-07-04",
+        "end_date": "2026-07-05",
+        "venue": "Taj Palace, New Delhi",
+        "why_it_matters": "While property-focused, it's a major B2B event in Delhi, useful for general networking and understanding event organization.",
+        "link": "https://in.linkedin.com/company/nkn-media",
+        "type": "domestic"
+    },
+    {
+        "name": "India’s Advanced Import–Export & AI Business Masterclass by Export Experts Global",
+        "start_date": "2026-07-02",
+        "end_date": "2026-07-04",
+        "venue": "Mumbai",
+        "why_it_matters": "Practical training on import-export with AI tools, highly relevant for Supab Digital's consulting services and for Supab Exports' operational efficiency.",
+        "link": "https://in.linkedin.com/company/export-experts-global",
+        "type": "domestic"
+    },
+    {
+        "name": "FIEO International Reverse Buyer-Seller Meet (RBSM) - Kochi",
+        "start_date": "2026-08-12",
+        "end_date": "2026-08-13",
+        "venue": "Kochi, Kerala",
+        "why_it_matters": "Opportunity to meet international buyers and explore business opportunities in various sectors, including agro & food processing.",
+        "link": "https://indianembassyqatar.gov.in/whats_new?id=NTE0",
+        "type": "domestic"
+    },
+    {
+        "name": "FIEO International Reverse Buyer-Seller Meet (RBSM) - Trivandrum",
+        "start_date": "2026-11-05",
+        "end_date": "2026-11-06",
+        "venue": "Trivandrum, Kerala",
+        "why_it_matters": "Opportunity to meet international buyers and explore business opportunities in various sectors, including agro & food processing.",
+        "link": "https://indianembassyqatar.gov.in/whats_new?id=NTE0",
+        "type": "domestic"
+    },
+    {
+        "name": "FIEO International Reverse Buyer-Seller Meet (RBSM) - Pondicherry",
+        "start_date": "2026-12-08",
+        "end_date": "2026-12-09",
+        "venue": "Pondicherry",
+        "why_it_matters": "Opportunity to meet international buyers and explore business opportunities in various sectors, including agro & food processing.",
+        "link": "https://indianembassyqatar.gov.in/whats_new?id=NTE0",
+        "type": "domestic"
+    },
+    {
+        "name": "GFRAS 2026 Knowledge Sharing Webinar Series (CRISP & AESA)",
+        "start_date": "2026-07-16",
+        "end_date": "2026-07-16",
+        "venue": "Online",
+        "why_it_matters": "Insights into innovation, knowledge management, and strengthening agricultural advisory systems, beneficial for Supab Digital's market research and strategy reports.",
+        "link": "https://in.linkedin.com/company/aesa-network",
+        "type": "domestic"
+    },
+    {
+        "name": "IFT FIRST 2026 (Institute of Food Technologists)",
+        "start_date": "2026-07-12",
+        "end_date": "2026-07-15",
+        "venue": "McCormick Place, Chicago, USA",
+        "why_it_matters": "Largest global food science and innovation expo, offering connections with innovators and solution providers in the food industry.",
+        "link": "https://www.foodingredientsfirst.com/events.html",
+        "type": "international"
+    },
+    {
+        "name": "Foodist Istanbul International Food and Beverage Products Fair",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-04",
+        "venue": "Tüyap Fair and Congress Center, Istanbul, Turkey",
+        "why_it_matters": "Comprehensive global food industry event, providing access to the Turkish and surrounding markets for food and beverage products.",
+        "link": "https://www.foodingredientsfirst.com/events.html",
+        "type": "international"
+    },
+    {
+        "name": "Growtech Middle East",
+        "start_date": "2026-09-08",
+        "end_date": "2026-09-11",
+        "venue": "Sheikh Saeed Hall 1, Dubai World Trade Center, Dubai, UAE",
+        "why_it_matters": "Leading agriculture trade exhibition in the region, connecting agritech innovators with buyers and government stakeholders in the Middle East.",
+        "link": "https://www.foodingredientsfirst.com/events.html",
+        "type": "international"
+    },
+    {
+        "name": "Fi Asia Indonesia 2026",
+        "start_date": "2026-09-16",
+        "end_date": "2026-09-18",
+        "venue": "JIExpo, Jakarta, Indonesia",
+        "why_it_matters": "Indonesia's largest food and beverages ingredients event, ideal for discovering innovations in functional ingredients and plant-based products in Southeast Asia.",
+        "link": "https://www.foodingredientsfirst.com/events.html",
+        "type": "international"
+    },
+    {
+        "name": "Transform Food & Agriculture Europe 2026",
+        "start_date": "2026-10-12",
+        "end_date": "2026-10-14",
+        "venue": "Amsterdam",
+        "why_it_matters": "Focuses on transforming food and agriculture, offering insights into sustainable practices and technological advancements relevant for dehydrated food production.",
+        "link": "https://www.foodingredientsfirst.com/events.html",
         "type": "international"
     }
 ]
