@@ -12,9 +12,9 @@
         "name": "APEDA The Saudi Food Show",
         "start_date": "2026-09-27",
         "end_date": "2026-09-29",
-        "venue": "Riyadh, Saudi Arabia",
+        "venue": "Jeddah, Saudi Arabia",
         "why_it_matters": "Direct access to the growing Middle Eastern food market for dehydrated products and spices.",
-        "link": "https://apeda.gov.in/TradeFairs",
+        "link": "https://apeda.gov.in/announcements",
         "type": "international"
     },
     {
@@ -43,15 +43,6 @@
         "why_it_matters": "Explore growing West African market demand for healthy food preparations and ingredients, potentially including dehydrated foods.",
         "link": "https://www.linkedin.com/company/usda-foreign-agricultural-service",
         "type": "international"
-    },
-    {
-        "name": "Food A'Fair 2026",
-        "start_date": "2026-07-02",
-        "end_date": "2026-07-04",
-        "venue": "HITEX Exhibition Centre, Hyderabad, India",
-        "why_it_matters": "Connect with food & beverage producers and retail & wholesale traders.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "domestic"
     },
     {
         "name": "ISFA National Webinar on \"Nine Years of GST\"",
@@ -133,15 +124,6 @@
         "why_it_matters": "Forge meaningful business partnerships with leading Indian manufacturers, suppliers, and exporters.",
         "link": "https://in.linkedin.com/company/iaccindia",
         "type": "domestic"
-    },
-    {
-        "name": "HOTELEX Chengdu 2026",
-        "start_date": "2026-07-02",
-        "end_date": "2026-07-04",
-        "venue": "Chengdu Century City New International Exhibition & Convention Center, Chengdu, Sichuan, China",
-        "why_it_matters": "International trade fair for the hotel, catering, and food service industry, offering potential buyer connections for dehydrated products.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "international"
     },
     {
         "name": "Foodies Festival Christmas Tatton Park 2026",
@@ -297,15 +279,6 @@
         "type": "domestic"
     },
     {
-        "name": "India’s Advanced Import–Export & AI Business Masterclass by Export Experts Global",
-        "start_date": "2026-07-02",
-        "end_date": "2026-07-04",
-        "venue": "Mumbai",
-        "why_it_matters": "Practical training on import-export with AI tools, highly relevant for Supab Digital's consulting services and for Supab Exports' operational efficiency.",
-        "link": "https://in.linkedin.com/company/export-experts-global",
-        "type": "domestic"
-    },
-    {
         "name": "FIEO International Reverse Buyer-Seller Meet (RBSM) - Kochi",
         "start_date": "2026-08-12",
         "end_date": "2026-08-13",
@@ -320,7 +293,7 @@
         "end_date": "2026-11-06",
         "venue": "Trivandrum, Kerala",
         "why_it_matters": "Opportunity to meet international buyers and explore business opportunities in various sectors, including agro & food processing.",
-        "link": "https://indianembassyqatar.gov.in/whats_new?id=NTE0",
+        "link": "https://nicct.nl/event/reverse-buyer-seller-meet-9-11-july-2026-visakhapatnam-in-2-2-2",
         "type": "domestic"
     },
     {
@@ -385,5 +358,140 @@
         "why_it_matters": "Focuses on transforming food and agriculture, offering insights into sustainable practices and technological advancements relevant for dehydrated food production.",
         "link": "https://www.foodingredientsfirst.com/events.html",
         "type": "international"
+    },
+    {
+        "name": "AGRICULTURE SKILL COUNCIL OF INDIA: Master Trainer/ToA programs",
+        "start_date": "2026-07-10",
+        "end_date": "2026-07-10",
+        "venue": "Online",
+        "why_it_matters": "Opportunity to contribute to India's skilling ecosystem in agriculture, relevant for Supab Digital's consulting work.",
+        "link": "https://in.linkedin.com/company/agriculture-skill-council-of-india",
+        "type": "domestic"
+    },
+    {
+        "name": "ASSOCHAM Investor Connect",
+        "start_date": "2026-07-25",
+        "end_date": "2026-07-25",
+        "venue": "Smartworks DLF Commercial Building, Gurugram",
+        "why_it_matters": "Exclusive platform for ambitious founders to connect with investors and strategic partners, beneficial for Supab Digital's clients.",
+        "link": "https://in.linkedin.com/company/ram-ventures",
+        "type": "domestic"
+    },
+    {
+        "name": "National Innovation Hackathon 2026",
+        "start_date": "2026-07-17",
+        "end_date": "2026-07-19",
+        "venue": "Offline (details pending)",
+        "why_it_matters": "Showcase talent in AI & Emerging Technologies, Entrepreneurship, and Sustainability, relevant for Supab Digital's tech-focused clients.",
+        "link": "https://in.linkedin.com/company/amiee-association",
+        "type": "domestic"
+    },
+    {
+        "name": "PM-RKVY for Agri-focused Ideas",
+        "start_date": "2026-07-05",
+        "end_date": "2026-07-31",
+        "venue": "Online",
+        "why_it_matters": "Application opportunity for AgriStartups and Innovators in agricultural technology, relevant for Supab Digital's clients.",
+        "link": "https://in.linkedin.com/company/cunomial",
+        "type": "domestic"
+    },
+    {
+        "name": "USHUS Seed Grant Program",
+        "start_date": "2026-07-05",
+        "end_date": "2026-07-14",
+        "venue": "Online",
+        "why_it_matters": "Funding for early-stage startups in maritime and allied sectors, potentially relevant for logistics tech clients of Supab Digital.",
+        "link": "https://in.linkedin.com/company/startupgrantsindia",
+        "type": "domestic"
+    },
+    {
+        "name": "Korean Food Fair 2026",
+        "start_date": "2026-07-30",
+        "end_date": "2026-07-31",
+        "venue": "South Korea",
+        "why_it_matters": "Opportunity to explore the South Korean food market and connect with buyers for Indian food products.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "international"
+    },
+    {
+        "name": "WORLD OF HOSPITALITY EXPO 2026",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-03",
+        "venue": "India (details pending)",
+        "why_it_matters": "Explore the latest culinary trends and source ingredients, machinery, and finished products for the hospitality sector.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "international"
+    },
+    {
+        "name": "MAFBEX - Manila Food & Beverage Expo 2026",
+        "start_date": "2026-07-09",
+        "end_date": "2026-07-12",
+        "venue": "Iloilo Convention Center, Iloilo, Philippines",
+        "why_it_matters": "Largest food and beverage trade show in Asia, ideal for exploring global food trends and business opportunities.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "international"
+    },
+    {
+        "name": "AGRI INTEX 2026",
+        "start_date": "2026-07-09",
+        "end_date": "2026-07-13",
+        "venue": "India (details pending)",
+        "why_it_matters": "Major agricultural exhibition to explore new technologies, products, and market trends in the agri-food sector.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "domestic"
+    },
+    {
+        "name": "Taichung Int'l Tea, Coffee and Bakery Show 2026",
+        "start_date": "2026-07-10",
+        "end_date": "2026-07-13",
+        "venue": "Taiwan (details pending)",
+        "why_it_matters": "Showcase for tea, coffee, and bakery products, offering insights into East Asian consumer preferences.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "international"
+    },
+    {
+        "name": "Food & Bakery Expo 2026",
+        "start_date": "2026-07-10",
+        "end_date": "2026-07-12",
+        "venue": "India (details pending)",
+        "why_it_matters": "Showcases the latest food and bakery trends, innovative products, equipment, and services.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "domestic"
+    },
+    {
+        "name": "FoodTech Kerala 2026",
+        "start_date": "2026-10-07",
+        "end_date": "2026-10-09",
+        "venue": "Kerala, India",
+        "why_it_matters": "Focuses on food technology and processing, ideal for exploring new machinery and processes for dehydrated foods.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "domestic"
+    },
+    {
+        "name": "Morocco Siema Expo",
+        "start_date": "2026-09-14",
+        "end_date": "2026-09-16",
+        "venue": "Casablanca, Morocco",
+        "why_it_matters": "Leading trade exhibition for food processing and packaging technologies in Morocco, connecting with buyers in the region.",
+        "link": "https://foodindustryexecutive.com/trade-shows",
+        "type": "international"
+    },
+    {
+        "name": "SupplySide Global 2026",
+        "start_date": "2026-10-26",
+        "end_date": "2026-10-26",
+        "venue": "Mandalay Bay, Las Vegas",
+        "why_it_matters": "Ultimate destination for supplement, food, and beverage innovation, ideal for discovering new ingredients and market trends.",
+        "link": "https://www.foodingredientsfirst.com/events.html",
+        "type": "international"
+    },
+    {
+        "name": "Offline Export Training Mumbai",
+        "start_date": "2026-07-24",
+        "end_date": "2026-07-26",
+        "venue": "Mumbai, Maharashtra",
+        "why_it_matters": "Practical training on buyer finding, documentation, and government benefits for new exporters, relevant for Supab Digital's clients.",
+        "link": "https://www.instagram.com/p/DZt43x7kSWH",
+        "type": "domestic"
     }
 ]
