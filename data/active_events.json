@@ -270,15 +270,6 @@
         "type": "domestic"
     },
     {
-        "name": "NKN Media International Property Expo 2026",
-        "start_date": "2026-07-04",
-        "end_date": "2026-07-05",
-        "venue": "Taj Palace, New Delhi",
-        "why_it_matters": "While property-focused, it's a major B2B event in Delhi, useful for general networking and understanding event organization.",
-        "link": "https://in.linkedin.com/company/nkn-media",
-        "type": "domestic"
-    },
-    {
         "name": "FIEO International Reverse Buyer-Seller Meet (RBSM) - Kochi",
         "start_date": "2026-08-12",
         "end_date": "2026-08-13",
@@ -420,7 +411,7 @@
         "venue": "India (details pending)",
         "why_it_matters": "Explore the latest culinary trends and source ingredients, machinery, and finished products for the hospitality sector.",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "international"
+        "type": "domestic"
     },
     {
         "name": "MAFBEX - Manila Food & Beverage Expo 2026",
@@ -493,5 +484,32 @@
         "why_it_matters": "Practical training on buyer finding, documentation, and government benefits for new exporters, relevant for Supab Digital's clients.",
         "link": "https://www.instagram.com/p/DZt43x7kSWH",
         "type": "domestic"
+    },
+    {
+        "name": "FICCI–IBA Annual Banking Conference (FIBAC 2026)",
+        "start_date": "2026-08-11",
+        "end_date": "2026-08-12",
+        "venue": "Mumbai",
+        "why_it_matters": "Premier banking forum for policymakers, regulators, and financial leaders, relevant for Supab Digital's clients in finance.",
+        "link": "https://in.linkedin.com/company/ficci",
+        "type": "domestic"
+    },
+    {
+        "name": "Indian Chamber of Food and Agriculture: India-Africa Seed Dialogue 2026",
+        "start_date": "2026-07-10",
+        "end_date": "2026-07-10",
+        "venue": "Online",
+        "why_it_matters": "Exchange ideas and explore opportunities for a food-secure future, relevant for agri-business and sourcing.",
+        "link": "https://in.linkedin.com/company/indian-chamber-of-food-and-agriculture-icfa",
+        "type": "domestic"
+    },
+    {
+        "name": "DTI Foreign Trade Service Corps: U.S. business mission to visit the Philippines",
+        "start_date": "2026-07-06",
+        "end_date": "2026-07-10",
+        "venue": "Philippines (various locations)",
+        "why_it_matters": "Explore new business, tourism, and investment opportunities, potentially opening doors for dehydrated food exports to the Philippines.",
+        "link": "https://ph.linkedin.com/company/dtiftsc",
+        "type": "international"
     }
 ]
