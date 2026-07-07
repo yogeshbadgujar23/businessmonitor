@@ -45,15 +45,6 @@
         "type": "international"
     },
     {
-        "name": "ISFA National Webinar on \"Nine Years of GST\"",
-        "start_date": "2026-07-06",
-        "end_date": "2026-07-06",
-        "venue": "Online",
-        "why_it_matters": "Gain insights into GST litigation, beneficial for Supab Digital's export compliance guidance.",
-        "link": "https://in.linkedin.com/company/indian-small-business-and-franchise-association",
-        "type": "domestic"
-    },
-    {
         "name": "APEDA 2nd Edition of the International Reverse Buyer - Seller Meet (RBSM)",
         "start_date": "2026-07-27",
         "end_date": "2026-07-28",
@@ -510,6 +501,42 @@
         "venue": "Philippines (various locations)",
         "why_it_matters": "Explore new business, tourism, and investment opportunities, potentially opening doors for dehydrated food exports to the Philippines.",
         "link": "https://ph.linkedin.com/company/dtiftsc",
+        "type": "international"
+    },
+    {
+        "name": "Pusa Krishi: Agripreneurship Development Program on Cultivation & Processing of Spirulina Biomass",
+        "start_date": "2026-07-07",
+        "end_date": "2026-07-10",
+        "venue": "ICAR-IARI, New Delhi",
+        "why_it_matters": "Gain hands-on insights into cultivation, processing, and entrepreneurial opportunities in the Spirulina sector, a potential new dehydrated food product.",
+        "link": "https://th.linkedin.com/company/pusakrishi",
+        "type": "domestic"
+    },
+    {
+        "name": "Telangana Chefs Association: TCA 7th Anniversary Celebrations",
+        "start_date": "2026-07-07",
+        "end_date": "2026-07-07",
+        "venue": "Taj Deccan, Banjara Hills, Hyderabad",
+        "why_it_matters": "Network with culinary professionals and explore food trends, potentially identifying new applications or demand for dehydrated ingredients.",
+        "link": "https://in.linkedin.com/company/telangana-chef-s-association",
+        "type": "domestic"
+    },
+    {
+        "name": "PHD Chamber of Commerce and Industry: UFSEC 2026",
+        "start_date": "2026-07-10",
+        "end_date": "2026-07-11",
+        "venue": "India Expo Centre & Mart, Greater Noida",
+        "why_it_matters": "Focuses on industrial safety and sustainability, relevant for Supab Digital's clients in manufacturing and compliance.",
+        "link": "https://in.linkedin.com/company/phd-chamber-of-commerce-and-industry",
+        "type": "domestic"
+    },
+    {
+        "name": "ASEAN Ports & Logistics 2026",
+        "start_date": "2026-07-07",
+        "end_date": "2026-07-09",
+        "venue": "Sofitel Kuala Lumpur Damansara, Kuala Lumpur, Malaysia",
+        "why_it_matters": "Exchange insights on maritime, shipping, ports, and logistics, crucial for optimizing supply chains for Supab Exports.",
+        "link": "https://www.linkedin.com/company/greenpen-freight-services-sdn-bhd",
         "type": "international"
     }
 ]
