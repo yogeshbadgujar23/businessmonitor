@@ -5,14 +5,14 @@
         "end_date": "2026-07-26",
         "venue": "Helipad Exhibition Centre, Gandhinagar",
         "why_it_matters": "A major food and beverage trade show to explore new product trends, source ingredients, and network with potential buyers and suppliers for Supab Exports.",
-        "link": "https://www.instagram.com/p/DTPxpRtjhGg?hl=en",
+        "link": "https://indusfood.co.in",
         "type": "domestic"
     },
     {
         "name": "APEDA The Saudi Food Show",
         "start_date": "2026-09-27",
         "end_date": "2026-09-29",
-        "venue": "Jeddah, Saudi Arabia",
+        "venue": "Riyadh Front, Saudi Arabia",
         "why_it_matters": "Direct access to the growing Middle Eastern food market for dehydrated products and spices.",
         "link": "https://apeda.gov.in/announcements",
         "type": "international"
@@ -32,7 +32,7 @@
         "end_date": "2026-07-15",
         "venue": "Dubai, UAE",
         "why_it_matters": "Direct access to importers, distributors, retailers, and HORECA buyers from across the GCC region for your food & beverage products.",
-        "link": "https://www.facebook.com/TPCIIndia/posts/looking-to-expand-your-food-beverage-business-across-the-gccjoin-the-indiagcc-bu/1328062376169704",
+        "link": "https://www.facebook.com/TPCIIndia/posts/unlock-gcc-market-opportunities-in-food-beveragejoin-the-india-gcc-buyers-seller/1320769986898943",
         "type": "international"
     },
     {
@@ -77,7 +77,7 @@
         "end_date": "2026-08-09",
         "venue": "Chennai Trade Centre, Chennai, India",
         "why_it_matters": "Premier B2B exhibition focusing on food technology and processing, ideal for exploring new machinery and processes for dehydrated foods.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "link": "https://in.linkedin.com/company/tnapex",
         "type": "domestic"
     },
     {
@@ -132,15 +132,6 @@
         "venue": "Online (Zoom)",
         "why_it_matters": "Explore AgriTech, startup, and agribusiness opportunities, beneficial for Supab Digital's consultancy services.",
         "link": "https://in.linkedin.com/company/youragristory",
-        "type": "domestic"
-    },
-    {
-        "name": "FIEO \"Trade Policy Snapshot: Monthly Update on Notifications & Circulars\"",
-        "start_date": "2026-07-07",
-        "end_date": "2026-07-07",
-        "venue": "Virtual session",
-        "why_it_matters": "Stay updated on the latest trade policy and regulatory frameworks from DGFT, CBIC, and RBI, crucial for Supab Digital's compliance guidance.",
-        "link": "https://fr.linkedin.com/company/fieo",
         "type": "domestic"
     },
     {
@@ -241,15 +232,6 @@
         "why_it_matters": "Leading international food and beverage exhibition in Asia, providing access to the Japanese market.",
         "link": "https://apeda.gov.in/TradeFairs",
         "type": "international"
-    },
-    {
-        "name": "Toy Biz 2026",
-        "start_date": "2026-07-04",
-        "end_date": "2026-07-07",
-        "venue": "Bharat Mandapam, New Delhi",
-        "why_it_matters": "While not directly agri-food, it's a major B2B expo in Delhi, good for general networking and understanding B2B event dynamics.",
-        "link": "https://www.linkedin.com/company/the-toy-association-of-india",
-        "type": "domestic"
     },
     {
         "name": "Bharatiya Vyapar Mahotsav 2026",
@@ -513,15 +495,6 @@
         "type": "domestic"
     },
     {
-        "name": "Telangana Chefs Association: TCA 7th Anniversary Celebrations",
-        "start_date": "2026-07-07",
-        "end_date": "2026-07-07",
-        "venue": "Taj Deccan, Banjara Hills, Hyderabad",
-        "why_it_matters": "Network with culinary professionals and explore food trends, potentially identifying new applications or demand for dehydrated ingredients.",
-        "link": "https://in.linkedin.com/company/telangana-chef-s-association",
-        "type": "domestic"
-    },
-    {
         "name": "PHD Chamber of Commerce and Industry: UFSEC 2026",
         "start_date": "2026-07-10",
         "end_date": "2026-07-11",
@@ -538,5 +511,32 @@
         "why_it_matters": "Exchange insights on maritime, shipping, ports, and logistics, crucial for optimizing supply chains for Supab Exports.",
         "link": "https://www.linkedin.com/company/greenpen-freight-services-sdn-bhd",
         "type": "international"
+    },
+    {
+        "name": "17th Agriculture Leadership Conclave 2026",
+        "start_date": "2026-07-08",
+        "end_date": "2026-07-09",
+        "venue": "The Oberoi, New Delhi",
+        "why_it_matters": "This conclave brings together policymakers, industry leaders, and innovators, offering valuable networking and insights into agri-policy and sustainable agriculture.",
+        "link": "https://in.linkedin.com/company/agriculture-today",
+        "type": "domestic"
+    },
+    {
+        "name": "TNAPEx Buyer - Seller Meet at Kadampuliyur, Cuddalore",
+        "start_date": "2026-07-09",
+        "end_date": "2026-07-09",
+        "venue": "AV Mahal, Kadampuliyur, Cuddalore",
+        "why_it_matters": "A direct opportunity for Agri & Food Processing MSMEs to connect with buyers, build market linkages, and promote GI-tagged & value-added products.",
+        "link": "https://in.linkedin.com/company/tnapex",
+        "type": "domestic"
+    },
+    {
+        "name": "India FoodCone Expo 2026",
+        "start_date": "2026-08-07",
+        "end_date": "2026-08-10",
+        "venue": "Exhibition Ground, Dongre Vasti, Nashik, Maharashtra",
+        "why_it_matters": "Located in a major hub for onions and vegetables, this expo is a strategic platform to showcase innovations and establish distribution networks for dehydrated products.",
+        "link": "https://indiafoodconeexpo.com",
+        "type": "domestic"
     }
 ]
