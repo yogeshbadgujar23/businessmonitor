@@ -372,9 +372,9 @@
         "name": "Korean Food Fair 2026",
         "start_date": "2026-07-30",
         "end_date": "2026-07-31",
-        "venue": "South Korea",
+        "venue": "Pullman Hotel Aerocity, New Delhi",
         "why_it_matters": "Opportunity to explore the South Korean food market and connect with buyers for Indian food products.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "link": "https://www.facebook.com/b2btradefairs/posts/-meet-leading-korean-food-brands-at-korean-food-fair-2026-looking-to-import-prem/1412834224198863",
         "type": "international"
     },
     {
@@ -537,6 +537,15 @@
         "venue": "Exhibition Ground, Dongre Vasti, Nashik, Maharashtra",
         "why_it_matters": "Located in a major hub for onions and vegetables, this expo is a strategic platform to showcase innovations and establish distribution networks for dehydrated products.",
         "link": "https://indiafoodconeexpo.com",
+        "type": "domestic"
+    },
+    {
+        "name": "Pharma Pro&Pack Expo 2026",
+        "start_date": "2026-07-09",
+        "end_date": "2026-07-11",
+        "venue": "HITEX Exhibition Centre, Hyderabad",
+        "why_it_matters": "Explore innovations in pharma processing and packaging, relevant for pharmaceutical-grade banana powder.",
+        "link": "https://in.linkedin.com/company/pharma-pro-pack-expo-india",
         "type": "domestic"
     }
 ]
