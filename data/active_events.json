@@ -28,7 +28,7 @@
     },
     {
         "name": "India–GCC Buyer-Seller Meet 2026",
-        "start_date": "2026-07-15",
+        "start_date": "2026-07-14",
         "end_date": "2026-07-15",
         "venue": "Dubai, UAE",
         "why_it_matters": "Direct access to importers, distributors, retailers, and HORECA buyers from across the GCC region for your food & beverage products.",
@@ -133,15 +133,6 @@
         "why_it_matters": "Explore AgriTech, startup, and agribusiness opportunities, beneficial for Supab Digital's consultancy services.",
         "link": "https://in.linkedin.com/company/youragristory",
         "type": "domestic"
-    },
-    {
-        "name": "HOSFAIR Xinjiang 2026",
-        "start_date": "2026-07-07",
-        "end_date": "2026-07-09",
-        "venue": "Urumqi, Xinjiang, China",
-        "why_it_matters": "Premier trading and networking event for food and hospitality, providing access to the Chinese market.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "international"
     },
     {
         "name": "TRAFS - Thailand Retail Food & Hospitality Services 2026",
@@ -504,33 +495,6 @@
         "type": "domestic"
     },
     {
-        "name": "ASEAN Ports & Logistics 2026",
-        "start_date": "2026-07-07",
-        "end_date": "2026-07-09",
-        "venue": "Sofitel Kuala Lumpur Damansara, Kuala Lumpur, Malaysia",
-        "why_it_matters": "Exchange insights on maritime, shipping, ports, and logistics, crucial for optimizing supply chains for Supab Exports.",
-        "link": "https://www.linkedin.com/company/greenpen-freight-services-sdn-bhd",
-        "type": "international"
-    },
-    {
-        "name": "17th Agriculture Leadership Conclave 2026",
-        "start_date": "2026-07-08",
-        "end_date": "2026-07-09",
-        "venue": "The Oberoi, New Delhi",
-        "why_it_matters": "This conclave brings together policymakers, industry leaders, and innovators, offering valuable networking and insights into agri-policy and sustainable agriculture.",
-        "link": "https://in.linkedin.com/company/agriculture-today",
-        "type": "domestic"
-    },
-    {
-        "name": "TNAPEx Buyer - Seller Meet at Kadampuliyur, Cuddalore",
-        "start_date": "2026-07-09",
-        "end_date": "2026-07-09",
-        "venue": "AV Mahal, Kadampuliyur, Cuddalore",
-        "why_it_matters": "A direct opportunity for Agri & Food Processing MSMEs to connect with buyers, build market linkages, and promote GI-tagged & value-added products.",
-        "link": "https://in.linkedin.com/company/tnapex",
-        "type": "domestic"
-    },
-    {
         "name": "India FoodCone Expo 2026",
         "start_date": "2026-08-07",
         "end_date": "2026-08-10",
@@ -546,6 +510,33 @@
         "venue": "HITEX Exhibition Centre, Hyderabad",
         "why_it_matters": "Explore innovations in pharma processing and packaging, relevant for pharmaceutical-grade banana powder.",
         "link": "https://in.linkedin.com/company/pharma-pro-pack-expo-india",
+        "type": "domestic"
+    },
+    {
+        "name": "Mega Halal Bangkok 2026",
+        "start_date": "2026-07-15",
+        "end_date": "2026-07-17",
+        "venue": "Queen Sirikit National Convention Center (QSNCC), Bangkok, Thailand",
+        "why_it_matters": "Showcase your Halal-certified products to buyers from ASEAN, the Middle East, and global markets, expanding your reach in the Halal food industry.",
+        "link": "https://za.linkedin.com/company/sanha-south-african-national-halaal-authority",
+        "type": "international"
+    },
+    {
+        "name": "WASME Export Business Session",
+        "start_date": "2026-07-10",
+        "end_date": "2026-07-10",
+        "venue": "WASME International Secretariat, Film City, Noida",
+        "why_it_matters": "Gain practical insights into export documentation, market access, and global networking, beneficial for new exporters and SME clients.",
+        "link": "https://in.linkedin.com/company/wasmeinfo-org",
+        "type": "domestic"
+    },
+    {
+        "name": "Nashik Engineering Cluster: Food Safety, GMP, HACCP & Regulatory Compliance Awareness Program",
+        "start_date": "2026-07-10",
+        "end_date": "2026-07-10",
+        "venue": "Nashik Engineering Cluster, C-10, MIDC, Ambad, Nashik – 422010",
+        "why_it_matters": "Essential training on food safety, GMP, HACCP, and regulatory compliance, crucial for maintaining export quality standards for your dehydrated products.",
+        "link": "https://in.linkedin.com/company/nashik-engineering-cluster",
         "type": "domestic"
     }
 ]
