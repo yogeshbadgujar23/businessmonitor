@@ -103,7 +103,7 @@
         "start_date": "2026-07-16",
         "end_date": "2026-07-16",
         "venue": "Kanpur, India",
-        "why_it_matters": "Offers practical insights into international export business in Hindi, beneficial for Supab Digital's clients.",
+        "why_it_mattes": "Offers practical insights into international export business in Hindi, beneficial for Supab Digital's clients.",
         "link": "https://fieo.org/MFR",
         "type": "domestic"
     },
@@ -124,15 +124,6 @@
         "why_it_matters": "Showcases food and beverage products, equipment, and services for retail trade in the UK market.",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
         "type": "international"
-    },
-    {
-        "name": "Your AgriStory: Online Workshop on Future of AgriTech & AgriTech Yuva Competition 2026",
-        "start_date": "2026-06-26",
-        "end_date": "2026-07-10",
-        "venue": "Online (Zoom)",
-        "why_it_matters": "Explore AgriTech, startup, and agribusiness opportunities, beneficial for Supab Digital's consultancy services.",
-        "link": "https://in.linkedin.com/company/youragristory",
-        "type": "domestic"
     },
     {
         "name": "TRAFS - Thailand Retail Food & Hospitality Services 2026",
@@ -315,15 +306,6 @@
         "type": "international"
     },
     {
-        "name": "AGRICULTURE SKILL COUNCIL OF INDIA: Master Trainer/ToA programs",
-        "start_date": "2026-07-10",
-        "end_date": "2026-07-10",
-        "venue": "Online",
-        "why_it_matters": "Opportunity to contribute to India's skilling ecosystem in agriculture, relevant for Supab Digital's consulting work.",
-        "link": "https://in.linkedin.com/company/agriculture-skill-council-of-india",
-        "type": "domestic"
-    },
-    {
         "name": "ASSOCHAM Investor Connect",
         "start_date": "2026-07-25",
         "end_date": "2026-07-25",
@@ -459,33 +441,6 @@
         "type": "domestic"
     },
     {
-        "name": "Indian Chamber of Food and Agriculture: India-Africa Seed Dialogue 2026",
-        "start_date": "2026-07-10",
-        "end_date": "2026-07-10",
-        "venue": "Online",
-        "why_it_matters": "Exchange ideas and explore opportunities for a food-secure future, relevant for agri-business and sourcing.",
-        "link": "https://in.linkedin.com/company/indian-chamber-of-food-and-agriculture-icfa",
-        "type": "domestic"
-    },
-    {
-        "name": "DTI Foreign Trade Service Corps: U.S. business mission to visit the Philippines",
-        "start_date": "2026-07-06",
-        "end_date": "2026-07-10",
-        "venue": "Philippines (various locations)",
-        "why_it_matters": "Explore new business, tourism, and investment opportunities, potentially opening doors for dehydrated food exports to the Philippines.",
-        "link": "https://ph.linkedin.com/company/dtiftsc",
-        "type": "international"
-    },
-    {
-        "name": "Pusa Krishi: Agripreneurship Development Program on Cultivation & Processing of Spirulina Biomass",
-        "start_date": "2026-07-07",
-        "end_date": "2026-07-10",
-        "venue": "ICAR-IARI, New Delhi",
-        "why_it_matters": "Gain hands-on insights into cultivation, processing, and entrepreneurial opportunities in the Spirulina sector, a potential new dehydrated food product.",
-        "link": "https://th.linkedin.com/company/pusakrishi",
-        "type": "domestic"
-    },
-    {
         "name": "PHD Chamber of Commerce and Industry: UFSEC 2026",
         "start_date": "2026-07-10",
         "end_date": "2026-07-11",
@@ -522,21 +477,39 @@
         "type": "international"
     },
     {
-        "name": "WASME Export Business Session",
-        "start_date": "2026-07-10",
-        "end_date": "2026-07-10",
-        "venue": "WASME International Secretariat, Film City, Noida",
-        "why_it_matters": "Gain practical insights into export documentation, market access, and global networking, beneficial for new exporters and SME clients.",
-        "link": "https://in.linkedin.com/company/wasmeinfo-org",
+        "name": "NABARD MABIF Training on Indoor Saffron Cultivation",
+        "start_date": "2026-07-11",
+        "end_date": "2026-07-11",
+        "venue": "Seminar Hall, 2nd Floor, Agricultural College and Research Institute, TNAU Campus, Madurai.",
+        "why_it_matters": "Gain hands-on knowledge on high-value indoor farming, potentially inspiring new product lines or cultivation methods for Supab Exports.",
+        "link": "https://in.linkedin.com/company/agristartups",
         "type": "domestic"
     },
     {
-        "name": "Nashik Engineering Cluster: Food Safety, GMP, HACCP & Regulatory Compliance Awareness Program",
-        "start_date": "2026-07-10",
-        "end_date": "2026-07-10",
-        "venue": "Nashik Engineering Cluster, C-10, MIDC, Ambad, Nashik – 422010",
-        "why_it_matters": "Essential training on food safety, GMP, HACCP, and regulatory compliance, crucial for maintaining export quality standards for your dehydrated products.",
-        "link": "https://in.linkedin.com/company/nashik-engineering-cluster",
+        "name": "PrintExpo 2026",
+        "start_date": "2026-07-09",
+        "end_date": "2026-07-11",
+        "venue": "Chennai Trade Centre, Chennai",
+        "why_it_matters": "Explore printing and packaging solutions, relevant for enhancing product presentation and branding for Supab Exports.",
+        "link": "https://in.linkedin.com/company/printexpoin",
+        "type": "domestic"
+    },
+    {
+        "name": "MSME Idea Hackathon 6.0",
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-14",
+        "venue": "Online (Host Institute: Sri Shanmugha College of Engineering and Technology)",
+        "why_it_matters": "Opportunity for Supab Digital's clients to secure grant funding (up to ₹15 lakhs) and incubation support for innovative solutions, including in AgriTech.",
+        "link": "https://in.linkedin.com/company/aakam-shine",
+        "type": "domestic"
+    },
+    {
+        "name": "FoodVision Expo - Chennai 2026",
+        "start_date": "2026-10-15",
+        "end_date": "2026-10-17",
+        "venue": "Chennai",
+        "why_it_matters": "India’s exclusive trade show for food and beverage manufacturing and processing, offering insights into operational efficiency and innovation.",
+        "link": "https://foodvisionexpo.com",
         "type": "domestic"
     }
 ]
