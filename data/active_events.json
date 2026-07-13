@@ -103,7 +103,7 @@
         "start_date": "2026-07-16",
         "end_date": "2026-07-16",
         "venue": "Kanpur, India",
-        "why_it_mattes": "Offers practical insights into international export business in Hindi, beneficial for Supab Digital's clients.",
+        "why_it_matters": "Practical training on buyer finding, documentation, and government benefits for new exporters, relevant for Supab Digital's clients.",
         "link": "https://fieo.org/MFR",
         "type": "domestic"
     },
@@ -115,24 +115,6 @@
         "why_it_matters": "Forge meaningful business partnerships with leading Indian manufacturers, suppliers, and exporters.",
         "link": "https://in.linkedin.com/company/iaccindia",
         "type": "domestic"
-    },
-    {
-        "name": "Foodies Festival Christmas Tatton Park 2026",
-        "start_date": "2026-07-10",
-        "end_date": "2026-07-12",
-        "venue": "Tatton Park, Knutsford, United Kingdom",
-        "why_it_matters": "Showcases food and beverage products, equipment, and services for retail trade in the UK market.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "international"
-    },
-    {
-        "name": "TRAFS - Thailand Retail Food & Hospitality Services 2026",
-        "start_date": "2026-07-09",
-        "end_date": "2026-07-12",
-        "venue": "BITEC - Bangkok International Trade & Exhibition Centre Bangkok, Thailand",
-        "why_it_matters": "International trade fair focusing on food, hospitality, and retail services, offering market insights and networking in Southeast Asia.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "international"
     },
     {
         "name": "Biofach India-2026",
@@ -360,15 +342,6 @@
         "type": "domestic"
     },
     {
-        "name": "MAFBEX - Manila Food & Beverage Expo 2026",
-        "start_date": "2026-07-09",
-        "end_date": "2026-07-12",
-        "venue": "Iloilo Convention Center, Iloilo, Philippines",
-        "why_it_matters": "Largest food and beverage trade show in Asia, ideal for exploring global food trends and business opportunities.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "international"
-    },
-    {
         "name": "AGRI INTEX 2026",
         "start_date": "2026-07-09",
         "end_date": "2026-07-13",
@@ -385,15 +358,6 @@
         "why_it_matters": "Showcase for tea, coffee, and bakery products, offering insights into East Asian consumer preferences.",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
         "type": "international"
-    },
-    {
-        "name": "Food & Bakery Expo 2026",
-        "start_date": "2026-07-10",
-        "end_date": "2026-07-12",
-        "venue": "India (details pending)",
-        "why_it_matters": "Showcases the latest food and bakery trends, innovative products, equipment, and services.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "domestic"
     },
     {
         "name": "FoodTech Kerala 2026",
@@ -441,30 +405,12 @@
         "type": "domestic"
     },
     {
-        "name": "PHD Chamber of Commerce and Industry: UFSEC 2026",
-        "start_date": "2026-07-10",
-        "end_date": "2026-07-11",
-        "venue": "India Expo Centre & Mart, Greater Noida",
-        "why_it_matters": "Focuses on industrial safety and sustainability, relevant for Supab Digital's clients in manufacturing and compliance.",
-        "link": "https://in.linkedin.com/company/phd-chamber-of-commerce-and-industry",
-        "type": "domestic"
-    },
-    {
         "name": "India FoodCone Expo 2026",
         "start_date": "2026-08-07",
         "end_date": "2026-08-10",
         "venue": "Exhibition Ground, Dongre Vasti, Nashik, Maharashtra",
         "why_it_matters": "Located in a major hub for onions and vegetables, this expo is a strategic platform to showcase innovations and establish distribution networks for dehydrated products.",
         "link": "https://indiafoodconeexpo.com",
-        "type": "domestic"
-    },
-    {
-        "name": "Pharma Pro&Pack Expo 2026",
-        "start_date": "2026-07-09",
-        "end_date": "2026-07-11",
-        "venue": "HITEX Exhibition Centre, Hyderabad",
-        "why_it_matters": "Explore innovations in pharma processing and packaging, relevant for pharmaceutical-grade banana powder.",
-        "link": "https://in.linkedin.com/company/pharma-pro-pack-expo-india",
         "type": "domestic"
     },
     {
@@ -475,24 +421,6 @@
         "why_it_matters": "Showcase your Halal-certified products to buyers from ASEAN, the Middle East, and global markets, expanding your reach in the Halal food industry.",
         "link": "https://za.linkedin.com/company/sanha-south-african-national-halaal-authority",
         "type": "international"
-    },
-    {
-        "name": "NABARD MABIF Training on Indoor Saffron Cultivation",
-        "start_date": "2026-07-11",
-        "end_date": "2026-07-11",
-        "venue": "Seminar Hall, 2nd Floor, Agricultural College and Research Institute, TNAU Campus, Madurai.",
-        "why_it_matters": "Gain hands-on knowledge on high-value indoor farming, potentially inspiring new product lines or cultivation methods for Supab Exports.",
-        "link": "https://in.linkedin.com/company/agristartups",
-        "type": "domestic"
-    },
-    {
-        "name": "PrintExpo 2026",
-        "start_date": "2026-07-09",
-        "end_date": "2026-07-11",
-        "venue": "Chennai Trade Centre, Chennai",
-        "why_it_matters": "Explore printing and packaging solutions, relevant for enhancing product presentation and branding for Supab Exports.",
-        "link": "https://in.linkedin.com/company/printexpoin",
-        "type": "domestic"
     },
     {
         "name": "MSME Idea Hackathon 6.0",
@@ -511,5 +439,41 @@
         "why_it_matters": "India’s exclusive trade show for food and beverage manufacturing and processing, offering insights into operational efficiency and innovation.",
         "link": "https://foodvisionexpo.com",
         "type": "domestic"
+    },
+    {
+        "name": "IIAB Expo 2026",
+        "start_date": "2026-07-29",
+        "end_date": "2026-07-30",
+        "venue": "Jio World Convention Centre, Mumbai",
+        "why_it_matters": "This expo is a key platform for building distribution, finding partners, and exploring new technologies in agri-business.",
+        "link": "https://in.linkedin.com/company/stanesofficial",
+        "type": "domestic"
+    },
+    {
+        "name": "2nd India–Africa Seed Summit 2026",
+        "start_date": "2026-09-15",
+        "end_date": "2026-09-18",
+        "venue": "Marigold Hotel, Begumpet, Hyderabad",
+        "why_it_matters": "A global platform to drive collaboration in seed systems, agri-innovation, and climate-resilient farming across India and Africa.",
+        "link": "https://in.linkedin.com/company/indian-chamber-of-food-and-agriculture",
+        "type": "domestic"
+    },
+    {
+        "name": "Ingredients, Additives & Materials Mumbai 2026",
+        "start_date": "2026-09-29",
+        "end_date": "2026-10-01",
+        "venue": "Bombay Exhibition Centre, Mumbai",
+        "why_it_matters": "India’s leading trade fair for innovative ingredients, additives, and functional materials for the food industry.",
+        "link": "https://www.tradefairdates.com/Ingredients-Additives-Materials-M14485/Mumbai.html",
+        "type": "domestic"
+    },
+    {
+        "name": "ZAK Salaam India Expo 2026 July",
+        "start_date": "2026-07-16",
+        "end_date": "2026-07-19",
+        "venue": "Singapore Expo, Singapore",
+        "why_it_matters": "A trade show showcasing Indian products and services to the world, offering networking opportunities in Asia.",
+        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "type": "international"
     }
 ]
