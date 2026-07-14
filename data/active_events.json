@@ -104,7 +104,7 @@
         "end_date": "2026-07-16",
         "venue": "Kanpur, India",
         "why_it_matters": "Practical training on buyer finding, documentation, and government benefits for new exporters, relevant for Supab Digital's clients.",
-        "link": "https://fieo.org/MFR",
+        "link": "https://fieo.org?lang=0&id=0%2C2613%2C2625",
         "type": "domestic"
     },
     {
@@ -283,7 +283,7 @@
         "start_date": "2026-10-12",
         "end_date": "2026-10-14",
         "venue": "Amsterdam",
-        "why_it_matters": "Focuses on transforming food and agriculture, offering insights into sustainable practices and technological advancements relevant for dehydrated food production.",
+        "why_it_m_atters": "Focuses on transforming food and agriculture, offering insights into sustainable practices and technological advancements relevant for dehydrated food production.",
         "link": "https://www.foodingredientsfirst.com/events.html",
         "type": "international"
     },
@@ -342,24 +342,6 @@
         "type": "domestic"
     },
     {
-        "name": "AGRI INTEX 2026",
-        "start_date": "2026-07-09",
-        "end_date": "2026-07-13",
-        "venue": "India (details pending)",
-        "why_it_matters": "Major agricultural exhibition to explore new technologies, products, and market trends in the agri-food sector.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "domestic"
-    },
-    {
-        "name": "Taichung Int'l Tea, Coffee and Bakery Show 2026",
-        "start_date": "2026-07-10",
-        "end_date": "2026-07-13",
-        "venue": "Taiwan (details pending)",
-        "why_it_matters": "Showcase for tea, coffee, and bakery products, offering insights into East Asian consumer preferences.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "international"
-    },
-    {
         "name": "FoodTech Kerala 2026",
         "start_date": "2026-10-07",
         "end_date": "2026-10-09",
@@ -409,7 +391,7 @@
         "start_date": "2026-08-07",
         "end_date": "2026-08-10",
         "venue": "Exhibition Ground, Dongre Vasti, Nashik, Maharashtra",
-        "why_it_matters": "Located in a major hub for onions and vegetables, this expo is a strategic platform to showcase innovations and establish distribution networks for dehydrated products.",
+        "why_it_m_atters": "Located in a major hub for onions and vegetables, this expo is a strategic platform to showcase innovations and establish distribution networks for dehydrated products.",
         "link": "https://indiafoodconeexpo.com",
         "type": "domestic"
     },
@@ -475,5 +457,41 @@
         "why_it_matters": "A trade show showcasing Indian products and services to the world, offering networking opportunities in Asia.",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
         "type": "international"
+    },
+    {
+        "name": "Navachar Mantra 2026",
+        "start_date": "2026-07-13",
+        "end_date": "2026-12-13",
+        "venue": "IIT Delhi",
+        "why_it_matters": "A zero-cost, 6-month incubator by MSDE & FITT-IIT Delhi offering funding access (₹25L-₹1Cr via Exim Bank) and mentorship for startups.",
+        "link": "https://in.linkedin.com/company/fittiitdelhi",
+        "type": "domestic"
+    },
+    {
+        "name": "FIEO International Reverse Buyer-Seller Meet (RBSM) at Visakhapatnam",
+        "start_date": "2026-08-19",
+        "end_date": "2026-08-21",
+        "venue": "Visakhapatnam",
+        "why_it_matters": "Opportunity to meet international buyers and explore business opportunities in various sectors, including agro & food processing.",
+        "link": "https://fieo.org/MFR",
+        "type": "domestic"
+    },
+    {
+        "name": "AKTU Startup Award 2026",
+        "start_date": "2026-06-27",
+        "end_date": "2026-07-14",
+        "venue": "Online (MIET Incubation Forum)",
+        "why_it_matters": "Opportunity for Supab Digital's clients to gain recognition and support for their startups, particularly women entrepreneurs and innovators.",
+        "link": "https://in.linkedin.com/company/miet-incubation-forum",
+        "type": "domestic"
+    },
+    {
+        "name": "Bharat Tex 2026",
+        "start_date": "2026-07-14",
+        "end_date": "2026-07-17",
+        "venue": "Bharat Mandapam, New Delhi",
+        "why_it_matters": "A global celebration of innovation, craftsmanship, and textile excellence, relevant for general export context and networking.",
+        "link": "https://in.linkedin.com/company/ministry-of-textiles",
+        "type": "domestic"
     }
 ]
