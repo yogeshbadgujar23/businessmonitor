@@ -351,15 +351,6 @@
         "type": "domestic"
     },
     {
-        "name": "Mega Halal Bangkok 2026",
-        "start_date": "2026-07-15",
-        "end_date": "2026-07-17",
-        "venue": "Queen Sirikit National Convention Center (QSNCC), Bangkok, Thailand",
-        "why_it_matters": "Showcase your Halal-certified products to buyers from ASEAN, the Middle East, and global markets, expanding your reach in the Halal food industry.",
-        "link": "https://za.linkedin.com/company/sanha-south-african-national-halaal-authority",
-        "type": "international"
-    },
-    {
         "name": "FoodVision Expo - Chennai 2026",
         "start_date": "2026-10-15",
         "end_date": "2026-10-17",
@@ -420,15 +411,6 @@
         "venue": "Visakhapatnam",
         "why_it_matters": "Opportunity to meet international buyers and explore business opportunities in various sectors, including agro & food processing.",
         "link": "https://fieo.org/MFR",
-        "type": "domestic"
-    },
-    {
-        "name": "Bharat Tex 2026",
-        "start_date": "2026-07-14",
-        "end_date": "2026-07-17",
-        "venue": "Bharat Mandapam, New Delhi",
-        "why_it_matters": "A global celebration of innovation, craftsmanship, and textile excellence, relevant for general export context and networking.",
-        "link": "https://in.linkedin.com/company/ministry-of-textiles",
         "type": "domestic"
     }
 ]
