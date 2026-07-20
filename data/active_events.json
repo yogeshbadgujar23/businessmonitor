@@ -121,7 +121,7 @@
         "start_date": "2026-09-15",
         "end_date": "2026-09-18",
         "venue": "Moscow, Russia",
-        "why_it_mattes": "Major international food exhibition to explore the Russian market for food and beverage products.",
+        "why_it_matters": "None",
         "link": "https://apeda.gov.in/TradeFairs",
         "type": "international"
     },
@@ -261,15 +261,6 @@
         "type": "domestic"
     },
     {
-        "name": "National Innovation Hackathon 2026",
-        "start_date": "2026-07-17",
-        "end_date": "2026-07-19",
-        "venue": "Offline (details pending)",
-        "why_it_matters": "Opportunity for Supab Digital's clients to showcase talent in AI & Emerging Technologies, Entrepreneurship, and Sustainability.",
-        "link": "https://in.linkedin.com/company/amiee-association",
-        "type": "domestic"
-    },
-    {
         "name": "PM-RKVY for Agri-focused Ideas",
         "start_date": "2026-07-05",
         "end_date": "2026-07-31",
@@ -301,7 +292,7 @@
         "start_date": "2026-10-07",
         "end_date": "2026-10-09",
         "venue": "Kerala, India",
-        "why_it_mattered": "Focuses on food technology and processing, ideal for exploring new machinery and processes for dehydrated foods.",
+        "why_it_matters": "None",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
         "type": "domestic"
     },
@@ -385,15 +376,6 @@
         "why_it_matters": "India’s leading trade fair for innovative ingredients, additives, and functional materials for the food industry.",
         "link": "https://www.tradefairdates.com/Ingredients-Additives-Materials-M14485/Mumbai.html",
         "type": "domestic"
-    },
-    {
-        "name": "ZAK Salaam India Expo 2026 July",
-        "start_date": "2026-07-16",
-        "end_date": "2026-07-19",
-        "venue": "Singapore Expo, Singapore",
-        "why_it_matters": "A trade show showcasing Indian products and services to the world, offering networking opportunities in Asia.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "international"
     },
     {
         "name": "Navachar Mantra 2026",
