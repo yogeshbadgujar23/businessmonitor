@@ -1,14 +1,5 @@
 [
     {
-        "name": "Indusfood 2026 Ahmedabad",
-        "start_date": "2026-07-24",
-        "end_date": "2026-07-26",
-        "venue": "Helipad Exhibition Centre, Gandhinagar",
-        "why_it_matters": "A major food and beverage trade show to explore new product trends, source ingredients, and network with potential buyers and suppliers for Supab Exports.",
-        "link": "https://indusfood.co.in",
-        "type": "domestic"
-    },
-    {
         "name": "APEDA The Saudi Food Show",
         "start_date": "2026-09-27",
         "end_date": "2026-09-29",
@@ -306,15 +297,6 @@
         "type": "international"
     },
     {
-        "name": "Offline Export Training Mumbai",
-        "start_date": "2026-07-24",
-        "end_date": "2026-07-26",
-        "venue": "Mumbai, Maharashtra",
-        "why_it_matters": "Practical training on buyer finding, documentation, and government benefits for new exporters, relevant for Supab Digital's clients.",
-        "link": "https://www.instagram.com/p/DZt43x7kSWH",
-        "type": "domestic"
-    },
-    {
         "name": "FICCI–IBA Annual Banking Conference (FIBAC 2026)",
         "start_date": "2026-08-11",
         "end_date": "2026-08-12",
@@ -328,7 +310,7 @@
         "start_date": "2026-08-07",
         "end_date": "2026-08-10",
         "venue": "Exhibition Ground, Dongre Vasti, Nashik, Maharashtra",
-        "why_it_matters": "A local food expo in Nashik, Maharashtra, offering direct networking with regional food industry players and potential suppliers/buyers for Supab Exports.",
+        "why_it_mattered": "A local food expo in Nashik, Maharashtra, offering direct networking with regional food industry players and potential suppliers/buyers for Supab Exports.",
         "link": "https://indiafoodconeexpo.com",
         "type": "domestic"
     },
