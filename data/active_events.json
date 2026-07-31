@@ -72,15 +72,6 @@
         "type": "domestic"
     },
     {
-        "name": "India–US Trade & Investment Connect 2026 (Buyer–Seller Meet)",
-        "start_date": "2026-07-30",
-        "end_date": "2026-07-30",
-        "venue": "Hotel Taj Coromandel, Chennai, India",
-        "why_it_matters": "Forge meaningful business partnerships with leading Indian manufacturers, suppliers, and exporters.",
-        "link": "https://in.linkedin.com/company/iaccindia",
-        "type": "domestic"
-    },
-    {
         "name": "Biofach India-2026",
         "start_date": "2026-08-06",
         "end_date": "2026-08-08",
@@ -121,7 +112,7 @@
         "start_date": "2026-12-07",
         "end_date": "2026-12-10",
         "venue": "Egypt International Exhibition Center (EIEC), Cairo, Egypt",
-        "why_it_mattes": "Africa’s largest international food and beverage trade exhibition, connecting to fast-growing African and Middle Eastern markets.",
+        "why_it_matters": "Key exhibition for accessing the North African and Middle Eastern food markets, relevant for dehydrated vegetables and spices.",
         "link": "http://www.foodafrica-expo.com",
         "type": "international"
     },
@@ -130,7 +121,7 @@
         "start_date": "2027-02-16",
         "end_date": "2027-02-19",
         "venue": "Germany",
-        "why_it_mattes": "Leading trade fair for organic food worldwide, crucial for exploring organic dehydrated food opportunities in Europe.",
+        "why_it_matters": "Leading global trade fair for organic food, ideal for exploring the European organic market for dehydrated products.",
         "link": "https://apeda.gov.in/TradeFairs",
         "type": "international"
     },
@@ -139,7 +130,7 @@
         "start_date": "2027-03-02",
         "end_date": "2027-03-05",
         "venue": "USA",
-        "why_it_mattes": "Major natural, organic, and healthy products trade show in the US, ideal for showcasing dehydrated foods and ingredients.",
+        "why_it_matters": "Major event for natural, organic, and healthy products in the US, offering insights into consumer trends and buyer connections.",
         "link": "https://apeda.gov.in/TradeFairs",
         "type": "international"
     },
@@ -148,7 +139,7 @@
         "start_date": "2027-03-15",
         "end_date": "2027-03-19",
         "venue": "UAE",
-        "why_it_mattes": "World's largest annual food and beverage trade exhibition, offering unparalleled access to Middle Eastern and global buyers.",
+        "why_it_matters": "World's largest annual food and beverage trade exhibition, crucial for connecting with buyers across the Middle East, Africa, and Asia.",
         "link": "https://apeda.gov.in/TradeFairs",
         "type": "international"
     },
@@ -157,7 +148,7 @@
         "start_date": "2027-03-01",
         "end_date": "2027-03-31",
         "venue": "Japan",
-        "why_it_mattes": "Leading international food and beverage exhibition in Asia, providing access to the Japanese market.",
+        "why_it_matters": "Asia's largest food and beverage exhibition, providing access to the Japanese and broader Asian markets for dehydrated foods.",
         "link": "https://apeda.gov.in/TradeFairs",
         "type": "international"
     },
@@ -175,7 +166,7 @@
         "start_date": "2026-08-12",
         "end_date": "2026-08-13",
         "venue": "Kochi, Kerala",
-        "why_it_mattes": "Opportunity to meet international buyers and explore business opportunities in various sectors, including agro & food processing.",
+        "why_it_mattes": "Organized by FIEO, this RBSM provides direct networking opportunities with international buyers for agricultural and food products.",
         "link": "https://indianembassyqatar.gov.in/whats_new?id=NTE0",
         "type": "domestic"
     },
@@ -184,7 +175,7 @@
         "start_date": "2026-11-05",
         "end_date": "2026-11-06",
         "venue": "Trivandrum, Kerala",
-        "why_it_mattes": "Opportunity to meet international buyers and explore business opportunities in various sectors, including agro & food processing.",
+        "why_it_mattes": "Organized by FIEO, this RBSM provides direct networking opportunities with international buyers for agricultural and food products.",
         "link": "https://nicct.nl/event/reverse-buyer-seller-meet-9-11-july-2026-visakhapatnam-in-2-2-2",
         "type": "domestic"
     },
@@ -193,7 +184,7 @@
         "start_date": "2026-12-08",
         "end_date": "2026-12-09",
         "venue": "Pondicherry",
-        "why_it_mattes": "Opportunity to meet international buyers and explore business opportunities in various sectors, including agro & food processing.",
+        "why_it_mattes": "Organized by FIEO, this RBSM provides direct networking opportunities with international buyers for agricultural and food products.",
         "link": "https://indianembassyqatar.gov.in/whats_new?id=NTE0",
         "type": "domestic"
     },
@@ -202,7 +193,7 @@
         "start_date": "2026-09-01",
         "end_date": "2026-09-04",
         "venue": "Tüyap Fair and Congress Center, Istanbul, Turkey",
-        "why_it_mattes": "Comprehensive global food industry event, providing access to the Turkish and surrounding markets for food and beverage products.",
+        "why_it_mattes": "Opportunity to explore the Turkish and surrounding regional food markets for dehydrated vegetables and spices.",
         "link": "https://www.foodingredientsfirst.com/events.html",
         "type": "international"
     },
@@ -265,7 +256,7 @@
         "start_date": "2026-10-07",
         "end_date": "2026-10-09",
         "venue": "Kerala, India",
-        "why_it_mattes": "Focuses on food technology and processing, ideal for exploring new machinery and processes for dehydrated foods.",
+        "why_it_mattes": "Focuses on food technology and processing, useful for exploring new machinery and optimizing dehydrated food production.",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
         "type": "domestic"
     },
@@ -283,7 +274,7 @@
         "start_date": "2026-10-26",
         "end_date": "2026-10-26",
         "venue": "Mandalay Bay, Las Vegas",
-        "why_it_mattes": "Ultimate destination for supplement, food, and beverage innovation, ideal for discovering new ingredients and market trends.",
+        "why_it_mattes": "Relevant for exploring opportunities in health and nutrition ingredients, particularly for pharmaceutical-grade banana powder and other functional dehydrated foods.",
         "link": "https://www.foodingredientsfirst.com/events.html",
         "type": "international"
     },
@@ -301,7 +292,7 @@
         "start_date": "2026-08-07",
         "end_date": "2026-08-10",
         "venue": "Exhibition Ground, Dongre Vasti, Nashik, Maharashtra",
-        "why_it_mattered": "A local food expo in Nashik, Maharashtra, offering direct networking with regional food industry players and potential suppliers/buyers for Supab Exports.",
+        "why_it_mattes": "Local food expo in Maharashtra, offering networking opportunities with regional players and potential suppliers/buyers.",
         "link": "https://indiafoodconeexpo.com",
         "type": "domestic"
     },
@@ -310,17 +301,8 @@
         "start_date": "2026-10-15",
         "end_date": "2026-10-17",
         "venue": "Chennai",
-        "why_it_mattes": "India’s exclusive trade show for food and beverage manufacturing and processing, offering insights into operational efficiency and innovation.",
+        "why_it_mattes": "A food industry expo to discover new trends, network with suppliers and buyers, and explore market opportunities.",
         "link": "https://foodvisionexpo.com",
-        "type": "domestic"
-    },
-    {
-        "name": "IIAB Expo 2026",
-        "start_date": "2026-07-29",
-        "end_date": "2026-07-30",
-        "venue": "Jio World Convention Centre, Mumbai",
-        "why_it_mattes": "This expo is a key platform for building distribution, finding partners, and exploring new technologies in agri-business.",
-        "link": "https://in.linkedin.com/company/stanesofficial",
         "type": "domestic"
     },
     {
@@ -355,7 +337,7 @@
         "start_date": "2026-08-19",
         "end_date": "2026-08-21",
         "venue": "Visakhapatnam",
-        "why_it_mattes": "Opportunity to meet international buyers and explore business opportunities in various sectors, including agro & food processing.",
+        "why_it_mattes": "Organized by FIEO, this RBSM provides direct networking opportunities with international buyers for agricultural and food products.",
         "link": "https://fieo.org/MFR",
         "type": "domestic"
     }
