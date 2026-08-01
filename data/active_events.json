@@ -193,7 +193,7 @@
         "start_date": "2026-09-01",
         "end_date": "2026-09-04",
         "venue": "Tüyap Fair and Congress Center, Istanbul, Turkey",
-        "why_it_mattes": "Opportunity to explore the Turkish and surrounding regional food markets for dehydrated vegetables and spices.",
+        "why_it_matters": "Opportunity to explore the Turkish and surrounding regional food markets for dehydrated products and spices.",
         "link": "https://www.foodingredientsfirst.com/events.html",
         "type": "international"
     },
@@ -211,7 +211,7 @@
         "start_date": "2026-09-16",
         "end_date": "2026-09-18",
         "venue": "JIExpo, Jakarta, Indonesia",
-        "why_it_mattes": "Indonesia's largest food and beverages ingredients event, ideal for discovering innovations in functional ingredients and plant-based products in Southeast Asia.",
+        "why_it_matters": "Indonesia's largest food and beverage ingredients event, ideal for discovering innovations and connecting with Asian buyers.",
         "link": "https://www.foodingredientsfirst.com/events.html",
         "type": "international"
     },
@@ -220,27 +220,9 @@
         "start_date": "2026-10-12",
         "end_date": "2026-10-14",
         "venue": "Amsterdam",
-        "why_it_mattes": "Focuses on innovation in food and agriculture, offering insights into European market trends and sustainable practices relevant for dehydrated food production.",
+        "why_it_matters": "Unites agri-food industry leaders to gain insights and forge partnerships for sustainable agriculture.",
         "link": "https://www.foodingredientsfirst.com/events.html",
         "type": "international"
-    },
-    {
-        "name": "PM-RKVY for Agri-focused Ideas",
-        "start_date": "2026-07-05",
-        "end_date": "2026-07-31",
-        "venue": "Online",
-        "why_it_mattes": "Application opportunity for AgriStartups and Innovators in agricultural technology, relevant for Supab Digital's clients.",
-        "link": "https://in.linkedin.com/company/cunomial",
-        "type": "domestic"
-    },
-    {
-        "name": "Korean Food Fair 2026",
-        "start_date": "2026-07-30",
-        "end_date": "2026-07-31",
-        "venue": "Pullman Hotel Aerocity, New Delhi",
-        "why_it_mattes": "Opportunity to explore the South Korean food market and connect with buyers for Indian food products.",
-        "link": "https://www.facebook.com/b2btradefairs/posts/-meet-leading-korean-food-brands-at-korean-food-fair-2026-looking-to-import-prem/1412834224198863",
-        "type": "domestic"
     },
     {
         "name": "WORLD OF HOSPITALITY EXPO 2026",
@@ -265,16 +247,16 @@
         "start_date": "2026-09-14",
         "end_date": "2026-09-16",
         "venue": "Casablanca, Morocco",
-        "why_it_mattes": "Leading trade exhibition for food processing and packaging technologies in Morocco, connecting with buyers in the region.",
+        "why_it_matters": "Leading trade exhibition for food processing and packaging technologies in Morocco, offering access to the North African market.",
         "link": "https://foodindustryexecutive.com/trade-shows",
         "type": "international"
     },
     {
         "name": "SupplySide Global 2026",
         "start_date": "2026-10-26",
-        "end_date": "2026-10-26",
+        "end_date": "2026-10-28",
         "venue": "Mandalay Bay, Las Vegas",
-        "why_it_mattes": "Relevant for exploring opportunities in health and nutrition ingredients, particularly for pharmaceutical-grade banana powder and other functional dehydrated foods.",
+        "why_it_matters": "The ultimate destination for supplement, food and beverage innovation, offering insights into US market trends.",
         "link": "https://www.foodingredientsfirst.com/events.html",
         "type": "international"
     },
@@ -310,7 +292,7 @@
         "start_date": "2026-09-15",
         "end_date": "2026-09-18",
         "venue": "Marigold Hotel, Begumpet, Hyderabad",
-        "why_it_mattes": "A global platform to drive collaboration in seed systems, agri-innovation, and climate-resilient farming across India and Africa.",
+        "why_it_matters": "Global platform for seed systems and agri-innovation, relevant for sourcing and understanding agricultural trends.",
         "link": "https://in.linkedin.com/company/indian-chamber-of-food-and-agriculture",
         "type": "domestic"
     },
@@ -339,6 +321,69 @@
         "venue": "Visakhapatnam",
         "why_it_mattes": "Organized by FIEO, this RBSM provides direct networking opportunities with international buyers for agricultural and food products.",
         "link": "https://fieo.org/MFR",
+        "type": "domestic"
+    },
+    {
+        "name": "MCCIA's Specialized Certificate Course in Agri-Food Export Management",
+        "start_date": "2026-08-17",
+        "end_date": "2026-08-21",
+        "venue": "MCCIA Trade Tower, Senapati Bapat Road, Pune",
+        "why_it_matters": "Gain expertise in global agri trade and export pricing, valuable for both Supab Exports and Supab Digital's consulting services.",
+        "link": "https://in.linkedin.com/company/mcciapune",
+        "type": "domestic"
+    },
+    {
+        "name": "Natexpo 2026",
+        "start_date": "2026-09-28",
+        "end_date": "2026-09-29",
+        "venue": "Eurexpo Lyon, France",
+        "why_it_matters": "International trade fair for organic products and bio-trends, relevant for organic dehydrated food opportunities in Europe.",
+        "link": "https://www.itac-professional.com/en/blog/best-european-food-and-beverage-trade-shows",
+        "type": "international"
+    },
+    {
+        "name": "AHK Sri Lanka Business Delegation to Anuga Select India & Anuga FoodTec India 2026",
+        "start_date": "2026-09-29",
+        "end_date": "2026-10-01",
+        "venue": "Bombay Exhibition Centre (BEC), Mumbai, India",
+        "why_it_matters": "Connect with international exhibitors and explore sourcing opportunities in food processing and packaging.",
+        "link": "https://lk.linkedin.com/company/ahksrilanka",
+        "type": "domestic"
+    },
+    {
+        "name": "Saudi Agriculture Riyadh 2026",
+        "start_date": "2026-10-19",
+        "end_date": "2026-10-22",
+        "venue": "Riyadh, Saudi Arabia",
+        "why_it_matters": "International fair for agriculture and food, providing direct access to the Saudi Arabian market for agri-food products.",
+        "link": "https://expoassist.net/en/food",
+        "type": "international"
+    },
+    {
+        "name": "Foodex Saudi Riyadh 2026",
+        "start_date": "2026-11-16",
+        "end_date": "2026-11-18",
+        "venue": "Riyadh, Saudi Arabia",
+        "why_it_matters": "International food and beverage trade exhibition, crucial for connecting with buyers in Saudi Arabia.",
+        "link": "https://expoassist.net/en/food",
+        "type": "international"
+    },
+    {
+        "name": "Fi Europe 2026",
+        "start_date": "2026-11-17",
+        "end_date": "2026-11-19",
+        "venue": "Frankfurt, Germany",
+        "why_it_matters": "International platform connecting agri-food professionals, showcasing trends and latest discoveries in the food industry.",
+        "link": "https://www.itac-professional.com/en/blog/best-european-food-and-beverage-trade-shows",
+        "type": "international"
+    },
+    {
+        "name": "Indusfood 2027",
+        "start_date": "2027-01-08",
+        "end_date": "2027-01-10",
+        "venue": "Greater Noida, India",
+        "why_it_matters": "Asia’s premier F&B trade exhibition, offering opportunities to source smarter, scale faster, and succeed globally.",
+        "link": "https://indusfood.co.in",
         "type": "domestic"
     }
 ]
