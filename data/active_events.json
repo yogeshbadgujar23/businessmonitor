@@ -3,7 +3,7 @@
         "name": "APEDA The Saudi Food Show",
         "start_date": "2026-09-27",
         "end_date": "2026-09-29",
-        "venue": "Riyadh Front, Saudi Arabia",
+        "venue": "Jeddah, Saudi Arabia",
         "why_it_matters": "Direct access to the growing Middle Eastern food market for dehydrated products and spices.",
         "link": "https://apeda.gov.in/announcements",
         "type": "international"
@@ -25,15 +25,6 @@
         "why_it_matters": "Explore growing West African market demand for healthy food preparations and ingredients, potentially including dehydrated foods.",
         "link": "https://www.linkedin.com/company/usda-foreign-agricultural-service",
         "type": "international"
-    },
-    {
-        "name": "WAREMAT Exhibition",
-        "start_date": "2026-07-30",
-        "end_date": "2026-08-01",
-        "venue": "Chennai Trade Centre, Chennai, India",
-        "why_it_matters": "Explore solutions in warehousing, material handling, logistics, and supply chain management to optimize export operations.",
-        "link": "https://in.linkedin.com/company/indian-exhibition-industry-association",
-        "type": "domestic"
     },
     {
         "name": "Fi India 2026",
@@ -157,8 +148,8 @@
         "start_date": "2026-08-12",
         "end_date": "2026-08-15",
         "venue": "Bharat Mandapam, New Delhi",
-        "why_it_mattes": "A large B2B platform for Indian traders and MSMEs, offering opportunities for networking and understanding domestic trade trends.",
-        "link": "https://www.linkedin.com/company/bharatiya-vyapar-mahotsav",
+        "why_it_matters": "A large domestic trade festival designed to transition MSMEs and manufacturers into cross-border markets, offering networking and visibility.",
+        "link": "https://hu.linkedin.com/company/itpo-desk",
         "type": "domestic"
     },
     {
@@ -292,7 +283,7 @@
         "start_date": "2026-09-15",
         "end_date": "2026-09-18",
         "venue": "Marigold Hotel, Begumpet, Hyderabad",
-        "why_it_matters": "Global platform for seed systems and agri-innovation, relevant for sourcing and understanding agricultural trends.",
+        "why_it_matters": "Global platform for seed systems and agri-innovation, relevant for sourcing and understanding agricultural trends for Supab Exports.",
         "link": "https://in.linkedin.com/company/indian-chamber-of-food-and-agriculture",
         "type": "domestic"
     },
@@ -319,8 +310,8 @@
         "start_date": "2026-08-19",
         "end_date": "2026-08-21",
         "venue": "Visakhapatnam",
-        "why_it_mattes": "Organized by FIEO, this RBSM provides direct networking opportunities with international buyers for agricultural and food products.",
-        "link": "https://fieo.org/MFR",
+        "why_it_matters": "A domestic RBSM offering direct B2B engagements with international buyers, highly relevant for Supab Exports to find new leads.",
+        "link": "https://fieo.org/view_detail.php?id=0%2C22&dcd=13694&evetype=0",
         "type": "domestic"
     },
     {
@@ -346,7 +337,7 @@
         "start_date": "2026-09-29",
         "end_date": "2026-10-01",
         "venue": "Bombay Exhibition Centre (BEC), Mumbai, India",
-        "why_it_matters": "Connect with international exhibitors and explore sourcing opportunities in food processing and packaging.",
+        "why_it_matters": "Connect with international exhibitors and explore sourcing opportunities in food processing and packaging technologies.",
         "link": "https://lk.linkedin.com/company/ahksrilanka",
         "type": "domestic"
     },
@@ -382,8 +373,89 @@
         "start_date": "2027-01-08",
         "end_date": "2027-01-10",
         "venue": "Greater Noida, India",
-        "why_it_matters": "Asia’s premier F&B trade exhibition, offering opportunities to source smarter, scale faster, and succeed globally.",
+        "why_it_matters": "Asia’s premier F&B trade exhibition, offering opportunities to source smarter, scale faster, and succeed globally for Supab Exports.",
         "link": "https://indusfood.co.in",
+        "type": "domestic"
+    },
+    {
+        "name": "G20 Young Entrepreneurs' Alliance Summit",
+        "start_date": "2026-09-16",
+        "end_date": "2026-09-18",
+        "venue": "Vienna, Austria",
+        "why_it_matters": "An opportunity to represent India on a global stage, connect with young entrepreneurs, and shape conversations relevant to international business for Supab Digital's clients.",
+        "link": "https://in.linkedin.com/company/young-indians",
+        "type": "international"
+    },
+    {
+        "name": "Global SME Finance Forum",
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30",
+        "venue": "Not specified",
+        "why_it_matters": "This forum covers cross-border digital trade, AI governance in credit, and how to bring SMEs into global commerce, highly relevant for Supab Digital's clients.",
+        "link": "https://www.linkedin.com/company/sme-finance-forum-managed-by-ifc",
+        "type": "international"
+    },
+    {
+        "name": "CaterCon India 2026",
+        "start_date": "2026-08-01",
+        "end_date": "2026-08-03",
+        "venue": "JECC, Jaipur, Rajasthan",
+        "why_it_matters": "This ongoing event is a key platform for the HoReCa sector, offering direct B2B sourcing opportunities for spices and food ingredients.",
+        "link": "https://www.linkedin.com/company/sky-enterprise-private-limited",
+        "type": "domestic"
+    },
+    {
+        "name": "FSSAI Labeling & Packaging Display Regulations Training",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09",
+        "venue": "Online (Google Meet)",
+        "why_it_matters": "Essential training for ensuring your food labels comply with FSSAI rules, crucial for Supab Exports' domestic and international market readiness.",
+        "link": "https://in.linkedin.com/company/f-t-p-a",
+        "type": "domestic"
+    },
+    {
+        "name": "ISO 22000:2018 FSMS Training",
+        "start_date": "2026-08-13",
+        "end_date": "2026-08-13",
+        "venue": "Online",
+        "why_it_matters": "Crucial training for implementing food safety management systems, directly enhancing Supab Exports' compliance and quality assurance for global markets.",
+        "link": "https://in.linkedin.com/company/f-t-p-a",
+        "type": "domestic"
+    },
+    {
+        "name": "VEATS 2026 – Viksit East AgFoodTech Summit",
+        "start_date": "2026-08-04",
+        "end_date": "2026-08-05",
+        "venue": "Kolkata",
+        "why_it_matters": "This summit focuses on agri-food tech, innovation, and investment in East and North-East India, offering networking for Supab Exports and potential clients for Supab Digital.",
+        "link": "https://in.linkedin.com/company/thinkag",
+        "type": "domestic"
+    },
+    {
+        "name": "India IP Advantage Summit 2026",
+        "start_date": "2026-08-06",
+        "end_date": "2026-08-06",
+        "venue": "The Imperial, New Delhi",
+        "why_it_matters": "Relevant for Supab Digital's clients regarding IP protection, branding, and global competitiveness for Indian startups and enterprises.",
+        "link": "https://in.linkedin.com/company/tpci",
+        "type": "domestic"
+    },
+    {
+        "name": "Online Training - Frontiers in Food Process Engineering: AI, Digital Twins, and Sustainable Technologies",
+        "start_date": "2026-08-20",
+        "end_date": "2026-08-20",
+        "venue": "Online",
+        "why_it_matters": "This training is valuable for Supab Exports to explore advanced processing technologies and for Supab Digital to understand AI applications in food tech.",
+        "link": "https://www.linkedin.com/company/bio-brainzz",
+        "type": "domestic"
+    },
+    {
+        "name": "Physical Wallah AI Startup Challenge",
+        "start_date": "2026-08-20",
+        "end_date": "2026-08-21",
+        "venue": "Not specified",
+        "why_it_matters": "An opportunity for AI startups to pitch for funding, relevant for Supab Digital to network or potentially advise emerging AI businesses.",
+        "link": "https://in.linkedin.com/company/msme-business-forum-india",
         "type": "domestic"
     }
 ]
