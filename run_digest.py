@@ -287,11 +287,14 @@ class DailyDigestPipeline:
 
         # 2. Broad Intelligence batched queries (Manufacturer + Exporter specific)
         topic_queries = [
-            # Mandi Prices & Exchange Rates
-            f"(\"USD/INR\" OR \"EUR/INR\" exchange rate) AND (\"Jalgaon banana price\" OR \"Sangli turmeric price\" OR \"moringa leaf price\" OR \"beetroot price\" OR \"ginger mandi\" OR \"garlic mandi\") {today_str}",
+            # Exchange Rates & Mandi Prices (Separate queries to avoid AND-condition zero-result filters)
+            f"\"USD/INR\" \"EUR/INR\" exchange rate",
+            f"(\"banana price\" OR \"banana mandi\") AND (Jalgaon OR Maharashtra) {today_str}",
+            f"(\"turmeric price\" OR \"turmeric mandi\") AND (Sangli OR Jalgaon OR Maharashtra) {today_str}",
+            f"(\"ginger price\" OR \"garlic price\" OR \"beetroot price\" OR \"moringa price\") AND (mandi OR Maharashtra) {today_str}",
             
-            # Export & Import Policy & Regulations
-            f"(\"India export policy\" OR \"DGFT notification\" OR \"APEDA\" OR \"customs compliance\" OR \"FDA import alert\" OR \"EU RASFF\") AND (\"dehydrated food\" OR \"spices\" OR \"turmeric\" OR \"moringa\" OR \"banana powder\") {today_str}",
+            # Export & Import Policy & Regulations (Broadened target keyword to guarantee hits)
+            f"(\"India export policy\" OR \"DGFT notification\" OR \"APEDA\" OR \"customs compliance\" OR \"FDA import alert\" OR \"EU RASFF\") AND (\"dehydrated\" OR \"spices\" OR \"agricultural\" OR \"food\") {today_str}",
             
             # Manufacturing-side Compliance & Safety Standards
             f"(\"FSSAI manufacturing\" OR \"FSSAI label\" OR \"ISO 22000\" OR \"GMP compliance\" OR \"Factories Act\" OR \"pollution compliance\") AND \"food processing\" {today_str}",
@@ -478,10 +481,10 @@ Daily briefing for [Date, Day].
 ---
 
 🏛️ GOVERNMENT & POLICY
-[Provide updates under the three sub-tags. If nothing: "No significant policy updates today."]
-- (Export-side): [circulars/notices, exact numbers, DGFT/APEDA source. Implication for Supab Exports/Digital]
-- (Manufacturing-side): [FSSAI rules, ISO, GMP, Maharashtra state factory/effluent/waste rules, MSME/PMFME schemes, CSIR/CFTRI tech transfers]
-- (Import-side): [import alerts, FDA, EU RASFF, relevant to Indian dehydrated foods/spices]
+[Provide updates under the following sub-tags. Only include a sub-tag if there are updates for it; do not print "No updates" or "No significant alerts" placeholder lines. If the entire section has no updates at all, write "No significant policy updates today."]
+- (Export & Trade Policy): [circulars/notices, exact numbers, DGFT/APEDA source. Implication for Supab Exports/Digital]
+- (Manufacturing, MSME & Compliance): [FSSAI rules, ISO, GMP, Maharashtra state factory/effluent/waste rules, MSME/PMFME schemes, CSIR/CFTRI tech transfers]
+- (Destination Market Alerts - FDA/EU RASFF/etc.): [active import alerts/bans/restrictions in target markets (US, EU, GCC) affecting Indian dehydrated foods or spices]
 
 ---
 
@@ -650,11 +653,16 @@ Example:
         lines = text_content.split('\n')
         html_sections = []
         current_section = []
+        card_open = False
         
         def commit_section():
+            nonlocal card_open
             if current_section:
                 html_sections.append("\n".join(current_section))
                 current_section.clear()
+            if card_open:
+                html_sections.append('</div>')
+                card_open = False
 
         # Parse markdown lines into formatted blocks
         for line in lines:
@@ -666,44 +674,54 @@ Example:
             # Headers
             if line_strip.startswith("📋") or "WHAT MATTERS TODAY" in line_strip.upper():
                 commit_section()
-                current_section.append('<div class="section-card urgent">')
+                html_sections.append('<div class="section-card urgent">')
                 current_section.append(f'<h2 class="section-title">🚨 WHAT MATTERS TODAY</h2>')
+                card_open = True
             elif line_strip.startswith("🏛️") or "GOVERNMENT & POLICY" in line_strip.upper():
                 commit_section()
-                current_section.append('<div class="section-card">')
+                html_sections.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">🏛️ GOVERNMENT & POLICY</h2>')
+                card_open = True
             elif line_strip.startswith("📦") or "MARKET & PRODUCT" in line_strip.upper():
                 commit_section()
-                current_section.append('<div class="section-card">')
+                html_sections.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">📦 MARKET & PRODUCT INTEL</h2>')
+                card_open = True
             elif "DOMESTIC B2B EVENTS" in line_strip.upper() or "DOMESTIC EVENTS" in line_strip.upper():
                 commit_section()
-                current_section.append('<div class="section-card">')
+                html_sections.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">🇮🇳 DOMESTIC B2B EVENTS & MEETS</h2>')
+                card_open = True
             elif "INTERNATIONAL B2B EVENTS" in line_strip.upper() or "INTERNATIONAL EVENTS" in line_strip.upper():
                 commit_section()
-                current_section.append('<div class="section-card">')
+                html_sections.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">🌏 INTERNATIONAL B2B EVENTS</h2>')
+                card_open = True
             elif line_strip.startswith("🤝") or "EVENTS & OPPORTUNITIES" in line_strip.upper():
                 commit_section()
-                current_section.append('<div class="section-card">')
+                html_sections.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">🤝 EVENTS & OPPORTUNITIES</h2>')
+                card_open = True
             elif line_strip.startswith("🤖") or "AI & TOOLS" in line_strip.upper():
                 commit_section()
-                current_section.append('<div class="section-card">')
+                html_sections.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">🤖 AI & TOOLS</h2>')
+                card_open = True
             elif line_strip.startswith("📊") or "QUICK NUMBERS" in line_strip.upper():
                 commit_section()
-                current_section.append('<div class="section-card highlight">')
+                html_sections.append('<div class="section-card highlight">')
                 current_section.append(f'<h2 class="section-title">📊 QUICK NUMBERS</h2>')
+                card_open = True
             elif line_strip.startswith("🔜") or line_strip.startswith("🔒") or "WATCH THIS WEEK" in line_strip.upper():
                 commit_section()
-                current_section.append('<div class="section-card">')
+                html_sections.append('<div class="section-card">')
                 current_section.append(f'<h2 class="section-title">🔒 WATCH THIS WEEK</h2>')
+                card_open = True
             elif line_strip == "---":
                 commit_section()
                 # Simple divider or end card
-                html_sections.append('</div>')
+                # We do not append another </div> here since commit_section already closed it!
+                pass
             else:
                 # Format bullets, lists and bold items
                 formatted_line = line_strip
@@ -726,7 +744,7 @@ Example:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Supab Export Daily Intel</title>
+<title>Supab &amp; IMM Daily Intel</title>
 <style>
     body {{
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -838,7 +856,7 @@ Example:
 <body>
 <div class="email-container">
     <div class="header">
-        <h1>🌏 SUPAB EXPORT DAILY INTEL</h1>
+        <h1>🌏 SUPAB &amp; IMM DAILY INTEL</h1>
         <p>Strategic Business Intelligence Briefing</p>
     </div>
     <div class="content">
