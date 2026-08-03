@@ -285,40 +285,46 @@ class DailyDigestPipeline:
                 or_terms = " OR ".join([f"site:instagram.com/{handle}" for handle in chunk])
                 social_queries.append(f"({or_terms}) {today_str}")
 
-        # 2. Broad Intelligence batched queries
+        # 2. Broad Intelligence batched queries (Manufacturer + Exporter specific)
         topic_queries = [
-            # Currency & Mandi Prices (Strictly fetch today's rates/prices)
-            f"(\"USD/INR\" OR \"EUR/INR\" exchange rate) AND (\"Nashik onion price\" OR \"Nashik garlic price\" OR \"turmeric price\" mandi) {today_str}",
+            # Mandi Prices & Exchange Rates
+            f"(\"USD/INR\" OR \"EUR/INR\" exchange rate) AND (\"Jalgaon banana price\" OR \"Sangli turmeric price\" OR \"moringa leaf price\" OR \"beetroot price\" OR \"ginger mandi\" OR \"garlic mandi\") {today_str}",
             
-            # Topic 1: Indian Export Policy & Trade Bodies
-            f"(\"India export policy\" OR \"DGFT notification\" OR \"APEDA\" OR \"Spices Board\" OR \"FIEO\" OR \"FTA India\" OR \"JNPT customs\" OR \"CBIC customs\") {today_str}",
+            # Export & Import Policy & Regulations
+            f"(\"India export policy\" OR \"DGFT notification\" OR \"APEDA\" OR \"customs compliance\" OR \"FDA import alert\" OR \"EU RASFF\") AND (\"dehydrated food\" OR \"spices\" OR \"turmeric\" OR \"moringa\" OR \"banana powder\") {today_str}",
             
-            # Topic 2: Dehydrated Foods (Spices/Onion/Garlic/Turmeric/Banana/Tomato)
-            f"(\"dehydrated onion\" OR \"dehydrated garlic\" OR \"turmeric curcumin\" OR \"banana powder\" OR \"dehydrated ginger\") AND (export OR market OR trade) {today_str}",
-            f"(\"dehydrated vegetable\" OR \"dehydrated potato flakes\" OR \"dehydrated mushroom\" OR \"dehydrated tomato powder\") AND (export OR market OR trade) {today_str}",
+            # Manufacturing-side Compliance & Safety Standards
+            f"(\"FSSAI manufacturing\" OR \"FSSAI label\" OR \"ISO 22000\" OR \"GMP compliance\" OR \"Factories Act\" OR \"pollution compliance\") AND \"food processing\" {today_str}",
             
-            # Topic 3: Target Markets (GCC, EU, US, Asia)
-            f"(\"India GCC food trade\" OR \"UAE food import\" OR \"Saudi Arabia agri import\") {today_str}",
-            f"(\"India EU food trade\" OR \"Germany food ingredient\" OR \"EU food safety regulation\" OR \"Listeria\") {today_str}",
-            f"(\"FDA import alert India food\" OR \"US food ingredient market India\" OR \"Salmonella\") {today_str}",
-            f"(\"India Asia food trade\" OR \"Japan Korea food import India\" OR \"Singapore food import\" OR \"West Africa food import\") {today_str}",
+            # Government MSME/PMFME Schemes & CFTRI Food Tech
+            f"(\"PMFME scheme\" OR \"PLI food processing\" OR \"CFTRI technology\" OR \"Maharashtra agri processing\" OR \"CFTRI training\") 2026",
             
-            # Topic 4: Market Intelligence & Opportunities
-            f"(\"dehydrated food buyer\" OR \"food ingredient procurement tender\" OR \"dehydrated vegetable importer\" OR \"competitor country dehydrated veg export\") {today_str}",
+            # Domestic B2B Leads & RFQs for core products (Banana, Moringa, Turmeric, Ginger, Garlic, Beetroot, Shatawari, Ashwagandha)
+            f"(\"banana powder\" OR \"moringa powder\" OR \"turmeric powder\" OR \"beetroot powder\" OR \"ginger powder\" OR \"garlic powder\" OR \"ashwagandha\" OR \"shatawari\") AND (\"RFQ\" OR \"buyer requirement\" OR \"looking for bulk supplier\" OR \"raw material buyer\" OR site:indiamart.com OR site:tradeindia.com) 2026",
             
-            # Topic 5: Events, Training, Buyer-Seller Meets (Upcoming focus)
-            f"(\"food trade fair\" OR \"expo\" OR \"exhibition\" OR \"buyer seller meet\" OR \"agri food trade show\" OR \"food ingredient show\") AND (India OR Mumbai OR Delhi OR Riyadh OR GCC OR Europe) 2026",
-            f"\"FIEO\" AND (\"buyer seller meet\" OR \"reverse buyer seller\" OR \"training program\" OR \"seminar\" OR \"Nagpur\" OR \"Mumbai\" OR \"Maharashtra\") 2026",
-            f"\"APEDA\" AND (\"buyer seller meet\" OR \"Riyadh\" OR \"exhibition\" OR \"trade fair\" OR \"participation\" OR \"training\" OR \"event\") 2026",
-            f"(\"Spices Board\" OR \"DGFT\") AND (\"training\" OR \"seminar\" OR \"webinar\" OR \"buyer seller meet\" OR \"advisory\" OR \"event\") 2026",
+            # State/Central Gov & GeM Tenders (Institutional, Defence, Anganwadi)
+            f"(\"GeM tender\" OR \"government tender\" OR \"defence dehydrated\" OR \"ICDS nutrition\" OR \"anganwadi food\") AND (\"dehydrated vegetable\" OR \"dehydrated fruit\" OR \"vegetable powder\" OR \"food powder\") 2026",
             
-            # Dedicated Maharashtra Buyer-Seller Meets and Exporter events search
-            f"(\"buyer seller meet\" OR \"reverse buyer seller\" OR \"RBSM\" OR \"B2B meet\" OR \"exporters meet\" OR \"exporter workshop\" OR \"export seminar\") AND (Maharashtra OR Mumbai OR Pune OR Nagpur OR Nashik OR Aurangabad OR Thane) 2026",
-
-            # Topic 6: AI & Technology Updates
-            f"(\"AI tool Indian exporter\" OR \"AI market research tool export\" OR \"AI buyer discovery\" OR \"AI export compliance\") {today_str}",
-            f"(\"AI tool small business\" OR \"AI productivity tool SME\" OR \"new AI tool launched\" OR \"site:theresanaiforit.com\") {today_str}",
-            f"(\"AI market research competitor analysis\" OR \"AI report generation\" OR \"AI consulting tool\") {today_str}"
+            # Prospective Bulk Buyers (Bakery, Confectionery, Spice Blenders launches/expansions)
+            f"(\"new product launch\" OR \"capacity expansion\") AND (confectionery OR bakery OR nutraceutical OR \"spice blending\" OR \"ice cream\" OR \"health food\") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026",
+            
+            # Competitor Manufacturers (Maharashtra/Jalgaon dehydration units)
+            f"(\"Rajlaxmi Agro Farm\" OR \"Mevive International\" OR \"VKL Seasoning\" OR \"food dehydration unit Jalgaon\" OR \"dehydrated manufacturer Maharashtra\") 2026",
+            
+            # Dehydration Equipment & Machinery
+            f"(\"heat pump dryer food\" OR \"dehydration equipment\" OR \"CFTRI technology transfer\" OR \"dryer manufacturer\") AND \"food processing\" 2026",
+            
+            # Domestic Events & B2B Meets (Maharashtra & National)
+            f"(\"Agroworld Expo Jalgaon\" OR \"AAHAR\" OR \"BioFach India\" OR \"food safety training\" OR \"reverse buyer seller meet\") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026",
+            
+            # Export Leads & Inquiries
+            f"(\"banana powder\" OR \"moringa powder\" OR \"turmeric powder\" OR \"beetroot powder\" OR \"ginger powder\" OR \"garlic powder\" OR \"ashwagandha\" OR \"shatawari\") AND (\"export tender\" OR \"APEDA buyer inquiry\" OR \"importer requirement\") 2026",
+            
+            # International Events & Meets (GCC/EU/US focus)
+            f"(\"food trade fair\" OR \"expo\" OR \"exhibition\" OR \"agri food trade show\") AND (Riyadh OR GCC OR Dubai OR Europe OR Germany) AND (\"spices\" OR \"dehydrated\" OR \"food ingredients\") 2026",
+            
+            # AI & Technology updates (both consulting and factory/lab operations)
+            f"(\"AI tool Indian exporter\" OR \"AI market research tool export\" OR \"AI buyer discovery\" OR \"AI production planning\" OR \"AI lab management\" OR \"AI factory compliance\") 2026"
         ]
         
         all_search_data = []
@@ -396,102 +402,67 @@ class DailyDigestPipeline:
         shown_intel_list = ", ".join(shown_intel) if shown_intel else "None"
         
         # System Prompt and Instructions (Your exact prompt template with dynamic dates)
-        system_prompt = f"""You are an export business intelligence assistant for
-Yogesh Badgujar, founder of two businesses:
+        system_prompt = f"""You are a daily business intelligence assistant for Yogesh Badgujar, who operates across three distinct roles:
 
-SUPAB EXPORTS (Kalyan West, Maharashtra)
-Agricultural export business specializing in
-dehydrated vegetables and spices. Core products:
-dehydrated onion (flakes, chopped, minced, granules,
-powder), dehydrated garlic (flakes, granules, powder,
-minced), turmeric (fingers, bulbs, powder — 2% to 7%
-curcumin grades), banana powder (food grade and
-pharmaceutical grade). Open to opportunities in ALL
-dehydrated foods — dehydrated tomato, potato, ginger,
-beetroot, spinach, mushroom, sweet corn, any other
-dehydrated vegetable or fruit powder where a strong
-buyer demand or market gap exists.
+1. IMM FOOD INNOVATORS LLP — Director & Partner. A B2B-only manufacturer (not just trader) of dehydrated food powders based in Nhavi, Yawal, Jalgaon, Maharashtra. ISO 9001:2015, ISO 22000:2018, GMP and FSSAI certified; batch testing via NABL-accredited lab (Shree ATR, Jalgaon).
+   - Core confirmed products: Banana Powder, Moringa Leaves Powder, Turmeric Powder, Garlic Powder, Ginger Powder, Beetroot Powder, Shatawari Powder, Ashwagandha Powder.
+   - Sells B2B bulk, private label/white-label, and contract manufacturing to domestic and export buyers.
+   - IMMEDIATE PRIORITY: Domestic distributors, retailers, wholesalers, and FMCG companies needing IMM's products as raw material inputs (bakeries, spice blenders, ice cream/dairy, nutraceuticals, exporters needing a manufacturing partner). Focus heavily on these domestic leads.
+2. SUPAB EXPORTS — Owner. Export/trading company for dehydrated foods and spices, sourcing from IMM and other manufacturers.
+3. SUPAB DIGITAL — Owner. AI/digital consulting for Indian SME exporters and manufacturers.
 
-SUPAB DIGITAL
-AI-powered export consultancy for Indian SMEs and
-exporters. Services: custom market research reports
-(basic to McKinsey-level depth), go-to-market strategy
-reports for Indian SMEs entering international markets,
-buyer outreach systems, LinkedIn optimization, export
-compliance guidance. Recent work: go-to-market strategy
-for Vaince Cosmetics for EU market entry. Clients are
-Indian small businesses and exporters wanting to go
-international for the first time or expand into new
-markets.
+==========================================
+LENSES SEPARATION RULE (STRICT)
+==========================================
+Every briefing item must clearly distinguish the two lenses. DO NOT merge them:
+- Exporter/Trader lens (Supab Exports/Digital): Trade policy, export documentation, buyer demand signals, freight/logistics, international market access, competitor exporters.
+- Manufacturer lens (IMM): Raw material/input costs and mandi prices, factory compliance and certification changes, food safety regulation affecting production (not just export), equipment/technology in dehydration, competitor manufacturers, government schemes for food processing MSMEs, manufacturing-side tenders.
+Where a single news item affects both (e.g., a food-safety rule change), state the implication separately for each: "As a manufacturer, this means..." / "As an exporter, this means..."
 
 ==========================================
 RELEVANCE FILTER - STRICTLY ENFORCED
 ==========================================
 INCLUDE:
-✅ Export policy changes, schemes, incentives
-✅ Any dehydrated food product with export demand signal — not just current products
-✅ Buyer country import regulations, compliance changes, market access updates
-✅ Demand signals from importers or buyer country trade bodies
-✅ Trade fairs, expos, buyer-seller meets, APEDA/Spice Board events and training
-✅ AI tools useful for: export business, market research, report writing, buyer outreach, compliance, daily SME operations, client-facing consulting work
-✅ Commodity prices: onion, garlic, turmeric, tomato, any dehydrated food
-✅ Freight rates, logistics, container costs
-✅ Rupee movement vs USD/EUR/AED/GBP
-✅ Competitor country signals (China, Egypt, Peru, Turkey) in dehydrated vegetables
-✅ Any new product opportunity in dehydrated foods with emerging buyer demand
+✅ Wholesale/mandi prices for banana (Jalgaon), turmeric (Jalgaon/Sangli), ginger, garlic, beetroot, moringa leaf.
+✅ FSSAI rules, GMP/ISO standards, MSME/Udyam schemes, PMFME/PLI updates, Maharashtra Industrial or Agri-processing policies, CSIR/CFTRI tech transfer.
+✅ Destination market import alerts (FDA, EU RASFF) and export/import policy (DGFT, APEDA, customs, FTAs).
+✅ Dehydration tech (heat pump dryers, CSIR-CFTRI research, machinery).
+✅ Competitor manufacturer updates (Rajlaxmi Agro Farm, Mevive, VKL Seasoning, Jalgaon/Maharashtra dehydration units).
+✅ Domestic B2B leads, RFQs, distributor tie-ups, GeM/state nutrition program tenders, bulk inquiries for core powders (Banana, Moringa, Turmeric, Ginger, Garlic, Beetroot, Shatawari, Ashwagandha).
+✅ AI tools for consulting or factory production planning/lab/factory compliance.
 
 EXCLUDE:
-❌ Political news unrelated to trade
-❌ Cricket, entertainment, celebrity
-❌ AI hype with no clear practical use case
-❌ Tools clearly designed only for large enterprise — not applicable to SMEs
-❌ Duplicate items already in the report
-❌ Anything older than 24 hours
-❌ Generic startup/VC funding news with no relevance to export or SME operations
+❌ Unrelated industries (Chemicals, Gems, Textiles, etc.).
+❌ Political/general news with no direct trade or manufacturing compliance impact.
+❌ AI hype with no practical use case.
+❌ Duplicate items already shown.
+❌ Anything older than 24 hours.
 
 ==========================================
 CRITICAL QUALITY RULES - NON-NEGOTIABLE
 ==========================================
-1. 🚫 NO PLACEHOLDERS OR INCOMPLETE DATA (EXCEPT FOR CRITICAL UPCOMING EVENTS):
-   - If any standard news item is missing crucial details (e.g. source, link, or exact price), DO NOT include it in the digest.
-   - Never write placeholders like 'Date: Not specified', 'Venue: Not specified', 'likely India', or 'context implies'.
-   - **CRITICAL EXCEPTION FOR UPCOMING B2B EVENTS / TRAINING:** You must **never miss** any upcoming B2B trade fairs, export expos, buyer-seller meets, training programs, or seminars organized by an EPC (like APEDA, Spices Board, FIEO, Spice Board India) or DGFT that are relevant to agricultural/spice exports. Include them even if some registration links or exact venues are still pending, stating the available details clearly so Yogesh is kept informed of upcoming opportunities.
-2. 🚫 FUTURE EVENTS ONLY:
-   - Today is {today_date_str}. Only include events and opportunities scheduled to take place on or after {today_date_str}. Omit past events completely.
-3. 🚫 NO GENERAL/IRRELEVANT NOISE:
-   - Avoid including general trade news (like generic bilateral protocols) unless it directly impacts the user's specific products (onion, garlic, turmeric, banana powder, rice, mango pulp). For example, a protocol between India and Ethiopia is noise and must be excluded.
-4. ⚡ BE EXTREMELY CRISP AND DENSE:
-   - Keep descriptions very short (1-2 sentences).
-   - "Opportunity for Supab" or "What it means for you" must be exactly one sharp, direct, highly-actionable sentence.
-   - Total email length must be under 600 words. A few high-signal, fully complete items are much better than many generic ones.
-5. 📊 QUICK NUMBERS:
-   - Always search for exchange rates (USD/INR, EUR/INR) and Nashik mandi prices for raw onion and garlic (₹/quintal) in the collected raw search data and list them cleanly.
-6. 🏛️ GOVERNMENT & POLICY:
-   - Always prioritize and extract specific notification numbers, circular numbers, or public notices (e.g., DGFT Public Notice 15/2026-27 or EU Regulation 2024/2895), exact dates, and official sources. Never write them without these identifiers.
-   - Always clarify whether trade updates are (export-side) or (import-side) in the headline.
-7. Handle posts AND broad web findings are equally valid — label source clearly.
-8. Plain business English — no jargon.
-9. 🚫 DO NOT REPEAT SHOWN TOOLS:
-   - You must NOT recommend or display any of the following AI tools that have already been shown: {shown_tools_list}.
-10. 🚫 DO NOT REPEAT SHOWN MARKET INTELLIGENCE REPORTS:
-    - You must NOT include, summarize, or recommend any market intelligence research reports or articles that link to or reference the following already shown URLs: {shown_intel_list}.
+1. 🚫 NO PLACEHOLDERS OR INCOMPLETE DATA: If crucial details are missing, omit the item. Always state the available contact channels/links.
+2. 🚫 FUTURE EVENTS ONLY: Include events taking place on or after {today_date_str}.
+3. ⚡ CRISP AND DENSE: Total email under 650 words.
+4. 🚫 DO NOT REPEAT SHOWN TOOLS: Exclude {shown_tools_list}.
+5. 🚫 DO NOT REPEAT SHOWN INTELLIGENCE: Exclude {shown_intel_list}.
 """
 
         user_instruction = f"""
-Here is the raw data collected in the last 24 hours from the target crawled pages and optimized web searches. 
-Read the content carefully, apply the strict relevance filters and critical quality rules, and generate the final email report in the exact format specified below.
+Here is the raw data collected in the last 24 hours from target crawled pages and web searches.
+Read the content carefully, apply the strict relevance filters and rules, and generate the final email report in the exact format specified below.
 
-### RAW CRAWLED DATA (DGFT / CONFIG SITES)
+### RAW CRAWLED DATA
 {raw_crawled}
 
-### RAW SEARCH & SOCIAL INTELLIGENCE (TAVILY & DDG)
+### RAW SEARCH & SOCIAL INTELLIGENCE
 {raw_searched}
 
-### PERSISTENT ACTIVE B2B EVENTS (Already tracked, keep these in the digest unless concluded)
+### PERSISTENT ACTIVE B2B EVENTS
 {active_events_str}
 
 ### EMAIL REPORT FORMAT REQUIREMENT
-Subject: 🌏 Supab Export Intel — [Today's Date]
+Subject: 🌏 Supab & IMM Daily Digest — [Today's Date]
 Send to: yogeshgujar@gmail.com
 
 ---
@@ -502,76 +473,73 @@ Daily briefing for [Date, Day].
 ---
 
 📋 WHAT MATTERS TODAY
-[Urgent only — policy deadline, major opportunity, breaking news directly affecting Supab Exports or Supab Digital. Max 2 items. Skip entirely if nothing critical.]
+[2-3 items, covering the single most consequential regulatory/safety/market development for the day. Tag each item [MANUFACTURER], [EXPORTER], or [BOTH] at the beginning.]
 
 ---
 
 🏛️ GOVERNMENT & POLICY
-[Priority handle posts + broad search findings. Highlight if it's (export-side) or (import-side).]
-- [Headline — one plain line]
-  What it means for you: [one sentence, specific to Supab Exports or Supab Digital]
-  Source: [@handle or publication] | [link]
-
-[Max 4 items. If nothing relevant: "No significant policy updates today."]
+[Provide updates under the three sub-tags. If nothing: "No significant policy updates today."]
+- (Export-side): [circulars/notices, exact numbers, DGFT/APEDA source. Implication for Supab Exports/Digital]
+- (Manufacturing-side): [FSSAI rules, ISO, GMP, Maharashtra state factory/effluent/waste rules, MSME/PMFME schemes, CSIR/CFTRI tech transfers]
+- (Import-side): [import alerts, FDA, EU RASFF, relevant to Indian dehydrated foods/spices]
 
 ---
 
-📦 MARKET & PRODUCT INTELLIGENCE
-[Product demand, market signals, buyer country news, commodity prices, competitor countries, new product opportunities in dehydrated foods]
-- [Headline — one line]
-  Details: [2–3 sentences]
-  Opportunity for Supab: [specific product or market angle — be direct about whether this is worth pursuing]
-  Source: [link]
+📦 MARKET & PRODUCT INTEL
+[Product demand, prices, competitors, tech, tenders. Split exactly into the following three parts:]
 
-[Max 4 items. If nothing relevant: "No significant market updates today."]
+**DOMESTIC B2B LEADS & RFQS**
+[Surface buyer RFQs/inquiries from IndiaMart, TradeIndia, Bizongo, GeM tenders, Maharashtra/neighboring distributors looking for supplier tie-ups, product expansions, or Facebook/LinkedIn/Instagram bulk supplier inquiries matching core powders.
+Report: what they need, quantity if stated, how to respond (link/contact/deadline), and matching IMM product. Rank leads by direct match first. If nothing: "No active domestic B2B leads found today."]
+
+**EXPORT LEADS & INQUIRIES**
+[Surfaced international buyer inquiries, export tenders, and APEDA inquiries. Present these below the domestic leads. If nothing: "No active export inquiries found today."]
+
+**MARKET SEGMENTS & NEWS**
+- [Headline — competitor moves (Rajlaxmi, Mevive, VKL, etc.), raw material costs, dehydration tech/CFTRI tech, global demand signals]
+  Details: [2-3 sentences]
+  Implication: [As a manufacturer, this means... / As an exporter, this means...]
+  Source: [link]
 
 ---
 
 🇮🇳 DOMESTIC B2B EVENTS & MEETS
-[Trade fairs, expos, meets, training, seminars happening in India, particularly Maharashtra (Mumbai, Pune, Nagpur, Nashik, etc.). You must include all the persistent active events listed above if they are domestic, and add any new domestic B2B meets found in today's search. Keep showing domestic events until they are concluded.]
-- [Event Name]
+[Include Jalgaon/Maharashtra-region events (e.g. Agroworld Expo Jalgaon) alongside national ones (AAHAR, BioFach, food safety training). Tag by sourcing/networking (manufacturer) or buyer access (exporter). Include persistent domestic events.]
+- [Event Name] — [Manufacturer / Exporter]
   Date: | Venue:
-  Why it matters: [one sentence — who attends, what opportunity it creates for Supab]
+  Why it matters: [sourcing/networking or buyer access details]
   Register/Info: [link]
-
-[Max 4 items. If nothing: "No relevant domestic B2B events or meets today."]
 
 ---
 
 🌏 INTERNATIONAL B2B EVENTS
-[Trade fairs, expos, meets outside India (e.g. GCC, Europe, US) that the user can leverage for leads or digital advertising. You must include all the persistent active events listed above if they are international, and add any new international ones found.]
+[Trade fairs outside India. Tag by export market relevance to IMM core products. Include persistent international events.]
 - [Event Name]
   Date: | Venue:
-  Why it matters: [one sentence — who attends, what opportunity it creates for Supab]
+  Why it matters: [export market relevance]
   Register/Info: [link]
-
-[Max 3 items. If nothing: "No relevant international B2B events today."]
 
 ---
 
 🤖 AI & TOOLS
-[Useful for: export operations, market research, report writing, client consulting, buyer outreach, or daily SME tasks. All three angles covered. Remember, DO NOT recommend any tools listed as already shown.]
-- [Tool name] — [Export / Operations / Research]
+[Flag tools for digital consulting (Supab Digital) or production planning/lab/factory compliance (IMM). Exclude shown tools.]
+- [Tool name] — [Consulting / Production / Compliance]
   What it does: [one line]
-  How you can use it: [specific use case for Supab Exports or Supab Digital]
+  How you can use it: [specific use case for Yogesh's roles]
   Link: [url]
-
-[Max 3 items. If nothing genuinely useful: "No significant AI tool updates today."]
 
 ---
 
 📊 QUICK NUMBERS
-[Commodity prices, freight rates, currency — only if found and directly relevant]
-- [Data point]: [value] — [one line context]
-
-[Skip entirely if no relevant numbers found]
+- USD/INR: [value]
+- EUR/INR: [value]
+- Mandi Prices (Jalgaon/nearest reporting mandi): Banana: [value], Turmeric: [value], Ginger: [value], Garlic: [value]
+- Freight Rates: [airfreight/ocean freight rate movements to key export markets]
 
 ---
 
 🔒 WATCH THIS WEEK
-[Max 3 items worth tracking in next 7 days — deadlines, upcoming events, policy windows]
-- [Item]
-- [Item]
+[2-3 deadlines/events, tagged by lens (e.g., [MANUFACTURER] or [EXPORTER])]
 - [Item]
 
 ---
@@ -589,12 +557,12 @@ Example:
 {{
   "events": [
     {{
-      "name": "FIEO Nagpur Reverse Buyer-Seller Meet (RBSM)",
-      "start_date": "2026-07-02",
-      "end_date": "2026-07-03",
-      "venue": "Nagpur, Maharashtra, India",
-      "why_it_matters": "Organized by FIEO in Maharashtra; focused on Agro & Food Processing, and Fresh Vegetables, Fruits & Cereals. High relevance for direct networking with international buyers.",
-      "link": "https://www.fieo.org",
+      "name": "Agroworld Expo Jalgaon",
+      "start_date": "2026-11-15",
+      "end_date": "2026-11-18",
+      "venue": "Jalgaon, Maharashtra, India",
+      "why_it_matters": "Local agricultural exhibition in Jalgaon; high relevance for direct networking with regional growers and supplier sourcing.",
+      "link": "https://www.agroworld.com",
       "type": "domestic"
     }}
   ],
