@@ -193,9 +193,9 @@
         "start_date": "2026-09-08",
         "end_date": "2026-09-11",
         "venue": "Sheikh Saeed Hall 1, Dubai World Trade Center, Dubai, UAE",
-        "why_it_matters": "None",
+        "why_it_matters": "Relevant for exploring agricultural technology and supply chain solutions for Middle Eastern markets.",
         "link": "https://www.foodingredientsfirst.com/events.html",
-        "type": "international"
+        "type": "domestic"
     },
     {
         "name": "Fi Asia Indonesia 2026",
@@ -220,7 +220,7 @@
         "start_date": "2026-09-01",
         "end_date": "2026-09-03",
         "venue": "India (details pending)",
-        "why_it_matters": "None",
+        "why_it_matters": "Relevant for connecting with the hospitality sector, a potential buyer for IMM's products.",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
         "type": "domestic"
     },
@@ -229,7 +229,7 @@
         "start_date": "2026-10-07",
         "end_date": "2026-10-09",
         "venue": "Kerala, India",
-        "why_it_matters": "None",
+        "why_it_matters": "Regional food tech exhibition, good for exploring new machinery and processes for dehydrated foods.",
         "link": "https://www.tradeindia.com/tradeshows/food-beverage",
         "type": "domestic"
     },
@@ -265,7 +265,7 @@
         "start_date": "2026-08-07",
         "end_date": "2026-08-10",
         "venue": "Exhibition Ground, Dongre Vasti, Nashik, Maharashtra",
-        "why_it_matters": "Local event in Maharashtra, good for regional networking and market presence.",
+        "why_it_matters": "Highly relevant local event in Maharashtra for networking, showcasing products, and exploring new food processing technologies.",
         "link": "https://indiafoodconeexpo.com",
         "type": "domestic"
     },
@@ -301,7 +301,7 @@
         "start_date": "2026-07-13",
         "end_date": "2026-12-13",
         "venue": "Online",
-        "why_it_matters": "None",
+        "why_it_matters": "Ongoing event for innovation, potentially relevant for digital consulting.",
         "link": "https://in.linkedin.com/company/fittiitdelhi",
         "type": "domestic"
     },
@@ -396,20 +396,11 @@
         "type": "international"
     },
     {
-        "name": "CaterCon India 2026",
-        "start_date": "2026-08-01",
-        "end_date": "2026-08-03",
-        "venue": "JECC, Jaipur, Rajasthan",
-        "why_it_matters": "This ongoing event is a key platform for the HoReCa sector, offering direct B2B sourcing opportunities for spices and food ingredients.",
-        "link": "https://www.linkedin.com/company/sky-enterprise-private-limited",
-        "type": "domestic"
-    },
-    {
         "name": "FSSAI Labeling & Packaging Display Regulations Training",
         "start_date": "2026-08-09",
         "end_date": "2026-08-09",
         "venue": "Online (Google Meet)",
-        "why_it_matters": "Essential training for ensuring your food labels comply with FSSAI rules, crucial for Supab Exports' domestic and international market readiness.",
+        "why_it_matters": "Essential training for ensuring food labels comply with FSSAI rules, crucial for IMM's domestic and Supab Exports' international market readiness.",
         "link": "https://in.linkedin.com/company/f-t-p-a",
         "type": "domestic"
     },
@@ -418,7 +409,7 @@
         "start_date": "2026-08-13",
         "end_date": "2026-08-13",
         "venue": "Online",
-        "why_it_matters": "Crucial training for implementing food safety management systems, directly enhancing Supab Exports' compliance and quality assurance for global markets.",
+        "why_it_matters": "Crucial training for implementing food safety management systems, directly enhancing IMM's compliance and quality assurance for global markets.",
         "link": "https://in.linkedin.com/company/f-t-p-a",
         "type": "domestic"
     },
@@ -427,7 +418,7 @@
         "start_date": "2026-08-04",
         "end_date": "2026-08-05",
         "venue": "Kolkata",
-        "why_it_matters": "This summit focuses on agri-food tech, innovation, and investment in East and North-East India, offering networking for Supab Exports and potential clients for Supab Digital.",
+        "why_it_matters": "This summit focuses on agri-food tech, innovation, and investment in East and North-East India, offering networking for IMM and Supab Exports, and potential clients for Supab Digital.",
         "link": "https://in.linkedin.com/company/thinkag",
         "type": "domestic"
     },
@@ -445,7 +436,7 @@
         "start_date": "2026-08-20",
         "end_date": "2026-08-20",
         "venue": "Online",
-        "why_it_matters": "This training is valuable for Supab Exports to explore advanced processing technologies and for Supab Digital to understand AI applications in food tech.",
+        "why_it_matters": "This training is valuable for IMM to explore advanced processing technologies and for Supab Digital to understand AI applications in food tech.",
         "link": "https://www.linkedin.com/company/bio-brainzz",
         "type": "domestic"
     },
@@ -456,6 +447,24 @@
         "venue": "Not specified",
         "why_it_matters": "An opportunity for AI startups to pitch for funding, relevant for Supab Digital to network or potentially advise emerging AI businesses.",
         "link": "https://in.linkedin.com/company/msme-business-forum-india",
+        "type": "domestic"
+    },
+    {
+        "name": "International Bakery Expo Kolkata 2026",
+        "start_date": "2026-08-21",
+        "end_date": "2026-08-23",
+        "venue": "Biswa Bangla Mela Prangan, Kolkata",
+        "why_it_matters": "Relevant for connecting with bakeries, mithai, and namkeen industries, potential buyers for IMM's powders.",
+        "link": "https://www.instagram.com/p/DWTJ_RzkUzf",
+        "type": "domestic"
+    },
+    {
+        "name": "AGROWORLD EXPO 2026",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-23",
+        "venue": "Jalgaon, India",
+        "why_it_matters": "Highly relevant local event for networking and sourcing in the agricultural sector.",
+        "link": "https://www.tradeindia.com/tradeshows/organizer-153713747/agro-world.html",
         "type": "domestic"
     }
 ]
