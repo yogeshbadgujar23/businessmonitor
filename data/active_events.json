@@ -466,5 +466,95 @@
         "why_it_matters": "Highly relevant local event for networking and sourcing in the agricultural sector.",
         "link": "https://www.tradeindia.com/tradeshows/organizer-153713747/agro-world.html",
         "type": "domestic"
+    },
+    {
+        "name": "MCCIA Certificate Course in Project Management",
+        "start_date": "2026-08-05",
+        "end_date": "2026-08-05",
+        "venue": "Shekhar Natu Hall, MCCIA Trade Tower, Pune",
+        "why_it_matters": "Gain practical insights into resource planning, procurement, vendor management, contract negotiation, and risk management. Valuable for optimizing IMM's factory operations and for Supab Digital to advise manufacturing clients.",
+        "link": "in.linkedin.com/company/mcciapune",
+        "type": "domestic"
+    },
+    {
+        "name": "GCC Summit 2026 Hyderabad",
+        "start_date": "2026-08-05",
+        "end_date": "2026-08-05",
+        "venue": "ITC Kohenur, Hyderabad",
+        "why_it_matters": "Brings together leaders shaping the future of Global Capability Centers, enterprise transformation, and AI adoption. Opportunity for Supab Digital to network and identify potential clients or partners in AI/digital innovation.",
+        "link": "linkedin.com/company/global-capability-center-summit",
+        "type": "domestic"
+    },
+    {
+        "name": "FIEO Niryat Bandhu Programme (Gwalior)",
+        "start_date": "2026-08-11",
+        "end_date": "2026-08-11",
+        "venue": "Gwalior, Madhya Pradesh",
+        "why_it_matters": "Capacity building and export awareness program for new exporters with a specific focus on District as Export Hub (DEH) products.",
+        "link": "x.com/FieoHq/status/2082717362784976896",
+        "type": "domestic"
+    },
+    {
+        "name": "FIEO Virtual Workshop on Export Promotion",
+        "start_date": "2026-08-14",
+        "end_date": "2026-08-14",
+        "venue": "Virtual",
+        "why_it_matters": "Provides practical insights on export promotion under the Niryat Bandhu Scheme.",
+        "link": "x.com/FieoHq/status/2082765973422309868",
+        "type": "domestic"
+    },
+    {
+        "name": "LDB Introductory Session",
+        "start_date": "2026-08-05",
+        "end_date": "2026-08-05",
+        "venue": "Not specified",
+        "why_it_matters": "Discover how the Logistics Data Bank (LDB) is transforming container visibility, transparency, and efficiency in India's logistics ecosystem. Crucial for Supab Exports to optimize logistics and for Supab Digital to advise clients on supply chain tech.",
+        "link": "in.linkedin.com/company/nicdclogistics",
+        "type": "domestic"
+    },
+    {
+        "name": "BIMCO Summer Shipping School",
+        "start_date": "2026-08-05",
+        "end_date": "2026-08-05",
+        "venue": "Not specified (global program)",
+        "why_it_matters": "Offers a global learning and networking experience, providing insights into maritime economics and forces driving the industry. Useful for Supab Exports to understand global shipping dynamics.",
+        "link": "be.linkedin.com/company/bimco",
+        "type": "international"
+    },
+    {
+        "name": "CIIC 5th Mega Demo Day",
+        "start_date": "2026-08-05",
+        "end_date": "2026-08-05",
+        "venue": "CIIC, Vandalur",
+        "why_it_matters": "Supports startups and drives global innovation in Industry 4.0, Mobility & Transportation & Life Sciences. Networking opportunity for Supab Digital to identify new clients or trends in AI/tech.",
+        "link": "in.linkedin.com/company/ciicofficial",
+        "type": "domestic"
+    },
+    {
+        "name": "Samridh Kisan Utsav 2026",
+        "start_date": "2026-08-05",
+        "end_date": "2026-08-05",
+        "venue": "Not specified (part of a 5-city event)",
+        "why_it_matters": "Agricultural networking platform to connect directly with the farming community, showcase products, and generate leads. Relevant for IMM for raw material sourcing and farmer relations.",
+        "link": "in.linkedin.com/company/krishijagran",
+        "type": "domestic"
+    },
+    {
+        "name": "Goa Hospitality Show",
+        "start_date": "2026-08-12",
+        "end_date": "2026-08-13",
+        "venue": "Dr. Shyama Prasad Mukherjee Indoor Stadium, Bambolim, Goa",
+        "why_it_matters": "Most focused product sourcing show for the hotel, restaurant, bakery & catering industry. Excellent opportunity to connect with domestic B2B buyers for IMM's powders.",
+        "link": "instagram.com/reel/DZt7e_eMtJn",
+        "type": "domestic"
+    },
+    {
+        "name": "Bakery Business Mumbai 2026",
+        "start_date": "2026-11-25",
+        "end_date": "2026-11-26",
+        "venue": "JIO WORLD CONVENTION CENTRE BKC MUMBAI",
+        "why_it_matters": "Promises bigger opportunities and networking for the bakery, confectionery, ice cream, and food service industries. Excellent opportunity to connect with domestic B2B buyers for IMM's powders.",
+        "link": "instagram.com/reel/DZt7e_eMtJn",
+        "type": "domestic"
     }
 ]
