@@ -66,9 +66,9 @@
         "name": "Biofach India-2026",
         "start_date": "2026-08-06",
         "end_date": "2026-08-08",
-        "venue": "IEML, Greater Noida, Uttar Pradesh",
+        "venue": "India Expo Centre & Mart, Greater Noida, Uttar Pradesh",
         "why_it_matters": "Major domestic trade fair for organic products, offering networking and market insights for organic dehydrated foods.",
-        "link": "https://apeda.gov.in/TradeFairs",
+        "link": "https://in.linkedin.com/company/international-competence-centre-for-organic-agriculture-iccoa-",
         "type": "domestic"
     },
     {
@@ -414,15 +414,6 @@
         "type": "domestic"
     },
     {
-        "name": "India IP Advantage Summit 2026",
-        "start_date": "2026-08-06",
-        "end_date": "2026-08-06",
-        "venue": "The Imperial, New Delhi",
-        "why_it_matters": "Relevant for Supab Digital's clients regarding IP protection, branding, and global competitiveness for Indian startups and enterprises.",
-        "link": "https://in.linkedin.com/company/tpci",
-        "type": "domestic"
-    },
-    {
         "name": "Online Training - Frontiers in Food Process Engineering: AI, Digital Twins, and Sustainable Technologies",
         "start_date": "2026-08-20",
         "end_date": "2026-08-20",
@@ -481,7 +472,7 @@
         "start_date": "2026-08-12",
         "end_date": "2026-08-13",
         "venue": "Dr. Shyama Prasad Mukherjee Indoor Stadium, Bambolim, Goa",
-        "why_it_matters": "Most focused product sourcing show for the hotel, restaurant, bakery & catering industry. Excellent opportunity to connect with domestic B2B buyers for IMM's powders.",
+        "why_it_attends": "Most focused product sourcing show for the hotel, restaurant, bakery & catering industry. Excellent opportunity to connect with domestic B2B buyers for IMM's powders.",
         "link": "instagram.com/reel/DZt7e_eMtJn",
         "type": "domestic"
     },
@@ -501,15 +492,6 @@
         "venue": "New Delhi",
         "why_it_matters": "Sustainable agriculture, renewable energy. Potentially relevant for IMM's long-term sustainability goals or exploring new agri-tech.",
         "link": "https://in.linkedin.com/company/giz-india",
-        "type": "domestic"
-    },
-    {
-        "name": "ULIP Introductory Session",
-        "start_date": "2026-08-06",
-        "end_date": "2026-08-06",
-        "venue": "Online",
-        "why_it_matters": "Understanding India's digital logistics journey and smarter supply chains, relevant for Supab Exports' logistics optimization and Supab Digital's consulting services.",
-        "link": "https://in.linkedin.com/company/nicdclogistics",
         "type": "domestic"
     },
     {
@@ -573,6 +555,24 @@
         "venue": "Mumbai (India) Bombay Convention & Exhibition Centre (BCEC)",
         "why_it_matters": "India's leading food ingredients event to network with industry tastemakers and discover F&B trends.",
         "link": "https://www.figlobal.com/india",
+        "type": "domestic"
+    },
+    {
+        "name": "India Association Congress (IAC 2026)",
+        "start_date": "2026-08-07",
+        "end_date": "2026-08-08",
+        "venue": "Biswa Bangla Convention Centre, Kolkata",
+        "why_it_matters": "Explores \"Associations in a Changing World Order,\" with discussions on Cross-Border Trade, Digital Trade, AI, Digital Transformation, Supply Chain, and Trade Innovation. Valuable for networking and understanding future trends.",
+        "link": "https://in.linkedin.com/company/india-association-congress",
+        "type": "domestic"
+    },
+    {
+        "name": "NSE's 15-Week Sustainability Webinar Series 2026: Driving Change: The Social Stock Exchange",
+        "start_date": "2026-08-07",
+        "end_date": "2026-08-07",
+        "venue": "Online",
+        "why_it_matters": "Explore how the Social Stock Exchange (SSE) enables transparent, credible, and impact-driven social investments. Relevant for understanding ESG and sustainable finance.",
+        "link": "https://in.linkedin.com/company/nseindia",
         "type": "domestic"
     }
 ]
