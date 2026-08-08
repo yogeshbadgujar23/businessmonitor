@@ -437,7 +437,7 @@
         "end_date": "2026-08-23",
         "venue": "Biswa Bangla Mela Prangan, Kolkata",
         "why_it_matters": "Relevant for connecting with bakeries, mithai, and namkeen industries, potential buyers for IMM's powders.",
-        "link": "https://www.instagram.com/p/DWTJ_RzkUzf",
+        "link": "https://www.instagram.com/p/DXy8JWTmAMt",
         "type": "domestic"
     },
     {
@@ -567,12 +567,102 @@
         "type": "domestic"
     },
     {
-        "name": "NSE's 15-Week Sustainability Webinar Series 2026: Driving Change: The Social Stock Exchange",
-        "start_date": "2026-08-07",
-        "end_date": "2026-08-07",
-        "venue": "Online",
-        "why_it_matters": "Explore how the Social Stock Exchange (SSE) enables transparent, credible, and impact-driven social investments. Relevant for understanding ESG and sustainable finance.",
-        "link": "https://in.linkedin.com/company/nseindia",
+        "name": "MCCIA Certificate Course in Foreign Trade",
+        "start_date": "2026-08-08",
+        "end_date": "2026-08-08",
+        "venue": "MCCIA Trade Tower, SB Road, Pune",
+        "why_it_matters": "Provides practical insights into export-import finance, banking regulations, and trade documentation, crucial for optimizing export operations and advising clients.",
+        "link": "https://in.linkedin.com/company/mcciapune",
         "type": "domestic"
+    },
+    {
+        "name": "MCCIA AI Workshop: Prompting Skills",
+        "start_date": "2026-08-10",
+        "end_date": "2026-08-10",
+        "venue": "Online Session",
+        "why_it_matters": "Learn practical techniques to write better prompts, improve AI responses, and use AI tools more effectively for daily work, directly enhancing consulting services.",
+        "link": "https://in.linkedin.com/company/mcciapune",
+        "type": "domestic"
+    },
+    {
+        "name": "MCCIA Agri-Food EXIM Management Certification Course",
+        "start_date": "2026-08-17",
+        "end_date": "2026-08-21",
+        "venue": "MCCIA Trade Tower, Pune",
+        "why_it_matters": "Equips with practical skills and direct industry exposure for agri-food export, including live documentation, industrial field visits, and virtual B2B meets with global buyers.",
+        "link": "https://in.linkedin.com/company/mcciapune",
+        "type": "domestic"
+    },
+    {
+        "name": "GIZ India Young Voices for Sustainable Development",
+        "start_date": "2026-08-12",
+        "end_date": "2026-08-12",
+        "venue": "German Embassy, New Delhi",
+        "why_it_matters": "Gain insights into youth-led innovation and sustainable development, which could inform future consulting strategies for SME clients.",
+        "link": "https://in.linkedin.com/company/giz-india",
+        "type": "domestic"
+    },
+    {
+        "name": "Exhibition Excellence Awards & Summit (EEA 2026)",
+        "start_date": "2026-08-18",
+        "end_date": "2026-08-18",
+        "venue": "Mumbai",
+        "why_it_matters": "Opportunity to network with exhibition industry leaders, explore event technology, and understand future trends in showcasing products, which can be beneficial for future trade fair participation.",
+        "link": "https://in.linkedin.com/company/exhibition-showcase-magazine",
+        "type": "domestic"
+    },
+    {
+        "name": "Freelance Trainings FREE Live Webinar",
+        "start_date": "2026-08-08",
+        "end_date": "2026-08-08",
+        "venue": "Online",
+        "why_it_matters": "Learn how to access daily training opportunities, build a stronger professional network, and maximize visibility as a freelance trainer, directly benefiting Supab Digital's growth.",
+        "link": "https://www.linkedin.com/company/freelancetrainings.com",
+        "type": "domestic"
+    },
+    {
+        "name": "National Spice Conference 2026",
+        "start_date": "2026-09-19",
+        "end_date": "2026-09-20",
+        "venue": "Novotel Jaipur Convention Centre, Rajasthan",
+        "why_it_matters": "Crucial for understanding evolving organic farming regulations, certification challenges, and market trends in the spice industry. Early bird registration ends August 31, 2026.",
+        "link": "https://www.linkedin.com/company/national-spice-conference",
+        "type": "domestic"
+    },
+    {
+        "name": "EverythingAboutWater Expo 2026",
+        "start_date": "2026-08-06",
+        "end_date": "2026-08-08",
+        "venue": "Bharat Mandapam, New Delhi",
+        "why_it_matters": "Opportunity to explore innovative water and wastewater treatment solutions, crucial for food processing factory compliance and sustainability.",
+        "link": "https://in.linkedin.com/company/nanokriti-nanobubble-technologies-iit-ropar",
+        "type": "domestic"
+    },
+    {
+        "name": "ICCOA Workshop & Training Program",
+        "start_date": "2026-08-19",
+        "end_date": "2026-08-21",
+        "venue": "Amity University Campus, Noida",
+        "why_it_matters": "Gain practical insights into certified organics, new labels (Global G.A.P., IPM, Rainforest Alliance), and carbon credits, vital for market access and sustainable practices.",
+        "link": "https://in.linkedin.com/company/international-competence-centre-for-organic-agriculture-iccoa-",
+        "type": "domestic"
+    },
+    {
+        "name": "AIFPA \"Future of Food, Engineered Today\" Conference",
+        "start_date": "2026-09-11",
+        "end_date": "2026-09-11",
+        "venue": "Radisson Blu, New Delhi",
+        "why_it_matters": "Focus on innovation, sustainability, food safety, compliance, and future-ready technologies is highly relevant for IMM's production processes and strategic planning.",
+        "link": "https://in.linkedin.com/company/aifpa",
+        "type": "domestic"
+    },
+    {
+        "name": "Morocco SIEMA Expo 2026",
+        "start_date": "2026-09-15",
+        "end_date": "2026-09-17",
+        "venue": "Casablanca, Morocco",
+        "why_it_matters": "Leading trade exhibition for food processing and packaging technologies in Morocco, offering access to the North African market.",
+        "link": "https://in.linkedin.com/company/packaging-labeling-industry",
+        "type": "international"
     }
 ]
