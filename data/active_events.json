@@ -1,84 +1,83 @@
 [
     {
         "name": "APEDA The Saudi Food Show",
-        "start_date": "2026-09-27",
-        "end_date": "2026-09-29",
+        "type": "international",
+        "date": "2026-09-27 to 2026-09-29",
         "venue": "Riyadh Front, Saudi Arabia",
         "why_it_matters": "Direct access to the growing Middle Eastern food market for dehydrated products and spices.",
-        "link": "https://apeda.gov.in/sites/default/files/announcements/Tor_SAUDI_FOOD%20SHOW_2026.pdf",
-        "type": "international"
+        "register_info": "https://apeda.gov.in/sites/default/files/announcements/Tor_SAUDI_FOOD%20SHOW_2026.pdf",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Pharmexcil iPHEX 2026",
-        "start_date": "2026-09-07",
-        "end_date": "2026-09-09",
+        "type": "domestic",
+        "date": "2026-09-07 to 2026-09-09",
         "venue": "Bharat Mandapam, New Delhi",
         "why_it_matters": "Relevant for exploring pharmaceutical-grade banana powder opportunities and connecting with buyers in the pharma sector for Supab Exports.",
-        "link": "https://in.linkedin.com/company/pharmaceuticals-export-promotion-council-of-india",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/pharmaceuticals-export-promotion-council-of-india",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Agribusiness Trade Mission to Accra, Ghana (USDA FAS)",
-        "start_date": "2026-09-22",
-        "end_date": "2026-09-25",
+        "type": "international",
+        "date": "2026-09-22 to 2026-09-25",
         "venue": "Accra, Ghana",
         "why_it_matters": "Explore growing West African market demand for healthy food preparations and ingredients, potentially including dehydrated foods.",
-        "link": "https://www.linkedin.com/company/usda-foreign-agricultural-service",
-        "type": "international"
+        "register_info": "https://www.linkedin.com/company/usda-foreign-agricultural-service",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Fi India 2026",
-        "start_date": "2026-08-26",
-        "end_date": "2026-08-28",
+        "type": "domestic",
+        "date": "2026-08-26 to 2026-08-28",
         "venue": "Bombay Exhibition Center (BEC), Mumbai, India",
         "why_it_matters": "India's leading food ingredients event to network with industry tastemakers and discover F&B trends.",
-        "link": "https://www.figlobal.com/india",
-        "type": "domestic"
+        "register_info": "https://www.figlobal.com/india",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Foodpro 2026",
-        "start_date": "2026-08-07",
-        "end_date": "2026-08-09",
+        "type": "domestic",
+        "date": "2026-08-07 to 2026-08-09",
         "venue": "Chennai Trade Centre, Chennai, India",
         "why_it_matters": "Premier B2B exhibition focusing on food technology and processing, ideal for exploring new machinery and processes for dehydrated foods.",
-        "link": "https://in.linkedin.com/company/tnapex",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/tnapex",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Food India Expo 2026",
-        "start_date": "2026-09-09",
-        "end_date": "2026-09-11",
+        "type": "domestic",
+        "date": "2026-09-09 to 2026-09-11",
         "venue": "CIDCO Exhibition Centre, Vashi, Navi Mumbai, India",
         "why_it_matters": "Biggest international exhibition for spices, food grains, and allied food industry, offering extensive networking opportunities.",
-        "link": "https://www.foodindia.co",
-        "type": "domestic"
+        "register_info": "https://www.foodindia.co",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "ICRISAT International Conference 2026",
-        "start_date": "2026-09-10",
-        "end_date": "2026-09-12",
+        "type": "domestic",
+        "date": "2026-09-10 to 2026-09-12",
         "venue": "NASC Complex, New Delhi, India",
         "why_it_matters": "Platform for researchers and policymakers to discuss transforming dryland agriculture, relevant for sourcing and sustainable practices.",
-        "link": "https://ke.linkedin.com/company/icrisat",
-        "type": "domestic"
-    },
-    {
-        "name": "Biofach India-2026",
-        "start_date": "2026-08-06",
-        "end_date": "2026-08-08",
-        "venue": "India Expo Centre & Mart, Greater Noida, Uttar Pradesh",
-        "why_it_matters": "Major domestic trade fair for organic products, offering networking and market insights for organic dehydrated foods.",
-        "link": "https://in.linkedin.com/company/international-competence-centre-for-organic-agriculture-iccoa-",
-        "type": "domestic"
+        "register_info": "https://ke.linkedin.com/company/icrisat",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Fine Food Australia",
-        "start_date": "2026-08-31",
-        "end_date": "2026-09-03",
+        "type": "international",
+        "date": "2026-08-31 to 2026-09-03",
         "venue": "Melbourne Convention & Exhibition Centre Australia",
         "why_it_matters": "Key international food exhibition to showcase Indian agri-food products and connect with Australian buyers.",
-        "link": "https://apeda.gov.in/TradeFairs",
-        "type": "international"
+        "register_info": "https://apeda.gov.in/TradeFairs",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "World Food Moscow, Russia",
@@ -91,578 +90,602 @@
     },
     {
         "name": "Sial Paris, France",
-        "start_date": "2026-10-17",
-        "end_date": "2026-10-21",
+        "type": "international",
+        "date": "2026-10-17 to 2026-10-21",
         "venue": "Paris, France",
         "why_it_matters": "One of the world's largest food innovation exhibitions, offering global market trends and buyer connections.",
-        "link": "https://apeda.gov.in/TradeFairs",
-        "type": "international"
+        "register_info": "https://apeda.gov.in/TradeFairs",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Food Africa 2026",
-        "start_date": "2026-12-07",
-        "end_date": "2026-12-10",
+        "type": "international",
+        "date": "2026-12-07 to 2026-12-10",
         "venue": "Egypt International Exhibition Center (EIEC), Cairo, Egypt",
         "why_it_matters": "Key exhibition for accessing the North African and Middle Eastern food markets, relevant for dehydrated vegetables and spices.",
-        "link": "http://www.foodafrica-expo.com",
-        "type": "international"
+        "register_info": "http://www.foodafrica-expo.com",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Biofach, Germany",
-        "start_date": "2027-02-16",
-        "end_date": "2027-02-19",
+        "type": "international",
+        "date": "2027-02-16 to 2027-02-19",
         "venue": "Germany",
         "why_it_matters": "Leading global trade fair for organic food, ideal for exploring the European organic market for dehydrated products.",
-        "link": "https://apeda.gov.in/TradeFairs",
-        "type": "international"
+        "register_info": "https://apeda.gov.in/TradeFairs",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Natural Product Expo West, USA",
-        "start_date": "2027-03-02",
-        "end_date": "2027-03-05",
+        "type": "international",
+        "date": "2027-03-02 to 2027-03-05",
         "venue": "USA",
         "why_it_matters": "Major event for natural, organic, and healthy products in the US, offering insights into consumer trends and buyer connections.",
-        "link": "https://apeda.gov.in/TradeFairs",
-        "type": "international"
+        "register_info": "https://apeda.gov.in/TradeFairs",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Gulfood, UAE",
-        "start_date": "2027-03-15",
-        "end_date": "2027-03-19",
+        "type": "international",
+        "date": "2027-03-15 to 2027-03-19",
         "venue": "UAE",
         "why_it_matters": "World's largest annual food and beverage trade exhibition, crucial for connecting with buyers across the Middle East, Africa, and Asia.",
-        "link": "https://apeda.gov.in/TradeFairs",
-        "type": "international"
+        "register_info": "https://apeda.gov.in/TradeFairs",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Foodex, Japan",
-        "start_date": "2027-03-01",
-        "end_date": "2027-03-31",
+        "type": "international",
+        "date": "2027-03-01 to 2027-03-31",
         "venue": "Japan",
         "why_it_matters": "Asia's largest food and beverage exhibition, providing access to the Japanese and broader Asian markets for dehydrated foods.",
-        "link": "https://apeda.gov.in/TradeFairs",
-        "type": "international"
+        "register_info": "https://apeda.gov.in/TradeFairs",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Bharatiya Vyapar Mahotsav 2026",
-        "start_date": "2026-08-12",
-        "end_date": "2026-08-15",
+        "type": "domestic",
+        "date": "2026-08-12 to 2026-08-15",
         "venue": "Bharat Mandapam, New Delhi",
         "why_it_matters": "A large domestic trade festival designed to transition MSMEs and manufacturers into cross-border markets, offering networking and visibility.",
-        "link": "https://hu.linkedin.com/company/itpo-desk",
-        "type": "domestic"
+        "register_info": "https://hu.linkedin.com/company/itpo-desk",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FIEO International Reverse Buyer-Seller Meet (RBSM) - Kochi",
-        "start_date": "2026-08-12",
-        "end_date": "2026-08-13",
+        "type": "domestic",
+        "date": "2026-08-12 to 2026-08-13",
         "venue": "Kochi, Kerala",
         "why_it_matters": "Direct B2B engagements with international buyers, highly relevant for Supab Exports to find new leads.",
-        "link": "https://indianembassyqatar.gov.in/whats_new?id=NTE0",
-        "type": "domestic"
+        "register_info": "https://indianembassyqatar.gov.in/whats_new?id=NTEw",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FIEO International Reverse Buyer-Seller Meet (RBSM) - Trivandrum",
-        "start_date": "2026-11-05",
-        "end_date": "2026-11-06",
+        "type": "domestic",
+        "date": "2026-11-05 to 2026-11-06",
         "venue": "Trivandrum, Kerala",
         "why_it_matters": "Direct B2B engagements with international buyers, highly relevant for Supab Exports to find new leads.",
-        "link": "https://nicct.nl/event/reverse-buyer-seller-meet-9-11-july-2026-visakhapatnam-in-2-2-2",
-        "type": "domestic"
+        "register_info": "https://nicct.nl/event/reverse-buyer-seller-meet-9-11-july-2026-visakhapatnam-in-2-2-2",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FIEO International Reverse Buyer-Seller Meet (RBSM) - Pondicherry",
-        "start_date": "2026-12-08",
-        "end_date": "2026-12-09",
+        "type": "domestic",
+        "date": "2026-12-08 to 2026-12-09",
         "venue": "Pondicherry",
         "why_it_matters": "Direct B2B engagements with international buyers, highly relevant for Supab Exports to find new leads.",
-        "link": "https://indianembassyqatar.gov.in/whats_new?id=NTE0",
-        "type": "domestic"
+        "register_info": "https://indianembassyqatar.gov.in/whats_new?id=NTE0",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Foodist Istanbul International Food and Beverage Products Fair",
-        "start_date": "2026-09-01",
-        "end_date": "2026-09-04",
+        "type": "international",
+        "date": "2026-09-01 to 2026-09-04",
         "venue": "Tüyap Fair and Congress Center, Istanbul, Turkey",
         "why_it_matters": "Opportunity to explore the Turkish and surrounding regional food markets for dehydrated products and spices.",
-        "link": "https://www.foodingredientsfirst.com/events.html",
-        "type": "international"
+        "register_info": "https://www.foodingredientsfirst.com/events.html",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Growtech Middle East",
-        "start_date": "2026-09-08",
-        "end_date": "2026-09-11",
+        "type": "international",
+        "date": "2026-09-08 to 2026-09-11",
         "venue": "Sheikh Saeed Hall 1, Dubai World Trade Center, Dubai, UAE",
         "why_it_matters": "Relevant for exploring agricultural technology and supply chain solutions for Middle Eastern markets.",
-        "link": "https://www.foodingredientsfirst.com/events.html",
-        "type": "international"
+        "register_info": "https://www.foodingredientsfirst.com/events.html",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Fi Asia Indonesia 2026",
-        "start_date": "2026-09-16",
-        "end_date": "2026-09-18",
+        "type": "international",
+        "date": "2026-09-16 to 2026-09-18",
         "venue": "JIExpo, Jakarta, Indonesia",
         "why_it_matters": "Indonesia's largest food and beverage ingredients event, ideal for discovering innovations and connecting with Asian buyers.",
-        "link": "https://www.foodingredientsfirst.com/events.html",
-        "type": "international"
+        "register_info": "https://www.foodingredientsfirst.com/events.html",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Transform Food & Agriculture Europe 2026",
-        "start_date": "2026-10-12",
-        "end_date": "2026-10-14",
+        "type": "international",
+        "date": "2026-10-12 to 2026-10-14",
         "venue": "Amsterdam",
         "why_it_matters": "Unites agri-food industry leaders to gain insights and forge partnerships for sustainable agriculture.",
-        "link": "https://www.foodingredientsfirst.com/events.html",
-        "type": "international"
+        "register_info": "https://www.foodingredientsfirst.com/events.html",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "WORLD OF HOSPITALITY EXPO 2026",
-        "start_date": "2026-09-01",
-        "end_date": "2026-09-03",
+        "type": "domestic",
+        "date": "2026-09-01 to 2026-09-03",
         "venue": "India (details pending)",
         "why_it_matters": "Relevant for connecting with the hospitality sector, a potential buyer for IMM's products.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "domestic"
+        "register_info": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FoodTech Kerala 2026",
-        "start_date": "2026-10-07",
-        "end_date": "2026-10-09",
+        "type": "domestic",
+        "date": "2026-10-07 to 2026-10-09",
         "venue": "Kerala, India",
         "why_it_matters": "Regional food tech exhibition, good for exploring new machinery and processes for dehydrated foods.",
-        "link": "https://www.tradeindia.com/tradeshows/food-beverage",
-        "type": "domestic"
+        "register_info": "https://www.tradeindia.com/tradeshows/food-beverage",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Morocco Siema Expo",
-        "start_date": "2026-09-14",
-        "end_date": "2026-09-16",
+        "type": "international",
+        "date": "2026-09-14 to 2026-09-16",
         "venue": "Casablanca, Morocco",
         "why_it_matters": "Leading trade exhibition for food processing and packaging technologies in Morocco, offering access to the North African market.",
-        "link": "https://foodindustryexecutive.com/trade-shows",
-        "type": "international"
+        "register_info": "https://foodindustryexecutive.com/trade-shows",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "SupplySide Global 2026",
-        "start_date": "2026-10-26",
-        "end_date": "2026-10-28",
+        "type": "international",
+        "date": "2026-10-26 to 2026-10-28",
         "venue": "Mandalay Bay, Las Vegas",
         "why_it_matters": "The ultimate destination for supplement, food and beverage innovation, offering insights into US market trends.",
-        "link": "https://www.foodingredientsfirst.com/events.html",
-        "type": "international"
+        "register_info": "https://www.foodingredientsfirst.com/events.html",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FICCI–IBA Annual Banking Conference (FIBAC 2026)",
-        "start_date": "2026-08-11",
-        "end_date": "2026-08-12",
+        "type": "domestic",
+        "date": "2026-08-11 to 2026-08-12",
         "venue": "Mumbai",
         "why_it_matters": "Networking opportunity with banking and finance professionals, potentially useful for trade finance for Supab Exports.",
-        "link": "https://in.linkedin.com/company/ficci",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/ficci",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "India FoodCone Expo 2026",
-        "start_date": "2026-08-07",
-        "end_date": "2026-08-10",
+        "type": "domestic",
+        "date": "2026-08-07 to 2026-08-10",
         "venue": "Exhibition Ground, Dongre Vasti, Nashik, Maharashtra",
         "why_it_matters": "Highly relevant local event in Maharashtra for networking, showcasing products, and exploring new food processing technologies.",
-        "link": "https://indiafoodconeexpo.com",
-        "type": "domestic"
+        "register_info": "https://indiafoodconeexpo.com",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FoodVision Expo - Chennai 2026",
-        "start_date": "2026-10-15",
-        "end_date": "2026-10-17",
+        "type": "domestic",
+        "date": "2026-10-15 to 2026-10-17",
         "venue": "Chennai",
         "why_it_matters": "Regional food expo, good for networking and market presence in South India.",
-        "link": "https://foodvisionexpo.com",
-        "type": "domestic"
+        "register_info": "https://foodvisionexpo.com",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "2nd India–Africa Seed Summit 2026",
-        "start_date": "2026-09-15",
-        "end_date": "2026-09-18",
+        "type": "domestic",
+        "date": "2026-09-15 to 2026-09-18",
         "venue": "Marigold Hotel, Begumpet, Hyderabad",
         "why_it_matters": "Global platform for seed systems and agri-innovation, relevant for sourcing and understanding agricultural trends for Supab Exports.",
-        "link": "https://in.linkedin.com/company/indian-chamber-of-food-and-agriculture",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/indian-chamber-of-food-and-agriculture",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Ingredients, Additives & Materials Mumbai 2026",
-        "start_date": "2026-09-29",
-        "end_date": "2026-10-01",
+        "type": "domestic",
+        "date": "2026-09-29 to 2026-10-01",
         "venue": "Bombay Exhibition Centre, Mumbai",
         "why_it_matters": "Key event for food ingredients, relevant for sourcing and market trends for Supab Exports.",
-        "link": "https://www.tradefairdates.com/Ingredients-Additives-Materials-M14485/Mumbai.html",
-        "type": "domestic"
+        "register_info": "https://www.tradefairdates.com/Ingredients-Additives-Materials-M14485/Mumbai.html",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Navachar Mantra 2026",
-        "start_date": "2026-07-13",
-        "end_date": "2026-12-13",
+        "type": "domestic",
+        "date": "2026-07-13 to 2026-12-13",
         "venue": "Online",
         "why_it_matters": "Ongoing event for innovation, potentially relevant for digital consulting.",
-        "link": "https://in.linkedin.com/company/fittiitdelhi",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/fittiitdelhi",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FIEO International Reverse Buyer-Seller Meet (RBSM) at Visakhapatnam",
-        "start_date": "2026-08-19",
-        "end_date": "2026-08-21",
+        "type": "domestic",
+        "date": "2026-08-19 to 2026-08-21",
         "venue": "Visakhapatnam",
         "why_it_matters": "A domestic RBSM offering direct B2B engagements with international buyers, highly relevant for Supab Exports to find new leads.",
-        "link": "https://fieo.org/view_detail.php?id=0%2C22&dcd=13694&evetype=0",
-        "type": "domestic"
+        "register_info": "https://fieo.org/view_detail.php?id=0%2C22&dcd=13694&evetype=0",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "MCCIA's Specialized Certificate Course in Agri-Food Export Management",
-        "start_date": "2026-08-17",
-        "end_date": "2026-08-21",
+        "type": "domestic",
+        "date": "2026-08-17 to 2026-08-21",
         "venue": "MCCIA Trade Tower, Senapati Bapat Road, Pune",
         "why_it_matters": "Gain expertise in global agri trade and export pricing, valuable for both Supab Exports and Supab Digital's consulting services.",
-        "link": "https://in.linkedin.com/company/mcciapune",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/mcciapune",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Natexpo 2026",
-        "start_date": "2026-09-28",
-        "end_date": "2026-09-29",
+        "type": "international",
+        "date": "2026-09-28 to 2026-09-29",
         "venue": "Eurexpo Lyon, France",
         "why_it_matters": "International trade fair for organic products and bio-trends, relevant for organic dehydrated food opportunities in Europe.",
-        "link": "https://www.itac-professional.com/en/blog/best-european-food-and-beverage-trade-shows",
-        "type": "international"
+        "register_info": "https://www.itac-professional.com/en/blog/best-european-food-and-beverage-trade-shows",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "AHK Sri Lanka Business Delegation to Anuga Select India & Anuga FoodTec India 2026",
-        "start_date": "2026-09-29",
-        "end_date": "2026-10-01",
+        "type": "domestic",
+        "date": "2026-09-29 to 2026-10-01",
         "venue": "Bombay Exhibition Centre (BEC), Mumbai, India",
         "why_it_matters": "Connect with international exhibitors and explore sourcing opportunities in food processing and packaging technologies.",
-        "link": "https://lk.linkedin.com/company/ahksrilanka",
-        "type": "domestic"
+        "register_info": "https://lk.linkedin.com/company/ahksrilanka",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Saudi Agriculture Riyadh 2026",
-        "start_date": "2026-10-19",
-        "end_date": "2026-10-22",
+        "type": "international",
+        "date": "2026-10-19 to 2026-10-22",
         "venue": "Riyadh, Saudi Arabia",
         "why_it_matters": "International fair for agriculture and food, providing direct access to the Saudi Arabian market for agri-food products.",
-        "link": "https://expoassist.net/en/food",
-        "type": "international"
+        "register_info": "https://expoassist.net/en/food",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Foodex Saudi Riyadh 2026",
-        "start_date": "2026-11-16",
-        "end_date": "2026-11-18",
+        "type": "international",
+        "date": "2026-11-16 to 2026-11-18",
         "venue": "Riyadh, Saudi Arabia",
         "why_it_matters": "International food and beverage trade exhibition, crucial for connecting with buyers in Saudi Arabia.",
-        "link": "https://expoassist.net/en/food",
-        "type": "international"
+        "register_info": "https://expoassist.net/en/food",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Fi Europe 2026",
-        "start_date": "2026-11-17",
-        "end_date": "2026-11-19",
+        "type": "international",
+        "date": "2026-11-17 to 2026-11-19",
         "venue": "Frankfurt, Germany",
         "why_it_matters": "International platform connecting agri-food professionals, showcasing trends and latest discoveries in the food industry.",
-        "link": "https://www.exproglobal-europe.com/events/fi-europe",
-        "type": "international"
+        "register_info": "https://www.exproglobal-europe.com/events/fi-europe",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Indusfood 2027",
-        "start_date": "2027-01-08",
-        "end_date": "2027-01-10",
+        "type": "domestic",
+        "date": "2027-01-08 to 2027-01-10",
         "venue": "Greater Noida, India",
         "why_it_matters": "Asia’s premier F&B trade exhibition, offering opportunities to source smarter, scale faster, and succeed globally for Supab Exports.",
-        "link": "https://indusfood.co.in",
-        "type": "domestic"
+        "register_info": "https://indusfood.co.in",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "G20 Young Entrepreneurs' Alliance Summit",
-        "start_date": "2026-09-16",
-        "end_date": "2026-09-18",
+        "type": "international",
+        "date": "2026-09-16 to 2026-09-18",
         "venue": "Vienna, Austria",
         "why_it_matters": "An opportunity to represent India on a global stage, connect with young entrepreneurs, and shape conversations relevant to international business for Supab Digital's clients.",
-        "link": "https://in.linkedin.com/company/young-indians",
-        "type": "international"
+        "register_info": "https://in.linkedin.com/company/young-indians",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Global SME Finance Forum",
-        "start_date": "2026-09-01",
-        "end_date": "2026-09-30",
+        "type": "international",
+        "date": "2026-09-01 to 2026-09-30",
         "venue": "Not specified",
         "why_it_matters": "This forum covers cross-border digital trade, AI governance in credit, and how to bring SMEs into global commerce, highly relevant for Supab Digital's clients.",
-        "link": "https://www.linkedin.com/company/sme-finance-forum-managed-by-ifc",
-        "type": "international"
+        "register_info": "https://www.linkedin.com/company/sme-finance-forum-managed-by-ifc",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FSSAI Labeling & Packaging Display Regulations Training",
-        "start_date": "2026-08-09",
-        "end_date": "2026-08-09",
+        "type": "domestic",
+        "date": "2026-08-09 to 2026-08-09",
         "venue": "Online (Google Meet)",
         "why_it_matters": "Essential training for ensuring food labels comply with FSSAI rules, crucial for IMM's domestic and Supab Exports' international market readiness.",
-        "link": "https://in.linkedin.com/company/f-t-p-a",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/f-t-p-a",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "ISO 22000:2018 FSMS Training",
-        "start_date": "2026-08-13",
-        "end_date": "2026-08-13",
+        "type": "domestic",
+        "date": "2026-08-13 to 2026-08-13",
         "venue": "Online",
         "why_it_matters": "Crucial training for implementing food safety management systems, directly enhancing IMM's compliance and quality assurance for global markets.",
-        "link": "https://in.linkedin.com/company/f-t-p-a",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/f-t-p-a",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Online Training - Frontiers in Food Process Engineering: AI, Digital Twins, and Sustainable Technologies",
-        "start_date": "2026-08-20",
-        "end_date": "2026-08-20",
+        "type": "domestic",
+        "date": "2026-08-20 to 2026-08-20",
         "venue": "Online",
         "why_it_matters": "This training is valuable for IMM to explore advanced processing technologies and for Supab Digital to understand AI applications in food tech.",
-        "link": "https://www.linkedin.com/company/bio-brainzz",
-        "type": "domestic"
+        "register_info": "https://www.linkedin.com/company/bio-brainzz",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Physical Wallah AI Startup Challenge",
-        "start_date": "2026-08-20",
-        "end_date": "2026-08-21",
+        "type": "domestic",
+        "date": "2026-08-20 to 2026-08-21",
         "venue": "Not specified",
         "why_it_matters": "An opportunity for AI startups to pitch for funding, relevant for Supab Digital to network or potentially advise emerging AI businesses.",
-        "link": "https://in.linkedin.com/company/msme-business-forum-india",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/msme-business-forum-india",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "International Bakery Expo Kolkata 2026",
-        "start_date": "2026-08-21",
-        "end_date": "2026-08-23",
+        "type": "domestic",
+        "date": "2026-08-21 to 2026-08-23",
         "venue": "Biswa Bangla Mela Prangan, Kolkata",
         "why_it_matters": "Relevant for connecting with bakeries, mithai, and namkeen industries, potential buyers for IMM's powders.",
-        "link": "https://www.instagram.com/p/DXy8JWTmAMt",
-        "type": "domestic"
+        "register_info": "https://www.instagram.com/p/DXy8JWTmAMt",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "AGROWORLD EXPO 2026",
-        "start_date": "2026-11-20",
-        "end_date": "2026-11-23",
+        "type": "domestic",
+        "date": "2026-11-20 to 2026-11-23",
         "venue": "Jalgaon, India",
         "why_it_matters": "Highly relevant local event for networking and sourcing in the agricultural sector.",
-        "link": "https://www.tradeindia.com/tradeshows/organizer-153713747/agro-world.html",
-        "type": "domestic"
+        "register_info": "https://www.tradeindia.com/tradeshows/organizer-153713747/agro-world.html",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FIEO Niryat Bandhu Programme (Gwalior)",
-        "start_date": "2026-08-11",
-        "end_date": "2026-08-11",
+        "type": "domestic",
+        "date": "2026-08-11 to 2026-08-11",
         "venue": "Gwalior, Madhya Pradesh",
         "why_it_matters": "Capacity building and export awareness program for new exporters with a specific focus on District as Export Hub (DEH) products.",
-        "link": "x.com/FieoHq/status/2082717362784976896",
-        "type": "domestic"
+        "register_info": "x.com/FieoHq/status/2082717362784976896",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FIEO Virtual Workshop on Export Promotion",
-        "start_date": "2026-08-14",
-        "end_date": "2026-08-14",
+        "type": "domestic",
+        "date": "2026-08-14 to 2026-08-14",
         "venue": "Virtual",
         "why_it_matters": "Provides practical insights on export promotion under the Niryat Bandhu Scheme.",
-        "link": "x.com/FieoHq/status/2082765973422309868",
-        "type": "domestic"
+        "register_info": "x.com/FieoHq/status/2082765973422309868",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Goa Hospitality Show",
-        "start_date": "2026-08-12",
-        "end_date": "2026-08-13",
+        "type": "domestic",
+        "date": "2026-08-12 to 2026-08-13",
         "venue": "Dr. Shyama Prasad Mukherjee Indoor Stadium, Bambolim, Goa",
-        "why_it_attends": "Most focused product sourcing show for the hotel, restaurant, bakery & catering industry. Excellent opportunity to connect with domestic B2B buyers for IMM's powders.",
-        "link": "instagram.com/reel/DZt7e_eMtJn",
-        "type": "domestic"
+        "why_it_matters": "Relevant for connecting with the hospitality sector, a potential buyer for IMM's products.",
+        "register_info": "instagram.com/reel/DZt7e_eMtJn",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Bakery Business Mumbai 2026",
-        "start_date": "2026-11-25",
-        "end_date": "2026-11-26",
+        "type": "domestic",
+        "date": "2026-11-25 to 2026-11-26",
         "venue": "JIO WORLD CONVENTION CENTRE BKC MUMBAI",
         "why_it_matters": "Promises bigger opportunities and networking for the bakery, confectionery, ice cream, and food service industries. Excellent opportunity to connect with domestic B2B buyers for IMM's powders.",
-        "link": "instagram.com/reel/DZt7e_eMtJn",
-        "type": "domestic"
+        "register_info": "instagram.com/reel/DZt7e_eMtJn",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Agrivoltaics World Conference 2026",
-        "start_date": "2026-10-21",
-        "end_date": "2026-10-23",
+        "type": "domestic",
+        "date": "2026-10-21 to 2026-10-23",
         "venue": "New Delhi",
         "why_it_matters": "Sustainable agriculture, renewable energy. Potentially relevant for IMM's long-term sustainability goals or exploring new agri-tech.",
-        "link": "https://in.linkedin.com/company/giz-india",
-        "type": "domestic"
-    },
-    {
-        "name": "BIOFACH INDIA 2026",
-        "start_date": "2026-08-06",
-        "end_date": "2026-08-08",
-        "venue": "India Expo Centre, Greater Noida, Delhi NCR",
-        "why_it_matters": "Major domestic trade fair for organic products, offering networking and market insights for organic dehydrated foods.",
-        "link": "https://apeda.gov.in/TradeFairs",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/giz-india",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "ICA2026 (International Conference on AI in Agriculture)",
-        "start_date": "2026-11-01",
-        "end_date": "2026-11-04",
+        "type": "domestic",
+        "date": "2026-11-01 to 2026-11-04",
         "venue": "Not specified.",
         "why_it_matters": "AI in agriculture, digital agriculture. Relevant for Supab Digital for consulting and IMM for exploring tech.",
-        "link": "https://in.linkedin.com/company/annam-ai",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/annam-ai",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "WorldFood Moscow 2026",
-        "start_date": "2026-09-15",
-        "end_date": "2026-09-18",
+        "type": "international",
+        "date": "2026-09-15 to 2026-09-18",
         "venue": "Moscow, Russia",
         "why_it_matters": "Major international food exhibition to explore Russian market trends and connect with potential buyers.",
-        "link": "https://apeda.gov.in/TradeFairs",
-        "type": "international"
+        "register_info": "https://apeda.gov.in/TradeFairs",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "SAUDI FOOD EXPO",
-        "start_date": "2026-11-15",
-        "end_date": "2026-11-18",
+        "type": "international",
+        "date": "2026-11-15 to 2026-11-18",
         "venue": "Riyadh Front Expo, Saudi Arabia",
         "why_it_matters": "Saudi Arabia’s largest food and beverage exhibition, designed to connect global producers, suppliers, distributors, and retailers.",
-        "link": "https://www.cannedfood.it/calendar.html",
-        "type": "international"
+        "register_info": "https://www.cannedfood.it/calendar.html",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FOODEX SAUDI",
-        "start_date": "2026-11-16",
-        "end_date": "2026-11-18",
+        "type": "international",
+        "date": "2026-11-16 to 2026-11-18",
         "venue": "Riyadh",
         "why_it_matters": "Saudi Arabia’s leading international trade exhibition 100% dedicated to the food and drink industry, connecting professional Saudi buyers with global offerings.",
-        "link": "https://www.cannedfood.it/calendar.html",
-        "type": "international"
+        "register_info": "https://www.cannedfood.it/calendar.html",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "MIDDLE EAST ORGANIC AND NATURAL PRODUCTS EXPO (MENOPE)",
-        "start_date": "2026-11-16",
-        "end_date": "2026-11-18",
+        "type": "international",
+        "date": "2026-11-16 to 2026-11-18",
         "venue": "Dubai World Trade Centre, UAE",
         "why_it_matters": "Opportunity to explore the organic and natural products market in the Middle East.",
-        "link": "https://www.cannedfood.it/calendar.html",
-        "type": "international"
+        "register_info": "https://www.cannedfood.it/calendar.html",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "FI INDIA - FOOD INGREDIENTS INDIA",
-        "start_date": "2026-08-26",
-        "end_date": "2026-08-28",
+        "type": "domestic",
+        "date": "2026-08-26 to 2026-08-28",
         "venue": "Mumbai (India) Bombay Convention & Exhibition Centre (BCEC)",
         "why_it_matters": "India's leading food ingredients event to network with industry tastemakers and discover F&B trends.",
-        "link": "https://www.figlobal.com/india",
-        "type": "domestic"
-    },
-    {
-        "name": "India Association Congress (IAC 2026)",
-        "start_date": "2026-08-07",
-        "end_date": "2026-08-08",
-        "venue": "Biswa Bangla Convention Centre, Kolkata",
-        "why_it_matters": "Explores \"Associations in a Changing World Order,\" with discussions on Cross-Border Trade, Digital Trade, AI, Digital Transformation, Supply Chain, and Trade Innovation. Valuable for networking and understanding future trends.",
-        "link": "https://in.linkedin.com/company/india-association-congress",
-        "type": "domestic"
-    },
-    {
-        "name": "MCCIA Certificate Course in Foreign Trade",
-        "start_date": "2026-08-08",
-        "end_date": "2026-08-08",
-        "venue": "MCCIA Trade Tower, SB Road, Pune",
-        "why_it_matters": "Provides practical insights into export-import finance, banking regulations, and trade documentation, crucial for optimizing export operations and advising clients.",
-        "link": "https://in.linkedin.com/company/mcciapune",
-        "type": "domestic"
+        "register_info": "https://www.figlobal.com/india",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "MCCIA AI Workshop: Prompting Skills",
-        "start_date": "2026-08-10",
-        "end_date": "2026-08-10",
+        "type": "domestic",
+        "date": "2026-08-10 to 2026-08-10",
         "venue": "Online Session",
         "why_it_matters": "Learn practical techniques to write better prompts, improve AI responses, and use AI tools more effectively for daily work, directly enhancing consulting services.",
-        "link": "https://in.linkedin.com/company/mcciapune",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/mcciapune",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "MCCIA Agri-Food EXIM Management Certification Course",
-        "start_date": "2026-08-17",
-        "end_date": "2026-08-21",
+        "type": "domestic",
+        "date": "2026-08-17 to 2026-08-21",
         "venue": "MCCIA Trade Tower, Pune",
         "why_it_matters": "Equips with practical skills and direct industry exposure for agri-food export, including live documentation, industrial field visits, and virtual B2B meets with global buyers.",
-        "link": "https://in.linkedin.com/company/mcciapune",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/mcciapune",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "GIZ India Young Voices for Sustainable Development",
-        "start_date": "2026-08-12",
-        "end_date": "2026-08-12",
+        "type": "domestic",
+        "date": "2026-08-12 to 2026-08-12",
         "venue": "German Embassy, New Delhi",
         "why_it_matters": "Gain insights into youth-led innovation and sustainable development, which could inform future consulting strategies for SME clients.",
-        "link": "https://in.linkedin.com/company/giz-india",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/giz-india",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Exhibition Excellence Awards & Summit (EEA 2026)",
-        "start_date": "2026-08-18",
-        "end_date": "2026-08-18",
+        "type": "domestic",
+        "date": "2026-08-18 to 2026-08-18",
         "venue": "Mumbai",
         "why_it_matters": "Opportunity to network with exhibition industry leaders, explore event technology, and understand future trends in showcasing products, which can be beneficial for future trade fair participation.",
-        "link": "https://in.linkedin.com/company/exhibition-showcase-magazine",
-        "type": "domestic"
-    },
-    {
-        "name": "Freelance Trainings FREE Live Webinar",
-        "start_date": "2026-08-08",
-        "end_date": "2026-08-08",
-        "venue": "Online",
-        "why_it_matters": "Learn how to access daily training opportunities, build a stronger professional network, and maximize visibility as a freelance trainer, directly benefiting Supab Digital's growth.",
-        "link": "https://www.linkedin.com/company/freelancetrainings.com",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/exhibition-showcase-magazine",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "National Spice Conference 2026",
-        "start_date": "2026-09-19",
-        "end_date": "2026-09-20",
+        "type": "domestic",
+        "date": "2026-09-19 to 2026-09-20",
         "venue": "Novotel Jaipur Convention Centre, Rajasthan",
         "why_it_matters": "Crucial for understanding evolving organic farming regulations, certification challenges, and market trends in the spice industry. Early bird registration ends August 31, 2026.",
-        "link": "https://www.linkedin.com/company/national-spice-conference",
-        "type": "domestic"
-    },
-    {
-        "name": "EverythingAboutWater Expo 2026",
-        "start_date": "2026-08-06",
-        "end_date": "2026-08-08",
-        "venue": "Bharat Mandapam, New Delhi",
-        "why_it_matters": "Opportunity to explore innovative water and wastewater treatment solutions, crucial for food processing factory compliance and sustainability.",
-        "link": "https://in.linkedin.com/company/nanokriti-nanobubble-technologies-iit-ropar",
-        "type": "domestic"
+        "register_info": "https://www.linkedin.com/company/national-spice-conference",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "ICCOA Workshop & Training Program",
-        "start_date": "2026-08-19",
-        "end_date": "2026-08-21",
+        "type": "domestic",
+        "date": "2026-08-19 to 2026-08-21",
         "venue": "Amity University Campus, Noida",
         "why_it_matters": "Gain practical insights into certified organics, new labels (Global G.A.P., IPM, Rainforest Alliance), and carbon credits, vital for market access and sustainable practices.",
-        "link": "https://in.linkedin.com/company/international-competence-centre-for-organic-agriculture-iccoa-",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/international-competence-centre-for-organic-agriculture-iccoa-",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "AIFPA \"Future of Food, Engineered Today\" Conference",
-        "start_date": "2026-09-11",
-        "end_date": "2026-09-11",
+        "type": "domestic",
+        "date": "2026-09-11 to 2026-09-11",
         "venue": "Radisson Blu, New Delhi",
         "why_it_matters": "Focus on innovation, sustainability, food safety, compliance, and future-ready technologies is highly relevant for IMM's production processes and strategic planning.",
-        "link": "https://in.linkedin.com/company/aifpa",
-        "type": "domestic"
+        "register_info": "https://in.linkedin.com/company/aifpa",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     },
     {
         "name": "Morocco SIEMA Expo 2026",
-        "start_date": "2026-09-15",
-        "end_date": "2026-09-17",
+        "type": "international",
+        "date": "2026-09-15 to 2026-09-17",
         "venue": "Casablanca, Morocco",
         "why_it_matters": "Leading trade exhibition for food processing and packaging technologies in Morocco, offering access to the North African market.",
-        "link": "https://in.linkedin.com/company/packaging-labeling-industry",
-        "type": "international"
+        "register_info": "https://in.linkedin.com/company/packaging-labeling-industry",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
+    },
+    {
+        "name": "WorldFood Moscow, Russia",
+        "type": "international",
+        "date": "2026-09-15 to 2026-09-18",
+        "venue": "Moscow, Russia",
+        "why_it_matters": "Major international food exhibition to explore Russian market trends and connect with potential buyers.",
+        "register_info": "https://apeda.gov.in/TradeFairs",
+        "start_date": "2026-08-09",
+        "end_date": "2026-08-09"
     }
 ]
