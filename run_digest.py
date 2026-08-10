@@ -226,6 +226,91 @@ class DailyDigestPipeline:
             logging.error(f"DuckDuckGo search failed for '{query}': {e}")
             return ""
 
+    def fetch_newspaper_intelligence(self):
+        """Scans leading Indian business dailies (Economic Times, Business Standard, 
+        Hindu BusinessLine, Mint, Financial Express) via RSS and Google News RSS for industry-relevant news."""
+        import urllib.request
+        import xml.etree.ElementTree as ET
+        
+        logging.info("Gathering news from leading Indian business newspapers (Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...")
+        
+        feeds = [
+            ("The Hindu BusinessLine (Agri-Business)", "https://www.thehindubusinessline.com/economy/agri-business/feeder/default.rss"),
+            ("The Hindu BusinessLine (Economy)", "https://www.thehindubusinessline.com/economy/feeder/default.rss"),
+            ("The Hindu BusinessLine (Commodities)", "https://www.thehindubusinessline.com/markets/commodities/feeder/default.rss"),
+            ("Business Standard (Economy & Policy)", "https://www.business-standard.com/rss/economy-policy-102.rss"),
+            ("Business Standard (Markets & Commodities)", "https://www.business-standard.com/rss/markets-commodities-106.rss"),
+            ("Google News (ET / Financial Express / Mint - Agri, Spices & Food Processing)", "https://news.google.com/rss/search?q=(site:economictimes.indiatimes.com+OR+site:financialexpress.com+OR+site:livemint.com)+(%22spices%22+OR+%22dehydrated%22+OR+%22banana%22+OR+%22turmeric%22+OR+%22garlic%22+OR+%22ginger%22+OR+%22moringa%22+OR+%22food+processing%22+OR+%22PMFME%22)&hl=en-IN&gl=IN&ceid=IN:en"),
+            ("Google News (ET / Mint / Business Standard - Trade, Mandi & Policy)", "https://news.google.com/rss/search?q=(site:economictimes.indiatimes.com+OR+site:financialexpress.com+OR+site:livemint.com+OR+site:business-standard.com)+(%22agri+export%22+OR+%22DGFT%22+OR+%22APEDA%22+OR+%22FSSAI%22+OR+%22container+freight%22+OR+%22mandi+price%22)&hl=en-IN&gl=IN&ceid=IN:en")
+        ]
+        
+        # Keywords for filtering articles to ensure high signal for IMM & Supab
+        relevance_keywords = [
+            "banana", "moringa", "turmeric", "ginger", "garlic", "beetroot", "shatawari", "ashwagandha",
+            "onion", "dehydrat", "powder", "food processing", "agri export", "spice", "fssai", "dgft",
+            "apeda", "msme", "pmfme", "mandi", "container", "freight", "customs", "cepa", "fta",
+            "curcumin", "cold chain", "packaging", "contract manufacturing", "private label",
+            "horticulture", "agriculture", "export", "import alert", "food safety"
+        ]
+        
+        extracted_articles = []
+        seen_titles = set()
+        
+        for feed_name, feed_url in feeds:
+            try:
+                req = urllib.request.Request(feed_url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+                with urllib.request.urlopen(req, timeout=12) as res:
+                    raw_xml = res.read()
+                    root = ET.fromstring(raw_xml)
+                    items = root.findall('.//item')
+                    
+                    for item in items:
+                        title_el = item.find('title')
+                        link_el = item.find('link')
+                        desc_el = item.find('description')
+                        pub_date_el = item.find('pubDate')
+                        
+                        title = title_el.text.strip() if title_el is not None and title_el.text else ""
+                        link = link_el.text.strip() if link_el is not None and link_el.text else ""
+                        desc = desc_el.text.strip() if desc_el is not None and desc_el.text else ""
+                        pub_date = pub_date_el.text.strip() if pub_date_el is not None and pub_date_el.text else ""
+                        
+                        # Clean HTML tags in description if present
+                        desc_clean = re.sub(r'<[^>]+>', '', desc).strip()
+                        
+                        if not title or title.lower() in seen_titles:
+                            continue
+                            
+                        # Relevance match
+                        text_to_check = f"{title} {desc_clean}".lower()
+                        is_relevant = any(kw in text_to_check for kw in relevance_keywords)
+                        
+                        if is_relevant:
+                            seen_titles.add(title.lower())
+                            extracted_articles.append({
+                                "source": feed_name,
+                                "title": title,
+                                "link": link,
+                                "description": desc_clean[:300],
+                                "date": pub_date
+                            })
+            except Exception as e:
+                logging.warning(f"Failed to fetch newspaper feed '{feed_name}': {e}")
+                
+        logging.info(f"Retrieved {len(extracted_articles)} relevant business newspaper stories.")
+        
+        # Format articles into structured markdown string for the LLM
+        formatted_list = []
+        for art in extracted_articles:
+            formatted_list.append(
+                f"- [{art['source']}] {art['title']}\n"
+                f"  Published: {art['date']}\n"
+                f"  Summary: {art['description']}\n"
+                f"  Link: {art['link']}"
+            )
+            
+        return "\n\n".join(formatted_list) if formatted_list else "No direct newspaper matches found in today's business RSS feeds."
+
     def run_broad_search(self):
         """Runs optimized search queries for the topics and social media handles."""
         today_str = datetime.date.today().isoformat()
@@ -323,8 +408,9 @@ class DailyDigestPipeline:
             # Export Leads & Inquiries
             f"(\"banana powder\" OR \"moringa powder\" OR \"turmeric powder\" OR \"beetroot powder\" OR \"ginger powder\" OR \"garlic powder\" OR \"ashwagandha\" OR \"shatawari\") AND (\"export tender\" OR \"APEDA buyer inquiry\" OR \"importer requirement\") 2026",
             
-            # International Events & Meets (GCC/EU/US focus)
-            f"(\"food trade fair\" OR \"expo\" OR \"exhibition\" OR \"agri food trade show\") AND (Riyadh OR GCC OR Dubai OR Europe OR Germany) AND (\"spices\" OR \"dehydrated\" OR \"food ingredients\") 2026",
+            # Business Newspapers targeted search
+            f"(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND (\"spices\" OR \"dehydrated\" OR \"banana powder\" OR \"moringa\" OR \"turmeric\" OR \"food processing\" OR \"PMFME\" OR \"FSSAI\" OR \"DGFT\") {today_str}",
+            f"(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND (\"agri export\" OR \"commodity prices\" OR \"mandi price\" OR \"container freight\" OR \"exim\") {today_str}",
             
             # AI & Technology updates (both consulting and factory/lab operations)
             f"(\"AI tool Indian exporter\" OR \"AI market research tool export\" OR \"AI buyer discovery\" OR \"AI production planning\" OR \"AI lab management\" OR \"AI factory compliance\") 2026"
@@ -353,7 +439,7 @@ class DailyDigestPipeline:
     # ==========================================
     # AI COMPILATION & GENERATION (Gemini API)
     # ==========================================
-    def generate_digest_ai(self, raw_crawled, raw_searched):
+    def generate_digest_ai(self, raw_crawled, raw_searched, raw_newspapers=""):
         """Calls OpenAI or Gemini API to compile and generate the final Daily Digest."""
         today_date_str = datetime.date.today().strftime("%A, %d %B %Y")
         
@@ -452,11 +538,14 @@ CRITICAL QUALITY RULES - NON-NEGOTIABLE
 """
 
         user_instruction = f"""
-Here is the raw data collected in the last 24 hours from target crawled pages and web searches.
+Here is the raw data collected in the last 24 hours from target crawled pages, daily business newspapers, and web searches.
 Read the content carefully, apply the strict relevance filters and rules, and generate the final email report in the exact format specified below.
 
-### RAW CRAWLED DATA
+### RAW CRAWLED DATA (REGULATORY BODIES)
 {raw_crawled}
+
+### RAW BUSINESS NEWSPAPER INTELLIGENCE (The Economic Times, Business Standard, The Hindu BusinessLine, Mint, Financial Express)
+{raw_newspapers}
 
 ### RAW SEARCH & SOCIAL INTELLIGENCE
 {raw_searched}
@@ -1055,13 +1144,19 @@ Example:
         logging.info("=" * 60)
         
         # 1. Scrape configured target sites (DGFT, etc.)
-        logging.info("[Step 1/4] Deep Scanning Target Regulatory Sites...")
+        logging.info("[Step 1/5] Deep Scanning Target Regulatory Sites...")
         crawled_data = self.crawl_target_sites()
         crawled_data = self.clean_text_for_llm(crawled_data)
         logging.info(f"Scraped & cleaned {len(crawled_data)} chars of raw text from regulatory targets.")
         
-        # 2. Execute broad web search & handle checking
-        logging.info("[Step 2/4] Conducting 24-Hour Web Intelligence Searches...")
+        # 2. Newspaper intelligence
+        logging.info("[Step 2/5] Scanning Leading Business Newspapers (The Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...")
+        newspaper_data = self.fetch_newspaper_intelligence()
+        newspaper_data = self.clean_text_for_llm(newspaper_data)
+        logging.info(f"Scraped & cleaned {len(newspaper_data)} chars of raw text from business newspapers.")
+
+        # 3. Execute broad web search & handle checking
+        logging.info("[Step 3/5] Conducting 24-Hour Web Intelligence Searches...")
         searched_data = self.run_broad_search()
         searched_data = self.clean_text_for_llm(searched_data)
         logging.info(f"Retrieved & cleaned {len(searched_data)} chars of broad web search results.")
@@ -1073,12 +1168,14 @@ Example:
         
         with open(os.path.join(daily_dir, "raw_scraped_targets.txt"), "w", encoding="utf-8") as f:
             f.write(crawled_data)
+        with open(os.path.join(daily_dir, "raw_newspaper_intel.txt"), "w", encoding="utf-8") as f:
+            f.write(newspaper_data)
         with open(os.path.join(daily_dir, "raw_searched_intel.txt"), "w", encoding="utf-8") as f:
             f.write(searched_data)
         
-        # 3. Call AI to synthesize and filter
-        logging.info("[Step 3/4] Synthesizing Intelligence with Gemini API...")
-        digest_text = self.generate_digest_ai(crawled_data, searched_data)
+        # 4. Call AI to synthesize and filter
+        logging.info("[Step 4/5] Synthesizing Intelligence with Gemini API...")
+        digest_text = self.generate_digest_ai(crawled_data, searched_data, newspaper_data)
         
         # Extract and update state
         clean_digest, state_data = self.parse_state_update(digest_text)
@@ -1091,8 +1188,8 @@ Example:
             f.write(clean_digest)
         logging.info(f"Saved completed markdown digest to {digest_file}")
         
-        # 4. Email report
-        logging.info("[Step 4/4] Delivering Digest Briefing Email...")
+        # 5. Email report
+        logging.info("[Step 5/5] Delivering Digest Briefing Email...")
         self.send_email(clean_digest)
         
         logging.info("=" * 60)
