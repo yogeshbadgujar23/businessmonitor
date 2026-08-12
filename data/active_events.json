@@ -27,39 +27,12 @@
         "type": "domestic"
     },
     {
-        "name": "World Futures Forum 2026",
-        "start_date": "2026-08-11",
-        "end_date": "2026-08-11",
-        "venue": "New Delhi",
-        "why_it_matters": "Focus on innovation, digital transformation, and MSME competitiveness. Relevant for Supab Digital's consulting services and IMM's factory upgrades.",
-        "link": "https://in.linkedin.com/company/india-sme-forum",
-        "type": "international"
-    },
-    {
-        "name": "VGRC 2026 at Vadodara",
-        "start_date": "2026-08-11",
-        "end_date": "2026-08-11",
-        "venue": "Vadodara",
-        "why_it_matters": "Relevant for understanding trends in healthy food ingredients and nutraceuticals, which use IMM's powders. Potential market for value-added products.",
-        "link": "https://in.linkedin.com/company/fieo",
-        "type": "domestic"
-    },
-    {
-        "name": "MCCIA Capability Building Program on \"Operational Excellence – The Toyota Way\"",
-        "start_date": "2026-08-11",
-        "end_date": "2026-08-11",
-        "venue": "MCCIA Trade Tower, Pune",
-        "why_it_matters": "Directly applicable for IMM to improve factory productivity, quality, and efficiency.",
-        "link": "No direct link in snippet, but contact details available via MCCIA LinkedIn",
-        "type": "domestic"
-    },
-    {
         "name": "Agroworld Expo 2026 Jalgaon",
         "start_date": "2026-11-20",
         "end_date": "2026-11-23",
         "venue": "Jalgaon, Maharashtra, India",
         "why_it_matters": "Major local event to meet agricultural exhibitors, discover new technologies, learn about government schemes, and build connections with suppliers for IMM. Explore new agribusiness and export opportunities for Supab Exports.",
-        "link": "https://www.kisaantrade.com/event-details/383/agroworld-expo-2026",
+        "link": "https://www.tradeindia.com/tradeshows/organizer-153713747/agro-world.html",
         "type": "domestic"
     },
     {
@@ -96,6 +69,51 @@
         "venue": "Rajasthan",
         "why_it_matters": "Opportunity to network and understand market trends for spices for IMM and Supab Exports.",
         "link": "No direct link for 2026, but the 2025 news implies an annual event.",
+        "type": "domestic"
+    },
+    {
+        "name": "World Food Moscow 2026",
+        "start_date": "2026-09-15",
+        "end_date": "2026-09-18",
+        "venue": "Crocus Expo, Moscow, Russia",
+        "why_it_matters": "Major international food exhibition to explore Russian market trends and connect with potential buyers for Supab Exports.",
+        "link": "https://apeda.gov.in",
+        "type": "international"
+    },
+    {
+        "name": "MCCIA Certificate Course in Project Management: Risk Management, Legal Aspects & Quality Management",
+        "start_date": "2026-08-12",
+        "end_date": "2026-08-12",
+        "venue": "Shekhar Natu Hall, MCCIA, Pune",
+        "why_it_matters": "Gain practical skills to identify risks, ensure compliance, and deliver high-quality project outcomes, directly relevant for IMM's operations and certifications.",
+        "link": "Contact Sandhya Acharya +91 98507 84341 | sandhyaa@mcciapune.com",
+        "type": "domestic"
+    },
+    {
+        "name": "MCCIA Program on \"Building High Performance Teams\"",
+        "start_date": "2026-08-12",
+        "end_date": "2026-08-12",
+        "venue": "MCCIA Trade Tower, Pune",
+        "why_it_matters": "Learn strategies to create collaborative, accountable, and high-performing teams, beneficial for IMM's operational efficiency and growth.",
+        "link": "Contact Ms. Varsha Mahajan +91 88054 34864 | varsham@mcciapune.com",
+        "type": "domestic"
+    },
+    {
+        "name": "CSIR-CFTRI Training Program on Preparation of fruit & vegetable pulp/pures & its canning",
+        "start_date": "2026-08-31",
+        "end_date": "2026-09-04",
+        "venue": "CSIR-CFTRI",
+        "why_it_matters": "Relevant for understanding fruit/vegetable processing techniques, which could inform IMM's dehydration processes or product development.",
+        "link": "https://stc.cftri.res.in",
+        "type": "domestic"
+    },
+    {
+        "name": "CSIR-CFTRI Training Program on Value addition of Fruit & Vegetables (Resource Center-Mumbai)",
+        "start_date": "2026-09-28",
+        "end_date": "2026-09-30",
+        "venue": "Mumbai",
+        "why_it_matters": "Direct relevance for IMM to explore new value-added products or optimize existing processes for fruit and vegetable powders.",
+        "link": "https://stc.cftri.res.in",
         "type": "domestic"
     }
 ]
