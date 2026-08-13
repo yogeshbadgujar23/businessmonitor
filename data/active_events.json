@@ -51,7 +51,7 @@
         "venue": "Indore, India",
         "why_it_matters": "Major domestic event for networking and buyer connections for both IMM and Supab Exports.",
         "link": "https://www.trade.gov.in/webHP?requestType=ApplicationRH&actionVal=tradeEventLoadPage&screenId=1000&menuCode=800000&auditUSFlag=true&entityId=null&LACode=CAS",
-        "type": "domestic"
+        "type": "international"
     },
     {
         "name": "Conference on Future of Food, Engineered Today (AIFPA)",
@@ -76,27 +76,9 @@
         "start_date": "2026-09-15",
         "end_date": "2026-09-18",
         "venue": "Crocus Expo, Moscow, Russia",
-        "why_it_matters": "Major international food exhibition to explore Russian market trends and connect with potential buyers for Supab Exports.",
+        "why_it_matters": "Major international food exhibition to explore Russian market trends and connect with potential buyers for Supab Exports. APEDA is inviting bids for India Pavilion.",
         "link": "https://apeda.gov.in",
         "type": "international"
-    },
-    {
-        "name": "MCCIA Certificate Course in Project Management: Risk Management, Legal Aspects & Quality Management",
-        "start_date": "2026-08-12",
-        "end_date": "2026-08-12",
-        "venue": "Shekhar Natu Hall, MCCIA, Pune",
-        "why_it_matters": "Gain practical skills to identify risks, ensure compliance, and deliver high-quality project outcomes, directly relevant for IMM's operations and certifications.",
-        "link": "Contact Sandhya Acharya +91 98507 84341 | sandhyaa@mcciapune.com",
-        "type": "domestic"
-    },
-    {
-        "name": "MCCIA Program on \"Building High Performance Teams\"",
-        "start_date": "2026-08-12",
-        "end_date": "2026-08-12",
-        "venue": "MCCIA Trade Tower, Pune",
-        "why_it_matters": "Learn strategies to create collaborative, accountable, and high-performing teams, beneficial for IMM's operational efficiency and growth.",
-        "link": "Contact Ms. Varsha Mahajan +91 88054 34864 | varsham@mcciapune.com",
-        "type": "domestic"
     },
     {
         "name": "CSIR-CFTRI Training Program on Preparation of fruit & vegetable pulp/pures & its canning",
@@ -115,5 +97,86 @@
         "why_it_matters": "Direct relevance for IMM to explore new value-added products or optimize existing processes for fruit and vegetable powders.",
         "link": "https://stc.cftri.res.in",
         "type": "domestic"
+    },
+    {
+        "name": "Agri-Food EXIM Management Certification Course (MCCIA, Pune)",
+        "start_date": "2026-08-17",
+        "end_date": "2026-08-21",
+        "venue": "MCCIA Trade Tower, Pune",
+        "why_it_matters": "For IMM, it offers practical skills and industry exposure for agri-business. For Supab Exports, it provides direct industry exposure, live export documentation understanding, and a virtual B2B meet to connect with global buyers.",
+        "link": "https://in.linkedin.com/company/mcciapune",
+        "type": "domestic"
+    },
+    {
+        "name": "Agri SAARTHI KRANTI 2026 – 5.0 (National Agricultural Training Programme)",
+        "start_date": "2026-07-15",
+        "end_date": "2026-08-13",
+        "venue": "Online",
+        "why_it_matters": "Last day today. Offers expert-led training, modern agricultural technologies, and agri-entrepreneurship opportunities. Relevant for IMM to understand agricultural trends and for Supab Exports to identify potential sourcing partners.",
+        "link": "https://www.linkedin.com/company/agri-saarthi",
+        "type": "domestic"
+    },
+    {
+        "name": "Bharatiya Vyapar Mahotsav (ITPO & CAIT)",
+        "start_date": "2026-08-12",
+        "end_date": "2026-08-15",
+        "venue": "Bharat Mandapam, New Delhi",
+        "why_it_matters": "Last day today. Opportunity for networking with trade and industry stakeholders.",
+        "link": "https://in.linkedin.com/company/horti-goi",
+        "type": "domestic"
+    },
+    {
+        "name": "Kaizen: Continuous Improvement in Manufacturing (MCCIA, Pune)",
+        "start_date": "2026-08-14",
+        "end_date": "2026-08-14",
+        "venue": "Online Session",
+        "why_it_matters": "Directly relevant for IMM to improve manufacturing efficiency, productivity, and quality through lean manufacturing principles.",
+        "link": "https://in.linkedin.com/company/mcciapune",
+        "type": "domestic"
+    },
+    {
+        "name": "National Award for Excellence in Energy Management 2026 (CII – Green Business Centre)",
+        "start_date": "2026-09-16",
+        "end_date": "2026-09-18",
+        "venue": "Hyderabad",
+        "why_it_matters": "Opportunity for IMM to showcase energy efficiency efforts, learn best practices, and network with other industrial sectors. (Note: Submission deadline for questionnaire was June 15, 2026, so participation is no longer possible for this edition).",
+        "link": "https://in.linkedin.com/company/cii-godrej-gbc",
+        "type": "domestic"
+    },
+    {
+        "name": "World Futures Forum 2026 (India SME Forum & UNIDO)",
+        "start_date": "2026-01-01",
+        "end_date": "2026-12-31",
+        "venue": "New Delhi",
+        "why_it_matters": "For Supab Digital, it's a platform to advance dialogue on innovation, digital transformation, and MSME competitiveness, especially for the Global South. For Supab Exports, it offers insights into future trade trends and networking with policymakers and industry leaders.",
+        "link": "https://www.linkedin.com/company/world-entrepreneurship-development-organisation-wedo",
+        "type": "domestic"
+    },
+    {
+        "name": "Export Awareness Camp & E-Commerce Export Summit (DGFT Mumbai & DIC Nashik)",
+        "start_date": "2026-08-13",
+        "end_date": "2026-08-13",
+        "venue": "Nashik",
+        "why_it_matters": "For Supab Exports, it offers insights on navigating global trade and e-commerce platforms. For Supab Digital, it's a direct opportunity to understand exporter needs and offer AI/digital consulting for e-commerce.",
+        "link": "https://x.com/dgftindia",
+        "type": "domestic"
+    },
+    {
+        "name": "Africa Food Show Kenya 2026 (International Trade Council)",
+        "start_date": "2026-08-19",
+        "end_date": "2026-08-21",
+        "venue": "KICC, Nairobi, Kenya",
+        "why_it_matters": "Opportunity to expand into new markets, build international partnerships, and explore trade and investment opportunities in Africa for dehydrated foods and spices.",
+        "link": "https://sg.linkedin.com/company/the-international-trade-council",
+        "type": "international"
+    },
+    {
+        "name": "2nd India–Africa Seed Summit 2026 (ICFA)",
+        "start_date": "2026-09-15",
+        "end_date": "2026-09-18",
+        "venue": "Marigold Hotel, Begumpet, Hyderabad",
+        "why_it_matters": "Focus on India-Africa seed partnerships and market access could lead to broader agri-trade opportunities for Supab Exports. AI-powered breeding is relevant for future raw material quality for IMM.",
+        "link": "https://in.linkedin.com/company/indian-chamber-of-food-and-agriculture-icfa",
+        "type": "international"
     }
 ]
