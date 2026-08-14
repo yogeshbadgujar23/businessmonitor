@@ -51,7 +51,7 @@
         "venue": "Indore, India",
         "why_it_matters": "Major domestic event for networking and buyer connections for both IMM and Supab Exports.",
         "link": "https://www.trade.gov.in/webHP?requestType=ApplicationRH&actionVal=tradeEventLoadPage&screenId=1000&menuCode=800000&auditUSFlag=true&entityId=null&LACode=CAS",
-        "type": "international"
+        "type": "domestic"
     },
     {
         "name": "Conference on Future of Food, Engineered Today (AIFPA)",
@@ -108,15 +108,6 @@
         "type": "domestic"
     },
     {
-        "name": "Agri SAARTHI KRANTI 2026 – 5.0 (National Agricultural Training Programme)",
-        "start_date": "2026-07-15",
-        "end_date": "2026-08-13",
-        "venue": "Online",
-        "why_it_matters": "Last day today. Offers expert-led training, modern agricultural technologies, and agri-entrepreneurship opportunities. Relevant for IMM to understand agricultural trends and for Supab Exports to identify potential sourcing partners.",
-        "link": "https://www.linkedin.com/company/agri-saarthi",
-        "type": "domestic"
-    },
-    {
         "name": "Bharatiya Vyapar Mahotsav (ITPO & CAIT)",
         "start_date": "2026-08-12",
         "end_date": "2026-08-15",
@@ -153,15 +144,6 @@
         "type": "domestic"
     },
     {
-        "name": "Export Awareness Camp & E-Commerce Export Summit (DGFT Mumbai & DIC Nashik)",
-        "start_date": "2026-08-13",
-        "end_date": "2026-08-13",
-        "venue": "Nashik",
-        "why_it_matters": "For Supab Exports, it offers insights on navigating global trade and e-commerce platforms. For Supab Digital, it's a direct opportunity to understand exporter needs and offer AI/digital consulting for e-commerce.",
-        "link": "https://x.com/dgftindia",
-        "type": "domestic"
-    },
-    {
         "name": "Africa Food Show Kenya 2026 (International Trade Council)",
         "start_date": "2026-08-19",
         "end_date": "2026-08-21",
@@ -177,6 +159,6 @@
         "venue": "Marigold Hotel, Begumpet, Hyderabad",
         "why_it_matters": "Focus on India-Africa seed partnerships and market access could lead to broader agri-trade opportunities for Supab Exports. AI-powered breeding is relevant for future raw material quality for IMM.",
         "link": "https://in.linkedin.com/company/indian-chamber-of-food-and-agriculture-icfa",
-        "type": "international"
+        "type": "domestic"
     }
 ]
