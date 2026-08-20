@@ -311,6 +311,28 @@ class DailyDigestPipeline:
             
         return "\n\n".join(formatted_list) if formatted_list else "No direct newspaper matches found in today's business RSS feeds."
 
+    def fetch_exchange_rates(self):
+        """Fetches real-time exchange rates for USD/INR and EUR/INR using a free, verified API."""
+        import urllib.request
+        import json
+        logging.info("Fetching real-time verified exchange rates from open.er-api.com...")
+        try:
+            req = urllib.request.Request("https://open.er-api.com/v6/latest/USD", headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=10) as res:
+                data = json.loads(res.read())
+                inr_rate = data['rates']['INR']
+                eur_rate = data['rates']['EUR']
+                eur_inr = inr_rate / eur_rate
+                logging.info(f"Verified exchange rates - USD/INR: {inr_rate:.4f}, EUR/INR: {eur_inr:.4f}")
+                return {
+                    "usd_inr": round(inr_rate, 2),
+                    "eur_inr": round(eur_inr, 2),
+                    "date": data.get("time_last_update_utc", datetime.datetime.utcnow().strftime("%a, %d %b %Y"))
+                }
+        except Exception as e:
+            logging.error(f"Failed to fetch exchange rates programmatically: {e}")
+            return None
+
     def run_broad_search(self):
         """Runs optimized search queries for the topics and social media handles."""
         today_str = datetime.date.today().isoformat()
@@ -439,7 +461,7 @@ class DailyDigestPipeline:
     # ==========================================
     # AI COMPILATION & GENERATION (Gemini API)
     # ==========================================
-    def generate_digest_ai(self, raw_crawled, raw_searched, raw_newspapers=""):
+    def generate_digest_ai(self, raw_crawled, raw_searched, raw_newspapers="", verified_exchange_rates=None):
         """Calls OpenAI or Gemini API to compile and generate the final Daily Digest."""
         today_date_str = datetime.date.today().strftime("%A, %d %B %Y")
         
@@ -535,6 +557,11 @@ CRITICAL QUALITY RULES - NON-NEGOTIABLE
 3. ⚡ CRISP AND DENSE: Total email under 650 words.
 4. 🚫 DO NOT REPEAT SHOWN TOOLS: Exclude {shown_tools_list}.
 5. 🚫 DO NOT REPEAT SHOWN INTELLIGENCE: Exclude {shown_intel_list}.
+6. 🚫 STRICT VERIFIED DATA RULE (MANDATORY):
+   - You must ONLY output exchange rates and mandi prices that are explicitly present in the provided raw input data sections.
+   - Never use your pre-trained knowledge or historical knowledge to output or 'fill in' exchange rates (like USD/INR, EUR/INR) or mandi prices.
+   - For every single price, exchange rate, or lead reported in the digest, you must list the exact URL source and publication/crawled date immediately next to it.
+   - If the raw data does not contain today's verified numbers, write 'Not available in today's search data'. Never guess, write 'approximate', or estimate.
 """
 
         user_instruction = f"""
@@ -549,6 +576,9 @@ Read the content carefully, apply the strict relevance filters and rules, and ge
 
 ### RAW SEARCH & SOCIAL INTELLIGENCE
 {raw_searched}
+
+### VERIFIED EXCHANGE RATES (API SOURCED - 100% ACCURATE)
+{f"USD/INR: {verified_exchange_rates.get('usd_inr')}\nEUR/INR: {verified_exchange_rates.get('eur_inr')}\n(Source: API fetched on {verified_exchange_rates.get('date')})" if verified_exchange_rates else "USD/INR: Not available\nEUR/INR: Not available"}
 
 ### PERSISTENT ACTIVE B2B EVENTS
 {active_events_str}
@@ -701,7 +731,8 @@ Example:
                     )
                     response = model.generate_content(
                         user_instruction,
-                        generation_config={"temperature": 0.2}
+                        generation_config={"temperature": 0.2},
+                        request_options={"timeout": 120}
                     )
                     
                     result_text = response.text
@@ -1173,9 +1204,12 @@ Example:
         with open(os.path.join(daily_dir, "raw_searched_intel.txt"), "w", encoding="utf-8") as f:
             f.write(searched_data)
         
+        # Fetch verified exchange rates from API
+        verified_rates = self.fetch_exchange_rates()
+        
         # 4. Call AI to synthesize and filter
         logging.info("[Step 4/5] Synthesizing Intelligence with Gemini API...")
-        digest_text = self.generate_digest_ai(crawled_data, searched_data, newspaper_data)
+        digest_text = self.generate_digest_ai(crawled_data, searched_data, newspaper_data, verified_rates)
         
         # Extract and update state
         clean_digest, state_data = self.parse_state_update(digest_text)
