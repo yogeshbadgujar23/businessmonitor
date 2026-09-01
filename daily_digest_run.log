@@ -1,184 +1,73 @@
-2026-08-31 08:53:13,351 - INFO - === ENV DIAGNOSTICS ===
-2026-08-31 08:53:13,351 - INFO -   GEMINI_API_KEY: SET (len=39, pattern=AIza...6uL0)
-2026-08-31 08:53:13,352 - INFO -   OPENAI_API_KEY: SET (len=164, pattern=sk-p...rUQA)
-2026-08-31 08:53:13,352 - INFO -   TAVILY_API_KEY: SET (len=58, pattern=tvly...GEB2)
-2026-08-31 08:53:13,352 - INFO -   SMTP_EMAIL: SET (len=21, pattern=yoge....com)
-2026-08-31 08:53:13,352 - INFO -   SMTP_PASSWORD: SET (len=16, pattern=qnul...gqvn)
-2026-08-31 08:53:13,352 - INFO - =======================
-2026-08-31 08:53:13,352 - INFO - ============================================================
-2026-08-31 08:53:13,352 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE STARTED
-2026-08-31 08:53:13,352 - INFO - ============================================================
-2026-08-31 08:53:13,352 - INFO - [Step 1/5] Deep Scanning Target Regulatory Sites...
-2026-08-31 08:53:13,352 - INFO - Scanning target URL: https://www.dgft.gov.in/CP/...
-2026-08-31 08:53:13,727 - ERROR - Failed to scan target sub-links for https://www.dgft.gov.in/CP/: 403 Client Error: Forbidden for url: https://www.dgft.gov.in/CP/
-2026-08-31 08:53:13,727 - INFO - Found 1 pages to extract on https://www.dgft.gov.in/CP/
-2026-08-31 08:53:13,727 - INFO - Extracting content from https://www.dgft.gov.in/CP/...
-2026-08-31 08:53:13,783 - ERROR - not a 200 response: 403 for URL https://www.dgft.gov.in/CP/
-2026-08-31 08:53:13,783 - INFO - Scraped & cleaned 0 chars of raw text from regulatory targets.
-2026-08-31 08:53:13,783 - INFO - [Step 2/5] Scanning Leading Business Newspapers (The Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
-2026-08-31 08:53:13,804 - INFO - Gathering news from leading Indian business newspapers (Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
-2026-08-31 08:53:15,230 - INFO - Retrieved 53 relevant business newspaper stories.
-2026-08-31 08:53:15,232 - INFO - Scraped & cleaned 37177 chars of raw text from business newspapers.
-2026-08-31 08:53:15,232 - INFO - [Step 3/5] Conducting 24-Hour Web Intelligence Searches...
-2026-08-31 08:53:15,232 - INFO - Gathering priority handles updates (Social search)...
-2026-08-31 08:53:15,232 - INFO - Tavily Search: '(site:x.com/dgftindia OR site:x.com/CimGOI OR site:x.com/DoC_GoI) 2026-08-31'
-2026-08-31 08:53:15,341 - ERROR - Tavily search failed for '(site:x.com/dgftindia OR site:x.com/CimGOI OR site:x.com/DoC_GoI) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:15,341 - INFO - DuckDuckGo Search: '(site:x.com/dgftindia OR site:x.com/CimGOI OR site:x.com/DoC_GoI) 2026-08-31'
-2026-08-31 08:53:15,563 - INFO - response: https://www.bing.com/search?q=%28site%3Ax.com%2Fdgftindia+OR+site%3Ax.com%2FCimGOI+OR+site%3Ax.com%2FDoC_GoI%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:16,641 - INFO - Tavily Search: '(site:x.com/FieoHq OR site:x.com/PiyushGoyal OR site:x.com/APEDADOC) 2026-08-31'
-2026-08-31 08:53:16,727 - ERROR - Tavily search failed for '(site:x.com/FieoHq OR site:x.com/PiyushGoyal OR site:x.com/APEDADOC) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:16,727 - INFO - DuckDuckGo Search: '(site:x.com/FieoHq OR site:x.com/PiyushGoyal OR site:x.com/APEDADOC) 2026-08-31'
-2026-08-31 08:53:16,808 - INFO - response: https://www.bing.com/search?q=%28site%3Ax.com%2FFieoHq+OR+site%3Ax.com%2FPiyushGoyal+OR+site%3Ax.com%2FAPEDADOC%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:17,866 - INFO - Tavily Search: '(site:x.com/AgriGoI OR site:x.com/theresanaiforit) 2026-08-31'
-2026-08-31 08:53:17,953 - ERROR - Tavily search failed for '(site:x.com/AgriGoI OR site:x.com/theresanaiforit) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:17,953 - INFO - DuckDuckGo Search: '(site:x.com/AgriGoI OR site:x.com/theresanaiforit) 2026-08-31'
-2026-08-31 08:53:18,005 - INFO - response: https://www.bing.com/search?q=%28site%3Ax.com%2FAgriGoI+OR+site%3Ax.com%2Ftheresanaiforit%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:19,120 - INFO - Tavily Search: '(site:linkedin.com/company "Services Export Promotion Council  India" OR site:linkedin.com/company "Mahratta Chamber of Commerce, Industries and Agriculture, Pune") 2026-08-31'
-2026-08-31 08:53:19,186 - ERROR - Tavily search failed for '(site:linkedin.com/company "Services Export Promotion Council  India" OR site:linkedin.com/company "Mahratta Chamber of Commerce, Industries and Agriculture, Pune") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:19,186 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Services Export Promotion Council  India" OR site:linkedin.com/company "Mahratta Chamber of Commerce, Industries and Agriculture, Pune") 2026-08-31'
-2026-08-31 08:53:19,245 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Services+Export+Promotion+Council++India%22+OR+site%3Alinkedin.com%2Fcompany+%22Mahratta+Chamber+of+Commerce%2C+Industries+and+Agriculture%2C+Pune%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:20,325 - INFO - Tavily Search: '(site:linkedin.com/company "Embassy of India, Belgium, Luxembourg & European Union" OR site:linkedin.com/company "World Trade Center Mumbai") 2026-08-31'
-2026-08-31 08:53:20,405 - ERROR - Tavily search failed for '(site:linkedin.com/company "Embassy of India, Belgium, Luxembourg & European Union" OR site:linkedin.com/company "World Trade Center Mumbai") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:20,405 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Embassy of India, Belgium, Luxembourg & European Union" OR site:linkedin.com/company "World Trade Center Mumbai") 2026-08-31'
-2026-08-31 08:53:20,457 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Embassy+of+India%2C+Belgium%2C+Luxembourg+%26+European+Union%22+OR+site%3Alinkedin.com%2Fcompany+%22World+Trade+Center+Mumbai%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:21,534 - INFO - Tavily Search: '(site:linkedin.com/company "India SME Forum" OR site:linkedin.com/company/Tradologie OR site:linkedin.com/in/Tradologie) 2026-08-31'
-2026-08-31 08:53:21,593 - ERROR - Tavily search failed for '(site:linkedin.com/company "India SME Forum" OR site:linkedin.com/company/Tradologie OR site:linkedin.com/in/Tradologie) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:21,593 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "India SME Forum" OR site:linkedin.com/company/Tradologie OR site:linkedin.com/in/Tradologie) 2026-08-31'
-2026-08-31 08:53:21,800 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22India+SME+Forum%22+OR+site%3Alinkedin.com%2Fcompany%2FTradologie+OR+site%3Alinkedin.com%2Fin%2FTradologie%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:23,024 - INFO - Tavily Search: '(site:linkedin.com/company "Trade Promotion Council of India" OR site:linkedin.com/company "AgriGuru Online") 2026-08-31'
-2026-08-31 08:53:23,119 - ERROR - Tavily search failed for '(site:linkedin.com/company "Trade Promotion Council of India" OR site:linkedin.com/company "AgriGuru Online") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:23,119 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Trade Promotion Council of India" OR site:linkedin.com/company "AgriGuru Online") 2026-08-31'
-2026-08-31 08:53:23,239 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Trade+Promotion+Council+of+India%22+OR+site%3Alinkedin.com%2Fcompany+%22AgriGuru+Online%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:24,302 - INFO - Tavily Search: '(site:linkedin.com/company/EximIndia OR site:linkedin.com/in/EximIndia OR site:linkedin.com/company "Spices Board India") 2026-08-31'
-2026-08-31 08:53:24,503 - ERROR - Tavily search failed for '(site:linkedin.com/company/EximIndia OR site:linkedin.com/in/EximIndia OR site:linkedin.com/company "Spices Board India") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:24,503 - INFO - DuckDuckGo Search: '(site:linkedin.com/company/EximIndia OR site:linkedin.com/in/EximIndia OR site:linkedin.com/company "Spices Board India") 2026-08-31'
-2026-08-31 08:53:24,576 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany%2FEximIndia+OR+site%3Alinkedin.com%2Fin%2FEximIndia+OR+site%3Alinkedin.com%2Fcompany+%22Spices+Board+India%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:25,860 - INFO - Tavily Search: '(site:linkedin.com/company "Department of Commerce" OR site:linkedin.com/company "India Exim Bank") 2026-08-31'
-2026-08-31 08:53:26,028 - ERROR - Tavily search failed for '(site:linkedin.com/company "Department of Commerce" OR site:linkedin.com/company "India Exim Bank") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:26,028 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Department of Commerce" OR site:linkedin.com/company "India Exim Bank") 2026-08-31'
-2026-08-31 08:53:26,080 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Department+of+Commerce%22+OR+site%3Alinkedin.com%2Fcompany+%22India+Exim+Bank%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:27,219 - INFO - Tavily Search: '(site:linkedin.com/company "Ministry of Micro, Small and Medium Enterprises, Government of India" OR site:linkedin.com/company "JNPA- Jawaharlal Nehru Port Authority") 2026-08-31'
-2026-08-31 08:53:27,304 - ERROR - Tavily search failed for '(site:linkedin.com/company "Ministry of Micro, Small and Medium Enterprises, Government of India" OR site:linkedin.com/company "JNPA- Jawaharlal Nehru Port Authority") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:27,304 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Ministry of Micro, Small and Medium Enterprises, Government of India" OR site:linkedin.com/company "JNPA- Jawaharlal Nehru Port Authority") 2026-08-31'
-2026-08-31 08:53:27,370 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Ministry+of+Micro%2C+Small+and+Medium+Enterprises%2C+Government+of+India%22+OR+site%3Alinkedin.com%2Fcompany+%22JNPA-+Jawaharlal+Nehru+Port+Authority%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:28,435 - INFO - Tavily Search: '(site:linkedin.com/company "Maritime Analytica" OR site:linkedin.com/company "Container News") 2026-08-31'
-2026-08-31 08:53:28,552 - ERROR - Tavily search failed for '(site:linkedin.com/company "Maritime Analytica" OR site:linkedin.com/company "Container News") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:28,552 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Maritime Analytica" OR site:linkedin.com/company "Container News") 2026-08-31'
-2026-08-31 08:53:28,705 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Maritime+Analytica%22+OR+site%3Alinkedin.com%2Fcompany+%22Container+News%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:29,719 - INFO - Tavily Search: '(site:linkedin.com/company "Export Portal" OR site:linkedin.com/company "Ministry of Food Processing Industries") 2026-08-31'
-2026-08-31 08:53:29,808 - ERROR - Tavily search failed for '(site:linkedin.com/company "Export Portal" OR site:linkedin.com/company "Ministry of Food Processing Industries") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:29,808 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Export Portal" OR site:linkedin.com/company "Ministry of Food Processing Industries") 2026-08-31'
-2026-08-31 08:53:29,927 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Export+Portal%22+OR+site%3Alinkedin.com%2Fcompany+%22Ministry+of+Food+Processing+Industries%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:30,988 - INFO - Tavily Search: '(site:linkedin.com/company "Indian Chamber of Food and Agriculture" OR site:linkedin.com/company "NABARD - National Bank for Agriculture and Rural Development") 2026-08-31'
-2026-08-31 08:53:31,153 - ERROR - Tavily search failed for '(site:linkedin.com/company "Indian Chamber of Food and Agriculture" OR site:linkedin.com/company "NABARD - National Bank for Agriculture and Rural Development") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:31,153 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Indian Chamber of Food and Agriculture" OR site:linkedin.com/company "NABARD - National Bank for Agriculture and Rural Development") 2026-08-31'
-2026-08-31 08:53:31,251 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Indian+Chamber+of+Food+and+Agriculture%22+OR+site%3Alinkedin.com%2Fcompany+%22NABARD+-+National+Bank+for+Agriculture+and+Rural+Development%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:32,305 - INFO - Tavily Search: '(site:linkedin.com/company "Ministry of Agriculture & Farmers Welfare, Government of India" OR site:linkedin.com/company "FEDERATION OF INDIAN EXPORT ORGANISATIONS") 2026-08-31'
-2026-08-31 08:53:32,356 - ERROR - Tavily search failed for '(site:linkedin.com/company "Ministry of Agriculture & Farmers Welfare, Government of India" OR site:linkedin.com/company "FEDERATION OF INDIAN EXPORT ORGANISATIONS") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:32,356 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Ministry of Agriculture & Farmers Welfare, Government of India" OR site:linkedin.com/company "FEDERATION OF INDIAN EXPORT ORGANISATIONS") 2026-08-31'
-2026-08-31 08:53:32,556 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Ministry+of+Agriculture+%26+Farmers+Welfare%2C+Government+of+India%22+OR+site%3Alinkedin.com%2Fcompany+%22FEDERATION+OF+INDIAN+EXPORT+ORGANISATIONS%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:33,802 - INFO - Tavily Search: '(site:linkedin.com/company "The Agricultural and Processed Food Products Export Development Authority" OR site:linkedin.com/company "Indian Spices Exporters Association") 2026-08-31'
-2026-08-31 08:53:33,851 - ERROR - Tavily search failed for '(site:linkedin.com/company "The Agricultural and Processed Food Products Export Development Authority" OR site:linkedin.com/company "Indian Spices Exporters Association") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:33,851 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "The Agricultural and Processed Food Products Export Development Authority" OR site:linkedin.com/company "Indian Spices Exporters Association") 2026-08-31'
-2026-08-31 08:53:33,979 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22The+Agricultural+and+Processed+Food+Products+Export+Development+Authority%22+OR+site%3Alinkedin.com%2Fcompany+%22Indian+Spices+Exporters+Association%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:35,020 - INFO - Tavily Search: '(site:linkedin.com/company "National Commodity & Derivatives Exchange Portfolio" OR site:linkedin.com/company "All India Food Processors' Association") 2026-08-31'
-2026-08-31 08:53:35,211 - ERROR - Tavily search failed for '(site:linkedin.com/company "National Commodity & Derivatives Exchange Portfolio" OR site:linkedin.com/company "All India Food Processors' Association") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:35,211 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "National Commodity & Derivatives Exchange Portfolio" OR site:linkedin.com/company "All India Food Processors' Association") 2026-08-31'
-2026-08-31 08:53:35,348 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22National+Commodity+%26+Derivatives+Exchange+Portfolio%22+OR+site%3Alinkedin.com%2Fcompany+%22All+India+Food+Processors%27+Association%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:36,380 - INFO - Tavily Search: '(site:linkedin.com/company/horti-goi OR site:linkedin.com/in/horti-goi) 2026-08-31'
-2026-08-31 08:53:36,439 - ERROR - Tavily search failed for '(site:linkedin.com/company/horti-goi OR site:linkedin.com/in/horti-goi) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:36,440 - INFO - DuckDuckGo Search: '(site:linkedin.com/company/horti-goi OR site:linkedin.com/in/horti-goi) 2026-08-31'
-2026-08-31 08:53:36,494 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany%2Fhorti-goi+OR+site%3Alinkedin.com%2Fin%2Fhorti-goi%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:37,636 - INFO - Tavily Search: '(site:instagram.com/indianmerchantchamber OR site:instagram.com/mvirdc_wtcmumbaiindia) 2026-08-31'
-2026-08-31 08:53:37,701 - ERROR - Tavily search failed for '(site:instagram.com/indianmerchantchamber OR site:instagram.com/mvirdc_wtcmumbaiindia) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:37,701 - INFO - DuckDuckGo Search: '(site:instagram.com/indianmerchantchamber OR site:instagram.com/mvirdc_wtcmumbaiindia) 2026-08-31'
-2026-08-31 08:53:37,797 - INFO - response: https://www.bing.com/search?q=%28site%3Ainstagram.com%2Findianmerchantchamber+OR+site%3Ainstagram.com%2Fmvirdc_wtcmumbaiindia%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:38,944 - INFO - Tavily Search: '(site:instagram.com/tradologieworld OR site:instagram.com/indonesiainmumbai) 2026-08-31'
-2026-08-31 08:53:39,099 - ERROR - Tavily search failed for '(site:instagram.com/tradologieworld OR site:instagram.com/indonesiainmumbai) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:39,099 - INFO - DuckDuckGo Search: '(site:instagram.com/tradologieworld OR site:instagram.com/indonesiainmumbai) 2026-08-31'
-2026-08-31 08:53:39,166 - INFO - response: https://www.bing.com/search?q=%28site%3Ainstagram.com%2Ftradologieworld+OR+site%3Ainstagram.com%2Findonesiainmumbai%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:40,220 - INFO - Tavily Search: '(site:instagram.com/turmericboard) 2026-08-31'
-2026-08-31 08:53:40,273 - ERROR - Tavily search failed for '(site:instagram.com/turmericboard) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:40,273 - INFO - DuckDuckGo Search: '(site:instagram.com/turmericboard) 2026-08-31'
-2026-08-31 08:53:40,340 - INFO - response: https://www.bing.com/search?q=%28site%3Ainstagram.com%2Fturmericboard%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:41,434 - INFO - Gathering broad market intelligence...
-2026-08-31 08:53:41,435 - INFO - Tavily Search: '"USD/INR" "EUR/INR" exchange rate'
-2026-08-31 08:53:41,487 - ERROR - Tavily search failed for '"USD/INR" "EUR/INR" exchange rate': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:41,488 - INFO - DuckDuckGo Search: '"USD/INR" "EUR/INR" exchange rate'
-2026-08-31 08:53:41,545 - INFO - response: https://www.bing.com/search?q=%22USD%2FINR%22+%22EUR%2FINR%22+exchange+rate&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:42,597 - INFO - Tavily Search: '("banana price" OR "banana mandi") AND (Jalgaon OR Maharashtra) 2026-08-31'
-2026-08-31 08:53:42,659 - ERROR - Tavily search failed for '("banana price" OR "banana mandi") AND (Jalgaon OR Maharashtra) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:42,659 - INFO - DuckDuckGo Search: '("banana price" OR "banana mandi") AND (Jalgaon OR Maharashtra) 2026-08-31'
-2026-08-31 08:53:42,720 - INFO - response: https://www.bing.com/search?q=%28%22banana+price%22+OR+%22banana+mandi%22%29+AND+%28Jalgaon+OR+Maharashtra%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:43,849 - INFO - Tavily Search: '("turmeric price" OR "turmeric mandi") AND (Sangli OR Jalgaon OR Maharashtra) 2026-08-31'
-2026-08-31 08:53:43,951 - ERROR - Tavily search failed for '("turmeric price" OR "turmeric mandi") AND (Sangli OR Jalgaon OR Maharashtra) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:43,952 - INFO - DuckDuckGo Search: '("turmeric price" OR "turmeric mandi") AND (Sangli OR Jalgaon OR Maharashtra) 2026-08-31'
-2026-08-31 08:53:43,999 - INFO - response: https://www.bing.com/search?q=%28%22turmeric+price%22+OR+%22turmeric+mandi%22%29+AND+%28Sangli+OR+Jalgaon+OR+Maharashtra%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:45,063 - INFO - Tavily Search: '("ginger price" OR "garlic price" OR "beetroot price" OR "moringa price") AND (mandi OR Maharashtra) 2026-08-31'
-2026-08-31 08:53:45,119 - ERROR - Tavily search failed for '("ginger price" OR "garlic price" OR "beetroot price" OR "moringa price") AND (mandi OR Maharashtra) 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:45,119 - INFO - DuckDuckGo Search: '("ginger price" OR "garlic price" OR "beetroot price" OR "moringa price") AND (mandi OR Maharashtra) 2026-08-31'
-2026-08-31 08:53:45,281 - INFO - response: https://www.bing.com/search?q=%28%22ginger+price%22+OR+%22garlic+price%22+OR+%22beetroot+price%22+OR+%22moringa+price%22%29+AND+%28mandi+OR+Maharashtra%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:46,402 - INFO - Tavily Search: '("India export policy" OR "DGFT notification" OR "APEDA" OR "customs compliance" OR "FDA import alert" OR "EU RASFF") AND ("dehydrated" OR "spices" OR "agricultural" OR "food") 2026-08-31'
-2026-08-31 08:53:46,468 - ERROR - Tavily search failed for '("India export policy" OR "DGFT notification" OR "APEDA" OR "customs compliance" OR "FDA import alert" OR "EU RASFF") AND ("dehydrated" OR "spices" OR "agricultural" OR "food") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:46,468 - INFO - DuckDuckGo Search: '("India export policy" OR "DGFT notification" OR "APEDA" OR "customs compliance" OR "FDA import alert" OR "EU RASFF") AND ("dehydrated" OR "spices" OR "agricultural" OR "food") 2026-08-31'
-2026-08-31 08:53:46,556 - INFO - response: https://www.bing.com/search?q=%28%22India+export+policy%22+OR+%22DGFT+notification%22+OR+%22APEDA%22+OR+%22customs+compliance%22+OR+%22FDA+import+alert%22+OR+%22EU+RASFF%22%29+AND+%28%22dehydrated%22+OR+%22spices%22+OR+%22agricultural%22+OR+%22food%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:47,688 - INFO - Tavily Search: '("FSSAI manufacturing" OR "FSSAI label" OR "ISO 22000" OR "GMP compliance" OR "Factories Act" OR "pollution compliance") AND "food processing" 2026-08-31'
-2026-08-31 08:53:47,812 - ERROR - Tavily search failed for '("FSSAI manufacturing" OR "FSSAI label" OR "ISO 22000" OR "GMP compliance" OR "Factories Act" OR "pollution compliance") AND "food processing" 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:47,812 - INFO - DuckDuckGo Search: '("FSSAI manufacturing" OR "FSSAI label" OR "ISO 22000" OR "GMP compliance" OR "Factories Act" OR "pollution compliance") AND "food processing" 2026-08-31'
-2026-08-31 08:53:47,888 - INFO - response: https://www.bing.com/search?q=%28%22FSSAI+manufacturing%22+OR+%22FSSAI+label%22+OR+%22ISO+22000%22+OR+%22GMP+compliance%22+OR+%22Factories+Act%22+OR+%22pollution+compliance%22%29+AND+%22food+processing%22+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:48,933 - INFO - Tavily Search: '("PMFME scheme" OR "PLI food processing" OR "CFTRI technology" OR "Maharashtra agri processing" OR "CFTRI training") 2026'
-2026-08-31 08:53:48,986 - ERROR - Tavily search failed for '("PMFME scheme" OR "PLI food processing" OR "CFTRI technology" OR "Maharashtra agri processing" OR "CFTRI training") 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:48,986 - INFO - DuckDuckGo Search: '("PMFME scheme" OR "PLI food processing" OR "CFTRI technology" OR "Maharashtra agri processing" OR "CFTRI training") 2026'
-2026-08-31 08:53:49,052 - INFO - response: https://www.bing.com/search?q=%28%22PMFME+scheme%22+OR+%22PLI+food+processing%22+OR+%22CFTRI+technology%22+OR+%22Maharashtra+agri+processing%22+OR+%22CFTRI+training%22%29+2026&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:50,190 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("RFQ" OR "buyer requirement" OR "looking for bulk supplier" OR "raw material buyer" OR site:indiamart.com OR site:tradeindia.com) 2026'
-2026-08-31 08:53:50,268 - ERROR - Tavily search failed for '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("RFQ" OR "buyer requirement" OR "looking for bulk supplier" OR "raw material buyer" OR site:indiamart.com OR site:tradeindia.com) 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:50,268 - INFO - DuckDuckGo Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("RFQ" OR "buyer requirement" OR "looking for bulk supplier" OR "raw material buyer" OR site:indiamart.com OR site:tradeindia.com) 2026'
-2026-08-31 08:53:50,354 - INFO - response: https://www.bing.com/search?q=%28%22banana+powder%22+OR+%22moringa+powder%22+OR+%22turmeric+powder%22+OR+%22beetroot+powder%22+OR+%22ginger+powder%22+OR+%22garlic+powder%22+OR+%22ashwagandha%22+OR+%22shatawari%22%29+AND+%28%22RFQ%22+OR+%22buyer+requirement%22+OR+%22looking+for+bulk+supplier%22+OR+%22raw+material+buyer%22+OR+site%3Aindiamart.com+OR+site%3Atradeindia.com%29+2026&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:51,379 - INFO - Tavily Search: '("GeM tender" OR "government tender" OR "defence dehydrated" OR "ICDS nutrition" OR "anganwadi food") AND ("dehydrated vegetable" OR "dehydrated fruit" OR "vegetable powder" OR "food powder") 2026'
-2026-08-31 08:53:51,437 - ERROR - Tavily search failed for '("GeM tender" OR "government tender" OR "defence dehydrated" OR "ICDS nutrition" OR "anganwadi food") AND ("dehydrated vegetable" OR "dehydrated fruit" OR "vegetable powder" OR "food powder") 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:51,437 - INFO - DuckDuckGo Search: '("GeM tender" OR "government tender" OR "defence dehydrated" OR "ICDS nutrition" OR "anganwadi food") AND ("dehydrated vegetable" OR "dehydrated fruit" OR "vegetable powder" OR "food powder") 2026'
-2026-08-31 08:53:51,495 - INFO - response: https://www.bing.com/search?q=%28%22GeM+tender%22+OR+%22government+tender%22+OR+%22defence+dehydrated%22+OR+%22ICDS+nutrition%22+OR+%22anganwadi+food%22%29+AND+%28%22dehydrated+vegetable%22+OR+%22dehydrated+fruit%22+OR+%22vegetable+powder%22+OR+%22food+powder%22%29+2026&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:52,653 - INFO - Tavily Search: '("new product launch" OR "capacity expansion") AND (confectionery OR bakery OR nutraceutical OR "spice blending" OR "ice cream" OR "health food") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026'
-2026-08-31 08:53:52,706 - ERROR - Tavily search failed for '("new product launch" OR "capacity expansion") AND (confectionery OR bakery OR nutraceutical OR "spice blending" OR "ice cream" OR "health food") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:52,706 - INFO - DuckDuckGo Search: '("new product launch" OR "capacity expansion") AND (confectionery OR bakery OR nutraceutical OR "spice blending" OR "ice cream" OR "health food") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026'
-2026-08-31 08:53:52,762 - INFO - response: https://www.bing.com/search?q=%28%22new+product+launch%22+OR+%22capacity+expansion%22%29+AND+%28confectionery+OR+bakery+OR+nutraceutical+OR+%22spice+blending%22+OR+%22ice+cream%22+OR+%22health+food%22%29+AND+%28India+OR+Maharashtra+OR+Gujarat+OR+Karnataka%29+2026&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:53,836 - INFO - Tavily Search: '("Rajlaxmi Agro Farm" OR "Mevive International" OR "VKL Seasoning" OR "food dehydration unit Jalgaon" OR "dehydrated manufacturer Maharashtra") 2026'
-2026-08-31 08:53:53,889 - ERROR - Tavily search failed for '("Rajlaxmi Agro Farm" OR "Mevive International" OR "VKL Seasoning" OR "food dehydration unit Jalgaon" OR "dehydrated manufacturer Maharashtra") 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:53,889 - INFO - DuckDuckGo Search: '("Rajlaxmi Agro Farm" OR "Mevive International" OR "VKL Seasoning" OR "food dehydration unit Jalgaon" OR "dehydrated manufacturer Maharashtra") 2026'
-2026-08-31 08:53:53,960 - INFO - response: https://www.bing.com/search?q=%28%22Rajlaxmi+Agro+Farm%22+OR+%22Mevive+International%22+OR+%22VKL+Seasoning%22+OR+%22food+dehydration+unit+Jalgaon%22+OR+%22dehydrated+manufacturer+Maharashtra%22%29+2026&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:55,041 - INFO - Tavily Search: '("heat pump dryer food" OR "dehydration equipment" OR "CFTRI technology transfer" OR "dryer manufacturer") AND "food processing" 2026'
-2026-08-31 08:53:55,092 - ERROR - Tavily search failed for '("heat pump dryer food" OR "dehydration equipment" OR "CFTRI technology transfer" OR "dryer manufacturer") AND "food processing" 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:55,092 - INFO - DuckDuckGo Search: '("heat pump dryer food" OR "dehydration equipment" OR "CFTRI technology transfer" OR "dryer manufacturer") AND "food processing" 2026'
-2026-08-31 08:53:55,209 - INFO - response: https://www.bing.com/search?q=%28%22heat+pump+dryer+food%22+OR+%22dehydration+equipment%22+OR+%22CFTRI+technology+transfer%22+OR+%22dryer+manufacturer%22%29+AND+%22food+processing%22+2026&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:56,400 - INFO - Tavily Search: '("Agroworld Expo Jalgaon" OR "AAHAR" OR "BioFach India" OR "food safety training" OR "reverse buyer seller meet") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026'
-2026-08-31 08:53:56,458 - ERROR - Tavily search failed for '("Agroworld Expo Jalgaon" OR "AAHAR" OR "BioFach India" OR "food safety training" OR "reverse buyer seller meet") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:56,458 - INFO - DuckDuckGo Search: '("Agroworld Expo Jalgaon" OR "AAHAR" OR "BioFach India" OR "food safety training" OR "reverse buyer seller meet") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026'
-2026-08-31 08:53:56,522 - INFO - response: https://www.bing.com/search?q=%28%22Agroworld+Expo+Jalgaon%22+OR+%22AAHAR%22+OR+%22BioFach+India%22+OR+%22food+safety+training%22+OR+%22reverse+buyer+seller+meet%22%29+AND+%28food+OR+agri+OR+Maharashtra+OR+Mumbai+OR+Jalgaon+OR+Pune%29+2026&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:57,599 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("export tender" OR "APEDA buyer inquiry" OR "importer requirement") 2026'
-2026-08-31 08:53:57,680 - ERROR - Tavily search failed for '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("export tender" OR "APEDA buyer inquiry" OR "importer requirement") 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:57,680 - INFO - DuckDuckGo Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("export tender" OR "APEDA buyer inquiry" OR "importer requirement") 2026'
-2026-08-31 08:53:57,766 - INFO - response: https://www.bing.com/search?q=%28%22banana+powder%22+OR+%22moringa+powder%22+OR+%22turmeric+powder%22+OR+%22beetroot+powder%22+OR+%22ginger+powder%22+OR+%22garlic+powder%22+OR+%22ashwagandha%22+OR+%22shatawari%22%29+AND+%28%22export+tender%22+OR+%22APEDA+buyer+inquiry%22+OR+%22importer+requirement%22%29+2026&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:53:58,917 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND ("spices" OR "dehydrated" OR "banana powder" OR "moringa" OR "turmeric" OR "food processing" OR "PMFME" OR "FSSAI" OR "DGFT") 2026-08-31'
-2026-08-31 08:53:58,964 - ERROR - Tavily search failed for '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND ("spices" OR "dehydrated" OR "banana powder" OR "moringa" OR "turmeric" OR "food processing" OR "PMFME" OR "FSSAI" OR "DGFT") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:53:58,964 - INFO - DuckDuckGo Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND ("spices" OR "dehydrated" OR "banana powder" OR "moringa" OR "turmeric" OR "food processing" OR "PMFME" OR "FSSAI" OR "DGFT") 2026-08-31'
-2026-08-31 08:53:59,032 - INFO - response: https://www.bing.com/search?q=%28site%3Aeconomictimes.indiatimes.com+OR+site%3Abusiness-standard.com+OR+site%3Athehindubusinessline.com+OR+site%3Alivemint.com+OR+site%3Afinancialexpress.com%29+AND+%28%22spices%22+OR+%22dehydrated%22+OR+%22banana+powder%22+OR+%22moringa%22+OR+%22turmeric%22+OR+%22food+processing%22+OR+%22PMFME%22+OR+%22FSSAI%22+OR+%22DGFT%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:54:00,076 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND ("agri export" OR "commodity prices" OR "mandi price" OR "container freight" OR "exim") 2026-08-31'
-2026-08-31 08:54:00,133 - ERROR - Tavily search failed for '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND ("agri export" OR "commodity prices" OR "mandi price" OR "container freight" OR "exim") 2026-08-31': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:54:00,133 - INFO - DuckDuckGo Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND ("agri export" OR "commodity prices" OR "mandi price" OR "container freight" OR "exim") 2026-08-31'
-2026-08-31 08:54:00,200 - INFO - response: https://www.bing.com/search?q=%28site%3Aeconomictimes.indiatimes.com+OR+site%3Abusiness-standard.com+OR+site%3Athehindubusinessline.com%29+AND+%28%22agri+export%22+OR+%22commodity+prices%22+OR+%22mandi+price%22+OR+%22container+freight%22+OR+%22exim%22%29+2026-08-31&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:54:01,304 - INFO - Tavily Search: '("AI tool Indian exporter" OR "AI market research tool export" OR "AI buyer discovery" OR "AI production planning" OR "AI lab management" OR "AI factory compliance") 2026'
-2026-08-31 08:54:01,355 - ERROR - Tavily search failed for '("AI tool Indian exporter" OR "AI market research tool export" OR "AI buyer discovery" OR "AI production planning" OR "AI lab management" OR "AI factory compliance") 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
-2026-08-31 08:54:01,355 - INFO - DuckDuckGo Search: '("AI tool Indian exporter" OR "AI market research tool export" OR "AI buyer discovery" OR "AI production planning" OR "AI lab management" OR "AI factory compliance") 2026'
-2026-08-31 08:54:01,405 - INFO - response: https://www.bing.com/search?q=%28%22AI+tool+Indian+exporter%22+OR+%22AI+market+research+tool+export%22+OR+%22AI+buyer+discovery%22+OR+%22AI+production+planning%22+OR+%22AI+lab+management%22+OR+%22AI+factory+compliance%22%29+2026&filters=ex1%3A%22ez1%22 200
-2026-08-31 08:54:02,520 - INFO - Retrieved & cleaned 11340 chars of broad web search results.
-2026-08-31 08:54:02,520 - INFO - Fetching real-time verified exchange rates from open.er-api.com...
-2026-08-31 08:54:02,572 - INFO - Verified exchange rates - USD/INR: 95.5816, EUR/INR: 110.8455
-2026-08-31 08:54:02,573 - INFO - [Step 4/5] Synthesizing Intelligence with Gemini API...
-2026-08-31 08:54:02,573 - INFO - Attempting daily digest compilation using OpenAI (gpt-4o-mini)...
-2026-08-31 08:54:03,803 - WARNING - OpenAI API call failed: 429 Client Error: Too Many Requests for url: https://api.openai.com/v1/chat/completions. Falling back to Google Gemini...
-2026-08-31 08:54:03,803 - INFO - Attempting daily digest compilation using Google Gemini (Attempt 1/3)...
-2026-08-31 08:56:03,714 - ERROR - Gemini API call failed on attempt 1: 504 The request timed out. Please try again.
-2026-08-31 08:56:03,716 - ERROR - Traceback (most recent call last):
+2026-09-01 07:58:14,828 - INFO - === ENV DIAGNOSTICS ===
+2026-09-01 07:58:14,828 - INFO -   GEMINI_API_KEY: SET (len=39, pattern=AIza...6uL0)
+2026-09-01 07:58:14,829 - INFO -   OPENAI_API_KEY: SET (len=164, pattern=sk-p...rUQA)
+2026-09-01 07:58:14,829 - INFO -   TAVILY_API_KEY: SET (len=58, pattern=tvly...GEB2)
+2026-09-01 07:58:14,829 - INFO -   SMTP_EMAIL: SET (len=21, pattern=yoge....com)
+2026-09-01 07:58:14,829 - INFO -   SMTP_PASSWORD: SET (len=16, pattern=qnul...gqvn)
+2026-09-01 07:58:14,829 - INFO - =======================
+2026-09-01 07:58:14,829 - INFO - ============================================================
+2026-09-01 07:58:14,829 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE STARTED
+2026-09-01 07:58:14,829 - INFO - ============================================================
+2026-09-01 07:58:14,829 - INFO - [Step 1/5] Deep Scanning Target Regulatory Sites...
+2026-09-01 07:58:14,829 - INFO - Scanning target URL: https://www.dgft.gov.in/CP/...
+2026-09-01 07:58:15,290 - ERROR - Failed to scan target sub-links for https://www.dgft.gov.in/CP/: 403 Client Error: Forbidden for url: https://www.dgft.gov.in/CP/
+2026-09-01 07:58:15,290 - INFO - Found 1 pages to extract on https://www.dgft.gov.in/CP/
+2026-09-01 07:58:15,290 - INFO - Extracting content from https://www.dgft.gov.in/CP/...
+2026-09-01 07:58:15,418 - ERROR - not a 200 response: 403 for URL https://www.dgft.gov.in/CP/
+2026-09-01 07:58:15,418 - INFO - Scraped & cleaned 0 chars of raw text from regulatory targets.
+2026-09-01 07:58:15,418 - INFO - [Step 2/5] Scanning Leading Business Newspapers (The Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
+2026-09-01 07:58:15,439 - INFO - Gathering news from leading Indian business newspapers (Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
+2026-09-01 07:58:18,254 - INFO - Retrieved 49 relevant business newspaper stories.
+2026-09-01 07:58:18,256 - INFO - Scraped & cleaned 36632 chars of raw text from business newspapers.
+2026-09-01 07:58:18,256 - INFO - [Step 3/5] Conducting 24-Hour Web Intelligence Searches...
+2026-09-01 07:58:18,257 - INFO - Gathering priority handles updates (Social search)...
+2026-09-01 07:58:18,257 - INFO - Tavily Search: '(site:x.com/dgftindia OR site:x.com/CimGOI OR site:x.com/DoC_GoI) 2026-09-01'
+2026-09-01 07:58:26,275 - INFO - Tavily Search: '(site:x.com/FieoHq OR site:x.com/PiyushGoyal OR site:x.com/APEDADOC) 2026-09-01'
+2026-09-01 07:58:31,822 - INFO - Tavily Search: '(site:x.com/AgriGoI OR site:x.com/theresanaiforit) 2026-09-01'
+2026-09-01 07:58:37,123 - INFO - Tavily Search: '(site:linkedin.com/company "Services Export Promotion Council  India" OR site:linkedin.com/company "Mahratta Chamber of Commerce, Industries and Agriculture, Pune") 2026-09-01'
+2026-09-01 07:58:44,243 - INFO - Tavily Search: '(site:linkedin.com/company "Embassy of India, Belgium, Luxembourg & European Union" OR site:linkedin.com/company "World Trade Center Mumbai") 2026-09-01'
+2026-09-01 07:58:49,801 - INFO - Tavily Search: '(site:linkedin.com/company "India SME Forum" OR site:linkedin.com/company/Tradologie OR site:linkedin.com/in/Tradologie) 2026-09-01'
+2026-09-01 07:58:54,273 - INFO - Tavily Search: '(site:linkedin.com/company "Trade Promotion Council of India" OR site:linkedin.com/company "AgriGuru Online") 2026-09-01'
+2026-09-01 07:58:58,287 - INFO - Tavily Search: '(site:linkedin.com/company/EximIndia OR site:linkedin.com/in/EximIndia OR site:linkedin.com/company "Spices Board India") 2026-09-01'
+2026-09-01 07:59:04,405 - INFO - Tavily Search: '(site:linkedin.com/company "Department of Commerce" OR site:linkedin.com/company "India Exim Bank") 2026-09-01'
+2026-09-01 07:59:09,659 - INFO - Tavily Search: '(site:linkedin.com/company "Ministry of Micro, Small and Medium Enterprises, Government of India" OR site:linkedin.com/company "JNPA- Jawaharlal Nehru Port Authority") 2026-09-01'
+2026-09-01 07:59:15,035 - INFO - Tavily Search: '(site:linkedin.com/company "Maritime Analytica" OR site:linkedin.com/company "Container News") 2026-09-01'
+2026-09-01 07:59:19,790 - INFO - Tavily Search: '(site:linkedin.com/company "Export Portal" OR site:linkedin.com/company "Ministry of Food Processing Industries") 2026-09-01'
+2026-09-01 07:59:24,153 - INFO - Tavily Search: '(site:linkedin.com/company "Indian Chamber of Food and Agriculture" OR site:linkedin.com/company "NABARD - National Bank for Agriculture and Rural Development") 2026-09-01'
+2026-09-01 07:59:28,154 - INFO - Tavily Search: '(site:linkedin.com/company "Ministry of Agriculture & Farmers Welfare, Government of India" OR site:linkedin.com/company "FEDERATION OF INDIAN EXPORT ORGANISATIONS") 2026-09-01'
+2026-09-01 07:59:32,763 - INFO - Tavily Search: '(site:linkedin.com/company "The Agricultural and Processed Food Products Export Development Authority" OR site:linkedin.com/company "Indian Spices Exporters Association") 2026-09-01'
+2026-09-01 07:59:38,799 - INFO - Tavily Search: '(site:linkedin.com/company "National Commodity & Derivatives Exchange Portfolio" OR site:linkedin.com/company "All India Food Processors' Association") 2026-09-01'
+2026-09-01 07:59:43,149 - INFO - Tavily Search: '(site:linkedin.com/company/horti-goi OR site:linkedin.com/in/horti-goi) 2026-09-01'
+2026-09-01 07:59:49,883 - INFO - Tavily Search: '(site:instagram.com/indianmerchantchamber OR site:instagram.com/mvirdc_wtcmumbaiindia) 2026-09-01'
+2026-09-01 07:59:54,694 - INFO - Tavily Search: '(site:instagram.com/tradologieworld OR site:instagram.com/indonesiainmumbai) 2026-09-01'
+2026-09-01 07:59:57,618 - INFO - Tavily Search: '(site:instagram.com/turmericboard) 2026-09-01'
+2026-09-01 08:00:01,650 - INFO - Gathering broad market intelligence...
+2026-09-01 08:00:01,652 - INFO - Tavily Search: '"USD/INR" "EUR/INR" exchange rate'
+2026-09-01 08:00:05,290 - INFO - Tavily Search: '("banana price" OR "banana mandi") AND (Jalgaon OR Maharashtra) 2026-09-01'
+2026-09-01 08:00:11,014 - INFO - Tavily Search: '("turmeric price" OR "turmeric mandi") AND (Sangli OR Jalgaon OR Maharashtra) 2026-09-01'
+2026-09-01 08:00:17,095 - INFO - Tavily Search: '("ginger price" OR "garlic price" OR "beetroot price" OR "moringa price") AND (mandi OR Maharashtra) 2026-09-01'
+2026-09-01 08:00:23,264 - INFO - Tavily Search: '("India export policy" OR "DGFT notification" OR "APEDA" OR "customs compliance" OR "FDA import alert" OR "EU RASFF") AND ("dehydrated" OR "spices" OR "agricultural" OR "food") 2026-09-01'
+2026-09-01 08:00:29,057 - INFO - Tavily Search: '("FSSAI manufacturing" OR "FSSAI label" OR "ISO 22000" OR "GMP compliance" OR "Factories Act" OR "pollution compliance") AND "food processing" 2026-09-01'
+2026-09-01 08:00:32,913 - INFO - Tavily Search: '("PMFME scheme" OR "PLI food processing" OR "CFTRI technology" OR "Maharashtra agri processing" OR "CFTRI training") 2026'
+2026-09-01 08:00:37,029 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("RFQ" OR "buyer requirement" OR "looking for bulk supplier" OR "raw material buyer" OR site:indiamart.com OR site:tradeindia.com) 2026'
+2026-09-01 08:00:43,454 - INFO - Tavily Search: '("GeM tender" OR "government tender" OR "defence dehydrated" OR "ICDS nutrition" OR "anganwadi food") AND ("dehydrated vegetable" OR "dehydrated fruit" OR "vegetable powder" OR "food powder") 2026'
+2026-09-01 08:00:50,027 - INFO - Tavily Search: '("new product launch" OR "capacity expansion") AND (confectionery OR bakery OR nutraceutical OR "spice blending" OR "ice cream" OR "health food") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026'
+2026-09-01 08:00:55,723 - INFO - Tavily Search: '("Rajlaxmi Agro Farm" OR "Mevive International" OR "VKL Seasoning" OR "food dehydration unit Jalgaon" OR "dehydrated manufacturer Maharashtra") 2026'
+2026-09-01 08:01:01,329 - INFO - Tavily Search: '("heat pump dryer food" OR "dehydration equipment" OR "CFTRI technology transfer" OR "dryer manufacturer") AND "food processing" 2026'
+2026-09-01 08:01:08,132 - INFO - Tavily Search: '("Agroworld Expo Jalgaon" OR "AAHAR" OR "BioFach India" OR "food safety training" OR "reverse buyer seller meet") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026'
+2026-09-01 08:01:15,769 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("export tender" OR "APEDA buyer inquiry" OR "importer requirement") 2026'
+2026-09-01 08:01:22,423 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND ("spices" OR "dehydrated" OR "banana powder" OR "moringa" OR "turmeric" OR "food processing" OR "PMFME" OR "FSSAI" OR "DGFT") 2026-09-01'
+2026-09-01 08:01:27,476 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND ("agri export" OR "commodity prices" OR "mandi price" OR "container freight" OR "exim") 2026-09-01'
+2026-09-01 08:01:31,892 - INFO - Tavily Search: '("AI tool Indian exporter" OR "AI market research tool export" OR "AI buyer discovery" OR "AI production planning" OR "AI lab management" OR "AI factory compliance") 2026'
+2026-09-01 08:01:36,717 - INFO - Retrieved & cleaned 238297 chars of broad web search results.
+2026-09-01 08:01:36,718 - INFO - Fetching real-time verified exchange rates from open.er-api.com...
+2026-09-01 08:01:36,864 - INFO - Verified exchange rates - USD/INR: 95.2014, EUR/INR: 110.5192
+2026-09-01 08:01:36,864 - INFO - [Step 4/5] Synthesizing Intelligence with Gemini API...
+2026-09-01 08:01:36,866 - INFO - Attempting daily digest compilation using OpenAI (gpt-4o-mini)...
+2026-09-01 08:01:38,236 - WARNING - OpenAI API call failed: 429 Client Error: Too Many Requests for url: https://api.openai.com/v1/chat/completions. Falling back to Google Gemini...
+2026-09-01 08:01:38,236 - INFO - Attempting daily digest compilation using Google Gemini (Attempt 1/3)...
+2026-09-01 08:03:37,685 - ERROR - Gemini API call failed on attempt 1: 504 The request timed out. Please try again.
+2026-09-01 08:03:37,687 - ERROR - Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/grpc_helpers.py", line 55, in error_remapped_callable
     return callable_(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -238,10 +127,22 @@ Traceback (most recent call last):
     raise exceptions.from_grpc_error(exc) from exc
 google.api_core.exceptions.DeadlineExceeded: 504 The request timed out. Please try again.
 
-2026-08-31 08:56:03,716 - INFO - Waiting 10 seconds before retrying...
-2026-08-31 08:56:13,717 - INFO - Attempting daily digest compilation using Google Gemini (Attempt 2/3)...
-2026-08-31 08:58:13,356 - ERROR - Gemini API call failed on attempt 2: 504 The request timed out. Please try again.
-2026-08-31 08:58:13,357 - ERROR - Traceback (most recent call last):
+2026-09-01 08:03:37,688 - INFO - Waiting 10 seconds before retrying...
+2026-09-01 08:03:47,688 - INFO - Attempting daily digest compilation using Google Gemini (Attempt 2/3)...
+2026-09-01 08:05:46,742 - ERROR - Gemini API call failed on attempt 2: 504 Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugonly    
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__9b0e1908-8503-4b5d-8aff-7580735b0991"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
+
+2026-09-01 08:05:46,743 - ERROR - Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/grpc_helpers.py", line 55, in error_remapped_callable
     return callable_(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -264,8 +165,32 @@ google.api_core.exceptions.DeadlineExceeded: 504 The request timed out. Please t
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
 	status = StatusCode.DEADLINE_EXCEEDED
-	details = "The request timed out. Please try again."
-	debug_error_string = "DEADLINE_EXCEEDED:The request timed out. Please try again."
+	details = "Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugonly    
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__9b0e1908-8503-4b5d-8aff-7580735b0991"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
+"
+	debug_error_string = "DEADLINE_EXCEEDED:Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugonly    
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__9b0e1908-8503-4b5d-8aff-7580735b0991"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
+"
 >
 
 The above exception was the direct cause of the following exception:
@@ -299,17 +224,231 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^
   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/grpc_helpers.py", line 57, in error_remapped_callable
     raise exceptions.from_grpc_error(exc) from exc
-google.api_core.exceptions.DeadlineExceeded: 504 The request timed out. Please try again.
+google.api_core.exceptions.DeadlineExceeded: 504 Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugonly    
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__9b0e1908-8503-4b5d-8aff-7580735b0991"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
 
-2026-08-31 08:58:13,357 - INFO - Waiting 10 seconds before retrying...
-2026-08-31 08:58:23,357 - INFO - Attempting daily digest compilation using Google Gemini (Attempt 3/3)...
-2026-08-31 08:59:40,909 - INFO - Gemini compilation successful!
-2026-08-31 08:59:40,910 - INFO - Updated active_events.json with 1 active events.
-2026-08-31 08:59:40,911 - INFO - Updated shown_intel.json. Total shown intel URLs: 444
-2026-08-31 08:59:40,912 - INFO - Saved completed markdown digest to /home/runner/work/businessmonitor/businessmonitor/data/2026-08-31/digest.md
-2026-08-31 08:59:40,912 - INFO - [Step 5/5] Delivering Digest Briefing Email...
-2026-08-31 08:59:40,912 - INFO - Sending daily intelligence email to yogeshgujar@gmail.com...
-2026-08-31 08:59:42,860 - INFO - Email delivered successfully!
-2026-08-31 08:59:42,860 - INFO - ============================================================
-2026-08-31 08:59:42,860 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE COMPLETED
-2026-08-31 08:59:42,860 - INFO - ============================================================
+
+2026-09-01 08:05:46,744 - INFO - Waiting 10 seconds before retrying...
+2026-09-01 08:05:56,744 - INFO - Attempting daily digest compilation using Google Gemini (Attempt 3/3)...
+2026-09-01 08:07:55,024 - ERROR - Gemini API call failed on attempt 3: 504 Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugproto   
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__64cd3ed9-ddc6-492d-8e09-50ef5c5e774a"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
+
+2026-09-01 08:07:55,025 - ERROR - Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_channel.py", line 447, in result
+    raise self
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_channel.py", line 1182, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_channel.py", line 999, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.DEADLINE_EXCEEDED
+	details = "Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugproto   
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__64cd3ed9-ddc6-492d-8e09-50ef5c5e774a"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
+"
+	debug_error_string = "DEADLINE_EXCEEDED:Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugproto   
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__64cd3ed9-ddc6-492d-8e09-50ef5c5e774a"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
+"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/work/businessmonitor/businessmonitor/run_digest.py", line 732, in generate_digest_ai
+    response = model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/gapic_v1/method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 295, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 157, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/retry/retry_base.py", line 215, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 148, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.DeadlineExceeded: 504 Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugproto   
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__64cd3ed9-ddc6-492d-8e09-50ef5c5e774a"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
+
+
+2026-09-01 08:07:55,025 - CRITICAL - Unhandled exception
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_channel.py", line 447, in result
+    raise self
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_channel.py", line 1182, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/grpc/_channel.py", line 999, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.DEADLINE_EXCEEDED
+	details = "Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugproto   
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__64cd3ed9-ddc6-492d-8e09-50ef5c5e774a"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
+"
+	debug_error_string = "DEADLINE_EXCEEDED:Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugproto   
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__64cd3ed9-ddc6-492d-8e09-50ef5c5e774a"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
+"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/work/businessmonitor/businessmonitor/run_digest.py", line 1255, in <module>
+    pipeline.run_pipeline()
+  File "/home/runner/work/businessmonitor/businessmonitor/run_digest.py", line 1212, in run_pipeline
+    digest_text = self.generate_digest_ai(crawled_data, searched_data, newspaper_data, verified_rates)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/businessmonitor/businessmonitor/run_digest.py", line 760, in generate_digest_ai
+    raise e
+  File "/home/runner/work/businessmonitor/businessmonitor/run_digest.py", line 732, in generate_digest_ai
+    response = model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/gapic_v1/method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 295, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 157, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/retry/retry_base.py", line 215, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 148, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/google/api_core/grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.DeadlineExceeded: 504 Stream cancelled; RPC from prefill servable to decode servable failed; Failed to close the streaming context; status = CANCELLED: Stream cancelled; RPC from prefill servable to decode servable failed [type.googleapis.com/util.ErrorSpacePayload='RPC::CANCELLED']
+=== Source Location Trace: ===
+net/rpc/rpc-errorspace-util.cc:19
+learning/serving/servables/wiz/remote_wiz_servable.cc:231
+learning/serving/servables/wiz/prefill_remote_wiz_servable.cc:223
+learning/serving/servables/wiz/wiz_servable.cc:3484
+;  Failed to run inference for model: go/debugproto   
+name: "prod-common-global__/aistudio/gemini-v3p1s-rev19-calmriver-sc__main__/aistudio/gemini-v3p1s-rev19-calmriver-sc__2025112500__prefill__variantvlp__64cd3ed9-ddc6-492d-8e09-50ef5c5e774a"
+version {
+  value: 1
+}
+signature_name: "serving_stream"
+
