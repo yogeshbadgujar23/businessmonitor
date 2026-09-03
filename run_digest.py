@@ -729,7 +729,7 @@ Example:
         
         # 2. Fallback to Google Gemini
         if self.gemini_key:
-            models_to_try = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
+            models_to_try = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"]
             for attempt, model_name in enumerate(models_to_try, 1):
                 logging.info(f"Attempting daily digest compilation using Google Gemini ({model_name}) (Attempt {attempt}/3)...")
                 try:
