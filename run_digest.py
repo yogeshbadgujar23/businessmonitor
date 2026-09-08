@@ -348,7 +348,7 @@ class DailyDigestPipeline:
         
         # Load user context to read custom social handles
         social_handles = {
-            "x": ["dgftindia", "CimGOI", "DoC_GoI", "FieoHq", "PiyushGoyal", "APEDADOC", "AgriGoI", "theresanaiforit"],
+            "x": ["dgftindia", "CimGOI", "DoC_GoI", "FieoHq", "PiyushGoyal", "APEDADOC", "AgriGoI", "theresanaiforit", "minmsme"],
             "linkedin": [],
             "instagram": []
         }
@@ -554,6 +554,7 @@ INCLUDE:
 EXCLUDE:
 ❌ Unrelated industries (Chemicals, Gems, Textiles, etc.).
 ❌ Political/general news with no direct trade or manufacturing compliance impact.
+❌ Generic ceremonial government posts (Ministry of MSME, AgriGoI, DGFT, etc.): Exclude photo-ops, minister courtesy visits, festival greetings, generic awards, and motivational slogans.
 ❌ AI hype with no practical use case.
 ❌ Duplicate items already shown.
 ❌ Anything older than 24 hours.
@@ -571,6 +572,14 @@ CRITICAL QUALITY RULES - NON-NEGOTIABLE
    - Never use your pre-trained knowledge or historical knowledge to output or 'fill in' exchange rates (like USD/INR, EUR/INR) or mandi prices.
    - For every single price, exchange rate, or lead reported in the digest, you must list the exact URL source and publication/crawled date immediately next to it.
    - If the raw data does not contain today's verified numbers, write 'Not available in today's search data'. Never guess, write 'approximate', or estimate.
+7. 🎯 STRICT MSME & GOVERNMENT SOCIAL FILTER (HIGH RELEVANCE ONLY):
+   - We track Ministry of MSME (@minmsme on X and LinkedIn) and other official bodies specifically for actionable opportunities for IMM Food Innovators LLP (dehydrated food powder manufacturer) and Supab Exports.
+   - DO NOT report every post just because it mentions MSME.
+   - ONLY include posts that contain:
+     * Actionable schemes, subsidies, grants, or financial aid (e.g. ZED, RAMP, CGTMSE, technology upgradation, cold chain, agro-processing clusters, PMFME).
+     * Concrete B2B exhibitions, trade fairs, buyer-seller meets, or vendor development programs relevant to food/agri manufacturing or exports.
+     * Regulatory, compliance, taxation (e.g. Section 43B(h)), or Udyam policy updates directly affecting manufacturing MSMEs or exporters.
+   - If a post is merely ceremonial, celebratory, political, or unrelated to manufacturing/exporting, DROP IT completely.
 """
 
         user_instruction = f"""
