@@ -25,5 +25,14 @@
         "why_it_matters": "Major regional trade platform in the GCC for dehydrated food powders and spice exporters targeting Middle Eastern buyers.",
         "link": "https://www.linkedin.com/company/food-from-morocco",
         "type": "international"
+    },
+    {
+        "name": "Pune Expo 2026",
+        "start_date": "2026-12-22",
+        "end_date": "2026-12-24",
+        "venue": "Auto Cluster Premises, Chinchwad, Pune",
+        "why_it_matters": "Maharashtra's leading B2B industrial exhibition to showcase food processing innovation and connect with regional buyers.",
+        "link": "https://in.linkedin.com/company/mcciapune",
+        "type": "domestic"
     }
 ]
