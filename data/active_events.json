@@ -1,22 +1,20 @@
 [
     {
-        "name": "Saudi Food Show 2026",
-        "date": "2026-09-27 to 2026-09-29",
-        "venue": "Jeddah, Saudi Arabia",
-        "why_it_matters": "Major regional trade platform in the GCC for dehydrated food powders and spice exporters targeting Middle Eastern buyers.",
-        "link": "https://www.linkedin.com/company/food-from-morocco",
-        "type": "international",
-        "start_date": "2026-09-29",
-        "end_date": "2026-09-29"
+        "name": "UP International Trade Show",
+        "start_date": "2026-09-27",
+        "end_date": "2026-10-02",
+        "venue": "Greater Noida, Uttar Pradesh, India",
+        "why_it_matters": "Food processing investments and buyer-seller networking for agri-processing firms.",
+        "link": "https://www.business-standard.com/economy/uttar-pradesh/uttar-pradesh-has-emerged-as-preferred-investment-destination-piyush-goyal-126092700341_1.html",
+        "type": "domestic"
     },
     {
-        "name": "Pune Expo 2026",
-        "date": "2026-12-22 to 2026-12-24",
-        "venue": "Auto Cluster Premises, Chinchwad, Pune",
-        "why_it_matters": "Maharashtra's leading B2B industrial exhibition to showcase food processing innovation and connect with regional buyers.",
-        "link": "https://in.linkedin.com/company/mcciapune",
-        "type": "domestic",
-        "start_date": "2026-09-29",
-        "end_date": "2026-09-29"
+        "name": "Second India-EFTA Prosperity Summit",
+        "start_date": "2026-10-15",
+        "end_date": "2026-10-16",
+        "venue": "New Delhi, India",
+        "why_it_matters": "Bilateral review of EFTA trade deal to expand food market access to Switzerland and Norway.",
+        "link": "https://www.thehindubusinessline.com/economy/india-efta-to-review-trade-pact-a-year-on-eye-new-opportunities/article71525057.ece",
+        "type": "international"
     }
 ]
