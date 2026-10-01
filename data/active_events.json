@@ -16,5 +16,59 @@
         "why_it_matters": "Bilateral review of EFTA trade deal to expand food market access to Switzerland and Norway.",
         "link": "https://www.thehindubusinessline.com/economy/india-efta-to-review-trade-pact-a-year-on-eye-new-opportunities/article71525057.ece",
         "type": "international"
+    },
+    {
+        "name": "Maharashtra Industries & SME Summit",
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-01",
+        "venue": "Hotel Centre Point, Ramdaspeth, Vidarbha Region, Maharashtra",
+        "why_it_matters": "Direct networking opportunity with manufacturers, SMEs, exporters, and industry leaders in Maharashtra. Highly relevant for domestic leads and potential collaborations.",
+        "link": "https://in.linkedin.com/company/sme-chamber-of-india",
+        "type": "domestic"
+    },
+    {
+        "name": "AgriConHortiConnect",
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-03",
+        "venue": "BIEC, Bengaluru",
+        "why_it_matters": "B2B agriculture and horticulture expo, relevant for raw material sourcing, agri-tech, and networking with potential domestic buyers.",
+        "link": "agriconhorticonnect.com",
+        "type": "domestic"
+    },
+    {
+        "name": "INDUSFOOD 2026",
+        "start_date": "2026-09-29",
+        "end_date": "2026-10-01",
+        "venue": "Ahmedabad",
+        "why_it_matters": "India's leading international food and beverage trade exhibition, offering networking with global buyers and insights into competitor offerings.",
+        "link": "https://in.linkedin.com/company/globriddge",
+        "type": "international"
+    },
+    {
+        "name": "BIOFACH India 2026",
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-01",
+        "venue": "Greater Noida, India Expo Centre",
+        "why_it_matters": "Key exhibition for organic food products, relevant for exploring organic market trends and potential export opportunities.",
+        "link": "https://in.linkedin.com/company/jimmy-sons-foods-llp",
+        "type": "international"
+    },
+    {
+        "name": "Australia & New Zealand Shipping & Logistics Conference 2026",
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-01",
+        "venue": "TBD",
+        "why_it_matters": "Insights into logistics and supply chain trends for Australia and New Zealand, potential export markets.",
+        "link": "https://au.linkedin.com/company/onestopconnections",
+        "type": "international"
+    },
+    {
+        "name": "BIOFACH 2026",
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-01",
+        "venue": "TBD",
+        "why_it_matters": "Major international trade fair for organic products, important for global market trends and export opportunities.",
+        "link": "https://at.linkedin.com/company/gqsp-ukraine",
+        "type": "international"
     }
 ]
