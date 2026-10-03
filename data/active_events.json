@@ -1,14 +1,5 @@
 [
     {
-        "name": "UP International Trade Show",
-        "start_date": "2026-09-27",
-        "end_date": "2026-10-02",
-        "venue": "Greater Noida, Uttar Pradesh, India",
-        "why_it_matters": "Food processing investments and buyer-seller networking for agri-processing firms.",
-        "link": "https://www.business-standard.com/economy/uttar-pradesh/uttar-pradesh-has-emerged-as-preferred-investment-destination-piyush-goyal-126092700341_1.html",
-        "type": "domestic"
-    },
-    {
         "name": "Second India-EFTA Prosperity Summit",
         "start_date": "2026-10-15",
         "end_date": "2026-10-16",
@@ -24,6 +15,15 @@
         "venue": "BIEC, Bengaluru",
         "why_it_matters": "B2B agriculture and horticulture expo, relevant for raw material sourcing, agri-tech, and networking with potential domestic buyers.",
         "link": "agriconhorticonnect.com",
+        "type": "domestic"
+    },
+    {
+        "name": "FIEO Workshop on Customs Schemes for Exporters",
+        "start_date": "2026-10-09",
+        "end_date": "2026-10-09",
+        "venue": "Nampally, Hyderabad",
+        "why_it_matters": "Practical session covering Customs schemes, benefits, procedures, and compliances for MSME exporters.",
+        "link": "https://x.com/FieoHq/status/2105149949206003883",
         "type": "domestic"
     }
 ]
