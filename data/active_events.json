@@ -1,29 +1,29 @@
 [
     {
         "name": "Second India-EFTA Prosperity Summit",
-        "type": "international",
         "start_date": "2026-10-15",
         "end_date": "2026-10-16",
         "venue": "New Delhi, India",
         "why_it_matters": "Bilateral review of EFTA trade deal to expand food market access to Switzerland and Norway.",
-        "link": "https://www.thehindubusinessline.com/economy/india-efta-to-review-trade-pact-a-year-on-eye-new-opportunities/article71525057.ece"
+        "link": "https://www.thehindubusinessline.com/economy/india-efta-to-review-trade-pact-a-year-on-eye-new-opportunities/article71525057.ece",
+        "type": "international"
     },
     {
         "name": "FIEO Workshop on Customs Schemes for Exporters",
-        "type": "domestic",
         "start_date": "2026-10-09",
         "end_date": "2026-10-09",
         "venue": "Nampally, Hyderabad, India",
         "why_it_matters": "Practical session covering Customs schemes, benefits, procedures, and compliances for MSME exporters.",
-        "link": "https://x.com/FieoHq/status/2105149949206003883"
+        "link": "https://x.com/FieoHq/status/2105149949206003883",
+        "type": "domestic"
     },
     {
         "name": "MahaBharat International Trade Expo (Sambhajinagar Edition)",
-        "type": "domestic",
         "start_date": "2026-10-09",
         "end_date": "2026-10-18",
         "venue": "Sambhajinagar, Maharashtra, India",
         "why_it_matters": "Excellent regional platform in Maharashtra to showcase dehydrated food powders to domestic food processors, retailers, and regional distributors.",
-        "link": "https://www.instagram.com/indianmerchantchamber/p/Db2Vk3eja9W"
+        "link": "https://www.instagram.com/indianmerchantchamber/p/Db2Vk3eja9W",
+        "type": "domestic"
     }
 ]
