@@ -1,20 +1,32 @@
 [
     {
         "name": "Second India-EFTA Prosperity Summit",
-        "start_date": "2026-10-15",
-        "end_date": "2026-10-16",
+        "type": "international",
+        "date": "2026-10-15 to 2026-10-16",
         "venue": "New Delhi, India",
         "why_it_matters": "Bilateral review of EFTA trade deal to expand food market access to Switzerland and Norway.",
         "link": "https://www.thehindubusinessline.com/economy/india-efta-to-review-trade-pact-a-year-on-eye-new-opportunities/article71525057.ece",
-        "type": "international"
+        "start_date": "2026-10-12",
+        "end_date": "2026-10-12"
     },
     {
         "name": "MahaBharat International Trade Expo (Sambhajinagar Edition)",
-        "start_date": "2026-10-09",
-        "end_date": "2026-10-18",
+        "type": "domestic",
+        "date": "2026-10-09 to 2026-10-18",
         "venue": "Sambhajinagar, Maharashtra, India",
         "why_it_matters": "Excellent regional platform in Maharashtra to showcase dehydrated food powders to domestic food processors, retailers, and regional distributors.",
         "link": "https://www.instagram.com/indianmerchantchamber/p/Db2Vk3eja9W",
-        "type": "domestic"
+        "start_date": "2026-10-12",
+        "end_date": "2026-10-12"
+    },
+    {
+        "name": "\"Vaaram Thorum Varthaga Aalosanai\" – Weekly Virtual Export Advisory Platform",
+        "type": "domestic",
+        "date": "Every Wednesday",
+        "venue": "Virtual",
+        "why_it_matters": "Expert guidance on agri and food products processing, technology, marketing & export-related queries.",
+        "link": "https://in.linkedin.com/company/tnapex",
+        "start_date": "2026-10-12",
+        "end_date": "2026-10-12"
     }
 ]
