@@ -1,32 +1,47 @@
 [
     {
-        "name": "Second India-EFTA Prosperity Summit",
-        "type": "international",
-        "date": "2026-10-15 to 2026-10-16",
-        "venue": "New Delhi, India",
-        "why_it_matters": "Bilateral review of EFTA trade deal to expand food market access to Switzerland and Norway.",
-        "link": "https://www.thehindubusinessline.com/economy/india-efta-to-review-trade-pact-a-year-on-eye-new-opportunities/article71525057.ece",
-        "start_date": "2026-10-12",
-        "end_date": "2026-10-12"
-    },
-    {
-        "name": "MahaBharat International Trade Expo (Sambhajinagar Edition)",
-        "type": "domestic",
-        "date": "2026-10-09 to 2026-10-18",
-        "venue": "Sambhajinagar, Maharashtra, India",
-        "why_it_matters": "Excellent regional platform in Maharashtra to showcase dehydrated food powders to domestic food processors, retailers, and regional distributors.",
+        "name": "MahaBharat International Trade Expo 2026 (Sambhajinagar)",
+        "start_date": "2026-10-09",
+        "end_date": "2026-10-18",
+        "venue": "Sambhajinagar",
+        "why_it_matters": "This expo offers significant opportunities for networking, B2B meetings, and exploring global business collaborations, particularly for MSMEs in Maharashtra. It's a platform to find domestic distributors, retailers, and FMCG companies.",
         "link": "https://www.instagram.com/indianmerchantchamber/p/Db2Vk3eja9W",
-        "start_date": "2026-10-12",
-        "end_date": "2026-10-12"
+        "type": "domestic"
     },
     {
-        "name": "\"Vaaram Thorum Varthaga Aalosanai\" – Weekly Virtual Export Advisory Platform",
-        "type": "domestic",
-        "date": "Every Wednesday",
+        "name": "MahaBharat International Trade Expo 2026 (Mumbai)",
+        "start_date": "2026-12-04",
+        "end_date": "2026-12-14",
+        "venue": "MMRDA Grounds, BKC, Mumbai",
+        "why_it_matters": "A major trade expo in Mumbai, offering extensive networking with international brands, MSMEs, and high-impact B2B opportunities for both domestic and export markets.",
+        "link": "https://www.instagram.com/indianmerchantchamber/p/Db2Vk3eja9W",
+        "type": "domestic"
+    },
+    {
+        "name": "NFPAT 2026 – 2nd Cycle (National Food Processing Aptitude Test)",
+        "start_date": "2026-03-03",
+        "end_date": "2026-10-13",
+        "venue": "Online/Various",
+        "why_it_matters": "Provides access to 400+ job opportunities across 50+ leading food companies and complimentary food safety masterclasses. Relevant for IMM to recruit skilled talent and enhance food safety knowledge within the team.",
+        "link": "https://in.linkedin.com/company/sector-skill-council-for-food-processing",
+        "type": "domestic"
+    },
+    {
+        "name": "\"Vaaram Thorum Varthaga Aalosanai\" (Weekly Virtual Export Advisory Platform)",
+        "start_date": "2026-10-13",
+        "end_date": "2026-10-13",
         "venue": "Virtual",
-        "why_it_matters": "Expert guidance on agri and food products processing, technology, marketing & export-related queries.",
+        "why_it_matters": "Offers expert guidance on agri and food products processing, technology, marketing, and export-related queries. Valuable for Supab Exports for market insights and for IMM for processing and technology updates.",
         "link": "https://in.linkedin.com/company/tnapex",
-        "start_date": "2026-10-12",
-        "end_date": "2026-10-12"
+        "type": "domestic"
+    },
+    {
+        "name": "INTERENEF – International Energy Forum",
+        "start_date": "2026-10-13",
+        "end_date": "2026-10-13",
+        "venue": "Zagreb, Croatia",
+        "why_it_matters": "The conference theme \"Energy and food sovereignty in an era of deglobalization\" is highly relevant for understanding global food supply chain resilience and strategic positioning for dehydrated food exports.",
+        "link": "https://hr.linkedin.com/company/interenef-forum",
+        "type": "international"
     }
 ]
