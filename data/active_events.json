@@ -18,30 +18,21 @@
         "type": "domestic"
     },
     {
-        "name": "NFPAT 2026 – 2nd Cycle (National Food Processing Aptitude Test)",
-        "start_date": "2026-03-03",
-        "end_date": "2026-10-13",
-        "venue": "Online/Various",
-        "why_it_matters": "Provides access to 400+ job opportunities across 50+ leading food companies and complimentary food safety masterclasses. Relevant for IMM to recruit skilled talent and enhance food safety knowledge within the team.",
-        "link": "https://in.linkedin.com/company/sector-skill-council-for-food-processing",
-        "type": "domestic"
+        "name": "Foodexpo Vietnam 2026",
+        "start_date": "2026-11-11",
+        "end_date": "2026-11-14",
+        "venue": "Saigon Exhibition & Convention Center (SECC), Ho Chi Minh City, Vietnam",
+        "why_it_matters": "Gateway to Vietnam's fast-growing food market, offering opportunities to connect with buyers and explore export potential for dehydrated food powders.",
+        "link": "https://x.com/FieoHq/status/2082721887684301026",
+        "type": "international"
     },
     {
-        "name": "\"Vaaram Thorum Varthaga Aalosanai\" (Weekly Virtual Export Advisory Platform)",
-        "start_date": "2026-10-13",
-        "end_date": "2026-10-13",
-        "venue": "Virtual",
-        "why_it_matters": "Offers expert guidance on agri and food products processing, technology, marketing, and export-related queries. Valuable for Supab Exports for market insights and for IMM for processing and technology updates.",
-        "link": "https://in.linkedin.com/company/tnapex",
-        "type": "domestic"
-    },
-    {
-        "name": "INTERENEF – International Energy Forum",
-        "start_date": "2026-10-13",
-        "end_date": "2026-10-13",
-        "venue": "Zagreb, Croatia",
-        "why_it_matters": "The conference theme \"Energy and food sovereignty in an era of deglobalization\" is highly relevant for understanding global food supply chain resilience and strategic positioning for dehydrated food exports.",
-        "link": "https://hr.linkedin.com/company/interenef-forum",
+        "name": "Trade Expo Indonesia 2026",
+        "start_date": "2026-10-14",
+        "end_date": "2026-10-18",
+        "venue": "Indonesia Convention Exhibition (ICE), BSD City",
+        "why_it_matters": "The ultimate hub for global sourcing, connecting with trusted suppliers, and unlocking new global opportunities in Indonesia's market. Relevant for both sourcing and export.",
+        "link": "https://www.linkedin.com/company/trade-expo-indonesia-tei?viewAsMember=true",
         "type": "international"
     }
 ]
