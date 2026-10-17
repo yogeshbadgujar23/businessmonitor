@@ -1,79 +1,104 @@
-2026-10-16 07:29:52,294 - INFO - === ENV DIAGNOSTICS ===
-2026-10-16 07:29:52,294 - INFO -   GEMINI_API_KEY: SET (len=39, pattern=AIza...6uL0)
-2026-10-16 07:29:52,294 - INFO -   OPENAI_API_KEY: SET (len=164, pattern=sk-p...rUQA)
-2026-10-16 07:29:52,294 - INFO -   TAVILY_API_KEY: SET (len=58, pattern=tvly...GEB2)
-2026-10-16 07:29:52,294 - INFO -   SMTP_EMAIL: SET (len=21, pattern=yoge....com)
-2026-10-16 07:29:52,294 - INFO -   SMTP_PASSWORD: SET (len=16, pattern=qnul...gqvn)
-2026-10-16 07:29:52,294 - INFO - =======================
-2026-10-16 07:29:52,295 - INFO - ============================================================
-2026-10-16 07:29:52,295 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE STARTED
-2026-10-16 07:29:52,295 - INFO - ============================================================
-2026-10-16 07:29:52,295 - INFO - [Step 1/5] Deep Scanning Target Regulatory Sites...
-2026-10-16 07:29:52,295 - INFO - Scanning target URL: https://www.dgft.gov.in/CP/...
-2026-10-16 07:29:52,588 - ERROR - Failed to scan target sub-links for https://www.dgft.gov.in/CP/: 403 Client Error: Forbidden for url: https://www.dgft.gov.in/CP/
-2026-10-16 07:29:52,588 - INFO - Found 1 pages to extract on https://www.dgft.gov.in/CP/
-2026-10-16 07:29:52,588 - INFO - Extracting content from https://www.dgft.gov.in/CP/...
-2026-10-16 07:29:52,639 - ERROR - not a 200 response: 403 for URL https://www.dgft.gov.in/CP/
-2026-10-16 07:29:52,639 - INFO - Scraped & cleaned 0 chars of raw text from regulatory targets.
-2026-10-16 07:29:52,639 - INFO - [Step 2/5] Scanning Leading Business Newspapers (The Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
-2026-10-16 07:29:52,661 - INFO - Gathering news from leading Indian business newspapers (Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
-2026-10-16 07:29:56,099 - INFO - Retrieved 58 relevant business newspaper stories.
-2026-10-16 07:29:56,101 - INFO - Scraped & cleaned 38379 chars of raw text from business newspapers.
-2026-10-16 07:29:56,101 - INFO - [Step 3/5] Conducting 24-Hour Web Intelligence Searches...
-2026-10-16 07:29:56,101 - INFO - Gathering priority handles updates (Social search)...
-2026-10-16 07:29:56,101 - INFO - Tavily Search: '(site:x.com/dgftindia OR site:x.com/CimGOI OR site:x.com/DoC_GoI) 2026-10-16'
-2026-10-16 07:29:59,267 - INFO - Tavily Search: '(site:x.com/FieoHq OR site:x.com/PiyushGoyal OR site:x.com/APEDADOC) 2026-10-16'
-2026-10-16 07:30:01,855 - INFO - Tavily Search: '(site:x.com/AgriGoI OR site:x.com/theresanaiforit OR site:x.com/minmsme) 2026-10-16'
-2026-10-16 07:30:05,078 - INFO - Tavily Search: '(site:linkedin.com/company "Services Export Promotion Council  India" OR site:linkedin.com/company "Mahratta Chamber of Commerce, Industries and Agriculture, Pune") 2026-10-16'
-2026-10-16 07:30:08,279 - INFO - Tavily Search: '(site:linkedin.com/company "Embassy of India, Belgium, Luxembourg & European Union" OR site:linkedin.com/company "World Trade Center Mumbai") 2026-10-16'
-2026-10-16 07:30:11,751 - INFO - Tavily Search: '(site:linkedin.com/company "India SME Forum" OR site:linkedin.com/company/Tradologie OR site:linkedin.com/in/Tradologie) 2026-10-16'
-2026-10-16 07:30:14,448 - INFO - Tavily Search: '(site:linkedin.com/company "Trade Promotion Council of India" OR site:linkedin.com/company "AgriGuru Online") 2026-10-16'
-2026-10-16 07:30:17,431 - INFO - Tavily Search: '(site:linkedin.com/company/EximIndia OR site:linkedin.com/in/EximIndia OR site:linkedin.com/company "Spices Board India") 2026-10-16'
-2026-10-16 07:30:20,305 - INFO - Tavily Search: '(site:linkedin.com/company "Department of Commerce" OR site:linkedin.com/company "India Exim Bank") 2026-10-16'
-2026-10-16 07:30:23,305 - INFO - Tavily Search: '(site:linkedin.com/company/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/in/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/company "JNPA- Jawaharlal Nehru Port Authority") 2026-10-16'
-2026-10-16 07:30:26,065 - INFO - Tavily Search: '(site:linkedin.com/company "Maritime Analytica" OR site:linkedin.com/company "Container News") 2026-10-16'
-2026-10-16 07:30:29,928 - INFO - Tavily Search: '(site:linkedin.com/company "Export Portal" OR site:linkedin.com/company "Ministry of Food Processing Industries") 2026-10-16'
-2026-10-16 07:30:33,381 - INFO - Tavily Search: '(site:linkedin.com/company "Indian Chamber of Food and Agriculture" OR site:linkedin.com/company "NABARD - National Bank for Agriculture and Rural Development") 2026-10-16'
-2026-10-16 07:30:37,205 - INFO - Tavily Search: '(site:linkedin.com/company "Ministry of Agriculture & Farmers Welfare, Government of India" OR site:linkedin.com/company "FEDERATION OF INDIAN EXPORT ORGANISATIONS") 2026-10-16'
-2026-10-16 07:30:41,235 - INFO - Tavily Search: '(site:linkedin.com/company "The Agricultural and Processed Food Products Export Development Authority" OR site:linkedin.com/company "Indian Spices Exporters Association") 2026-10-16'
-2026-10-16 07:30:45,613 - INFO - Tavily Search: '(site:linkedin.com/company "National Commodity & Derivatives Exchange Portfolio" OR site:linkedin.com/company "All India Food Processors' Association") 2026-10-16'
-2026-10-16 07:30:49,258 - INFO - Tavily Search: '(site:linkedin.com/company/horti-goi OR site:linkedin.com/in/horti-goi) 2026-10-16'
-2026-10-16 07:30:51,577 - INFO - Tavily Search: '(site:instagram.com/indianmerchantchamber OR site:instagram.com/mvirdc_wtcmumbaiindia) 2026-10-16'
-2026-10-16 07:30:55,545 - INFO - Tavily Search: '(site:instagram.com/tradologieworld OR site:instagram.com/indonesiainmumbai) 2026-10-16'
-2026-10-16 07:30:59,652 - INFO - Tavily Search: '(site:instagram.com/turmericboard) 2026-10-16'
-2026-10-16 07:31:03,586 - INFO - Gathering broad market intelligence...
-2026-10-16 07:31:03,586 - INFO - Tavily Search: '"USD/INR" "EUR/INR" exchange rate'
-2026-10-16 07:31:05,972 - INFO - Tavily Search: '("banana price" OR "banana mandi") AND (Jalgaon OR Maharashtra) 2026-10-16'
-2026-10-16 07:31:08,266 - INFO - Tavily Search: '("turmeric price" OR "turmeric mandi") AND (Sangli OR Jalgaon OR Maharashtra) 2026-10-16'
-2026-10-16 07:31:11,376 - INFO - Tavily Search: '("ginger price" OR "garlic price" OR "beetroot price" OR "moringa price") AND (mandi OR Maharashtra) 2026-10-16'
-2026-10-16 07:31:14,595 - INFO - Tavily Search: '("India export policy" OR "DGFT notification" OR "APEDA" OR "customs compliance" OR "FDA import alert" OR "EU RASFF") AND ("dehydrated" OR "spices" OR "agricultural" OR "food") 2026-10-16'
-2026-10-16 07:31:17,874 - INFO - Tavily Search: '("FSSAI manufacturing" OR "FSSAI label" OR "ISO 22000" OR "GMP compliance" OR "Factories Act" OR "pollution compliance") AND "food processing" 2026-10-16'
-2026-10-16 07:31:21,102 - INFO - Tavily Search: '("PMFME scheme" OR "PLI food processing" OR "CFTRI technology" OR "Maharashtra agri processing" OR "CFTRI training") 2026'
-2026-10-16 07:31:24,417 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("RFQ" OR "buyer requirement" OR "looking for bulk supplier" OR "raw material buyer" OR site:indiamart.com OR site:tradeindia.com) 2026'
-2026-10-16 07:31:28,219 - INFO - Tavily Search: '("GeM tender" OR "government tender" OR "defence dehydrated" OR "ICDS nutrition" OR "anganwadi food") AND ("dehydrated vegetable" OR "dehydrated fruit" OR "vegetable powder" OR "food powder") 2026'
-2026-10-16 07:31:31,647 - INFO - Tavily Search: '("new product launch" OR "capacity expansion") AND (confectionery OR bakery OR nutraceutical OR "spice blending" OR "ice cream" OR "health food") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026'
-2026-10-16 07:31:36,034 - INFO - Tavily Search: '("Rajlaxmi Agro Farm" OR "Mevive International" OR "VKL Seasoning" OR "food dehydration unit Jalgaon" OR "dehydrated manufacturer Maharashtra") 2026'
-2026-10-16 07:31:39,696 - INFO - Tavily Search: '("heat pump dryer food" OR "dehydration equipment" OR "CFTRI technology transfer" OR "dryer manufacturer") AND "food processing" 2026'
-2026-10-16 07:31:42,983 - INFO - Tavily Search: '("Agroworld Expo Jalgaon" OR "AAHAR" OR "BioFach India" OR "food safety training" OR "reverse buyer seller meet") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026'
-2026-10-16 07:31:46,570 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("export tender" OR "APEDA buyer inquiry" OR "importer requirement") 2026'
-2026-10-16 07:31:51,212 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND ("spices" OR "dehydrated" OR "banana powder" OR "moringa" OR "turmeric" OR "food processing" OR "PMFME" OR "FSSAI" OR "DGFT") 2026-10-16'
-2026-10-16 07:31:55,283 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND ("agri export" OR "commodity prices" OR "mandi price" OR "container freight" OR "exim") 2026-10-16'
-2026-10-16 07:31:58,706 - INFO - Tavily Search: '("AI tool Indian exporter" OR "AI market research tool export" OR "AI buyer discovery" OR "AI production planning" OR "AI lab management" OR "AI factory compliance") 2026'
-2026-10-16 07:32:02,196 - INFO - Retrieved & cleaned 40065 chars of broad web search results.
-2026-10-16 07:32:02,196 - INFO - Fetching real-time verified exchange rates from open.er-api.com...
-2026-10-16 07:32:02,238 - INFO - Verified exchange rates - USD/INR: 95.1001, EUR/INR: 106.6564
-2026-10-16 07:32:02,239 - INFO - [Step 4/5] Synthesizing Intelligence with Gemini API...
-2026-10-16 07:32:02,239 - INFO - Attempting daily digest compilation using OpenAI (gpt-4o-mini)...
-2026-10-16 07:32:03,343 - WARNING - OpenAI API call failed: 429 Client Error: Too Many Requests for url: https://api.openai.com/v1/chat/completions. Falling back to Google Gemini...
-2026-10-16 07:32:03,343 - INFO - Attempting daily digest compilation using Google Gemini (gemini-3.6-flash) (Attempt 1/3)...
-2026-10-16 07:32:47,059 - INFO - Gemini compilation successful!
-2026-10-16 07:32:47,060 - INFO - Updated active_events.json with 4 active events.
-2026-10-16 07:32:47,062 - INFO - Updated shown_tools.json. Total shown tools: 128
-2026-10-16 07:32:47,064 - INFO - Updated shown_intel.json. Total shown intel URLs: 573
-2026-10-16 07:32:47,064 - INFO - Saved completed markdown digest to /home/runner/work/businessmonitor/businessmonitor/data/2026-10-16/digest.md
-2026-10-16 07:32:47,064 - INFO - [Step 5/5] Delivering Digest Briefing Email...
-2026-10-16 07:32:47,064 - INFO - Sending daily intelligence email to yogeshgujar@gmail.com...
-2026-10-16 07:32:48,516 - INFO - Email delivered successfully!
-2026-10-16 07:32:48,516 - INFO - ============================================================
-2026-10-16 07:32:48,516 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE COMPLETED
-2026-10-16 07:32:48,516 - INFO - ============================================================
+2026-10-17 07:10:39,033 - INFO - === ENV DIAGNOSTICS ===
+2026-10-17 07:10:39,033 - INFO -   GEMINI_API_KEY: SET (len=39, pattern=AIza...6uL0)
+2026-10-17 07:10:39,033 - INFO -   OPENAI_API_KEY: SET (len=164, pattern=sk-p...rUQA)
+2026-10-17 07:10:39,033 - INFO -   TAVILY_API_KEY: SET (len=58, pattern=tvly...GEB2)
+2026-10-17 07:10:39,033 - INFO -   SMTP_EMAIL: SET (len=21, pattern=yoge....com)
+2026-10-17 07:10:39,033 - INFO -   SMTP_PASSWORD: SET (len=16, pattern=qnul...gqvn)
+2026-10-17 07:10:39,033 - INFO - =======================
+2026-10-17 07:10:39,033 - INFO - ============================================================
+2026-10-17 07:10:39,033 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE STARTED
+2026-10-17 07:10:39,033 - INFO - ============================================================
+2026-10-17 07:10:39,033 - INFO - [Step 1/5] Deep Scanning Target Regulatory Sites...
+2026-10-17 07:10:39,034 - INFO - Scanning target URL: https://www.dgft.gov.in/CP/...
+2026-10-17 07:10:39,488 - ERROR - Failed to scan target sub-links for https://www.dgft.gov.in/CP/: 403 Client Error: Forbidden for url: https://www.dgft.gov.in/CP/
+2026-10-17 07:10:39,489 - INFO - Found 1 pages to extract on https://www.dgft.gov.in/CP/
+2026-10-17 07:10:39,489 - INFO - Extracting content from https://www.dgft.gov.in/CP/...
+2026-10-17 07:10:39,564 - ERROR - not a 200 response: 403 for URL https://www.dgft.gov.in/CP/
+2026-10-17 07:10:39,564 - INFO - Scraped & cleaned 0 chars of raw text from regulatory targets.
+2026-10-17 07:10:39,564 - INFO - [Step 2/5] Scanning Leading Business Newspapers (The Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
+2026-10-17 07:10:39,586 - INFO - Gathering news from leading Indian business newspapers (Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
+2026-10-17 07:10:41,298 - INFO - Retrieved 54 relevant business newspaper stories.
+2026-10-17 07:10:41,300 - INFO - Scraped & cleaned 36157 chars of raw text from business newspapers.
+2026-10-17 07:10:41,300 - INFO - [Step 3/5] Conducting 24-Hour Web Intelligence Searches...
+2026-10-17 07:10:41,301 - INFO - Gathering priority handles updates (Social search)...
+2026-10-17 07:10:41,301 - INFO - Tavily Search: '(site:x.com/dgftindia OR site:x.com/CimGOI OR site:x.com/DoC_GoI) 2026-10-17'
+2026-10-17 07:10:43,878 - INFO - Tavily Search: '(site:x.com/FieoHq OR site:x.com/PiyushGoyal OR site:x.com/APEDADOC) 2026-10-17'
+2026-10-17 07:10:46,501 - INFO - Tavily Search: '(site:x.com/AgriGoI OR site:x.com/theresanaiforit OR site:x.com/minmsme) 2026-10-17'
+2026-10-17 07:10:48,828 - INFO - Tavily Search: '(site:linkedin.com/company "Services Export Promotion Council  India" OR site:linkedin.com/company "Mahratta Chamber of Commerce, Industries and Agriculture, Pune") 2026-10-17'
+2026-10-17 07:10:52,390 - INFO - Tavily Search: '(site:linkedin.com/company "Embassy of India, Belgium, Luxembourg & European Union" OR site:linkedin.com/company "World Trade Center Mumbai") 2026-10-17'
+2026-10-17 07:10:56,958 - INFO - Tavily Search: '(site:linkedin.com/company "India SME Forum" OR site:linkedin.com/company/Tradologie OR site:linkedin.com/in/Tradologie) 2026-10-17'
+2026-10-17 07:11:00,106 - INFO - Tavily Search: '(site:linkedin.com/company "Trade Promotion Council of India" OR site:linkedin.com/company "AgriGuru Online") 2026-10-17'
+2026-10-17 07:11:03,538 - INFO - Tavily Search: '(site:linkedin.com/company/EximIndia OR site:linkedin.com/in/EximIndia OR site:linkedin.com/company "Spices Board India") 2026-10-17'
+2026-10-17 07:11:06,669 - INFO - Tavily Search: '(site:linkedin.com/company "Department of Commerce" OR site:linkedin.com/company "India Exim Bank") 2026-10-17'
+2026-10-17 07:11:10,509 - INFO - Tavily Search: '(site:linkedin.com/company/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/in/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/company "JNPA- Jawaharlal Nehru Port Authority") 2026-10-17'
+2026-10-17 07:11:13,679 - INFO - Tavily Search: '(site:linkedin.com/company "Maritime Analytica" OR site:linkedin.com/company "Container News") 2026-10-17'
+2026-10-17 07:11:15,948 - INFO - Tavily Search: '(site:linkedin.com/company "Export Portal" OR site:linkedin.com/company "Ministry of Food Processing Industries") 2026-10-17'
+2026-10-17 07:11:19,157 - INFO - Tavily Search: '(site:linkedin.com/company "Indian Chamber of Food and Agriculture" OR site:linkedin.com/company "NABARD - National Bank for Agriculture and Rural Development") 2026-10-17'
+2026-10-17 07:11:24,199 - INFO - Tavily Search: '(site:linkedin.com/company "Ministry of Agriculture & Farmers Welfare, Government of India" OR site:linkedin.com/company "FEDERATION OF INDIAN EXPORT ORGANISATIONS") 2026-10-17'
+2026-10-17 07:11:27,583 - INFO - Tavily Search: '(site:linkedin.com/company "The Agricultural and Processed Food Products Export Development Authority" OR site:linkedin.com/company "Indian Spices Exporters Association") 2026-10-17'
+2026-10-17 07:11:30,955 - INFO - Tavily Search: '(site:linkedin.com/company "National Commodity & Derivatives Exchange Portfolio" OR site:linkedin.com/company "All India Food Processors' Association") 2026-10-17'
+2026-10-17 07:11:34,333 - INFO - Tavily Search: '(site:linkedin.com/company/horti-goi OR site:linkedin.com/in/horti-goi) 2026-10-17'
+2026-10-17 07:11:36,361 - INFO - Tavily Search: '(site:instagram.com/indianmerchantchamber OR site:instagram.com/mvirdc_wtcmumbaiindia) 2026-10-17'
+2026-10-17 07:11:38,818 - INFO - Tavily Search: '(site:instagram.com/tradologieworld OR site:instagram.com/indonesiainmumbai) 2026-10-17'
+2026-10-17 07:11:41,369 - INFO - Tavily Search: '(site:instagram.com/turmericboard) 2026-10-17'
+2026-10-17 07:11:43,607 - INFO - Gathering broad market intelligence...
+2026-10-17 07:11:43,608 - INFO - Tavily Search: '"USD/INR" "EUR/INR" exchange rate'
+2026-10-17 07:11:45,797 - INFO - Tavily Search: '("banana price" OR "banana mandi") AND (Jalgaon OR Maharashtra) 2026-10-17'
+2026-10-17 07:11:47,809 - INFO - Tavily Search: '("turmeric price" OR "turmeric mandi") AND (Sangli OR Jalgaon OR Maharashtra) 2026-10-17'
+2026-10-17 07:11:50,385 - INFO - Tavily Search: '("ginger price" OR "garlic price" OR "beetroot price" OR "moringa price") AND (mandi OR Maharashtra) 2026-10-17'
+2026-10-17 07:11:53,922 - INFO - Tavily Search: '("India export policy" OR "DGFT notification" OR "APEDA" OR "customs compliance" OR "FDA import alert" OR "EU RASFF") AND ("dehydrated" OR "spices" OR "agricultural" OR "food") 2026-10-17'
+2026-10-17 07:11:57,982 - INFO - Tavily Search: '("FSSAI manufacturing" OR "FSSAI label" OR "ISO 22000" OR "GMP compliance" OR "Factories Act" OR "pollution compliance") AND "food processing" 2026-10-17'
+2026-10-17 07:12:00,996 - INFO - Tavily Search: '("PMFME scheme" OR "PLI food processing" OR "CFTRI technology" OR "Maharashtra agri processing" OR "CFTRI training") 2026'
+2026-10-17 07:12:03,827 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("RFQ" OR "buyer requirement" OR "looking for bulk supplier" OR "raw material buyer" OR site:indiamart.com OR site:tradeindia.com) 2026'
+2026-10-17 07:12:07,824 - INFO - Tavily Search: '("GeM tender" OR "government tender" OR "defence dehydrated" OR "ICDS nutrition" OR "anganwadi food") AND ("dehydrated vegetable" OR "dehydrated fruit" OR "vegetable powder" OR "food powder") 2026'
+2026-10-17 07:12:12,882 - INFO - Tavily Search: '("new product launch" OR "capacity expansion") AND (confectionery OR bakery OR nutraceutical OR "spice blending" OR "ice cream" OR "health food") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026'
+2026-10-17 07:12:16,228 - INFO - Tavily Search: '("Rajlaxmi Agro Farm" OR "Mevive International" OR "VKL Seasoning" OR "food dehydration unit Jalgaon" OR "dehydrated manufacturer Maharashtra") 2026'
+2026-10-17 07:12:19,363 - INFO - Tavily Search: '("heat pump dryer food" OR "dehydration equipment" OR "CFTRI technology transfer" OR "dryer manufacturer") AND "food processing" 2026'
+2026-10-17 07:12:22,402 - INFO - Tavily Search: '("Agroworld Expo Jalgaon" OR "AAHAR" OR "BioFach India" OR "food safety training" OR "reverse buyer seller meet") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026'
+2026-10-17 07:12:26,049 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("export tender" OR "APEDA buyer inquiry" OR "importer requirement") 2026'
+2026-10-17 07:12:30,218 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND ("spices" OR "dehydrated" OR "banana powder" OR "moringa" OR "turmeric" OR "food processing" OR "PMFME" OR "FSSAI" OR "DGFT") 2026-10-17'
+2026-10-17 07:12:33,735 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND ("agri export" OR "commodity prices" OR "mandi price" OR "container freight" OR "exim") 2026-10-17'
+2026-10-17 07:12:36,026 - INFO - Tavily Search: '("AI tool Indian exporter" OR "AI market research tool export" OR "AI buyer discovery" OR "AI production planning" OR "AI lab management" OR "AI factory compliance") 2026'
+2026-10-17 07:12:38,772 - INFO - Retrieved & cleaned 40065 chars of broad web search results.
+2026-10-17 07:12:38,773 - INFO - Fetching real-time verified exchange rates from open.er-api.com...
+2026-10-17 07:12:38,846 - INFO - Verified exchange rates - USD/INR: 95.1120, EUR/INR: 106.9254
+2026-10-17 07:12:38,846 - INFO - [Step 4/5] Synthesizing Intelligence with Gemini API...
+2026-10-17 07:12:38,847 - INFO - Attempting daily digest compilation using OpenAI (gpt-4o-mini)...
+2026-10-17 07:12:39,939 - WARNING - OpenAI API call failed: 429 Client Error: Too Many Requests for url: https://api.openai.com/v1/chat/completions. Falling back to Google Gemini...
+2026-10-17 07:12:39,939 - INFO - Attempting daily digest compilation using Google Gemini (gemini-3.6-flash) (Attempt 1/3)...
+2026-10-17 07:12:47,987 - WARNING - Gemini API rate limited (429) on attempt 1: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000, model: gemini-3.6-flash
+Please retry in 12.021426756s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.6-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 250000
+}
+, retry_delay {
+  seconds: 12
+}
+]
+2026-10-17 07:12:47,987 - INFO - Waiting 65 seconds before retrying with next model...
+2026-10-17 07:13:52,987 - INFO - Attempting daily digest compilation using Google Gemini (gemini-3.5-flash) (Attempt 2/3)...
+2026-10-17 07:14:58,133 - INFO - Gemini compilation successful!
+2026-10-17 07:14:58,134 - INFO - Updated active_events.json with 4 active events.
+2026-10-17 07:14:58,135 - INFO - Updated shown_tools.json. Total shown tools: 129
+2026-10-17 07:14:58,136 - INFO - Updated shown_intel.json. Total shown intel URLs: 575
+2026-10-17 07:14:58,136 - INFO - Saved completed markdown digest to /home/runner/work/businessmonitor/businessmonitor/data/2026-10-17/digest.md
+2026-10-17 07:14:58,136 - INFO - [Step 5/5] Delivering Digest Briefing Email...
+2026-10-17 07:14:58,137 - INFO - Sending daily intelligence email to yogeshgujar@gmail.com...
+2026-10-17 07:14:59,526 - INFO - Email delivered successfully!
+2026-10-17 07:14:59,526 - INFO - ============================================================
+2026-10-17 07:14:59,526 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE COMPLETED
+2026-10-17 07:14:59,526 - INFO - ============================================================
