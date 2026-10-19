@@ -1,14 +1,5 @@
 [
     {
-        "name": "MahaBharat International Trade Expo 2026 (Sambhajinagar)",
-        "start_date": "2026-10-09",
-        "end_date": "2026-10-18",
-        "venue": "Sambhajinagar, Maharashtra",
-        "why_it_matters": "Regional Maharashtra platform for networking with domestic MSMEs, food processing units, and B2B buyers.",
-        "link": "https://www.instagram.com/indianmerchantchamber/p/Db2Vk3eja9W",
-        "type": "domestic"
-    },
-    {
         "name": "MahaBharat International Trade Expo 2026 (Mumbai)",
         "start_date": "2026-12-04",
         "end_date": "2026-12-14",
@@ -24,15 +15,6 @@
         "venue": "Saigon Exhibition & Convention Center (SECC), Ho Chi Minh City, Vietnam",
         "why_it_matters": "FIEO-supported international exhibition providing direct access to Vietnam's fast-growing food manufacturing sector.",
         "link": "https://x.com/FieoHq/status/2082721887684301026",
-        "type": "international"
-    },
-    {
-        "name": "Trade Expo Indonesia 2026",
-        "start_date": "2026-10-14",
-        "end_date": "2026-10-18",
-        "venue": "Indonesia Convention Exhibition (ICE), BSD City",
-        "why_it_matters": "Key ASEAN hub for sourcing and expanding trade ties for dehydrated ingredients and spices.",
-        "link": "https://www.linkedin.com/company/trade-expo-indonesia-tei?viewAsMember=true",
         "type": "international"
     }
 ]
