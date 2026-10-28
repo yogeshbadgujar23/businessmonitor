@@ -1,79 +1,183 @@
-2026-10-27 08:21:00,036 - INFO - === ENV DIAGNOSTICS ===
-2026-10-27 08:21:00,036 - INFO -   GEMINI_API_KEY: SET (len=39, pattern=AIza...6uL0)
-2026-10-27 08:21:00,036 - INFO -   OPENAI_API_KEY: SET (len=164, pattern=sk-p...rUQA)
-2026-10-27 08:21:00,036 - INFO -   TAVILY_API_KEY: SET (len=58, pattern=tvly...GEB2)
-2026-10-27 08:21:00,036 - INFO -   SMTP_EMAIL: SET (len=21, pattern=yoge....com)
-2026-10-27 08:21:00,036 - INFO -   SMTP_PASSWORD: SET (len=16, pattern=qnul...gqvn)
-2026-10-27 08:21:00,036 - INFO - =======================
-2026-10-27 08:21:00,036 - INFO - ============================================================
-2026-10-27 08:21:00,036 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE STARTED
-2026-10-27 08:21:00,037 - INFO - ============================================================
-2026-10-27 08:21:00,037 - INFO - [Step 1/5] Deep Scanning Target Regulatory Sites...
-2026-10-27 08:21:00,037 - INFO - Scanning target URL: https://www.dgft.gov.in/CP/...
-2026-10-27 08:21:00,406 - ERROR - Failed to scan target sub-links for https://www.dgft.gov.in/CP/: 403 Client Error: Forbidden for url: https://www.dgft.gov.in/CP/
-2026-10-27 08:21:00,406 - INFO - Found 1 pages to extract on https://www.dgft.gov.in/CP/
-2026-10-27 08:21:00,406 - INFO - Extracting content from https://www.dgft.gov.in/CP/...
-2026-10-27 08:21:00,486 - ERROR - not a 200 response: 403 for URL https://www.dgft.gov.in/CP/
-2026-10-27 08:21:00,486 - INFO - Scraped & cleaned 0 chars of raw text from regulatory targets.
-2026-10-27 08:21:00,486 - INFO - [Step 2/5] Scanning Leading Business Newspapers (The Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
-2026-10-27 08:21:00,507 - INFO - Gathering news from leading Indian business newspapers (Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
-2026-10-27 08:21:03,572 - INFO - Retrieved 60 relevant business newspaper stories.
-2026-10-27 08:21:03,574 - INFO - Scraped & cleaned 40064 chars of raw text from business newspapers.
-2026-10-27 08:21:03,574 - INFO - [Step 3/5] Conducting 24-Hour Web Intelligence Searches...
-2026-10-27 08:21:03,574 - INFO - Gathering priority handles updates (Social search)...
-2026-10-27 08:21:03,575 - INFO - Tavily Search: '(site:x.com/dgftindia OR site:x.com/CimGOI OR site:x.com/DoC_GoI) 2026-10-27'
-2026-10-27 08:21:06,398 - INFO - Tavily Search: '(site:x.com/FieoHq OR site:x.com/PiyushGoyal OR site:x.com/APEDADOC) 2026-10-27'
-2026-10-27 08:21:10,424 - INFO - Tavily Search: '(site:x.com/AgriGoI OR site:x.com/theresanaiforit OR site:x.com/minmsme) 2026-10-27'
-2026-10-27 08:21:13,284 - INFO - Tavily Search: '(site:linkedin.com/company "Services Export Promotion Council  India" OR site:linkedin.com/company "Mahratta Chamber of Commerce, Industries and Agriculture, Pune") 2026-10-27'
-2026-10-27 08:21:16,534 - INFO - Tavily Search: '(site:linkedin.com/company "Embassy of India, Belgium, Luxembourg & European Union" OR site:linkedin.com/company "World Trade Center Mumbai") 2026-10-27'
-2026-10-27 08:21:20,489 - INFO - Tavily Search: '(site:linkedin.com/company "India SME Forum" OR site:linkedin.com/company/Tradologie OR site:linkedin.com/in/Tradologie) 2026-10-27'
-2026-10-27 08:21:23,149 - INFO - Tavily Search: '(site:linkedin.com/company "Trade Promotion Council of India" OR site:linkedin.com/company "AgriGuru Online") 2026-10-27'
-2026-10-27 08:21:27,704 - INFO - Tavily Search: '(site:linkedin.com/company/EximIndia OR site:linkedin.com/in/EximIndia OR site:linkedin.com/company "Spices Board India") 2026-10-27'
-2026-10-27 08:21:30,667 - INFO - Tavily Search: '(site:linkedin.com/company "Department of Commerce" OR site:linkedin.com/company "India Exim Bank") 2026-10-27'
-2026-10-27 08:21:33,296 - INFO - Tavily Search: '(site:linkedin.com/company/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/in/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/company "JNPA- Jawaharlal Nehru Port Authority") 2026-10-27'
-2026-10-27 08:21:36,241 - INFO - Tavily Search: '(site:linkedin.com/company "Maritime Analytica" OR site:linkedin.com/company "Container News") 2026-10-27'
-2026-10-27 08:21:38,573 - INFO - Tavily Search: '(site:linkedin.com/company "Export Portal" OR site:linkedin.com/company "Ministry of Food Processing Industries") 2026-10-27'
-2026-10-27 08:21:41,363 - INFO - Tavily Search: '(site:linkedin.com/company "Indian Chamber of Food and Agriculture" OR site:linkedin.com/company "NABARD - National Bank for Agriculture and Rural Development") 2026-10-27'
-2026-10-27 08:21:45,392 - INFO - Tavily Search: '(site:linkedin.com/company "Ministry of Agriculture & Farmers Welfare, Government of India" OR site:linkedin.com/company "FEDERATION OF INDIAN EXPORT ORGANISATIONS") 2026-10-27'
-2026-10-27 08:21:48,667 - INFO - Tavily Search: '(site:linkedin.com/company "The Agricultural and Processed Food Products Export Development Authority" OR site:linkedin.com/company "Indian Spices Exporters Association") 2026-10-27'
-2026-10-27 08:21:53,310 - INFO - Tavily Search: '(site:linkedin.com/company "National Commodity & Derivatives Exchange Portfolio" OR site:linkedin.com/company "All India Food Processors' Association") 2026-10-27'
-2026-10-27 08:21:56,492 - INFO - Tavily Search: '(site:linkedin.com/company/horti-goi OR site:linkedin.com/in/horti-goi) 2026-10-27'
-2026-10-27 08:21:59,280 - INFO - Tavily Search: '(site:instagram.com/indianmerchantchamber OR site:instagram.com/mvirdc_wtcmumbaiindia) 2026-10-27'
-2026-10-27 08:22:02,353 - INFO - Tavily Search: '(site:instagram.com/tradologieworld OR site:instagram.com/indonesiainmumbai) 2026-10-27'
-2026-10-27 08:22:05,551 - INFO - Tavily Search: '(site:instagram.com/turmericboard) 2026-10-27'
-2026-10-27 08:22:08,535 - INFO - Gathering broad market intelligence...
-2026-10-27 08:22:08,536 - INFO - Tavily Search: '"USD/INR" "EUR/INR" exchange rate'
-2026-10-27 08:22:10,709 - INFO - Tavily Search: '("banana price" OR "banana mandi") AND (Jalgaon OR Maharashtra) 2026-10-27'
-2026-10-27 08:22:12,965 - INFO - Tavily Search: '("turmeric price" OR "turmeric mandi") AND (Sangli OR Jalgaon OR Maharashtra) 2026-10-27'
-2026-10-27 08:22:15,843 - INFO - Tavily Search: '("ginger price" OR "garlic price" OR "beetroot price" OR "moringa price") AND (mandi OR Maharashtra) 2026-10-27'
-2026-10-27 08:22:19,919 - INFO - Tavily Search: '("India export policy" OR "DGFT notification" OR "APEDA" OR "customs compliance" OR "FDA import alert" OR "EU RASFF") AND ("dehydrated" OR "spices" OR "agricultural" OR "food") 2026-10-27'
-2026-10-27 08:22:23,447 - INFO - Tavily Search: '("FSSAI manufacturing" OR "FSSAI label" OR "ISO 22000" OR "GMP compliance" OR "Factories Act" OR "pollution compliance") AND "food processing" 2026-10-27'
-2026-10-27 08:22:26,216 - INFO - Tavily Search: '("PMFME scheme" OR "PLI food processing" OR "CFTRI technology" OR "Maharashtra agri processing" OR "CFTRI training") 2026'
-2026-10-27 08:22:29,649 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("RFQ" OR "buyer requirement" OR "looking for bulk supplier" OR "raw material buyer" OR site:indiamart.com OR site:tradeindia.com) 2026'
-2026-10-27 08:22:34,074 - INFO - Tavily Search: '("GeM tender" OR "government tender" OR "defence dehydrated" OR "ICDS nutrition" OR "anganwadi food") AND ("dehydrated vegetable" OR "dehydrated fruit" OR "vegetable powder" OR "food powder") 2026'
-2026-10-27 08:22:36,875 - INFO - Tavily Search: '("new product launch" OR "capacity expansion") AND (confectionery OR bakery OR nutraceutical OR "spice blending" OR "ice cream" OR "health food") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026'
-2026-10-27 08:22:40,702 - INFO - Tavily Search: '("Rajlaxmi Agro Farm" OR "Mevive International" OR "VKL Seasoning" OR "food dehydration unit Jalgaon" OR "dehydrated manufacturer Maharashtra") 2026'
-2026-10-27 08:22:44,401 - INFO - Tavily Search: '("heat pump dryer food" OR "dehydration equipment" OR "CFTRI technology transfer" OR "dryer manufacturer") AND "food processing" 2026'
-2026-10-27 08:22:47,626 - INFO - Tavily Search: '("Agroworld Expo Jalgaon" OR "AAHAR" OR "BioFach India" OR "food safety training" OR "reverse buyer seller meet") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026'
-2026-10-27 08:22:50,662 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("export tender" OR "APEDA buyer inquiry" OR "importer requirement") 2026'
-2026-10-27 08:22:54,106 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND ("spices" OR "dehydrated" OR "banana powder" OR "moringa" OR "turmeric" OR "food processing" OR "PMFME" OR "FSSAI" OR "DGFT") 2026-10-27'
-2026-10-27 08:22:59,468 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND ("agri export" OR "commodity prices" OR "mandi price" OR "container freight" OR "exim") 2026-10-27'
-2026-10-27 08:23:02,566 - INFO - Tavily Search: '("AI tool Indian exporter" OR "AI market research tool export" OR "AI buyer discovery" OR "AI production planning" OR "AI lab management" OR "AI factory compliance") 2026'
-2026-10-27 08:23:06,595 - INFO - Retrieved & cleaned 40065 chars of broad web search results.
-2026-10-27 08:23:06,596 - INFO - Fetching real-time verified exchange rates from open.er-api.com...
-2026-10-27 08:23:06,728 - INFO - Verified exchange rates - USD/INR: 95.2691, EUR/INR: 106.5727
-2026-10-27 08:23:06,729 - INFO - [Step 4/5] Synthesizing Intelligence with Gemini API...
-2026-10-27 08:23:06,730 - INFO - Attempting daily digest compilation using OpenAI (gpt-4o-mini)...
-2026-10-27 08:23:07,988 - WARNING - OpenAI API call failed: 429 Client Error: Too Many Requests for url: https://api.openai.com/v1/chat/completions. Falling back to Google Gemini...
-2026-10-27 08:23:07,988 - INFO - Attempting daily digest compilation using Google Gemini (gemini-3.6-flash) (Attempt 1/3)...
-2026-10-27 08:24:34,188 - INFO - Gemini compilation successful!
-2026-10-27 08:24:34,189 - INFO - Updated active_events.json with 4 active events.
-2026-10-27 08:24:34,190 - INFO - Updated shown_tools.json. Total shown tools: 134
-2026-10-27 08:24:34,191 - INFO - Updated shown_intel.json. Total shown intel URLs: 594
-2026-10-27 08:24:34,192 - INFO - Saved completed markdown digest to /home/runner/work/businessmonitor/businessmonitor/data/2026-10-27/digest.md
-2026-10-27 08:24:34,192 - INFO - [Step 5/5] Delivering Digest Briefing Email...
-2026-10-27 08:24:34,192 - INFO - Sending daily intelligence email to yogeshgujar@gmail.com...
-2026-10-27 08:24:35,513 - INFO - Email delivered successfully!
-2026-10-27 08:24:35,513 - INFO - ============================================================
-2026-10-27 08:24:35,514 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE COMPLETED
-2026-10-27 08:24:35,514 - INFO - ============================================================
+2026-10-28 08:57:18,943 - INFO - === ENV DIAGNOSTICS ===
+2026-10-28 08:57:18,943 - INFO -   GEMINI_API_KEY: SET (len=39, pattern=AIza...6uL0)
+2026-10-28 08:57:18,943 - INFO -   OPENAI_API_KEY: SET (len=164, pattern=sk-p...rUQA)
+2026-10-28 08:57:18,943 - INFO -   TAVILY_API_KEY: SET (len=58, pattern=tvly...GEB2)
+2026-10-28 08:57:18,943 - INFO -   SMTP_EMAIL: SET (len=21, pattern=yoge....com)
+2026-10-28 08:57:18,943 - INFO -   SMTP_PASSWORD: SET (len=16, pattern=qnul...gqvn)
+2026-10-28 08:57:18,943 - INFO - =======================
+2026-10-28 08:57:18,944 - INFO - ============================================================
+2026-10-28 08:57:18,944 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE STARTED
+2026-10-28 08:57:18,944 - INFO - ============================================================
+2026-10-28 08:57:18,944 - INFO - [Step 1/5] Deep Scanning Target Regulatory Sites...
+2026-10-28 08:57:18,944 - INFO - Scanning target URL: https://www.dgft.gov.in/CP/...
+2026-10-28 08:57:19,286 - ERROR - Failed to scan target sub-links for https://www.dgft.gov.in/CP/: 403 Client Error: Forbidden for url: https://www.dgft.gov.in/CP/
+2026-10-28 08:57:19,286 - INFO - Found 1 pages to extract on https://www.dgft.gov.in/CP/
+2026-10-28 08:57:19,286 - INFO - Extracting content from https://www.dgft.gov.in/CP/...
+2026-10-28 08:57:19,459 - ERROR - not a 200 response: 403 for URL https://www.dgft.gov.in/CP/
+2026-10-28 08:57:19,460 - INFO - Scraped & cleaned 0 chars of raw text from regulatory targets.
+2026-10-28 08:57:19,460 - INFO - [Step 2/5] Scanning Leading Business Newspapers (The Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
+2026-10-28 08:57:19,482 - INFO - Gathering news from leading Indian business newspapers (Economic Times, Business Standard, Hindu BusinessLine, Mint, Financial Express)...
+2026-10-28 08:57:20,818 - INFO - Retrieved 67 relevant business newspaper stories.
+2026-10-28 08:57:20,820 - INFO - Scraped & cleaned 40064 chars of raw text from business newspapers.
+2026-10-28 08:57:20,820 - INFO - [Step 3/5] Conducting 24-Hour Web Intelligence Searches...
+2026-10-28 08:57:20,820 - INFO - Gathering priority handles updates (Social search)...
+2026-10-28 08:57:20,821 - INFO - Tavily Search: '(site:x.com/dgftindia OR site:x.com/CimGOI OR site:x.com/DoC_GoI) 2026-10-28'
+2026-10-28 08:57:23,282 - INFO - Tavily Search: '(site:x.com/FieoHq OR site:x.com/PiyushGoyal OR site:x.com/APEDADOC) 2026-10-28'
+2026-10-28 08:57:25,592 - INFO - Tavily Search: '(site:x.com/AgriGoI OR site:x.com/theresanaiforit OR site:x.com/minmsme) 2026-10-28'
+2026-10-28 08:57:25,642 - ERROR - Tavily search failed for '(site:x.com/AgriGoI OR site:x.com/theresanaiforit OR site:x.com/minmsme) 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:25,642 - INFO - DuckDuckGo Search: '(site:x.com/AgriGoI OR site:x.com/theresanaiforit OR site:x.com/minmsme) 2026-10-28'
+2026-10-28 08:57:25,845 - INFO - response: https://www.bing.com/search?q=%28site%3Ax.com%2FAgriGoI+OR+site%3Ax.com%2Ftheresanaiforit+OR+site%3Ax.com%2Fminmsme%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:26,909 - INFO - Tavily Search: '(site:linkedin.com/company "Services Export Promotion Council  India" OR site:linkedin.com/company "Mahratta Chamber of Commerce, Industries and Agriculture, Pune") 2026-10-28'
+2026-10-28 08:57:27,063 - ERROR - Tavily search failed for '(site:linkedin.com/company "Services Export Promotion Council  India" OR site:linkedin.com/company "Mahratta Chamber of Commerce, Industries and Agriculture, Pune") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:27,064 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Services Export Promotion Council  India" OR site:linkedin.com/company "Mahratta Chamber of Commerce, Industries and Agriculture, Pune") 2026-10-28'
+2026-10-28 08:57:27,163 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Services+Export+Promotion+Council++India%22+OR+site%3Alinkedin.com%2Fcompany+%22Mahratta+Chamber+of+Commerce%2C+Industries+and+Agriculture%2C+Pune%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:28,202 - INFO - Tavily Search: '(site:linkedin.com/company "Embassy of India, Belgium, Luxembourg & European Union" OR site:linkedin.com/company "World Trade Center Mumbai") 2026-10-28'
+2026-10-28 08:57:28,333 - ERROR - Tavily search failed for '(site:linkedin.com/company "Embassy of India, Belgium, Luxembourg & European Union" OR site:linkedin.com/company "World Trade Center Mumbai") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:28,333 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Embassy of India, Belgium, Luxembourg & European Union" OR site:linkedin.com/company "World Trade Center Mumbai") 2026-10-28'
+2026-10-28 08:57:28,380 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Embassy+of+India%2C+Belgium%2C+Luxembourg+%26+European+Union%22+OR+site%3Alinkedin.com%2Fcompany+%22World+Trade+Center+Mumbai%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:29,457 - INFO - Tavily Search: '(site:linkedin.com/company "India SME Forum" OR site:linkedin.com/company/Tradologie OR site:linkedin.com/in/Tradologie) 2026-10-28'
+2026-10-28 08:57:29,657 - ERROR - Tavily search failed for '(site:linkedin.com/company "India SME Forum" OR site:linkedin.com/company/Tradologie OR site:linkedin.com/in/Tradologie) 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:29,657 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "India SME Forum" OR site:linkedin.com/company/Tradologie OR site:linkedin.com/in/Tradologie) 2026-10-28'
+2026-10-28 08:57:29,741 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22India+SME+Forum%22+OR+site%3Alinkedin.com%2Fcompany%2FTradologie+OR+site%3Alinkedin.com%2Fin%2FTradologie%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:30,781 - INFO - Tavily Search: '(site:linkedin.com/company "Trade Promotion Council of India" OR site:linkedin.com/company "AgriGuru Online") 2026-10-28'
+2026-10-28 08:57:30,854 - ERROR - Tavily search failed for '(site:linkedin.com/company "Trade Promotion Council of India" OR site:linkedin.com/company "AgriGuru Online") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:30,854 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Trade Promotion Council of India" OR site:linkedin.com/company "AgriGuru Online") 2026-10-28'
+2026-10-28 08:57:30,901 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Trade+Promotion+Council+of+India%22+OR+site%3Alinkedin.com%2Fcompany+%22AgriGuru+Online%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:32,030 - INFO - Tavily Search: '(site:linkedin.com/company/EximIndia OR site:linkedin.com/in/EximIndia OR site:linkedin.com/company "Spices Board India") 2026-10-28'
+2026-10-28 08:57:32,156 - ERROR - Tavily search failed for '(site:linkedin.com/company/EximIndia OR site:linkedin.com/in/EximIndia OR site:linkedin.com/company "Spices Board India") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:32,156 - INFO - DuckDuckGo Search: '(site:linkedin.com/company/EximIndia OR site:linkedin.com/in/EximIndia OR site:linkedin.com/company "Spices Board India") 2026-10-28'
+2026-10-28 08:57:32,203 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany%2FEximIndia+OR+site%3Alinkedin.com%2Fin%2FEximIndia+OR+site%3Alinkedin.com%2Fcompany+%22Spices+Board+India%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:33,261 - INFO - Tavily Search: '(site:linkedin.com/company "Department of Commerce" OR site:linkedin.com/company "India Exim Bank") 2026-10-28'
+2026-10-28 08:57:33,335 - ERROR - Tavily search failed for '(site:linkedin.com/company "Department of Commerce" OR site:linkedin.com/company "India Exim Bank") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:33,335 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Department of Commerce" OR site:linkedin.com/company "India Exim Bank") 2026-10-28'
+2026-10-28 08:57:33,445 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Department+of+Commerce%22+OR+site%3Alinkedin.com%2Fcompany+%22India+Exim+Bank%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:34,488 - INFO - Tavily Search: '(site:linkedin.com/company/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/in/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/company "JNPA- Jawaharlal Nehru Port Authority") 2026-10-28'
+2026-10-28 08:57:34,611 - ERROR - Tavily search failed for '(site:linkedin.com/company/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/in/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/company "JNPA- Jawaharlal Nehru Port Authority") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:34,611 - INFO - DuckDuckGo Search: '(site:linkedin.com/company/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/in/ministry-of-micro-small-and-medium-enterprises-government-of-india OR site:linkedin.com/company "JNPA- Jawaharlal Nehru Port Authority") 2026-10-28'
+2026-10-28 08:57:34,685 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany%2Fministry-of-micro-small-and-medium-enterprises-government-of-india+OR+site%3Alinkedin.com%2Fin%2Fministry-of-micro-small-and-medium-enterprises-government-of-india+OR+site%3Alinkedin.com%2Fcompany+%22JNPA-+Jawaharlal+Nehru+Port+Authority%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:35,751 - INFO - Tavily Search: '(site:linkedin.com/company "Maritime Analytica" OR site:linkedin.com/company "Container News") 2026-10-28'
+2026-10-28 08:57:35,807 - ERROR - Tavily search failed for '(site:linkedin.com/company "Maritime Analytica" OR site:linkedin.com/company "Container News") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:35,807 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Maritime Analytica" OR site:linkedin.com/company "Container News") 2026-10-28'
+2026-10-28 08:57:35,865 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Maritime+Analytica%22+OR+site%3Alinkedin.com%2Fcompany+%22Container+News%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:36,912 - INFO - Tavily Search: '(site:linkedin.com/company "Export Portal" OR site:linkedin.com/company "Ministry of Food Processing Industries") 2026-10-28'
+2026-10-28 08:57:36,963 - ERROR - Tavily search failed for '(site:linkedin.com/company "Export Portal" OR site:linkedin.com/company "Ministry of Food Processing Industries") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:36,964 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Export Portal" OR site:linkedin.com/company "Ministry of Food Processing Industries") 2026-10-28'
+2026-10-28 08:57:37,013 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Export+Portal%22+OR+site%3Alinkedin.com%2Fcompany+%22Ministry+of+Food+Processing+Industries%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:38,106 - INFO - Tavily Search: '(site:linkedin.com/company "Indian Chamber of Food and Agriculture" OR site:linkedin.com/company "NABARD - National Bank for Agriculture and Rural Development") 2026-10-28'
+2026-10-28 08:57:38,202 - ERROR - Tavily search failed for '(site:linkedin.com/company "Indian Chamber of Food and Agriculture" OR site:linkedin.com/company "NABARD - National Bank for Agriculture and Rural Development") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:38,202 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Indian Chamber of Food and Agriculture" OR site:linkedin.com/company "NABARD - National Bank for Agriculture and Rural Development") 2026-10-28'
+2026-10-28 08:57:38,257 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Indian+Chamber+of+Food+and+Agriculture%22+OR+site%3Alinkedin.com%2Fcompany+%22NABARD+-+National+Bank+for+Agriculture+and+Rural+Development%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:39,336 - INFO - Tavily Search: '(site:linkedin.com/company "Ministry of Agriculture & Farmers Welfare, Government of India" OR site:linkedin.com/company "FEDERATION OF INDIAN EXPORT ORGANISATIONS") 2026-10-28'
+2026-10-28 08:57:39,408 - ERROR - Tavily search failed for '(site:linkedin.com/company "Ministry of Agriculture & Farmers Welfare, Government of India" OR site:linkedin.com/company "FEDERATION OF INDIAN EXPORT ORGANISATIONS") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:39,408 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "Ministry of Agriculture & Farmers Welfare, Government of India" OR site:linkedin.com/company "FEDERATION OF INDIAN EXPORT ORGANISATIONS") 2026-10-28'
+2026-10-28 08:57:39,476 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22Ministry+of+Agriculture+%26+Farmers+Welfare%2C+Government+of+India%22+OR+site%3Alinkedin.com%2Fcompany+%22FEDERATION+OF+INDIAN+EXPORT+ORGANISATIONS%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:40,579 - INFO - Tavily Search: '(site:linkedin.com/company "The Agricultural and Processed Food Products Export Development Authority" OR site:linkedin.com/company "Indian Spices Exporters Association") 2026-10-28'
+2026-10-28 08:57:40,642 - ERROR - Tavily search failed for '(site:linkedin.com/company "The Agricultural and Processed Food Products Export Development Authority" OR site:linkedin.com/company "Indian Spices Exporters Association") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:40,642 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "The Agricultural and Processed Food Products Export Development Authority" OR site:linkedin.com/company "Indian Spices Exporters Association") 2026-10-28'
+2026-10-28 08:57:40,693 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22The+Agricultural+and+Processed+Food+Products+Export+Development+Authority%22+OR+site%3Alinkedin.com%2Fcompany+%22Indian+Spices+Exporters+Association%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:41,780 - INFO - Tavily Search: '(site:linkedin.com/company "National Commodity & Derivatives Exchange Portfolio" OR site:linkedin.com/company "All India Food Processors' Association") 2026-10-28'
+2026-10-28 08:57:41,961 - ERROR - Tavily search failed for '(site:linkedin.com/company "National Commodity & Derivatives Exchange Portfolio" OR site:linkedin.com/company "All India Food Processors' Association") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:41,961 - INFO - DuckDuckGo Search: '(site:linkedin.com/company "National Commodity & Derivatives Exchange Portfolio" OR site:linkedin.com/company "All India Food Processors' Association") 2026-10-28'
+2026-10-28 08:57:42,007 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany+%22National+Commodity+%26+Derivatives+Exchange+Portfolio%22+OR+site%3Alinkedin.com%2Fcompany+%22All+India+Food+Processors%27+Association%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:43,072 - INFO - Tavily Search: '(site:linkedin.com/company/horti-goi OR site:linkedin.com/in/horti-goi) 2026-10-28'
+2026-10-28 08:57:43,122 - ERROR - Tavily search failed for '(site:linkedin.com/company/horti-goi OR site:linkedin.com/in/horti-goi) 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:43,122 - INFO - DuckDuckGo Search: '(site:linkedin.com/company/horti-goi OR site:linkedin.com/in/horti-goi) 2026-10-28'
+2026-10-28 08:57:43,189 - INFO - response: https://www.bing.com/search?q=%28site%3Alinkedin.com%2Fcompany%2Fhorti-goi+OR+site%3Alinkedin.com%2Fin%2Fhorti-goi%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:44,286 - INFO - Tavily Search: '(site:instagram.com/indianmerchantchamber OR site:instagram.com/mvirdc_wtcmumbaiindia) 2026-10-28'
+2026-10-28 08:57:44,336 - ERROR - Tavily search failed for '(site:instagram.com/indianmerchantchamber OR site:instagram.com/mvirdc_wtcmumbaiindia) 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:44,336 - INFO - DuckDuckGo Search: '(site:instagram.com/indianmerchantchamber OR site:instagram.com/mvirdc_wtcmumbaiindia) 2026-10-28'
+2026-10-28 08:57:44,448 - INFO - response: https://www.bing.com/search?q=%28site%3Ainstagram.com%2Findianmerchantchamber+OR+site%3Ainstagram.com%2Fmvirdc_wtcmumbaiindia%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:45,558 - INFO - Tavily Search: '(site:instagram.com/tradologieworld OR site:instagram.com/indonesiainmumbai) 2026-10-28'
+2026-10-28 08:57:45,640 - ERROR - Tavily search failed for '(site:instagram.com/tradologieworld OR site:instagram.com/indonesiainmumbai) 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:45,640 - INFO - DuckDuckGo Search: '(site:instagram.com/tradologieworld OR site:instagram.com/indonesiainmumbai) 2026-10-28'
+2026-10-28 08:57:45,713 - INFO - response: https://www.bing.com/search?q=%28site%3Ainstagram.com%2Ftradologieworld+OR+site%3Ainstagram.com%2Findonesiainmumbai%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:46,749 - INFO - Tavily Search: '(site:instagram.com/turmericboard) 2026-10-28'
+2026-10-28 08:57:46,800 - ERROR - Tavily search failed for '(site:instagram.com/turmericboard) 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:46,801 - INFO - DuckDuckGo Search: '(site:instagram.com/turmericboard) 2026-10-28'
+2026-10-28 08:57:46,854 - INFO - response: https://www.bing.com/search?q=%28site%3Ainstagram.com%2Fturmericboard%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:47,921 - INFO - Gathering broad market intelligence...
+2026-10-28 08:57:47,922 - INFO - Tavily Search: '"USD/INR" "EUR/INR" exchange rate'
+2026-10-28 08:57:47,996 - ERROR - Tavily search failed for '"USD/INR" "EUR/INR" exchange rate': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:47,996 - INFO - DuckDuckGo Search: '"USD/INR" "EUR/INR" exchange rate'
+2026-10-28 08:57:48,053 - INFO - response: https://www.bing.com/search?q=%22USD%2FINR%22+%22EUR%2FINR%22+exchange+rate&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:49,116 - INFO - Tavily Search: '("banana price" OR "banana mandi") AND (Jalgaon OR Maharashtra) 2026-10-28'
+2026-10-28 08:57:49,261 - ERROR - Tavily search failed for '("banana price" OR "banana mandi") AND (Jalgaon OR Maharashtra) 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:49,261 - INFO - DuckDuckGo Search: '("banana price" OR "banana mandi") AND (Jalgaon OR Maharashtra) 2026-10-28'
+2026-10-28 08:57:49,310 - INFO - response: https://www.bing.com/search?q=%28%22banana+price%22+OR+%22banana+mandi%22%29+AND+%28Jalgaon+OR+Maharashtra%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:50,385 - INFO - Tavily Search: '("turmeric price" OR "turmeric mandi") AND (Sangli OR Jalgaon OR Maharashtra) 2026-10-28'
+2026-10-28 08:57:50,443 - ERROR - Tavily search failed for '("turmeric price" OR "turmeric mandi") AND (Sangli OR Jalgaon OR Maharashtra) 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:50,443 - INFO - DuckDuckGo Search: '("turmeric price" OR "turmeric mandi") AND (Sangli OR Jalgaon OR Maharashtra) 2026-10-28'
+2026-10-28 08:57:50,548 - INFO - response: https://www.bing.com/search?q=%28%22turmeric+price%22+OR+%22turmeric+mandi%22%29+AND+%28Sangli+OR+Jalgaon+OR+Maharashtra%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:51,635 - INFO - Tavily Search: '("ginger price" OR "garlic price" OR "beetroot price" OR "moringa price") AND (mandi OR Maharashtra) 2026-10-28'
+2026-10-28 08:57:51,760 - ERROR - Tavily search failed for '("ginger price" OR "garlic price" OR "beetroot price" OR "moringa price") AND (mandi OR Maharashtra) 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:51,760 - INFO - DuckDuckGo Search: '("ginger price" OR "garlic price" OR "beetroot price" OR "moringa price") AND (mandi OR Maharashtra) 2026-10-28'
+2026-10-28 08:57:51,821 - INFO - response: https://www.bing.com/search?q=%28%22ginger+price%22+OR+%22garlic+price%22+OR+%22beetroot+price%22+OR+%22moringa+price%22%29+AND+%28mandi+OR+Maharashtra%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:52,882 - INFO - Tavily Search: '("India export policy" OR "DGFT notification" OR "APEDA" OR "customs compliance" OR "FDA import alert" OR "EU RASFF") AND ("dehydrated" OR "spices" OR "agricultural" OR "food") 2026-10-28'
+2026-10-28 08:57:52,932 - ERROR - Tavily search failed for '("India export policy" OR "DGFT notification" OR "APEDA" OR "customs compliance" OR "FDA import alert" OR "EU RASFF") AND ("dehydrated" OR "spices" OR "agricultural" OR "food") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:52,933 - INFO - DuckDuckGo Search: '("India export policy" OR "DGFT notification" OR "APEDA" OR "customs compliance" OR "FDA import alert" OR "EU RASFF") AND ("dehydrated" OR "spices" OR "agricultural" OR "food") 2026-10-28'
+2026-10-28 08:57:53,034 - INFO - response: https://www.bing.com/search?q=%28%22India+export+policy%22+OR+%22DGFT+notification%22+OR+%22APEDA%22+OR+%22customs+compliance%22+OR+%22FDA+import+alert%22+OR+%22EU+RASFF%22%29+AND+%28%22dehydrated%22+OR+%22spices%22+OR+%22agricultural%22+OR+%22food%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:54,051 - INFO - Tavily Search: '("FSSAI manufacturing" OR "FSSAI label" OR "ISO 22000" OR "GMP compliance" OR "Factories Act" OR "pollution compliance") AND "food processing" 2026-10-28'
+2026-10-28 08:57:54,128 - ERROR - Tavily search failed for '("FSSAI manufacturing" OR "FSSAI label" OR "ISO 22000" OR "GMP compliance" OR "Factories Act" OR "pollution compliance") AND "food processing" 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:54,129 - INFO - DuckDuckGo Search: '("FSSAI manufacturing" OR "FSSAI label" OR "ISO 22000" OR "GMP compliance" OR "Factories Act" OR "pollution compliance") AND "food processing" 2026-10-28'
+2026-10-28 08:57:54,183 - INFO - response: https://www.bing.com/search?q=%28%22FSSAI+manufacturing%22+OR+%22FSSAI+label%22+OR+%22ISO+22000%22+OR+%22GMP+compliance%22+OR+%22Factories+Act%22+OR+%22pollution+compliance%22%29+AND+%22food+processing%22+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:55,463 - INFO - Tavily Search: '("PMFME scheme" OR "PLI food processing" OR "CFTRI technology" OR "Maharashtra agri processing" OR "CFTRI training") 2026'
+2026-10-28 08:57:55,519 - ERROR - Tavily search failed for '("PMFME scheme" OR "PLI food processing" OR "CFTRI technology" OR "Maharashtra agri processing" OR "CFTRI training") 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:55,519 - INFO - DuckDuckGo Search: '("PMFME scheme" OR "PLI food processing" OR "CFTRI technology" OR "Maharashtra agri processing" OR "CFTRI training") 2026'
+2026-10-28 08:57:55,581 - INFO - response: https://www.bing.com/search?q=%28%22PMFME+scheme%22+OR+%22PLI+food+processing%22+OR+%22CFTRI+technology%22+OR+%22Maharashtra+agri+processing%22+OR+%22CFTRI+training%22%29+2026&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:56,678 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("RFQ" OR "buyer requirement" OR "looking for bulk supplier" OR "raw material buyer" OR site:indiamart.com OR site:tradeindia.com) 2026'
+2026-10-28 08:57:56,727 - ERROR - Tavily search failed for '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("RFQ" OR "buyer requirement" OR "looking for bulk supplier" OR "raw material buyer" OR site:indiamart.com OR site:tradeindia.com) 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:56,727 - INFO - DuckDuckGo Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("RFQ" OR "buyer requirement" OR "looking for bulk supplier" OR "raw material buyer" OR site:indiamart.com OR site:tradeindia.com) 2026'
+2026-10-28 08:57:56,802 - INFO - response: https://www.bing.com/search?q=%28%22banana+powder%22+OR+%22moringa+powder%22+OR+%22turmeric+powder%22+OR+%22beetroot+powder%22+OR+%22ginger+powder%22+OR+%22garlic+powder%22+OR+%22ashwagandha%22+OR+%22shatawari%22%29+AND+%28%22RFQ%22+OR+%22buyer+requirement%22+OR+%22looking+for+bulk+supplier%22+OR+%22raw+material+buyer%22+OR+site%3Aindiamart.com+OR+site%3Atradeindia.com%29+2026&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:57,851 - INFO - Tavily Search: '("GeM tender" OR "government tender" OR "defence dehydrated" OR "ICDS nutrition" OR "anganwadi food") AND ("dehydrated vegetable" OR "dehydrated fruit" OR "vegetable powder" OR "food powder") 2026'
+2026-10-28 08:57:57,906 - ERROR - Tavily search failed for '("GeM tender" OR "government tender" OR "defence dehydrated" OR "ICDS nutrition" OR "anganwadi food") AND ("dehydrated vegetable" OR "dehydrated fruit" OR "vegetable powder" OR "food powder") 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:57,907 - INFO - DuckDuckGo Search: '("GeM tender" OR "government tender" OR "defence dehydrated" OR "ICDS nutrition" OR "anganwadi food") AND ("dehydrated vegetable" OR "dehydrated fruit" OR "vegetable powder" OR "food powder") 2026'
+2026-10-28 08:57:57,964 - INFO - response: https://www.bing.com/search?q=%28%22GeM+tender%22+OR+%22government+tender%22+OR+%22defence+dehydrated%22+OR+%22ICDS+nutrition%22+OR+%22anganwadi+food%22%29+AND+%28%22dehydrated+vegetable%22+OR+%22dehydrated+fruit%22+OR+%22vegetable+powder%22+OR+%22food+powder%22%29+2026&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:57:59,029 - INFO - Tavily Search: '("new product launch" OR "capacity expansion") AND (confectionery OR bakery OR nutraceutical OR "spice blending" OR "ice cream" OR "health food") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026'
+2026-10-28 08:57:59,078 - ERROR - Tavily search failed for '("new product launch" OR "capacity expansion") AND (confectionery OR bakery OR nutraceutical OR "spice blending" OR "ice cream" OR "health food") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:57:59,078 - INFO - DuckDuckGo Search: '("new product launch" OR "capacity expansion") AND (confectionery OR bakery OR nutraceutical OR "spice blending" OR "ice cream" OR "health food") AND (India OR Maharashtra OR Gujarat OR Karnataka) 2026'
+2026-10-28 08:57:59,152 - INFO - response: https://www.bing.com/search?q=%28%22new+product+launch%22+OR+%22capacity+expansion%22%29+AND+%28confectionery+OR+bakery+OR+nutraceutical+OR+%22spice+blending%22+OR+%22ice+cream%22+OR+%22health+food%22%29+AND+%28India+OR+Maharashtra+OR+Gujarat+OR+Karnataka%29+2026&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:58:00,202 - INFO - Tavily Search: '("Rajlaxmi Agro Farm" OR "Mevive International" OR "VKL Seasoning" OR "food dehydration unit Jalgaon" OR "dehydrated manufacturer Maharashtra") 2026'
+2026-10-28 08:58:00,326 - ERROR - Tavily search failed for '("Rajlaxmi Agro Farm" OR "Mevive International" OR "VKL Seasoning" OR "food dehydration unit Jalgaon" OR "dehydrated manufacturer Maharashtra") 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:58:00,327 - INFO - DuckDuckGo Search: '("Rajlaxmi Agro Farm" OR "Mevive International" OR "VKL Seasoning" OR "food dehydration unit Jalgaon" OR "dehydrated manufacturer Maharashtra") 2026'
+2026-10-28 08:58:00,452 - INFO - response: https://www.bing.com/search?q=%28%22Rajlaxmi+Agro+Farm%22+OR+%22Mevive+International%22+OR+%22VKL+Seasoning%22+OR+%22food+dehydration+unit+Jalgaon%22+OR+%22dehydrated+manufacturer+Maharashtra%22%29+2026&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:58:01,711 - INFO - Tavily Search: '("heat pump dryer food" OR "dehydration equipment" OR "CFTRI technology transfer" OR "dryer manufacturer") AND "food processing" 2026'
+2026-10-28 08:58:01,839 - ERROR - Tavily search failed for '("heat pump dryer food" OR "dehydration equipment" OR "CFTRI technology transfer" OR "dryer manufacturer") AND "food processing" 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:58:01,839 - INFO - DuckDuckGo Search: '("heat pump dryer food" OR "dehydration equipment" OR "CFTRI technology transfer" OR "dryer manufacturer") AND "food processing" 2026'
+2026-10-28 08:58:01,895 - INFO - response: https://www.bing.com/search?q=%28%22heat+pump+dryer+food%22+OR+%22dehydration+equipment%22+OR+%22CFTRI+technology+transfer%22+OR+%22dryer+manufacturer%22%29+AND+%22food+processing%22+2026&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:58:02,967 - INFO - Tavily Search: '("Agroworld Expo Jalgaon" OR "AAHAR" OR "BioFach India" OR "food safety training" OR "reverse buyer seller meet") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026'
+2026-10-28 08:58:03,039 - ERROR - Tavily search failed for '("Agroworld Expo Jalgaon" OR "AAHAR" OR "BioFach India" OR "food safety training" OR "reverse buyer seller meet") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:58:03,039 - INFO - DuckDuckGo Search: '("Agroworld Expo Jalgaon" OR "AAHAR" OR "BioFach India" OR "food safety training" OR "reverse buyer seller meet") AND (food OR agri OR Maharashtra OR Mumbai OR Jalgaon OR Pune) 2026'
+2026-10-28 08:58:03,114 - INFO - response: https://www.bing.com/search?q=%28%22Agroworld+Expo+Jalgaon%22+OR+%22AAHAR%22+OR+%22BioFach+India%22+OR+%22food+safety+training%22+OR+%22reverse+buyer+seller+meet%22%29+AND+%28food+OR+agri+OR+Maharashtra+OR+Mumbai+OR+Jalgaon+OR+Pune%29+2026&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:58:04,177 - INFO - Tavily Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("export tender" OR "APEDA buyer inquiry" OR "importer requirement") 2026'
+2026-10-28 08:58:04,229 - ERROR - Tavily search failed for '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("export tender" OR "APEDA buyer inquiry" OR "importer requirement") 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:58:04,229 - INFO - DuckDuckGo Search: '("banana powder" OR "moringa powder" OR "turmeric powder" OR "beetroot powder" OR "ginger powder" OR "garlic powder" OR "ashwagandha" OR "shatawari") AND ("export tender" OR "APEDA buyer inquiry" OR "importer requirement") 2026'
+2026-10-28 08:58:04,306 - INFO - response: https://www.bing.com/search?q=%28%22banana+powder%22+OR+%22moringa+powder%22+OR+%22turmeric+powder%22+OR+%22beetroot+powder%22+OR+%22ginger+powder%22+OR+%22garlic+powder%22+OR+%22ashwagandha%22+OR+%22shatawari%22%29+AND+%28%22export+tender%22+OR+%22APEDA+buyer+inquiry%22+OR+%22importer+requirement%22%29+2026&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:58:05,353 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND ("spices" OR "dehydrated" OR "banana powder" OR "moringa" OR "turmeric" OR "food processing" OR "PMFME" OR "FSSAI" OR "DGFT") 2026-10-28'
+2026-10-28 08:58:05,424 - ERROR - Tavily search failed for '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND ("spices" OR "dehydrated" OR "banana powder" OR "moringa" OR "turmeric" OR "food processing" OR "PMFME" OR "FSSAI" OR "DGFT") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:58:05,424 - INFO - DuckDuckGo Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com OR site:livemint.com OR site:financialexpress.com) AND ("spices" OR "dehydrated" OR "banana powder" OR "moringa" OR "turmeric" OR "food processing" OR "PMFME" OR "FSSAI" OR "DGFT") 2026-10-28'
+2026-10-28 08:58:05,494 - INFO - response: https://www.bing.com/search?q=%28site%3Aeconomictimes.indiatimes.com+OR+site%3Abusiness-standard.com+OR+site%3Athehindubusinessline.com+OR+site%3Alivemint.com+OR+site%3Afinancialexpress.com%29+AND+%28%22spices%22+OR+%22dehydrated%22+OR+%22banana+powder%22+OR+%22moringa%22+OR+%22turmeric%22+OR+%22food+processing%22+OR+%22PMFME%22+OR+%22FSSAI%22+OR+%22DGFT%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:58:06,554 - INFO - Tavily Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND ("agri export" OR "commodity prices" OR "mandi price" OR "container freight" OR "exim") 2026-10-28'
+2026-10-28 08:58:06,609 - ERROR - Tavily search failed for '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND ("agri export" OR "commodity prices" OR "mandi price" OR "container freight" OR "exim") 2026-10-28': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:58:06,610 - INFO - DuckDuckGo Search: '(site:economictimes.indiatimes.com OR site:business-standard.com OR site:thehindubusinessline.com) AND ("agri export" OR "commodity prices" OR "mandi price" OR "container freight" OR "exim") 2026-10-28'
+2026-10-28 08:58:06,693 - INFO - response: https://www.bing.com/search?q=%28site%3Aeconomictimes.indiatimes.com+OR+site%3Abusiness-standard.com+OR+site%3Athehindubusinessline.com%29+AND+%28%22agri+export%22+OR+%22commodity+prices%22+OR+%22mandi+price%22+OR+%22container+freight%22+OR+%22exim%22%29+2026-10-28&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:58:07,720 - INFO - Tavily Search: '("AI tool Indian exporter" OR "AI market research tool export" OR "AI buyer discovery" OR "AI production planning" OR "AI lab management" OR "AI factory compliance") 2026'
+2026-10-28 08:58:07,794 - ERROR - Tavily search failed for '("AI tool Indian exporter" OR "AI market research tool export" OR "AI buyer discovery" OR "AI production planning" OR "AI lab management" OR "AI factory compliance") 2026': 432 Client Error:  for url: https://api.tavily.com/search. Falling back to DuckDuckGo.
+2026-10-28 08:58:07,794 - INFO - DuckDuckGo Search: '("AI tool Indian exporter" OR "AI market research tool export" OR "AI buyer discovery" OR "AI production planning" OR "AI lab management" OR "AI factory compliance") 2026'
+2026-10-28 08:58:07,859 - INFO - response: https://www.bing.com/search?q=%28%22AI+tool+Indian+exporter%22+OR+%22AI+market+research+tool+export%22+OR+%22AI+buyer+discovery%22+OR+%22AI+production+planning%22+OR+%22AI+lab+management%22+OR+%22AI+factory+compliance%22%29+2026&filters=ex1%3A%22ez1%22 200
+2026-10-28 08:58:09,213 - INFO - Retrieved & cleaned 18948 chars of broad web search results.
+2026-10-28 08:58:09,213 - INFO - Fetching real-time verified exchange rates from open.er-api.com...
+2026-10-28 08:58:09,238 - INFO - Verified exchange rates - USD/INR: 95.1993, EUR/INR: 106.0772
+2026-10-28 08:58:09,238 - INFO - [Step 4/5] Synthesizing Intelligence with Gemini API...
+2026-10-28 08:58:09,239 - INFO - Attempting daily digest compilation using OpenAI (gpt-4o-mini)...
+2026-10-28 08:58:10,430 - WARNING - OpenAI API call failed: 429 Client Error: Too Many Requests for url: https://api.openai.com/v1/chat/completions. Falling back to Google Gemini...
+2026-10-28 08:58:10,430 - INFO - Attempting daily digest compilation using Google Gemini (gemini-3.6-flash) (Attempt 1/3)...
+2026-10-28 08:58:58,266 - INFO - Gemini compilation successful!
+2026-10-28 08:58:58,267 - INFO - Updated active_events.json with 3 active events.
+2026-10-28 08:58:58,268 - INFO - Updated shown_intel.json. Total shown intel URLs: 596
+2026-10-28 08:58:58,269 - INFO - Saved completed markdown digest to /home/runner/work/businessmonitor/businessmonitor/data/2026-10-28/digest.md
+2026-10-28 08:58:58,269 - INFO - [Step 5/5] Delivering Digest Briefing Email...
+2026-10-28 08:58:58,269 - INFO - Sending daily intelligence email to yogeshgujar@gmail.com...
+2026-10-28 08:58:59,405 - INFO - Email delivered successfully!
+2026-10-28 08:58:59,405 - INFO - ============================================================
+2026-10-28 08:58:59,405 - INFO - SUPAB EXPORTS - CLOUD DAILY DIGEST PIPELINE COMPLETED
+2026-10-28 08:58:59,405 - INFO - ============================================================
