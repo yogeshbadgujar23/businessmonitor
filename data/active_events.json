@@ -1,21 +1,23 @@
 [
     {
         "name": "MahaBharat International Trade Expo 2026 (Mumbai)",
-        "start_date": "2026-12-04",
-        "end_date": "2026-12-14",
+        "date": "2026-12-04 to 2026-12-14",
         "venue": "MMRDA Grounds, BKC, Mumbai",
-        "why_it_matters": "Major Mumbai trade platform connecting regional food processors with national FMCG brands and international buying houses.",
+        "why_it_matters": "Major Mumbai trade platform connecting regional food processors with national FMCG brands and international buying houses. Excellent for domestic distributor tie-ups and B2B leads for IMM, and for Supab Exports to connect with international buying houses.",
         "link": "https://www.instagram.com/indianmerchantchamber/p/Db2Vk3eja9W",
-        "type": "domestic"
+        "type": "domestic",
+        "start_date": "2026-11-03",
+        "end_date": "2026-11-03"
     },
     {
         "name": "Foodexpo Vietnam 2026",
-        "start_date": "2026-11-11",
-        "end_date": "2026-11-14",
+        "date": "2026-11-11 to 2026-11-14",
         "venue": "Saigon Exhibition & Convention Center (SECC), Ho Chi Minh City, Vietnam",
-        "why_it_matters": "FIEO-supported international trade exhibition offering direct buyer access to South East Asia's expanding food manufacturing sector.",
+        "why_it_matters": "FIEO-supported international trade exhibition offering direct buyer access to South East Asia's expanding food manufacturing sector. Excellent for Supab Exports to find new buyers for dehydrated foods and spices in a growing market.",
         "link": "https://x.com/FieoHq/status/2082721887684301026",
-        "type": "international"
+        "type": "international",
+        "start_date": "2026-11-03",
+        "end_date": "2026-11-03"
     },
     {
         "name": "MahaBharat International Trade Expo 2026",
@@ -25,5 +27,55 @@
         "why_it_matters": "Major Mumbai trade platform connecting regional food processors with national FMCG brands and international buying houses.",
         "link": "https://www.instagram.com/indianmerchantchamber/p/Db2Vk3eja9W",
         "type": "domestic"
+    },
+    {
+        "name": "FIEO Reverse Buyer Seller Meet (RBSM) 2026 under RAMP Scheme",
+        "date": "02–03 July 2026",
+        "venue": "Nagpur, Maharashtra",
+        "why_it_matters": "Offers a valuable platform to connect with leading international buyers. Highly relevant for IMM to secure export orders and for Supab Exports to expand its buyer network.",
+        "link": "https://x.com/FieoHq/status/2062402946823049361",
+        "type": "domestic",
+        "start_date": "2026-11-03",
+        "end_date": "2026-11-03"
+    },
+    {
+        "name": "FIEO 5-Day Certificate Program on International Trade",
+        "date": "September 7-11, 2026",
+        "venue": "Kolkata",
+        "why_it_matters": "Aims at gaining practical insights from leading industry experts and government officials on topics like Export Documentation & Customs Procedures, Export Finance. Beneficial for Supab Exports to enhance operational knowledge.",
+        "link": "https://x.com/FieoHq/status/2084191409347964997",
+        "type": "domestic",
+        "start_date": "2026-11-03",
+        "end_date": "2026-11-03"
+    },
+    {
+        "name": "FIEO Webinar on Finance for MSME Exporters (in association with ICICI Bank)",
+        "date": "March 25, 2026",
+        "venue": "Online",
+        "why_it_matters": "Designed to help exporters understand financial schemes, export finance procedures, regulatory compliances, credit risk coverage, and tools. Directly relevant for Supab Exports to optimize financial strategies.",
+        "link": "https://x.com/FieoHq/status/2034234847766733296/photo/1",
+        "type": "domestic",
+        "start_date": "2026-11-03",
+        "end_date": "2026-11-03"
+    },
+    {
+        "name": "SEPC Virtual Awareness Program on Services Export Reporting & Compliance under FEMA Regulations, 2026",
+        "date": "17 April 2026",
+        "venue": "Online",
+        "why_it_matters": "Provides key insights into regulatory requirements for services exports. Highly relevant for Supab Digital to stay updated on compliance for advising SME exporters.",
+        "link": "https://www.linkedin.com/company/services-export-promotion-council-sepc-india",
+        "type": "domestic",
+        "start_date": "2026-11-03",
+        "end_date": "2026-11-03"
+    },
+    {
+        "name": "Karnataka, DGFT State-Level Workshop to Help Exporters Leverage FTAs",
+        "date": "Wed, 28 Oct 2026",
+        "venue": "Karnataka (details to be confirmed)",
+        "why_it_matters": "Provides practical guidance on utilizing Free Trade Agreements, which can help Supab Exports maximize benefits from existing and upcoming FTAs.",
+        "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQU0VGdDRxYWduX2lkcy1NM3A0WkNDNjl0SkJFWmZfbnllRkhOTmwzY294Y2NhQ3V1c0dhWUNfeGJLeUhvS0hDR2ZwZmhEXzA1V0Zjc013ODNtSVRfVzlrWm1ScXhGRW5pWDc1UUp5dFhON1Q3Tlc0M0dhbEhYSmpqZlVfTVpvVmV3UjU1YjhUbDMyVUs5ZHVVSXdGSVhjeVBENnczZWgxbnpDemZFSTBjZkNFN2NSbE9DSTNza252V056WGt1eDRZOHpCS29TQ19Oc2dMR2t5SUpfQWFPWUd1RDlPOWVfcmJiM1pKWUtBdk9BanpXWnd0etIB8gFBVV95cUxQVjMwWVVJWVZpTFhUYWd0RHhyUTZyUDhEclNRekQ0RUNPR0taYVQ3UlhIR0ZISzNuZDJWVzNQYzJVOWV5LVQ4S0hSdWlBaGZQaFY5MEY2RmllOVFGV2t5QWI2RnJNdmh4LXZaNTRNSDhDSE41aTJfQWw3MmlfX2VEZktVM1FJTEZqNFF0MHgxUmh6VFpqVVJNNVlGOTQ3WGdONlR3XzdmUFFnV2lYek1fUDhoVVlPT2YtSHc1ek5IT0ljNHFoUDV2SVdyeDVnRUNMejktdEF4Z0o0MXR5WE9La25CQmZNRktnWXlEUFdvaUdOdw?oc=5",
+        "type": "domestic",
+        "start_date": "2026-11-03",
+        "end_date": "2026-11-03"
     }
 ]
